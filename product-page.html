@@ -1,0 +1,1624 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="css/main.css">
+	<!-- Fonts -->
+	<link rel="stylesheet" href="fonts/BebasNeue/stylesheet.css">
+	<link rel="stylesheet" href="fonts/Gilroy/stylesheet.css">
+
+	<!-- Slick -->
+	<link rel="stylesheet" href="libs/slick-1.8.1/slick/slick.css">
+
+	<title>Forte WB6407A Тачка садовая</title>
+    
+</head>
+<body>
+	
+<header class="header">
+	<div class="header-container">
+		<div class="header__logo">
+			
+		</div>
+
+		<div class="header__nav">
+			<nav class="nav">
+				<a href="#" class="nav__link">О компании</a>
+				<a href="#" class="nav__link">Возврат товара</a>
+				<a href="#" class="nav__link">Доставка и оплата</a>
+				<a href="#" class="nav__link">Контакты</a>
+				<a href="#" class="nav__link">Акции!</a>
+			</nav>
+			<input type="search" class="header__search" placeholder="Поиск">
+		</div>
+
+		<div class="header__right">
+			<div class="right__sup">
+				<div class="signup-button">
+					<a href="#" id="signUpButton">
+						<img src="img/reg-icon.png" alt="">Регистрация/Вход
+					</a>
+				</div>
+				<div class="cart-button">
+					<a href="cart.html">
+						<img src="img/cart-icon.png" alt="">Корзина
+						<span class="cart-number">1</span>
+					</a>
+				</div>
+			</div>
+			<div class="right__sub">
+				<div class="contact-phone">
+					<a href="tel:+0800750250"><img src="img/phone-icon.png" alt=""> 0800  <span class="color-green">750 250</span></a>
+				</div>
+
+				<div class="contact-schedule">
+					<img src="img/clock-icon.png" alt=""><span class="color-green">9:00</span> до <span class="color-green">18:00</span> (Пн - Пт)
+				</div>
+			</div>
+		</div>
+
+		<div class="header-mobile">
+
+			<div class="hm__top">
+				<div class="header__logo">
+					<a href="index.html"><img src="img/header-logo.png" alt="Amadin"></a>
+				</div>
+
+				<img src="img/burger-menu.png" class="burger-button" id="burgerButton" alt="">
+			</div>
+
+			<div class="hm__middle">
+				<input type="search" class="header__search" placeholder="Поиск">
+			</div>
+			<div class="hm__bottom">
+
+				<div class="contact-phone">
+					<a href="tel:+0800750250"><img src="img/phone-icon.png" alt=""> 0800  <span class="color-green">750 250</span></a>
+				</div>
+
+				<div class="cart-button">
+					<a href="cart.html">
+						<img src="img/cart-icon.png" alt="">Корзина
+						<span class="cart-number">1</span>
+					</a>
+				</div>
+
+			</div>
+			
+		</div>
+
+		<div class="header__menu" id="mobileMenu">
+			<div class="header__menu-inner">
+				<div class="header__menu-reg">
+					<a href="#" id="regButton2"><img src="img/reg-mobie.png" alt=""> Регистрация/Вход</a>
+				</div>
+				<div class="header__menu-nav">
+					<a href="index.html">Главная</a>
+					<a href="#">О компании</a>
+					<a href="#">Возврат товара</a>
+					<a href="#">Доставка и оплата</a>
+					<a href="#">Контакты</a>
+					<a href="#">Акции</a>
+				</div>
+			</div>
+
+			<div class="header__menu-black">
+
+			</div>
+		</div>
+
+		
+	</div>
+</header>
+<div class="comment-modal" id="commentModal">
+	<img src="img/home/x-modal-icon.png" title="Назад" alt="Назад" class="reg__close" id="exitCommentButton">
+
+	<div class="comment-block">
+		<h3 class="comment__title">
+			Оставить свой отзыв о товаре
+		</h3>
+		<form method="POST" id="commentForm">
+			<input class="comment-from__input" type="text" name="title" placeholder="Заголовок отзыва" required>
+			<textarea class="comment-from__input" name="message" cols="30" placeholder="Оставьте отзыв" rows="10" required></textarea>
+			<div class="comment-form__info">
+				<p>Добавить изображение</p>
+				<small>не более 15 мб</small>
+			</div>
+			<div class="comment-form__pics">
+				<label>
+					<input type="file" name="pic" accept="image/*">
+				</label>
+			</div>
+			<div class="comment-form__bottom">
+				<div class="comment-form__stars">
+					<img src="img/star-unfilled.png" alt="">
+					<img src="img/star-unfilled.png" alt="">
+					<img src="img/star-unfilled.png" alt="">
+					<img src="img/star-unfilled.png" alt="">
+					<img src="img/star-unfilled.png" alt="">
+				</div>
+				<button type="submit" class="btn">Оставить отзыв</button>
+			</div>
+		</form>
+	</div>
+
+
+</div>
+
+<div class="registration" id="registrationModal">
+	
+	<img src="img/home/x-modal-icon.png" title="Назад" alt="Назад" class="reg__close" id="exitButton">
+	
+	<!-- 1st screen -->
+	<div class="modal-first" id="modalFirst">
+		<button class="modal__buyers-button" id="buyersButton">Я покупатель или хочу им стать</button>
+
+		<button class="modal__partners-button" id="partnersButton">Я партнер или хочу им стать</button>
+	</div>
+	<!-- /1st screen -->
+	<div class="modal__buyers" id="buyers">
+
+		<div class="modal__signin">
+			<div class="reg__title">Вход для покупателей</div>
+			<form action="#" class="modal__signing">
+				<input type="text" name placeholder="Имя">
+				<input type="text" name placeholder="Фамилия">
+				<input type="email" name placeholder="E-mail">
+				<button class="btn">Войти</button>
+			</form>
+		</div>
+
+		<div class="modal__signup">
+			<div class="reg__title">Регистрация покупателя</div>
+			<form action="#" class="modal__signing">
+				<input type="text" name placeholder="Имя">
+				<input type="text" name placeholder="Фамилия">
+				<input type="email" name placeholder="E-mail">
+				<button class="btn">Зарегистрироваться</button>
+			</form>
+		</div>
+
+	</div>
+
+	<div class="modal__partners" id="partners">
+
+		<div class="modal__signin">
+			<div class="reg__title">Вход для партнеров</div>
+			<form action="#" class="modal__signing">
+				<input type="text" name placeholder="Имя">
+				<input type="text" name placeholder="Фамилия">
+				<input type="email" name placeholder="E-mail">
+				<button class="btn">Войти как партнер</button>
+			</form>
+		</div>
+
+		<div class="modal__signup">
+			<div class="reg__title">Регистрация для партнеров</div>
+			<form action="#" class="modal__signing">
+				<input type="text" name placeholder="Имя">
+				<input type="text" name placeholder="Фамилия">
+				<input type="email" name placeholder="E-mail">
+				<button class="btn">Зарегистрироваться</button>
+			</form>
+		</div>
+
+	</div>
+
+</div>
+
+<div class="page-wrapper">
+	<aside class="aside">
+		<div class="aside__logo">
+			<a href="index.html">
+				<img src="img/header-logo.png" alt="Amadin">
+			</a>
+		</div>
+		<div class="aside__inner aside__inner--cats">
+			
+			<h3 class="aside__title title-underline">Фильтр</h3>
+
+			<div class="filter__discard">
+				<img src="img/home/small-black-x.png" alt="">сбросить
+			</div>
+			<div class="aside__filter">
+				<div class="aside__filter-title">Производитель:</div>
+				<input type="text" placeholder="Название" class="aside__filter-input">
+				<div class="aside__filter-item">
+					<img src="img/home/small-black-x.png" alt="">
+					Makita<span class="color-green no-margin">(52)</span>
+				</div>
+				<div class="aside__filter-item">
+					<img src="img/home/small-black-x.png" alt="">
+					Makita<span class="color-green no-margin">(52)</span>
+				</div>
+				<div class="aside__filter-item">
+					<img src="img/home/small-black-x.png" alt="">
+					Makita<span class="color-green no-margin">(52)</span>
+				</div>
+				<div class="aside__filter-item">
+					<img src="img/home/small-black-x.png" alt="">
+					Makita<span class="color-green no-margin">(52)</span>
+				</div>
+				<div class="aside__filter-item">
+					<img src="img/home/small-black-x.png" alt="">
+					Makita<span class="color-green no-margin">(52)</span>
+				</div>
+			</div>
+
+			<div class="aside__filter">
+				<div class="aside__filter-title">Страна производитель:</div>
+				<input type="text" placeholder="Название" class="aside__filter-input">
+				<div class="aside__filter-item">
+					<img src="img/home/small-black-x.png" alt="">
+					Япония<span class="color-green no-margin">(23)</span>
+				</div>
+				<div class="aside__filter-item">
+					<img src="img/home/small-black-x.png" alt="">
+					Япония<span class="color-green no-margin">(23)</span>
+				</div>
+				<div class="aside__filter-item">
+					<img src="img/home/small-black-x.png" alt="">
+					Япония<span class="color-green no-margin">(23)</span>
+				</div>
+				<div class="aside__filter-item">
+					<img src="img/home/small-black-x.png" alt="">
+					Япония<span class="color-green no-margin">(23)</span>
+				</div>
+			</div>
+
+
+		</div>
+
+		<div class="aside__inner aside__inner--mob">
+			<h3 class="aside__title title-underline" id="asideButton">Каталог Товаров</h3>
+			<ul class="aside__nav">
+				<li class="aside__nav-item">
+					<a href="#">Техника, оборудование, инструменты</a>
+				</li>
+
+				<li class="aside__nav-item">
+					<a href="#">Дача, сад и огород</a>
+				</li>
+
+				<li class="aside__nav-item">
+					<a href="#">Водоснабжение, сантехника, полив, фильтра</a>
+				</li>
+
+				<li class="aside__nav-item">
+					<a href="#">Активный отдых, спорт и туризм</a>
+				</li>
+
+				<li class="aside__nav-item">
+					<a href="#">Безопасность и видеонаблюдение</a>
+				</li>
+
+				<li class="aside__nav-item">
+					<a href="#">Товары для дома</a>
+				</li>
+
+				<li class="aside__nav-item">
+					<a href="#">Красота и здоровье</a>
+				</li>
+			</ul>
+
+			<div class="aside__tel">
+				<a href="tel:+0800750250">0800<span class="color-green">750 250</span></a>
+				<a href="tel:+0800750250">0800<span class="color-green">750 250</span></a>
+				<a href="tel:+0800750250">0800<span class="color-green">750 250</span></a>
+				<a href="tel:+0800750250">0800<span class="color-green">750 250</span></a>
+			</div>
+
+		</div>
+	</aside>
+
+	<div class="inner-wrapper">
+		<div class="main-container main-container--cats">
+			<div class="banners banners--product">
+				<div class="banner-big">
+					<img src="img/home/placeholder-main.jpg" alt="">
+				</div>
+			</div>
+
+			<div class="product-top">
+				<div class="goods-img">
+					
+					<div class="good-img__current">
+						<img src="img/home/tachka-434.png" alt="">
+					</div>
+					<div class="goods-img__bottom">
+
+						<a href="#" class="goods-img__item active">
+							<img src="img/home/tachka-434.png" alt="">
+						</a>
+						<a href="#" class="goods-img__item">
+							<img src="img/home/tachka-434.png" alt="" class="reversed">
+						</a>
+						<a href="#" class="goods-img__item">
+							<img src="img/home/tachka-434.png" alt="">
+						</a>
+						<a href="#" class="goods-img__item">
+							<img src="img/home/tachka-434.png" class="reversed" alt="">
+						</a>
+						
+					</div>
+				</div>
+
+				<div class="goods-shortinfo">
+					<h1 class="goods-shortinfo__title">
+						Forte WB6407A Тачка садовая
+					</h1>
+					<div class="goods-shortinfo__code">
+						Код товара: 83877
+					</div>
+
+					<div class="goods-shortinfo__purchase">
+						<div class="goods-shortinfo__price">
+							<span>566</span> грн
+						</div>
+						<div class="goods-shortinfo__buy">
+							<a href="#" class="btn buy-btn">купить</a>
+						</div>
+					</div>
+
+					<div class="goods-shortinfo__stats">
+						<div class="goods-shortinfo__line">
+							<div class="goods-shortinfo__option">Производитель</div>
+							<div class="goods-shortinfo__value">Grunhelm</div>
+						</div>
+
+						<div class="goods-shortinfo__line">
+							<div class="goods-shortinfo__option">Страна происхождения</div>
+							<div class="goods-shortinfo__value">Германия</div>
+						</div>
+
+						<div class="goods-shortinfo__line">
+							<div class="goods-shortinfo__option">Тип питания</div>
+							<div class="goods-shortinfo__value">Сеть</div>
+						</div>
+
+						<div class="goods-shortinfo__line">
+							<div class="goods-shortinfo__option">Мощность</div>
+							<div class="goods-shortinfo__value">1700 Вт</div>
+						</div>
+
+						<div class="goods-shortinfo__line">
+							<div class="goods-shortinfo__option">Длина шины</div>
+							<div class="goods-shortinfo__value">350 см</div>
+						</div>
+
+						<div class="goods-shortinfo__line">
+							<div class="goods-shortinfo__option">Скорость вращения цепи</div>
+							<div class="goods-shortinfo__value">13 м/с</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="goods-shipment">
+					<div class="goods-shipment__where">
+						Доставка по Киеву
+					</div>
+
+					<div class="goods-shipment__how">
+						От 1000 грн - бесплатно
+					</div>
+
+					<div class="goods-shipment__how">
+						До 1000 грн - 50 грн
+					</div>
+
+					<div class="goods-shipment__how">
+						Минимальный заказ - 500 грн
+					</div>
+
+					<div class="goods-shipment__how">
+						Самовывоз - бесплатно
+					</div>
+
+					<div class="goods-shipment__where">
+						Доставка по Украине
+					</div>
+
+					<div class="goods-shipment__how">
+						На отделение "Нова Пошта" доставка бесплатно
+					</div>
+
+					<div class="goods-shipment__where">
+						Оплата
+					</div>
+
+					<div class="goods-shipment__how">
+						Наличный расчет
+					</div>
+
+					<div class="goods-shipment__how">
+						Безналичный с НДС
+					</div>
+
+					<div class="goods-shipment__how">
+						Наложенный платеж
+					</div>
+
+					<div class="goods-shipment__where">
+						Гарантия
+					</div>
+
+					<div class="goods-shipment__how">
+						33 собственных сервисных цента по Украине
+					</div>
+				</div>
+			</div>
+
+			<div class="product-tabs">
+
+				<div class="product-tabs__header">
+					<a href="#allinfo" class="product-tabs__tab-button btn">Все о товаре</a>
+					<a href="#reviews-section" class="product-tabs__tab-button btn"><span class="number-of-reviews" id="reviewsNumber">0</span> отзывы</a>
+				</div>
+
+				<div class="product-tabs__tab-content">
+					<div class="product-tabs__about-goods" id="allinfo">
+						<div class="product-tabs__description">
+							<h2 class="product-tabs__description-title">
+								Описание Forte WB6407A Тачка садовая
+							</h2>
+
+							<div class="product-tabs__description-text">
+								Forte JS 900 AQVP - электрический лобзик бытового предназначения, оборудованный двигателем достаточной мощности для качественной и эффективной работы. Благодаря хорошим техническим характеристикам, модель с легкостью справляется с древесиной толщиной до 80 мм и стальными листами - 10 мм.
+							</div>
+
+							<h2 class="product-tabs__description-title product-tabs__description-title--features">
+								Особенности:
+							</h2>
+
+							<div class="product-tabs__description-text">
+								<div class="product-tabs__feature">
+									Система быстрой замены рабочего полотна
+								</div>
+
+								<div class="product-tabs__feature">
+									4-х позиционный ход пилки
+								</div>
+
+								<div class="product-tabs__feature">
+									Рукоятка с резиновой накладкой для удобной работы с электроинструментом
+								</div>
+							</div>
+
+						</div>
+
+						<div class="product-tabs__characts">
+							<h3 class="product-tabs__description-title">
+								Характеристики Forte WB6407A Тачка садовая
+							</h3>
+
+							<div class="goods-shortinfo__stats">
+							<div class="goods-shortinfo__line">
+								<div class="goods-shortinfo__option">Производитель</div>
+								<div class="goods-shortinfo__value">Grunhelm</div>
+							</div>
+
+							<div class="goods-shortinfo__line">
+								<div class="goods-shortinfo__option">Страна происхождения</div>
+								<div class="goods-shortinfo__value">Германия</div>
+							</div>
+
+							<div class="goods-shortinfo__line">
+								<div class="goods-shortinfo__option">Тип питания</div>
+								<div class="goods-shortinfo__value">Сеть</div>
+							</div>
+
+							<div class="goods-shortinfo__line">
+								<div class="goods-shortinfo__option">Мощность</div>
+								<div class="goods-shortinfo__value">1700 Вт</div>
+							</div>
+
+							<div class="goods-shortinfo__line">
+								<div class="goods-shortinfo__option">Длина шины</div>
+								<div class="goods-shortinfo__value">350 см</div>
+							</div>
+
+							<div class="goods-shortinfo__line">
+								<div class="goods-shortinfo__option">Скорость вращения цепи</div>
+								<div class="goods-shortinfo__value">13 м/с</div>
+							</div>
+						</div>
+
+						</div>
+					</div>
+				</div>
+
+
+			</div>
+
+			<div class="commentaries" id="reviews-section">
+				<div class="section__header section__header--offer">
+					<h3 class="title-underline">Отзывы и комментарии</h3>
+				</div>
+
+				<div class="product-tabs__reviews">
+					
+					<div class="reviews__rate">
+						<div class="reviews__summary">
+							4
+						</div>
+						<p>Общая оценка</p>
+						<div class="reviews__summary-stars">
+							<img src="img/star-filled.png" alt="">
+							<img src="img/star-filled.png" alt="">
+							<img src="img/star-filled.png" alt="">
+							<img src="img/star-filled.png" alt="">
+							<img src="img/star-unfilled.png" alt="">
+						</div>
+						<div class="reviews__lines">
+							<div class="reviews__line">
+								<span class="reviews__line-point">5 <img src="img/star-filled.png" alt=""></span>
+								<div class="reviews__line-line reviews__line-line-5">
+									a
+								</div>
+								<div class="reviews__number-of">
+									5 отзывов
+								</div>
+							</div>
+
+							<div class="reviews__line">
+								<span class="reviews__line-point">4 <img src="img/star-filled.png" alt=""></span>
+								<div class="reviews__line-line reviews__line-line-4">
+									a
+								</div>
+								<div class="reviews__number-of">
+									5 отзывов
+								</div>
+							</div>
+
+							<div class="reviews__line">
+								<span class="reviews__line-point">3 <img src="img/star-filled.png" alt=""></span>
+								<div class="reviews__line-line reviews__line-line-3">
+									a
+								</div>
+								<div class="reviews__number-of">
+									5 отзывов
+								</div>
+							</div>
+
+							<div class="reviews__line">
+								<span class="reviews__line-point">2 <img src="img/star-filled.png" alt=""></span>
+								<div class="reviews__line-line reviews__line-line-2">
+									a
+								</div>
+								<div class="reviews__number-of">
+									5 отзывов
+								</div>
+							</div>
+
+							<div class="reviews__line">
+								<span class="reviews__line-point">1 <img src="img/star-filled.png" alt=""></span>
+								<div class="reviews__line-line reviews__line-line-1">
+									a
+								</div>
+								<div class="reviews__number-of">
+									5 отзывов
+								</div>
+							</div>
+						</div>
+
+						<div class="reviews__button">
+							<button id="callLeaveReview">Оставить отзыв</button>
+						</div>
+					</div>
+
+					<div class="reviews__wrapper">
+						<div class="reviews__item">
+
+							<div class="reviews__userside">
+								<div class="reviews__userside-stars">
+									<img src="img/star-filled.png" alt="">
+									<img src="img/star-filled.png" alt="">
+									<img src="img/star-filled.png" alt="">
+									<img src="img/star-unfilled.png" alt="">
+									<img src="img/star-unfilled.png" alt="">
+								</div>
+								<div class="reviews__userside-pledge">
+									Реальный покупатель
+								</div>
+								<div class="reviews__userside-userpic">
+									<img src="img/userside-up.png" alt="User Name" title="User Name">
+								</div>
+								<div class="reviews__userside-date">
+									22 апреля 2018 14:43
+								</div>
+								<div class="reviews__userside-city">
+									г. Москва
+								</div>
+							</div>
+
+							<div class="reviews__text">
+								Lorem ipsum, dolor sit amet consectetur adipisicing elit. A rerum, impedit inventore nulla tempore obcaecati adipisci. Perspiciatis natus, sit libero dolor doloribus accusantium consectetur beatae illo ut dignissimos expedita asperiores. Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit voluptatem suscipit ipsa similique molestiae quo quis consectetur doloremque delectus, neque deserunt? Et aliquid eveniet animi asperiores expedita totam eum dolore. Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui dolor optio necessitatibus omnis dicta earum autem eos dolores neque id. Quia quod maiores iure dolorem commodi facilis, nisi at voluptatem? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur necessitatibus deserunt esse repudiandae id cum corrupti voluptate. Nobis numquam culpa accusamus itaque sed fuga magni officiis totam neque. Nulla, impedit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod facere obcaecati labore saepe vero perferendis cum blanditiis consequatur fuga vel. Nostrum pariatur assumenda beatae, omnis ratione temporibus vitae veritatis voluptate?
+							</div>
+							
+						</div>
+
+						<div class="reviews__item">
+
+							<div class="reviews__userside">
+								<div class="reviews__userside-stars">
+									<img src="img/star-filled.png" alt="">
+									<img src="img/star-filled.png" alt="">
+									<img src="img/star-filled.png" alt="">
+									<img src="img/star-unfilled.png" alt="">
+									<img src="img/star-unfilled.png" alt="">
+								</div>
+								<div class="reviews__userside-pledge">
+									Реальный покупатель
+								</div>
+								
+								<div class="reviews__userside-date">
+									22 апреля 2018 14:43
+								</div>
+								<div class="reviews__userside-city">
+									г. Москва
+								</div>
+							</div>
+
+							<div class="reviews__text">
+								Lorem ipsum, dolor sit amet consectetur adipisicing elit. A rerum, impedit inventore nulla tempore obcaecati adipisci. Perspiciatis natus, sit libero dolor doloribus accusantium consectetur beatae illo ut dignissimos expedita asperiores. Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit voluptatem suscipit ipsa similique molestiae quo quis consectetur doloremque delectus, neque deserunt? Et aliquid eveniet animi asperiores expedita totam eum dolore. Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui dolor optio necessitatibus omnis dicta earum autem eos dolores neque id. Quia quod maiores iure dolorem commodi facilis, nisi at voluptatem? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur necessitatibus deserunt esse repudiandae id cum corrupti voluptate. Nobis numquam culpa accusamus itaque 
+							</div>
+							
+						</div>
+
+						<div class="reviews__item">
+
+							<div class="reviews__userside">
+								<div class="reviews__userside-stars">
+									<img src="img/star-filled.png" alt="">
+									<img src="img/star-filled.png" alt="">
+									<img src="img/star-filled.png" alt="">
+									<img src="img/star-unfilled.png" alt="">
+									<img src="img/star-unfilled.png" alt="">
+								</div>
+								<div class="reviews__userside-pledge">
+									Реальный покупатель
+								</div>
+								
+								<div class="reviews__userside-date">
+									22 апреля 2018 14:43
+								</div>
+								<div class="reviews__userside-city">
+									г. Москва
+								</div>
+							</div>
+
+							<div class="reviews__text">
+								Lorem ipsum, dolor sit amet consectetur adipisicing elit. A rerum, impedit inventore nulla tempore obcaecati adipisci. Perspiciatis natus, sit libero dolor doloribus accusantium consectetur beatae illo ut dignissimos expedita asperiores. Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit voluptatem suscipit ipsa similique molestiae quo quis consectetur doloremque delectus, neque deserunt?
+							</div>
+							
+						</div>
+
+						<div class="reviews__all">
+							<a href="#" class="btn-allreviews">Все отзывы (30)</a>
+						</div>
+					</div>
+					
+
+					
+				</div>
+
+				<!-- <div class="leave-review">
+					<div class="leave-review__stars">
+						<img src="img/star-unfilled.png" alt="">
+						<img src="img/star-unfilled.png" alt="">
+						<img src="img/star-unfilled.png" alt="">
+						<img src="img/star-unfilled.png" alt="">
+						<img src="img/star-unfilled.png" alt="">
+					</div>
+					<div class="leave-review__inner">
+						
+						<div class="leave-review__header">
+							Оставить свой отзыв о товаре
+						</div>
+
+						<form action="" class="leave-review__form">
+							<input type="text" class="leave-review__input" placeholder="Введите имя">
+							<input type="email" name="email" id="" class="leave-review__input" placeholder="Введите e-mail">
+							<textarea name="message" id="" cols="30" rows="5" class="leave-review__input leave-review__input--textarea" placeholder="Оставьте отзыв или сообщение"></textarea>
+							<button type="submit" class="btn leave-review__btn">оставить отзыв</button>
+						</form>
+
+					</div>
+				</div> -->
+				
+			</div>
+
+			
+			<div class="same-price">
+				<div class="section__header">
+					<h3 class="title-underline">В той же цене</h3>
+				</div>
+
+				<div class="offer__slider">
+
+					<div class="new-items-wrapper">
+						
+						<div class="sale-wrapper-outer">
+							<div class="product-card">
+								<div class="product-img">
+									<a href="#"><img src="img/home/tachka.png" alt="Садовая Тачка"></a>
+								</div>
+								<div class="product-title">
+									<a href="#">Forte WB6407A Тачка садовая</a>
+								</div>
+								<div class="product-code">
+									Код товара: 12354
+								</div>
+								<div class="product-oldprice">
+									<span>592</span> грн
+								</div>
+								<div class="product-price">
+									<span>566</span> грн
+								</div>
+								<div class="product-button">
+									<a href="#">купить</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="sale-wrapper-outer">
+							<div class="product-card">
+								<div class="product-img">
+									<a href="#"><img src="img/home/tachka.png" alt="Садовая Тачка"></a>
+								</div>
+								<div class="product-title">
+									<a href="#">Forte WB6407A Тачка садовая</a>
+								</div>
+								<div class="product-code">
+									Код товара: 12354
+								</div>
+								<div class="product-oldprice">
+									<span>592</span> грн
+								</div>
+								<div class="product-price">
+									<span>566</span> грн
+								</div>
+								<div class="product-button">
+									<a href="#">купить</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="sale-wrapper-outer">
+							<div class="product-card">
+								<div class="product-img">
+									<a href="#"><img src="img/home/tachka.png" alt="Садовая Тачка"></a>
+								</div>
+								<div class="product-title">
+									<a href="#">Forte WB6407A Тачка садовая</a>
+								</div>
+								<div class="product-code">
+									Код товара: 12354
+								</div>
+								<div class="product-oldprice">
+									<span>592</span> грн
+								</div>
+								<div class="product-price">
+									<span>566</span> грн
+								</div>
+								<div class="product-button">
+									<a href="#">купить</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="sale-wrapper-outer">
+							<div class="product-card">
+								<div class="product-img">
+									<a href="#"><img src="img/home/tachka.png" alt="Садовая Тачка"></a>
+								</div>
+								<div class="product-title">
+									<a href="#">Forte WB6407A Тачка садовая</a>
+								</div>
+								<div class="product-code">
+									Код товара: 12354
+								</div>
+								<div class="product-oldprice">
+									<span>592</span> грн
+								</div>
+								<div class="product-price">
+									<span>566</span> грн
+								</div>
+								<div class="product-button">
+									<a href="#">купить</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="sale-wrapper-outer">
+							<div class="product-card">
+								<div class="product-img">
+									<a href="#"><img src="img/home/tachka.png" alt="Садовая Тачка"></a>
+								</div>
+								<div class="product-title">
+									<a href="#">Forte WB6407A Тачка садовая</a>
+								</div>
+								<div class="product-code">
+									Код товара: 12354
+								</div>
+								<div class="product-oldprice">
+									<span>592</span> грн
+								</div>
+								<div class="product-price">
+									<span>566</span> грн
+								</div>
+								<div class="product-button">
+									<a href="#">купить</a>
+								</div>
+							</div>
+						</div>
+						<div class="sale-wrapper-outer">
+							<div class="product-card">
+								<div class="product-img">
+									<a href="#"><img src="img/home/tachka.png" alt="Садовая Тачка"></a>
+								</div>
+								<div class="product-title">
+									<a href="#">Forte WB6407A Тачка садовая</a>
+								</div>
+								<div class="product-code">
+									Код товара: 12354
+								</div>
+								<div class="product-oldprice">
+									<span>592</span> грн
+								</div>
+								<div class="product-price">
+									<span>566</span> грн
+								</div>
+								<div class="product-button">
+									<a href="#">купить</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="sale-wrapper-outer">
+							<div class="product-card">
+								<div class="product-img">
+									<a href="#"><img src="img/home/tachka.png" alt="Садовая Тачка"></a>
+								</div>
+								<div class="product-title">
+									<a href="#">Forte WB6407A Тачка садовая</a>
+								</div>
+								<div class="product-code">
+									Код товара: 12354
+								</div>
+								<div class="product-oldprice">
+									<span>592</span> грн
+								</div>
+								<div class="product-price">
+									<span>566</span> грн
+								</div>
+								<div class="product-button">
+									<a href="#">купить</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="sale-wrapper-outer">
+							<div class="product-card">
+								<div class="product-img">
+									<a href="#"><img src="img/home/tachka.png" alt="Садовая Тачка"></a>
+								</div>
+								<div class="product-title">
+									<a href="#">Forte WB6407A Тачка садовая</a>
+								</div>
+								<div class="product-code">
+									Код товара: 12354
+								</div>
+								<div class="product-oldprice">
+									<span>592</span> грн
+								</div>
+								<div class="product-price">
+									<span>566</span> грн
+								</div>
+								<div class="product-button">
+									<a href="#">купить</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="sale-wrapper-outer">
+							<div class="product-card">
+								<div class="product-img">
+									<a href="#"><img src="img/home/tachka.png" alt="Садовая Тачка"></a>
+								</div>
+								<div class="product-title">
+									<a href="#">Forte WB6407A Тачка садовая</a>
+								</div>
+								<div class="product-code">
+									Код товара: 12354
+								</div>
+								<div class="product-oldprice">
+									<span>592</span> грн
+								</div>
+								<div class="product-price">
+									<span>566</span> грн
+								</div>
+								<div class="product-button">
+									<a href="#">купить</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="sale-wrapper-outer">
+							<div class="product-card">
+								<div class="product-img">
+									<a href="#"><img src="img/home/tachka.png" alt="Садовая Тачка"></a>
+								</div>
+								<div class="product-title">
+									<a href="#">Forte WB6407A Тачка садовая</a>
+								</div>
+								<div class="product-code">
+									Код товара: 12354
+								</div>
+								<div class="product-oldprice">
+									<span>592</span> грн
+								</div>
+								<div class="product-price">
+									<span>566</span> грн
+								</div>
+								<div class="product-button">
+									<a href="#">купить</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="sale-wrapper-outer">
+							<div class="product-card">
+								<div class="product-img">
+									<a href="#"><img src="img/home/tachka.png" alt="Садовая Тачка"></a>
+								</div>
+								<div class="product-title">
+									<a href="#">Forte WB6407A Тачка садовая</a>
+								</div>
+								<div class="product-code">
+									Код товара: 12354
+								</div>
+								<div class="product-oldprice">
+									<span>592</span> грн
+								</div>
+								<div class="product-price">
+									<span>566</span> грн
+								</div>
+								<div class="product-button">
+									<a href="#">купить</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="sale-wrapper-outer">
+							<div class="product-card">
+								<div class="product-img">
+									<a href="#"><img src="img/home/tachka.png" alt="Садовая Тачка"></a>
+								</div>
+								<div class="product-title">
+									<a href="#">Forte WB6407A Тачка садовая</a>
+								</div>
+								<div class="product-code">
+									Код товара: 12354
+								</div>
+								<div class="product-oldprice">
+									<span>592</span> грн
+								</div>
+								<div class="product-price">
+									<span>566</span> грн
+								</div>
+								<div class="product-button">
+									<a href="#">купить</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="sale-wrapper-outer">
+							<div class="product-card">
+								<div class="product-img">
+									<a href="#"><img src="img/home/tachka.png" alt="Садовая Тачка"></a>
+								</div>
+								<div class="product-title">
+									<a href="#">Forte WB6407A Тачка садовая</a>
+								</div>
+								<div class="product-code">
+									Код товара: 12354
+								</div>
+								<div class="product-oldprice">
+									<span>592</span> грн
+								</div>
+								<div class="product-price">
+									<span>566</span> грн
+								</div>
+								<div class="product-button">
+									<a href="#">купить</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="sale-wrapper-outer">
+							<div class="product-card">
+								<div class="product-img">
+									<a href="#"><img src="img/home/tachka.png" alt="Садовая Тачка"></a>
+								</div>
+								<div class="product-title">
+									<a href="#">Forte WB6407A Тачка садовая</a>
+								</div>
+								<div class="product-code">
+									Код товара: 12354
+								</div>
+								<div class="product-oldprice">
+									<span>592</span> грн
+								</div>
+								<div class="product-price">
+									<span>566</span> грн
+								</div>
+								<div class="product-button">
+									<a href="#">купить</a>
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+
+			<div class="offer">
+				<div class="section__header section__header--offer">
+					<h3 class="title-underline">Вас может заинтересовать</h3>
+				</div>
+
+				<div class="offer__slider">
+
+					<div class="offer-wrapper">
+						
+						<div class="sale-wrapper-outer">
+							<div class="product-card">
+								<div class="product-img">
+									<a href="#"><img src="img/home/tachka.png" alt="Садовая Тачка"></a>
+								</div>
+								<div class="product-title">
+									<a href="#">Forte WB6407A Тачка садовая</a>
+								</div>
+								<div class="product-code">
+									Код товара: 12354
+								</div>
+								<div class="product-oldprice">
+									<span>592</span> грн
+								</div>
+								<div class="product-price">
+									<span>566</span> грн
+								</div>
+								<div class="product-button">
+									<a href="#">купить</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="sale-wrapper-outer">
+							<div class="product-card">
+								<div class="product-img">
+									<a href="#"><img src="img/home/tachka.png" alt="Садовая Тачка"></a>
+								</div>
+								<div class="product-title">
+									<a href="#">Forte WB6407A Тачка садовая</a>
+								</div>
+								<div class="product-code">
+									Код товара: 12354
+								</div>
+								<div class="product-oldprice">
+									<span>592</span> грн
+								</div>
+								<div class="product-price">
+									<span>566</span> грн
+								</div>
+								<div class="product-button">
+									<a href="#">купить</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="sale-wrapper-outer">
+							<div class="product-card">
+								<div class="product-img">
+									<a href="#"><img src="img/home/tachka.png" alt="Садовая Тачка"></a>
+								</div>
+								<div class="product-title">
+									<a href="#">Forte WB6407A Тачка садовая</a>
+								</div>
+								<div class="product-code">
+									Код товара: 12354
+								</div>
+								<div class="product-oldprice">
+									<span>592</span> грн
+								</div>
+								<div class="product-price">
+									<span>566</span> грн
+								</div>
+								<div class="product-button">
+									<a href="#">купить</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="sale-wrapper-outer">
+							<div class="product-card">
+								<div class="product-img">
+									<a href="#"><img src="img/home/tachka.png" alt="Садовая Тачка"></a>
+								</div>
+								<div class="product-title">
+									<a href="#">Forte WB6407A Тачка садовая</a>
+								</div>
+								<div class="product-code">
+									Код товара: 12354
+								</div>
+								<div class="product-oldprice">
+									<span>592</span> грн
+								</div>
+								<div class="product-price">
+									<span>566</span> грн
+								</div>
+								<div class="product-button">
+									<a href="#">купить</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="sale-wrapper-outer">
+							<div class="product-card">
+								<div class="product-img">
+									<a href="#"><img src="img/home/tachka.png" alt="Садовая Тачка"></a>
+								</div>
+								<div class="product-title">
+									<a href="#">Forte WB6407A Тачка садовая</a>
+								</div>
+								<div class="product-code">
+									Код товара: 12354
+								</div>
+								<div class="product-oldprice">
+									<span>592</span> грн
+								</div>
+								<div class="product-price">
+									<span>566</span> грн
+								</div>
+								<div class="product-button">
+									<a href="#">купить</a>
+								</div>
+							</div>
+						</div>
+						<div class="sale-wrapper-outer">
+							<div class="product-card">
+								<div class="product-img">
+									<a href="#"><img src="img/home/tachka.png" alt="Садовая Тачка"></a>
+								</div>
+								<div class="product-title">
+									<a href="#">Forte WB6407A Тачка садовая</a>
+								</div>
+								<div class="product-code">
+									Код товара: 12354
+								</div>
+								<div class="product-oldprice">
+									<span>592</span> грн
+								</div>
+								<div class="product-price">
+									<span>566</span> грн
+								</div>
+								<div class="product-button">
+									<a href="#">купить</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="sale-wrapper-outer">
+							<div class="product-card">
+								<div class="product-img">
+									<a href="#"><img src="img/home/tachka.png" alt="Садовая Тачка"></a>
+								</div>
+								<div class="product-title">
+									<a href="#">Forte WB6407A Тачка садовая</a>
+								</div>
+								<div class="product-code">
+									Код товара: 12354
+								</div>
+								<div class="product-oldprice">
+									<span>592</span> грн
+								</div>
+								<div class="product-price">
+									<span>566</span> грн
+								</div>
+								<div class="product-button">
+									<a href="#">купить</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="sale-wrapper-outer">
+							<div class="product-card">
+								<div class="product-img">
+									<a href="#"><img src="img/home/tachka.png" alt="Садовая Тачка"></a>
+								</div>
+								<div class="product-title">
+									<a href="#">Forte WB6407A Тачка садовая</a>
+								</div>
+								<div class="product-code">
+									Код товара: 12354
+								</div>
+								<div class="product-oldprice">
+									<span>592</span> грн
+								</div>
+								<div class="product-price">
+									<span>566</span> грн
+								</div>
+								<div class="product-button">
+									<a href="#">купить</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="sale-wrapper-outer">
+							<div class="product-card">
+								<div class="product-img">
+									<a href="#"><img src="img/home/tachka.png" alt="Садовая Тачка"></a>
+								</div>
+								<div class="product-title">
+									<a href="#">Forte WB6407A Тачка садовая</a>
+								</div>
+								<div class="product-code">
+									Код товара: 12354
+								</div>
+								<div class="product-oldprice">
+									<span>592</span> грн
+								</div>
+								<div class="product-price">
+									<span>566</span> грн
+								</div>
+								<div class="product-button">
+									<a href="#">купить</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="sale-wrapper-outer">
+							<div class="product-card">
+								<div class="product-img">
+									<a href="#"><img src="img/home/tachka.png" alt="Садовая Тачка"></a>
+								</div>
+								<div class="product-title">
+									<a href="#">Forte WB6407A Тачка садовая</a>
+								</div>
+								<div class="product-code">
+									Код товара: 12354
+								</div>
+								<div class="product-oldprice">
+									<span>592</span> грн
+								</div>
+								<div class="product-price">
+									<span>566</span> грн
+								</div>
+								<div class="product-button">
+									<a href="#">купить</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="sale-wrapper-outer">
+							<div class="product-card">
+								<div class="product-img">
+									<a href="#"><img src="img/home/tachka.png" alt="Садовая Тачка"></a>
+								</div>
+								<div class="product-title">
+									<a href="#">Forte WB6407A Тачка садовая</a>
+								</div>
+								<div class="product-code">
+									Код товара: 12354
+								</div>
+								<div class="product-oldprice">
+									<span>592</span> грн
+								</div>
+								<div class="product-price">
+									<span>566</span> грн
+								</div>
+								<div class="product-button">
+									<a href="#">купить</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="sale-wrapper-outer">
+							<div class="product-card">
+								<div class="product-img">
+									<a href="#"><img src="img/home/tachka.png" alt="Садовая Тачка"></a>
+								</div>
+								<div class="product-title">
+									<a href="#">Forte WB6407A Тачка садовая</a>
+								</div>
+								<div class="product-code">
+									Код товара: 12354
+								</div>
+								<div class="product-oldprice">
+									<span>592</span> грн
+								</div>
+								<div class="product-price">
+									<span>566</span> грн
+								</div>
+								<div class="product-button">
+									<a href="#">купить</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="sale-wrapper-outer">
+							<div class="product-card">
+								<div class="product-img">
+									<a href="#"><img src="img/home/tachka.png" alt="Садовая Тачка"></a>
+								</div>
+								<div class="product-title">
+									<a href="#">Forte WB6407A Тачка садовая</a>
+								</div>
+								<div class="product-code">
+									Код товара: 12354
+								</div>
+								<div class="product-oldprice">
+									<span>592</span> грн
+								</div>
+								<div class="product-price">
+									<span>566</span> грн
+								</div>
+								<div class="product-button">
+									<a href="#">купить</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="sale-wrapper-outer">
+							<div class="product-card">
+								<div class="product-img">
+									<a href="#"><img src="img/home/tachka.png" alt="Садовая Тачка"></a>
+								</div>
+								<div class="product-title">
+									<a href="#">Forte WB6407A Тачка садовая</a>
+								</div>
+								<div class="product-code">
+									Код товара: 12354
+								</div>
+								<div class="product-oldprice">
+									<span>592</span> грн
+								</div>
+								<div class="product-price">
+									<span>566</span> грн
+								</div>
+								<div class="product-button">
+									<a href="#">купить</a>
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+			</div> <!-- /hits -->
+			
+
+			
+		</div> <!-- /main-container -->
+
+		<div class="info-container info-container--product">
+			<div class="info-cont__inner">
+
+				<div class="news-block info-block">
+					<div class="news-block__header">
+						<h3 class="news-block__title title-underline">Новости</h3>
+						<div class="info-block__button">
+							<a href="#">Все новости <img src="img/home/info-button.png" alt=""></a>
+						</div>
+					</div>
+
+					<div class="news-block__item">
+						<div class="news-block__date">
+							2019-06-11
+						</div>
+						<h3 class="news-block__topic"><a href="news-1.html">Встречайте новинки мотокос от брендов Grubhelm, Werk, Forte и Свитязь!</a></h3>
+						<div class="news-block__text">
+							<a href="news-1.html" title="Читать далее..">
+								Крупные компании представили, как и новые линейки моделей, так и улучшили уже знакомые нам мотокосы. В наличии появилось 17 единиц...
+							</a>
+						</div>
+					</div>
+
+					<div class="news-block__item">
+						<div class="news-block__date">
+							2019-06-11
+						</div>
+						<h3 class="news-block__topic"><a href="news-1.html">Встречайте новинки мотокос от брендов Grubhelm, Werk, Forte и Свитязь!</a></h3>
+						<div class="news-block__text">
+							<a href="news-1.html" title="Читать далее..">
+								Крупные компании представили, как и новые линейки моделей, так и улучшили уже знакомые нам мотокосы. В наличии появилось 17 единиц...
+							</a>
+						</div>
+					</div>
+
+					<div class="news-block__item">
+						<div class="news-block__date">
+							2019-06-11
+						</div>
+						<h3 class="news-block__topic"><a href="news-1.html">Встречайте новинки мотокос от брендов Grubhelm, Werk, Forte и Свитязь!</a></h3>
+						<div class="news-block__text">
+							<a href="news-1.html" title="Читать далее..">
+								Крупные компании представили, как и новые линейки моделей, так и улучшили уже знакомые нам мотокосы. В наличии появилось 17 единиц...
+							</a>
+						</div>
+					</div>
+
+					<div class="news-block__item">
+						<div class="news-block__date">
+							2019-06-11
+						</div>
+						<h3 class="news-block__topic"><a href="news-1.html">Встречайте новинки мотокос от брендов Grubhelm, Werk, Forte и Свитязь!</a></h3>
+						<div class="news-block__text">
+							<a href="news-1.html" title="Читать далее..">
+								Крупные компании представили, как и новые линейки моделей, так и улучшили уже знакомые нам мотокосы. В наличии появилось 17 единиц...
+							</a>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="articles-block info-block">
+					<div class="articles-block__header">
+						<h3 class="articles-block__title title-underline">Статьи</h3>
+						<div class="info-block__button info-block__button--articles">
+							<a href="#">Все статьи <img src="img/home/info-button.png" alt=""></a>
+						</div>
+					</div>
+
+					<div class="articles-block__item">
+						<h3 class="articles-block__topic">
+							<a href="#">Заточка цепи бензопилы: на станке и вручную</a>
+						</h3>
+						<div class="articles-block__text">
+							<a href="#" title="Читать статью полностью..">Чтобы ваша пила работала исправно, нужно использовать не только качественное топливо, но и следить за остротой режущих зубьев. Как...</a>
+						</div>
+					</div>
+
+					<div class="articles-block__item">
+						<h3 class="articles-block__topic">
+							<a href="#">Заточка цепи бензопилы: на станке и вручную</a>
+						</h3>
+						<div class="articles-block__text">
+							<a href="#" title="Читать статью полностью..">Чтобы ваша пила работала исправно, нужно использовать не только качественное топливо, но и следить за остротой режущих зубьев. Как...</a>
+						</div>
+					</div>
+
+					<div class="articles-block__item">
+						<h3 class="articles-block__topic">
+							<a href="#">Заточка цепи бензопилы: на станке и вручную</a>
+						</h3>
+						<div class="articles-block__text">
+							<a href="#" title="Читать статью полностью..">Чтобы ваша пила работала исправно, нужно использовать не только качественное топливо, но и следить за остротой режущих зубьев. Как...</a>
+						</div>
+					</div>
+
+					<div class="articles-block__item">
+						<h3 class="articles-block__topic">
+							<a href="#">Заточка цепи бензопилы: на станке и вручную</a>
+						</h3>
+						<div class="articles-block__text">
+							<a href="#" title="Читать статью полностью..">Чтобы ваша пила работала исправно, нужно использовать не только качественное топливо, но и следить за остротой режущих зубьев. Как...</a>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="video-block info-block">
+					<div class="video-block__header">
+						<h3 class="video-block__title title-underline">Видео</h3>
+						<div class="info-block__button info-block__button--video">
+							<a href="#">Все видео <img src="img/home/info-button.png" alt=""></a>
+						</div>
+					</div>
+
+					<div class="video-block__item">
+						<div class="video-block__topic">
+							<a href="#">Садовый измельчитель GRUNHELM ES-24</a>
+						</div>
+						<div class="video-block__video">
+							<img src="img/home/play-button.png" alt="" class="video-play">
+							<!-- Placeholder -->
+							<img src="img/home/video-placeholder.png" class="video-placeholder" alt="">
+						</div>
+					</div>
+
+					<div class="video-block__item">
+						<div class="video-block__topic">
+							<a href="#">Обзор мототрактора Форте</a>
+						</div>
+						<div class="video-block__video">
+							<img src="img/home/play-button.png" alt="" class="video-play">
+							<!-- Placeholder -->
+							<img src="img/home/video-placeholder.png" class="video-placeholder" alt="">
+						</div>
+					</div>
+
+
+
+
+				</div>
+
+			</div>
+		</div> <!-- /info-container -->
+	</div>
+</div>
+
+
+
+
+
+
+<footer class="footer">
+	<div class="footer-container">
+		<div class="footer__inner">
+
+			<div class="footer__col">
+				<h4 class="footer__title">информация о компании</h4>
+				<a href="#" class="footer__link">О компании</a>
+				<a href="#" class="footer__link">Контакты</a>
+				<a href="#" class="footer__link">Вакансии</a>
+			</div>
+
+			<div class="footer__col">
+				<h4 class="footer__title">Помощь</h4>
+				<a href="#" class="footer__link">Оплата и доставка</a>
+				<a href="#" class="footer__link">Возврат товара</a>
+				<a href="#" class="footer__link">Вопросы и ответы</a>
+				<a href="#" class="footer__link">Сервисные центры</a>
+				<a href="#" class="footer__link">Отследить заказ</a>
+			</div>
+
+			<div class="footer__col">
+				<h4 class="footer__title">Сотрудничество</h4>
+				<a href="#" class="footer__link">Кабинет B2B для партнеров</a>
+				<a href="#" class="footer__link">Для поставщиков</a>
+				<a href="#" class="footer__link">Для частных лиц</a>
+				<a href="#" class="footer__link">Для корпоративных клиентов</a>
+			</div>
+
+			<div class="footer__col">
+				<h4 class="footer__title">
+					Контактная информация
+				</h4>
+				<a href="tel:+0800750250" class="footer__link">тел: 0800-555-22</a>
+				<a href="#" class="footer__link">Адрес:</a>
+				<p class="footer__link">Принимаем к оплате:</p>
+				<div class="footer__payment">
+					<img src="img/home/mastercard.png" alt="">
+					<img src="img/home/visa-logo.png" alt="">
+					<img src="img/home/privat.png" alt="">
+				</div>
+			</div>
+
+		</div>
+		<div class="footer__year">
+			2019
+		</div>
+	</div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="libs/jQuery/jquery-3.4.1.min.js"></script>
+<script src="libs/slick-1.8.1/slick/slick.min.js"></script>
+<script src="js/common.js"></script>
+</body>
+</html>

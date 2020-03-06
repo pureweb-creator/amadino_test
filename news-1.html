@@ -1,0 +1,5694 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="css/main.css">
+	<!-- Fonts -->
+	<link rel="stylesheet" href="fonts/BebasNeue/stylesheet.css">
+	<link rel="stylesheet" href="fonts/Gilroy/stylesheet.css">
+
+	<!-- Slick -->
+	<link rel="stylesheet" href="libs/slick-1.8.1/slick/slick.css">
+
+	<title>Новость</title>
+</head>
+<body>
+	
+	
+<header class="header">
+	<div class="header-container">
+		<div class="header__logo">
+			
+		</div>
+
+		<div class="header__nav">
+			<nav class="nav">
+				<a href="#" class="nav__link">О компании</a>
+				<a href="#" class="nav__link">Возврат товара</a>
+				<a href="#" class="nav__link">Доставка и оплата</a>
+				<a href="#" class="nav__link">Контакты</a>
+				<a href="#" class="nav__link">Акции!</a>
+			</nav>
+			<input type="search" class="header__search" placeholder="Поиск">
+		</div>
+
+		<div class="header__right">
+			<div class="right__sup">
+				<div class="signup-button">
+					<a href="#" id="signUpButton">
+						<img src="img/reg-icon.png" alt="">Регистрация/Вход
+					</a>
+				</div>
+				<div class="cart-button">
+					<a href="cart.html">
+						<img src="img/cart-icon.png" alt="">Корзина
+						<span class="cart-number">1</span>
+					</a>
+				</div>
+			</div>
+			<div class="right__sub">
+				<div class="contact-phone">
+					<a href="tel:+0800750250"><img src="img/phone-icon.png" alt=""> 0800  <span class="color-green">750 250</span></a>
+				</div>
+
+				<div class="contact-schedule">
+					<img src="img/clock-icon.png" alt=""><span class="color-green">9:00</span> до <span class="color-green">18:00</span> (Пн - Пт)
+				</div>
+			</div>
+		</div>
+
+		<div class="header-mobile">
+
+			<div class="hm__top">
+				<div class="header__logo">
+					<a href="index.html"><img src="img/header-logo.png" alt="Amadin"></a>
+				</div>
+
+				<img src="img/burger-menu.png" class="burger-button" id="burgerButton" alt="">
+			</div>
+
+			<div class="hm__middle">
+				<input type="search" class="header__search" placeholder="Поиск">
+			</div>
+			<div class="hm__bottom">
+
+				<div class="contact-phone">
+					<a href="tel:+0800750250"><img src="img/phone-icon.png" alt=""> 0800  <span class="color-green">750 250</span></a>
+				</div>
+
+				<div class="cart-button">
+					<a href="cart.html">
+						<img src="img/cart-icon.png" alt="">Корзина
+						<span class="cart-number">1</span>
+					</a>
+				</div>
+
+			</div>
+			
+		</div>
+
+		<div class="header__menu" id="mobileMenu">
+			<div class="header__menu-inner">
+				<div class="header__menu-reg">
+					<a href="#" id="regButton2"><img src="img/reg-mobie.png" alt=""> Регистрация/Вход</a>
+				</div>
+				<div class="header__menu-nav">
+					<a href="index.html">Главная</a>
+					<a href="#">О компании</a>
+					<a href="#">Возврат товара</a>
+					<a href="#">Доставка и оплата</a>
+					<a href="#">Контакты</a>
+					<a href="#">Акции</a>
+				</div>
+			</div>
+
+			<div class="header__menu-black">
+
+			</div>
+		</div>
+
+		
+	</div>
+</header>
+<div class="registration" id="registrationModal">
+	
+	<img src="img/home/x-modal-icon.png" title="Назад" alt="Назад" class="reg__close" id="exitButton">
+	
+	
+	<div class="modal-first" id="modalFirst">
+		<button class="modal__buyers-button" id="buyersButton">Я покупатель или хочу им стать</button>
+
+		<button class="modal__partners-button" id="partnersButton">Я партнер или хочу им стать</button>
+	</div>
+	
+	<div class="modal__buyers" id="buyers">
+
+		<div class="modal__signin">
+			<div class="reg__title">Вход для покупателей</div>
+			<form action="#" class="modal__signing">
+				<input type="text" name placeholder="Имя">
+				<input type="text" name placeholder="Фамилия">
+				<input type="email" name placeholder="E-mail">
+				<button class="btn">Войти</button>
+			</form>
+		</div>
+
+		<div class="modal__signup">
+			<div class="reg__title">Регистрация покупателя</div>
+			<form action="#" class="modal__signing">
+				<input type="text" name placeholder="Имя">
+				<input type="text" name placeholder="Фамилия">
+				<input type="email" name placeholder="E-mail">
+				<button class="btn">Зарегистрироваться</button>
+			</form>
+		</div>
+
+	</div>
+
+	<div class="modal__partners" id="partners">
+
+		<div class="modal__signin">
+			<div class="reg__title">Вход для партнеров</div>
+			<form action="#" class="modal__signing">
+				<input type="text" name placeholder="Имя">
+				<input type="text" name placeholder="Фамилия">
+				<input type="email" name placeholder="E-mail">
+				<button class="btn">Войти как партнер</button>
+			</form>
+		</div>
+
+		<div class="modal__signup">
+			<div class="reg__title">Регистрация для партнеров</div>
+			<form action="#" class="modal__signing">
+				<input type="text" name placeholder="Имя">
+				<input type="text" name placeholder="Фамилия">
+				<input type="email" name placeholder="E-mail">
+				<button class="btn">Зарегистрироваться</button>
+			</form>
+		</div>
+
+	</div>
+</div>
+
+
+<div class="page-wrapper">
+	<aside class="aside">
+		<div class="aside__logo">
+			<a href="index.html">
+				<img src="img/header-logo.png" alt="Amadin">
+			</a>
+		</div>
+		<div class="aside__inner">
+			<h3 class="aside__title title-underline" id="asideButton">Каталог Товаров</h3>
+			<ul class="aside__nav">
+				<li class="aside__nav-item">
+					<a href="#">Техника, оборудование, инструменты</a>
+					<ul class="aside__nav-sublist">
+						
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты1</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nab-siblist2x-more">
+									<a href="#">Еще..</a>
+								</li>
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-1.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-1.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nab-siblist2x-more">
+									<a href="#">Еще..</a>
+								</li>
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nab-siblist2x-more">
+									<a href="#">Еще..</a>
+								</li>
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								
+							</ul>
+						</li>
+						
+						
+					</ul>
+				</li>
+
+				<li class="aside__nav-item">
+					<a href="#">Дача, сад и огород</a>
+					<ul class="aside__nav-sublist">
+						
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты1</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nab-siblist2x-more">
+									<a href="#">Еще..</a>
+								</li>
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-1.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-1.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nab-siblist2x-more">
+									<a href="#">Еще..</a>
+								</li>
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nab-siblist2x-more">
+									<a href="#">Еще..</a>
+								</li>
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								
+							</ul>
+						</li>
+						
+						
+					</ul>
+				</li>
+
+				<li class="aside__nav-item">
+					<a href="#">Водоснабжение, сантехника, полив, фильтра</a>
+					<ul class="aside__nav-sublist">
+						
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты1</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nab-siblist2x-more">
+									<a href="#">Еще..</a>
+								</li>
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-1.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-1.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nab-siblist2x-more">
+									<a href="#">Еще..</a>
+								</li>
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nab-siblist2x-more">
+									<a href="#">Еще..</a>
+								</li>
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								
+							</ul>
+						</li>
+						
+						
+					</ul>
+				</li>
+
+				<li class="aside__nav-item">
+					<a href="#">Активный отдых, спорт и туризм</a>
+					<ul class="aside__nav-sublist">
+						
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты1</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nab-siblist2x-more">
+									<a href="#">Еще..</a>
+								</li>
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-1.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-1.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nab-siblist2x-more">
+									<a href="#">Еще..</a>
+								</li>
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nab-siblist2x-more">
+									<a href="#">Еще..</a>
+								</li>
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								
+							</ul>
+						</li>
+						
+						
+					</ul>
+				</li>
+
+				<li class="aside__nav-item">
+					<a href="#">Безопасность и видеонаблюдение</a>
+					<ul class="aside__nav-sublist">
+						
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты1</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nab-siblist2x-more">
+									<a href="#">Еще..</a>
+								</li>
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-1.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-1.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nab-siblist2x-more">
+									<a href="#">Еще..</a>
+								</li>
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nab-siblist2x-more">
+									<a href="#">Еще..</a>
+								</li>
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								
+							</ul>
+						</li>
+						
+						
+					</ul>
+				</li>
+
+				<li class="aside__nav-item">
+					<a href="#">Товары для дома</a>
+					<ul class="aside__nav-sublist">
+						
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты1</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nab-siblist2x-more">
+									<a href="#">Еще..</a>
+								</li>
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-1.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-1.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nab-siblist2x-more">
+									<a href="#">Еще..</a>
+								</li>
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nab-siblist2x-more">
+									<a href="#">Еще..</a>
+								</li>
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								
+							</ul>
+						</li>
+						
+						
+					</ul>
+				</li>
+
+				<li class="aside__nav-item">
+					<a href="#">Красота и здоровье</a>
+					<ul class="aside__nav-sublist">
+						
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты1</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nab-siblist2x-more">
+									<a href="#">Еще..</a>
+								</li>
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-1.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-1.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nab-siblist2x-more">
+									<a href="#">Еще..</a>
+								</li>
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nab-siblist2x-more">
+									<a href="#">Еще..</a>
+								</li>
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								
+							</ul>
+						</li>
+						
+						
+					</ul>
+				</li>
+				<li class="aside__nav-item">
+					<a href="#">Техника, оборудование, инструменты</a>
+					<ul class="aside__nav-sublist">
+						
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты1</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nab-siblist2x-more">
+									<a href="#">Еще..</a>
+								</li>
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-1.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-1.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nab-siblist2x-more">
+									<a href="#">Еще..</a>
+								</li>
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nab-siblist2x-more">
+									<a href="#">Еще..</a>
+								</li>
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								
+							</ul>
+						</li>
+						
+						
+					</ul>
+				</li>
+
+				<li class="aside__nav-item">
+					<a href="#">Дача, сад и огород</a>
+					<ul class="aside__nav-sublist">
+						
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты1</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nab-siblist2x-more">
+									<a href="#">Еще..</a>
+								</li>
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-1.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-1.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nab-siblist2x-more">
+									<a href="#">Еще..</a>
+								</li>
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nab-siblist2x-more">
+									<a href="#">Еще..</a>
+								</li>
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								
+							</ul>
+						</li>
+						
+						
+					</ul>
+				</li>
+
+				<li class="aside__nav-item">
+					<a href="#">Водоснабжение, сантехника, полив, фильтра</a>
+					<ul class="aside__nav-sublist">
+						
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты1</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nab-siblist2x-more">
+									<a href="#">Еще..</a>
+								</li>
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-1.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-1.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nab-siblist2x-more">
+									<a href="#">Еще..</a>
+								</li>
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nab-siblist2x-more">
+									<a href="#">Еще..</a>
+								</li>
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								
+							</ul>
+						</li>
+						
+						
+					</ul>
+				</li>
+
+				<li class="aside__nav-item">
+					<a href="#">Активный отдых, спорт и туризм</a>
+					<ul class="aside__nav-sublist">
+						
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты1</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nab-siblist2x-more">
+									<a href="#">Еще..</a>
+								</li>
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-1.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-1.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nab-siblist2x-more">
+									<a href="#">Еще..</a>
+								</li>
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nab-siblist2x-more">
+									<a href="#">Еще..</a>
+								</li>
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								
+							</ul>
+						</li>
+						
+						
+					</ul>
+				</li>
+
+				<li class="aside__nav-item">
+					<a href="#">Безопасность и видеонаблюдение</a>
+					<ul class="aside__nav-sublist">
+						
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты1</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nab-siblist2x-more">
+									<a href="#">Еще..</a>
+								</li>
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-1.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-1.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nab-siblist2x-more">
+									<a href="#">Еще..</a>
+								</li>
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nab-siblist2x-more">
+									<a href="#">Еще..</a>
+								</li>
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								
+							</ul>
+						</li>
+						
+						
+					</ul>
+				</li>
+
+				<li class="aside__nav-item">
+					<a href="#">Товары для дома</a>
+					<ul class="aside__nav-sublist">
+						
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты1</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nab-siblist2x-more">
+									<a href="#">Еще..</a>
+								</li>
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-1.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-1.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nab-siblist2x-more">
+									<a href="#">Еще..</a>
+								</li>
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nab-siblist2x-more">
+									<a href="#">Еще..</a>
+								</li>
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								
+							</ul>
+						</li>
+						
+						
+					</ul>
+				</li>
+
+				<li class="aside__nav-item">
+					<a href="#">Красота и здоровье</a>
+					<ul class="aside__nav-sublist">
+						
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты1</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nab-siblist2x-more">
+									<a href="#">Еще..</a>
+								</li>
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-1.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-1.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nab-siblist2x-more">
+									<a href="#">Еще..</a>
+								</li>
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nab-siblist2x-more">
+									<a href="#">Еще..</a>
+								</li>
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								
+							</ul>
+						</li>
+						
+						
+					</ul>
+				</li>
+				<li class="aside__nav-item">
+					<a href="#">Техника, оборудование, инструменты</a>
+					<ul class="aside__nav-sublist">
+						
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты1</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nab-siblist2x-more">
+									<a href="#">Еще..</a>
+								</li>
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-1.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-1.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nab-siblist2x-more">
+									<a href="#">Еще..</a>
+								</li>
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nab-siblist2x-more">
+									<a href="#">Еще..</a>
+								</li>
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								
+							</ul>
+						</li>
+						
+						
+					</ul>
+				</li>
+
+				<li class="aside__nav-item">
+					<a href="#">Дача, сад и огород</a>
+					<ul class="aside__nav-sublist">
+						
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты1</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nab-siblist2x-more">
+									<a href="#">Еще..</a>
+								</li>
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-1.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-1.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nab-siblist2x-more">
+									<a href="#">Еще..</a>
+								</li>
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nab-siblist2x-more">
+									<a href="#">Еще..</a>
+								</li>
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								
+							</ul>
+						</li>
+						
+						
+					</ul>
+				</li>
+
+				<li class="aside__nav-item">
+					<a href="#">Водоснабжение, сантехника, полив, фильтра</a>
+					<ul class="aside__nav-sublist">
+						
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты1</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nab-siblist2x-more">
+									<a href="#">Еще..</a>
+								</li>
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-1.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-1.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nab-siblist2x-more">
+									<a href="#">Еще..</a>
+								</li>
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nab-siblist2x-more">
+									<a href="#">Еще..</a>
+								</li>
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								
+							</ul>
+						</li>
+						
+						
+					</ul>
+				</li>
+
+				<li class="aside__nav-item">
+					<a href="#">Активный отдых, спорт и туризм</a>
+					<ul class="aside__nav-sublist">
+						
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты1</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nab-siblist2x-more">
+									<a href="#">Еще..</a>
+								</li>
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-1.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-1.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nab-siblist2x-more">
+									<a href="#">Еще..</a>
+								</li>
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nab-siblist2x-more">
+									<a href="#">Еще..</a>
+								</li>
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								
+							</ul>
+						</li>
+						
+						
+					</ul>
+				</li>
+
+				<li class="aside__nav-item">
+					<a href="#">Безопасность и видеонаблюдение</a>
+					<ul class="aside__nav-sublist">
+						
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты1</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nab-siblist2x-more">
+									<a href="#">Еще..</a>
+								</li>
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-1.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-1.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nab-siblist2x-more">
+									<a href="#">Еще..</a>
+								</li>
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nab-siblist2x-more">
+									<a href="#">Еще..</a>
+								</li>
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								
+							</ul>
+						</li>
+						
+						
+					</ul>
+				</li>
+
+				<li class="aside__nav-item">
+					<a href="#">Товары для дома</a>
+					<ul class="aside__nav-sublist">
+						
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты1</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nab-siblist2x-more">
+									<a href="#">Еще..</a>
+								</li>
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-1.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-1.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nab-siblist2x-more">
+									<a href="#">Еще..</a>
+								</li>
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nab-siblist2x-more">
+									<a href="#">Еще..</a>
+								</li>
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								
+							</ul>
+						</li>
+						
+						
+					</ul>
+				</li>
+
+				<li class="aside__nav-item">
+					<a href="#">Красота и здоровье</a>
+					<ul class="aside__nav-sublist">
+						
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты1</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nab-siblist2x-more">
+									<a href="#">Еще..</a>
+								</li>
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-1.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-1.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nab-siblist2x-more">
+									<a href="#">Еще..</a>
+								</li>
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nab-siblist2x-more">
+									<a href="#">Еще..</a>
+								</li>
+							</ul>
+						</li>
+						<li class="aside__nav-sublist-item">
+							<a href="#">
+								<img src="img/nav-image-2.jpg" alt="">
+								Инструменты
+							</a>
+							<ul class="aside__nav-sublist2x">
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								<li class="aside__nav-siblist2x-item">
+									<a href="#">Инструменты</a>
+								</li>
+								
+							</ul>
+						</li>
+						
+						
+					</ul>
+				</li>
+			</ul>
+
+			<div class="aside__tel">
+				<a href="tel:+0800750250">0800<span class="color-green">750 250</span></a>
+				<a href="tel:+0800750250">0800<span class="color-green">750 250</span></a>
+				<a href="tel:+0800750250">0800<span class="color-green">750 250</span></a>
+				<a href="tel:+0800750250">0800<span class="color-green">750 250</span></a>
+			</div>
+
+			
+
+		</div>
+	</aside>
+	<div class="inner-wrapper">
+		<div class="main-container main-container--cart">
+
+			<div class="news">
+
+				<div class="news__header">
+					<h1 class="news__title title-underline">
+						новые модели тачек инверторов про гигалул эдишен
+					</h1>
+					<div class="news__date">29.06.2019</div>
+				</div>
+
+				<div class="news__inner">
+
+					<div class="news__top">
+						<div class="news__picture">
+							<img src="img/home/tachka.png" alt="Тачка">
+						</div>
+
+						<div class="news__text">
+							В последнее время широкое распространение получили устройства инверторного типа. Новая линейка «HOMELINE» сварочных устройств абсолютно новая как внешне, так и комплектующими. <br> <br> Представлено три новые модели (ММА-250, ММА-280, ММА-300), что работают с постоянным током в режиме ручной дуговой сварки ММА. Они небольшие по размеру, среднего ценового сегмента и подходят как для домашнего, так и профессионального использования.
+							<div class="news__text-topic"><b>Все модели поддерживают следующие функции:</b></div>
+						</div>
+
+					</div>
+
+					<div class="product-tabs__feature">
+						«Hot start» (горячий старт): для поджига электрода подаются максимальная величина тока.
+					</div>
+
+					<div class="product-tabs__feature">
+						«Anti-Sticking»: при коротком замыкании сварочный ток снижается до минимума.
+					</div>
+
+					<div class="product-tabs__feature">
+						«Arc Force»: для предотвращения залипания в момент отрыва капли металла ток возрастает до оптимального значения.
+					</div>
+
+					<div class="product-tabs__feature">
+						Воздушно- принудительное охлаждения
+					</div>
+
+					<div class="product-tabs__feature">
+						Защита от перегрева
+					</div>
+
+				</div>
+
+			</div>
+
+			<div class="same-price">
+				
+
+				<div class="offer__slider">
+
+					<div class="new-items-wrapper">
+						
+						<div class="sale-wrapper-outer">
+							<div class="product-card">
+								<div class="product-img">
+									<a href="#"><img src="img/home/tachka.png" alt="Садовая Тачка"></a>
+								</div>
+								<div class="product-title">
+									<a href="#">Forte WB6407A Тачка садовая</a>
+								</div>
+								<div class="product-code">
+									Код товара: 12354
+								</div>
+								<div class="product-oldprice">
+									<span>592</span> грн
+								</div>
+								<div class="product-price">
+									<span>566</span> грн
+								</div>
+								<div class="product-button">
+									<a href="#">купить</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="sale-wrapper-outer">
+							<div class="product-card">
+								<div class="product-img">
+									<a href="#"><img src="img/home/tachka.png" alt="Садовая Тачка"></a>
+								</div>
+								<div class="product-title">
+									<a href="#">Forte WB6407A Тачка садовая</a>
+								</div>
+								<div class="product-code">
+									Код товара: 12354
+								</div>
+								<div class="product-oldprice">
+									<span>592</span> грн
+								</div>
+								<div class="product-price">
+									<span>566</span> грн
+								</div>
+								<div class="product-button">
+									<a href="#">купить</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="sale-wrapper-outer">
+							<div class="product-card">
+								<div class="product-img">
+									<a href="#"><img src="img/home/tachka.png" alt="Садовая Тачка"></a>
+								</div>
+								<div class="product-title">
+									<a href="#">Forte WB6407A Тачка садовая</a>
+								</div>
+								<div class="product-code">
+									Код товара: 12354
+								</div>
+								<div class="product-oldprice">
+									<span>592</span> грн
+								</div>
+								<div class="product-price">
+									<span>566</span> грн
+								</div>
+								<div class="product-button">
+									<a href="#">купить</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="sale-wrapper-outer">
+							<div class="product-card">
+								<div class="product-img">
+									<a href="#"><img src="img/home/tachka.png" alt="Садовая Тачка"></a>
+								</div>
+								<div class="product-title">
+									<a href="#">Forte WB6407A Тачка садовая</a>
+								</div>
+								<div class="product-code">
+									Код товара: 12354
+								</div>
+								<div class="product-oldprice">
+									<span>592</span> грн
+								</div>
+								<div class="product-price">
+									<span>566</span> грн
+								</div>
+								<div class="product-button">
+									<a href="#">купить</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="sale-wrapper-outer">
+							<div class="product-card">
+								<div class="product-img">
+									<a href="#"><img src="img/home/tachka.png" alt="Садовая Тачка"></a>
+								</div>
+								<div class="product-title">
+									<a href="#">Forte WB6407A Тачка садовая</a>
+								</div>
+								<div class="product-code">
+									Код товара: 12354
+								</div>
+								<div class="product-oldprice">
+									<span>592</span> грн
+								</div>
+								<div class="product-price">
+									<span>566</span> грн
+								</div>
+								<div class="product-button">
+									<a href="#">купить</a>
+								</div>
+							</div>
+						</div>
+						<div class="sale-wrapper-outer">
+							<div class="product-card">
+								<div class="product-img">
+									<a href="#"><img src="img/home/tachka.png" alt="Садовая Тачка"></a>
+								</div>
+								<div class="product-title">
+									<a href="#">Forte WB6407A Тачка садовая</a>
+								</div>
+								<div class="product-code">
+									Код товара: 12354
+								</div>
+								<div class="product-oldprice">
+									<span>592</span> грн
+								</div>
+								<div class="product-price">
+									<span>566</span> грн
+								</div>
+								<div class="product-button">
+									<a href="#">купить</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="sale-wrapper-outer">
+							<div class="product-card">
+								<div class="product-img">
+									<a href="#"><img src="img/home/tachka.png" alt="Садовая Тачка"></a>
+								</div>
+								<div class="product-title">
+									<a href="#">Forte WB6407A Тачка садовая</a>
+								</div>
+								<div class="product-code">
+									Код товара: 12354
+								</div>
+								<div class="product-oldprice">
+									<span>592</span> грн
+								</div>
+								<div class="product-price">
+									<span>566</span> грн
+								</div>
+								<div class="product-button">
+									<a href="#">купить</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="sale-wrapper-outer">
+							<div class="product-card">
+								<div class="product-img">
+									<a href="#"><img src="img/home/tachka.png" alt="Садовая Тачка"></a>
+								</div>
+								<div class="product-title">
+									<a href="#">Forte WB6407A Тачка садовая</a>
+								</div>
+								<div class="product-code">
+									Код товара: 12354
+								</div>
+								<div class="product-oldprice">
+									<span>592</span> грн
+								</div>
+								<div class="product-price">
+									<span>566</span> грн
+								</div>
+								<div class="product-button">
+									<a href="#">купить</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="sale-wrapper-outer">
+							<div class="product-card">
+								<div class="product-img">
+									<a href="#"><img src="img/home/tachka.png" alt="Садовая Тачка"></a>
+								</div>
+								<div class="product-title">
+									<a href="#">Forte WB6407A Тачка садовая</a>
+								</div>
+								<div class="product-code">
+									Код товара: 12354
+								</div>
+								<div class="product-oldprice">
+									<span>592</span> грн
+								</div>
+								<div class="product-price">
+									<span>566</span> грн
+								</div>
+								<div class="product-button">
+									<a href="#">купить</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="sale-wrapper-outer">
+							<div class="product-card">
+								<div class="product-img">
+									<a href="#"><img src="img/home/tachka.png" alt="Садовая Тачка"></a>
+								</div>
+								<div class="product-title">
+									<a href="#">Forte WB6407A Тачка садовая</a>
+								</div>
+								<div class="product-code">
+									Код товара: 12354
+								</div>
+								<div class="product-oldprice">
+									<span>592</span> грн
+								</div>
+								<div class="product-price">
+									<span>566</span> грн
+								</div>
+								<div class="product-button">
+									<a href="#">купить</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="sale-wrapper-outer">
+							<div class="product-card">
+								<div class="product-img">
+									<a href="#"><img src="img/home/tachka.png" alt="Садовая Тачка"></a>
+								</div>
+								<div class="product-title">
+									<a href="#">Forte WB6407A Тачка садовая</a>
+								</div>
+								<div class="product-code">
+									Код товара: 12354
+								</div>
+								<div class="product-oldprice">
+									<span>592</span> грн
+								</div>
+								<div class="product-price">
+									<span>566</span> грн
+								</div>
+								<div class="product-button">
+									<a href="#">купить</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="sale-wrapper-outer">
+							<div class="product-card">
+								<div class="product-img">
+									<a href="#"><img src="img/home/tachka.png" alt="Садовая Тачка"></a>
+								</div>
+								<div class="product-title">
+									<a href="#">Forte WB6407A Тачка садовая</a>
+								</div>
+								<div class="product-code">
+									Код товара: 12354
+								</div>
+								<div class="product-oldprice">
+									<span>592</span> грн
+								</div>
+								<div class="product-price">
+									<span>566</span> грн
+								</div>
+								<div class="product-button">
+									<a href="#">купить</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="sale-wrapper-outer">
+							<div class="product-card">
+								<div class="product-img">
+									<a href="#"><img src="img/home/tachka.png" alt="Садовая Тачка"></a>
+								</div>
+								<div class="product-title">
+									<a href="#">Forte WB6407A Тачка садовая</a>
+								</div>
+								<div class="product-code">
+									Код товара: 12354
+								</div>
+								<div class="product-oldprice">
+									<span>592</span> грн
+								</div>
+								<div class="product-price">
+									<span>566</span> грн
+								</div>
+								<div class="product-button">
+									<a href="#">купить</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="sale-wrapper-outer">
+							<div class="product-card">
+								<div class="product-img">
+									<a href="#"><img src="img/home/tachka.png" alt="Садовая Тачка"></a>
+								</div>
+								<div class="product-title">
+									<a href="#">Forte WB6407A Тачка садовая</a>
+								</div>
+								<div class="product-code">
+									Код товара: 12354
+								</div>
+								<div class="product-oldprice">
+									<span>592</span> грн
+								</div>
+								<div class="product-price">
+									<span>566</span> грн
+								</div>
+								<div class="product-button">
+									<a href="#">купить</a>
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+			
+		</div> <!-- /main-container -->
+	</div>
+</div>
+
+
+
+
+
+
+
+
+<footer class="footer">
+	<div class="footer-container">
+		<div class="footer__inner">
+
+			<div class="footer__col">
+				<h4 class="footer__title">информация о компании</h4>
+				<a href="#" class="footer__link">О компании</a>
+				<a href="#" class="footer__link">Контакты</a>
+				<a href="#" class="footer__link">Вакансии</a>
+			</div>
+
+			<div class="footer__col">
+				<h4 class="footer__title">Помощь</h4>
+				<a href="#" class="footer__link">Оплата и доставка</a>
+				<a href="#" class="footer__link">Возврат товара</a>
+				<a href="#" class="footer__link">Вопросы и ответы</a>
+				<a href="#" class="footer__link">Сервисные центры</a>
+				<a href="#" class="footer__link">Отследить заказ</a>
+			</div>
+
+			<div class="footer__col">
+				<h4 class="footer__title">Сотрудничество</h4>
+				<a href="#" class="footer__link">Кабинет B2B для партнеров</a>
+				<a href="#" class="footer__link">Для поставщиков</a>
+				<a href="#" class="footer__link">Для частных лиц</a>
+				<a href="#" class="footer__link">Для корпоративных клиентов</a>
+			</div>
+
+			<div class="footer__col">
+				<h4 class="footer__title">
+					Контактная информация
+				</h4>
+				<a href="tel:+0800750250" class="footer__link">тел: 0800-555-22</a>
+				<a href="#" class="footer__link">Адрес:</a>
+				<p class="footer__link">Принимаем к оплате:</p>
+				<div class="footer__payment">
+					<img src="img/home/mastercard.png" alt="">
+					<img src="img/home/visa-logo.png" alt="">
+					<img src="img/home/privat.png" alt="">
+				</div>
+			</div>
+
+		</div>
+		<div class="footer__year">
+			2019
+		</div>
+	</div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="libs/jQuery/jquery-3.4.1.min.js"></script>
+<script src="libs/slick-1.8.1/slick/slick.min.js"></script>
+<script src="js/common.js"></script>
+</body>
+</html>

@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="css/main.css">
+	<!-- Fonts -->
+	<link rel="stylesheet" href="fonts/BebasNeue/stylesheet.css">
+	<link rel="stylesheet" href="fonts/Gilroy/stylesheet.css">
+
+	<!-- Slick -->
+	<link rel="stylesheet" href="libs/slick-1.8.1/slick/slick.css">
+
+	<title>B2B - Настройки</title>
+</head>
+<body>
+
+<header class="b2b-header">
+    <div class="b2b-header__logo">
+        <a href="#">
+            <img src="img/b2b/logo.png" alt="B2B"> B<span class="color-green no-margin">2</span>B
+        </a>
+    </div>
+
+    <div class="b2b-header__right" id="b2bMenu">
+        <div class="b2b-header__notifications">
+            <a href="#"><img src="img/b2b/bell.png" alt="">
+            <div class="notifications-number">1</div></a>
+        </div>
+
+        <div class="b2b-header__cart">
+            <a href="#">
+                <img src="img/b2b/cart.png" alt="">
+                <div class="notifications-number">1</div>
+            </a>
+        </div>
+
+        <div class="b2b-header__cashout" id="cashOut">
+            <a href="#">
+                <img src="img/b2b/account.png" class="b2b-header__cashout-img" alt="">
+                <img src="img/b2b/account-hover.png" class="b2b-header__cashout-img-hover" alt="">
+                Вывод средств
+            </a>
+
+            <div class="b2b-header__cashout-hover">
+                <form action="">
+                    <label for="card-number">Номер карты</label>
+                    <input type="text" class="cashout__input" id="card-number" name="card-number" placeholder="0000000000000000">
+                    <label for="full-name">ФИО Владельца</label>
+                    <input type="text" class="cashout__input" id="full-name" name="full-name" placeholder="Иванов Иван Иванович">
+                    <label for="to-leave">На счету оставить</label>
+                    <input type="text" class="cashout__input" id="to-leave" name="to-leave" placeholder="20">
+                    <button type="submit">Готово</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="b2b-header__user">
+            <a href="#">
+                <img src="img/b2b/user-pic.png" alt="">
+                Иван Иван
+            </a>
+        </div>
+
+        <div class="b2b-header__settings">
+            <a href="#">
+                <img src="img/b2b/settings.png" alt="">
+            </a>
+        </div>
+    </div>
+</header>
+
+<aside class="b2b-sidebar">
+    <div class="b2b-side__menu">
+        <img src="img/b2b/menu.png" id="b2bMenuButton" alt="Menu">
+    </div>
+
+    <div class="b2b-side__user">
+        <a href="#">
+            <img src="img/b2b/user-pic.png" alt="">
+        </a>
+    </div>
+
+    <ul class="b2b-nav">
+        <li class="b2b-nav__link">
+            <a href="b2b-catalog.html" class="">
+                <img src="img/b2b/catalog.png" alt="" class="b2b-nav__link-img">
+                <img src="img/b2b/catalog-hover.png" alt="" class="b2b-nav__link-img--hover">
+            </a>
+            <div class="b2b-nav__sublink b2b-nav__sublink--catalog">
+                Каталог
+                <div class="b2b-nav__catalog">
+                    Инструменты
+
+                    <div class="b2b-nav__subcatalog">
+                        <a href="#">Электроинструменты</a>
+                        <a href="#">Электроинструменты</a>
+                        <a href="#">Электроинструменты</a>
+                        <a href="#">Электроинструменты</a>
+                        <a href="#">Электроинструменты</a>
+                        <a href="#">Электроинструменты</a>
+                        <a href="#">Электроинструменты</a>
+                        <a href="#">Электроинструменты</a>
+                        <a href="#">Электроинструменты</a>
+                    </div>
+                </div>
+
+                <div class="b2b-nav__catalog">
+                    Инструменты
+
+                    <div class="b2b-nav__subcatalog">
+                        <a href="#">Электроинструменты</a>
+                        <a href="#">Электроинструменты</a>
+                        <a href="#">Электроинструменты</a>
+                        <a href="#">Электроинструменты</a>
+                        <a href="#">Электроинструменты</a>
+                        <a href="#">Электроинструменты</a>
+                        <a href="#">Электроинструменты</a>
+                        <a href="#">Электроинструменты</a>
+                        <a href="#">Электроинструменты</a>
+                    </div>
+                </div>
+
+                <div class="b2b-nav__catalog">
+                    Инструменты
+
+                    <div class="b2b-nav__subcatalog">
+                        <a href="#">Электроинструменты</a>
+                        <a href="#">Электроинструменты</a>
+                        <a href="#">Электроинструменты</a>
+                        <a href="#">Электроинструменты</a>
+                        <a href="#">Электроинструменты</a>
+                        <a href="#">Электроинструменты</a>
+                        <a href="#">Электроинструменты</a>
+                        <a href="#">Электроинструменты</a>
+                        <a href="#">Электроинструменты</a>
+                    </div>
+                </div>
+
+                <div class="b2b-nav__catalog">
+                    Инструменты
+
+                    <div class="b2b-nav__subcatalog">
+                        <a href="#">Электроинструменты</a>
+                        <a href="#">Электроинструменты</a>
+                        <a href="#">Электроинструменты</a>
+                        <a href="#">Электроинструменты</a>
+                        <a href="#">Электроинструменты</a>
+                        <a href="#">Электроинструменты</a>
+                        <a href="#">Электроинструменты</a>
+                        <a href="#">Электроинструменты</a>
+                        <a href="#">Электроинструменты</a>
+                    </div>
+                </div>
+
+                <div class="b2b-nav__catalog">
+                    Инструменты
+
+                    <div class="b2b-nav__subcatalog">
+                        <a href="#">Электроинструменты</a>
+                        <a href="#">Электроинструменты</a>
+                        <a href="#">Электроинструменты</a>
+                        <a href="#">Электроинструменты</a>
+                        <a href="#">Электроинструменты</a>
+                        <a href="#">Электроинструменты</a>
+                        <a href="#">Электроинструменты</a>
+                        <a href="#">Электроинструменты</a>
+                        <a href="#">Электроинструменты</a>
+                    </div>
+                </div>
+
+                <div class="b2b-nav__catalog">
+                    Инструменты
+
+                    <div class="b2b-nav__subcatalog">
+                        <a href="#">Электроинструменты</a>
+                        <a href="#">Электроинструменты</a>
+                        <a href="#">Электроинструменты</a>
+                        <a href="#">Электроинструменты</a>
+                        <a href="#">Электроинструменты</a>
+                        <a href="#">Электроинструменты</a>
+                        <a href="#">Электроинструменты</a>
+                        <a href="#">Электроинструменты</a>
+                        <a href="#">Электроинструменты</a>
+                    </div>
+                </div>
+
+                <div class="b2b-nav__catalog">
+                    Инструменты
+
+                    <div class="b2b-nav__subcatalog">
+                        <a href="#">Электроинструменты</a>
+                        <a href="#">Электроинструменты</a>
+                        <a href="#">Электроинструменты</a>
+                        <a href="#">Электроинструменты</a>
+                        <a href="#">Электроинструменты</a>
+                        <a href="#">Электроинструменты</a>
+                        <a href="#">Электроинструменты</a>
+                        <a href="#">Электроинструменты</a>
+                        <a href="#">Электроинструменты</a>
+                    </div>
+                </div>
+            </div>
+        </li>
+
+        <li class="b2b-nav__link">
+            <a href="b2b-orders.html" class="">
+                <img src="img/b2b/orders.png" alt="" class="b2b-nav__link-img">
+                <img src="img/b2b/orders-hover.png" alt="" class="b2b-nav__link-img--hover">
+            </a>
+            <div class="b2b-nav__sublink">
+                Заказы
+                
+            </div>
+        </li>
+
+        <li class="b2b-nav__link">
+            <a href="b2b-refunds.html" class="">
+                <img src="img/b2b/refunds.png" alt="" class="b2b-nav__link-img">
+                <img src="img/b2b/refunds-hover.png" alt="" class="b2b-nav__link-img--hover">
+            </a>
+            <div class="b2b-nav__sublink">
+                Возвраты
+            </div>
+        </li>
+
+        <li class="b2b-nav__link">
+            <a href="b2b-account.html" class="">
+                <img src="img/b2b/account.png" alt="" class="b2b-nav__link-img">
+                <img src="img/b2b/account-hover.png" alt="" class="b2b-nav__link-img--hover">
+            </a>
+            <div class="b2b-nav__sublink">
+                Счет
+            </div>
+        </li>
+
+        <li class="b2b-nav__link">
+            <a href="b2b-contacts.html" class="">
+                <img src="img/b2b/contacts.png" alt="" class="b2b-nav__link-img">
+                <img src="img/b2b/contacts-hover.png" alt="" class="b2b-nav__link-img--hover">
+            </a>
+            <div class="b2b-nav__sublink">
+                Контакты
+            </div>
+        </li>
+
+        <li class="b2b-nav__link">
+            <a href="b2b-settings.html" class="active">
+                <img src="img/b2b/settings.png" alt="" class="b2b-nav__link-img">
+                <img src="img/b2b/settings-hover.png" alt="" class="b2b-nav__link-img--hover">
+            </a>
+            <div class="b2b-nav__sublink">
+                Настройки
+            </div>
+        </li>
+
+        <li class="b2b-nav__link">
+            <a href="b2b-questions.html" class="">
+                <img src="img/b2b/questions.png" alt="" class="b2b-nav__link-img">
+                <img src="img/b2b/questions-hover.png" alt="" class="b2b-nav__link-img--hover">
+            </a>
+            <div class="b2b-nav__sublink">
+                Вопросы
+            </div>
+        </li>
+    </ul>
+</aside>
+
+<div class="b2b-container">
+
+    <div class="b2b-top">
+        <div class="b2b-pagetitle title-underline">
+            Настройки
+        </div>
+
+    </div>
+
+    <div class="b2b-subtop">
+        <div class="subtop__categoryname">
+            Выгрузка каталога товаров
+        </div>
+        
+    </div>
+
+    <div class="b2b-settings__warning">
+        <div class="fw-bold">Внимание</div>
+        Настройки каталога напрямую влияют на товар, который попадает в выгрузку YML или XLSX (Excel). Если вас не интересуют определенные группы товара или бренды, рекомендуем отключить их перед выгрузкой и нажмите на кнопку "Подтвердить" чтобы сохранить изменения. Полную выгрузку каталога можно делать не чаще чем 1 раз в 4 часа.
+    </div>
+
+    <div class="settings">
+        <form action="" class="settings-form">
+            <div class="settings__what">
+                Формат файла выгрузки
+            </div>
+            <select name="file-format" class="settings__select">
+                <option value="yml">YML</option>
+                <option value="2">2</option>
+                <option value="3">4</option>
+                <option value="5">6</option>
+            </select>
+
+            <div class="settings__what">
+                Тип выгрузки каталога
+            </div>
+            <select name="catalog-type" class="settings__select">
+                <option value="yml">Полная</option>
+                <option value="2">2</option>
+                <option value="3">4</option>
+                <option value="5">6</option>
+            </select>
+
+            <div class="settings__what">
+                Фотографии товара
+            </div>
+            <select name="photos" class="settings__select">
+                <option value="yml">Доступны по ссылке</option>
+                <option value="2">2</option>
+                <option value="3">4</option>
+                <option value="5">6</option>
+            </select>
+
+            <div class="settings__split">
+                <div class="">
+                    <div class="settings__what">
+                        Наценка к розничной цене, %
+                    </div>
+
+                    <input type="text" class="settings__input-1" value="0">
+                    <button class="green-btn green-btn--2">Обновить</button>
+
+                    <div class="settings__checks">
+                        <label for="check1">Изображения с водяным знаком</label>
+                        <input type="checkbox" class="settings__checkbox" id="check1" name="pic-w-water">
+                        <span class="check-mark"></span>
+                        
+                    </div>
+
+                    <div class="settings__checks">
+                        <label for="check2">Выгружать товары, не имеющие фото</label>
+                        <input type="checkbox" class="settings__checkbox" id="check2" name="items-w-o-pic" checked>
+
+                        <span class="check-mark"></span>
+                    </div>
+
+                </div>
+
+                <div class="">
+                    <div class="settings__what">
+                        Фильтр товара по цене, от
+                    </div>
+                    <select name="filter-from" class="settings__select-2">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                    </select>
+                    <span class="fw-normal">до</span>
+                    <input type="text" class="settings__input-2" value="0">
+                    <button class="green-btn green-btn--2">Сохранить</button>
+                </div>
+            </div>
+
+            <div class="settings__what">
+                По окончании формирования файла экспорта, ссылка  на его загрузку будет отправлена на ваш e-mail.
+                <button class="green-btn">Получить файл</button>
+            </div>
+
+            <div class="settings__bigwhat">
+                Ваша ссылка обновления цен и остатка
+            </div>
+
+            <div class="settings__lilwhat">
+                Внимание! Файл по данной ссылке не содержит фото, описаний и характеристик товара.
+            </div>
+
+            <div class="settings__what">
+                Ваша ссылка YML
+            </div>
+
+            <input type="text" id="copyInput1" class="settings__input-3" value="afggkhhqwklj;glkj;lklkg-0[wi[di[fpk';lk'a;ka[sdkljohqloihvoihlhpooilhnjlkcjvljpdk" readonly>
+            <a class="green-btn" id="copyBtn1"">Скопировать ссылку</a>
+
+            <div class="settings__what">
+                Ваша ссылка YML с оптовой ценой
+            </div>
+            <input type="text" id="copyInput2" class="settings__input-3" value="afggkhhqwklj;glkj;lklkg-0[wi[di[fpk';lk'a;ka[sdkljohqloihvoihlhpooilhnjlkcjvljpdk" readonly>
+            <a class="green-btn" id="copyBtn2"">Скопировать ссылку</a>
+
+            <div class="settings__bigwhat">
+                Выгрузка для rozetka.com.ua
+            </div>
+
+            <div class="settings__what">
+                Короткое название магазина
+            </div>
+            <input type="text" placeholder="Доступны по ссылке" class="settings__input-4">
+
+            <div class="settings__what">
+                Полное наименование компании, владеющей магазином
+            </div>
+            <input type="text" placeholder="Доступны по ссылке" class="settings__input-4">
+
+            <div class="settings__what">
+                URL главной страницы магазина
+            </div>
+            <input type="text" placeholder="Доступны по ссылке" class="settings__input-4">
+
+            <div class="settings__what">
+                Наценка для rozetka в розничной цене, %
+            </div>
+            <input type="text" placeholder="Доступны по ссылке" class="settings__input-4">
+
+            <div class="settings__what">
+                По окончании формирования файла экспорта для rozetka.com.ua, ссылка  на его загрузку будет отправлена на ваш e-mail.
+                <button class="green-btn">Получить файл</button>
+            </div>
+
+            <div class="settings__password">
+                <div class="settings__bigwhat">
+                    Сменить пароль
+                </div>
+                <div class="settings__what">
+                    Введите старый пароль
+                </div>
+                <input type="password" placeholder="********" name="old-password" id="oldPassword" class="settings__pass">
+                <a href="#" class="green-btn" id="showPass"></a>
+
+                <div class="settings__what">
+                    Введите новый пароль
+                </div>
+                <input type="password" placeholder="********" name="new-password" id="newPassword" class="settings__pass settings__pass-2">
+                <div class="settings__what">
+                    Повторите новый пароль
+                </div>
+                <input type="password" placeholder="********" name="again-new-password" id="againNewPassword" class="settings__pass settings__pass-2">
+            </div>
+            <div class="settings__bigwhat">
+                Настройки категорий товара
+            </div>
+
+            <div class="settings__pick-categories">
+                <div class="pick-catg__col">
+                    <div class="pick-catg__item">
+                        <label>Инструменты[9523]
+                            <input type="checkbox" class="pick-catg__input" name="category">
+                            <span class="checkmark1"></span>
+                        </label>
+                    </div>
+
+                    <div class="pick-catg__item">
+                        <label>Инструменты[9523]
+                            <input type="checkbox" class="pick-catg__input" name="category">
+                            <span class="checkmark1"></span>
+                        </label>
+                    </div>
+
+                    <div class="pick-catg__item">
+                        <label>Инструменты[9523]
+                            <input type="checkbox" class="pick-catg__input" name="category">
+                            <span class="checkmark1"></span>
+                        </label>
+                    </div>
+
+                    <div class="pick-catg__item">
+                        <label>Инструменты[9523]
+                            <input type="checkbox" class="pick-catg__input" name="category">
+                            <span class="checkmark1"></span>
+                        </label>
+                    </div>
+
+                    <div class="pick-catg__item">
+                        <label>Инструменты[9523]
+                            <input type="checkbox" class="pick-catg__input" name="category">
+                            <span class="checkmark1"></span>
+                        </label>
+                    </div>
+
+                    <div class="pick-catg__item">
+                        <label>Инструменты[9523]
+                            <input type="checkbox" class="pick-catg__input" name="category">
+                            <span class="checkmark1"></span>
+                        </label>
+                    </div>
+
+                    <div class="pick-catg__item">
+                        <label>Инструменты[9523]
+                            <input type="checkbox" class="pick-catg__input" name="category">
+                            <span class="checkmark1"></span>
+                        </label>
+                    </div>
+
+                </div>
+
+                <div class="pick-catg__col">
+                    <div class="pick-catg__item">
+                        <label>Инструменты[9523]
+                            <input type="checkbox" class="pick-catg__input" name="category">
+                            <span class="checkmark1"></span>
+                        </label>
+                    </div>
+
+                    <div class="pick-catg__item">
+                        <label>Инструменты[9523]
+                            <input type="checkbox" class="pick-catg__input" name="category">
+                            <span class="checkmark1"></span>
+                        </label>
+                    </div>
+
+                    <div class="pick-catg__item">
+                        <label>Инструменты[9523]
+                            <input type="checkbox" class="pick-catg__input" name="category">
+                            <span class="checkmark1"></span>
+                        </label>
+                    </div>
+
+                    <div class="pick-catg__item">
+                        <label>Инструменты[9523]
+                            <input type="checkbox" class="pick-catg__input" name="category">
+                            <span class="checkmark1"></span>
+                        </label>
+                    </div>
+
+                    <div class="pick-catg__item">
+                        <label>Инструменты[9523]
+                            <input type="checkbox" class="pick-catg__input" name="category">
+                            <span class="checkmark1"></span>
+                        </label>
+                    </div>
+
+                    <div class="pick-catg__item">
+                        <label>Инструменты[9523]
+                            <input type="checkbox" class="pick-catg__input" name="category">
+                            <span class="checkmark1"></span>
+                        </label>
+                    </div>
+
+                    <div class="pick-catg__item">
+                        <label>Инструменты[9523]
+                            <input type="checkbox" class="pick-catg__input" name="category">
+                            <span class="checkmark1"></span>
+                        </label>
+                    </div>
+
+                </div>
+
+                <div class="pick-catg__col">
+                    <div class="pick-catg__item">
+                        <label>Инструменты[9523]
+                            <input type="checkbox" class="pick-catg__input" name="category">
+                            <span class="checkmark1"></span>
+                        </label>
+                    </div>
+
+                    <div class="pick-catg__item">
+                        <label>Инструменты[9523]
+                            <input type="checkbox" class="pick-catg__input" name="category">
+                            <span class="checkmark1"></span>
+                        </label>
+                    </div>
+
+                    <div class="pick-catg__item">
+                        <label>Инструменты[9523]
+                            <input type="checkbox" class="pick-catg__input" name="category">
+                            <span class="checkmark1"></span>
+                        </label>
+                    </div>
+
+                    <div class="pick-catg__item">
+                        <label>Инструменты[9523]
+                            <input type="checkbox" class="pick-catg__input" name="category">
+                            <span class="checkmark1"></span>
+                        </label>
+                    </div>
+
+                    <div class="pick-catg__item">
+                        <label>Инструменты[9523]
+                            <input type="checkbox" class="pick-catg__input" name="category">
+                            <span class="checkmark1"></span>
+                        </label>
+                    </div>
+
+                    <div class="pick-catg__item">
+                        <label>Инструменты[9523]
+                            <input type="checkbox" class="pick-catg__input" name="category">
+                            <span class="checkmark1"></span>
+                        </label>
+                    </div>
+
+                    <div class="pick-catg__item">
+                        <label>Инструменты[9523]
+                            <input type="checkbox" class="pick-catg__input" name="category">
+                            <span class="checkmark1"></span>
+                        </label>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="pick-catg__buttons">
+                <a href="#" class="green-btn white-btn">Отметить/снять</a>
+                <a href="#" class="green-btn">Подтвердить</a>
+            </div>
+
+            <div class="settings__bigwhat">
+                Настройки категорий товара
+            </div>
+            <div class="settings__pick-categories">
+
+                <div class="pick-catg__col pick-catg__col-2">
+                    <div class="pick-catg__item">
+                        <label>Бренды
+                            <input type="checkbox" class="pick-catg__input" name="category">
+                            <span class="checkmark1"></span>
+                        </label>
+                    </div>
+
+                    <div class="pick-catg__item">
+                        <label>Бренды
+                            <input type="checkbox" class="pick-catg__input" name="category">
+                            <span class="checkmark1"></span>
+                        </label>
+                    </div>
+
+                    <div class="pick-catg__item">
+                        <label>Бренды
+                            <input type="checkbox" class="pick-catg__input" name="category">
+                            <span class="checkmark1"></span>
+                        </label>
+                    </div>
+
+                    <div class="pick-catg__item">
+                        <label>Бренды
+                            <input type="checkbox" class="pick-catg__input" name="category">
+                            <span class="checkmark1"></span>
+                        </label>
+                    </div>
+
+                    <div class="pick-catg__item">
+                        <label>Бренды
+                            <input type="checkbox" class="pick-catg__input" name="category">
+                            <span class="checkmark1"></span>
+                        </label>
+                    </div>
+
+                    <div class="pick-catg__item">
+                        <label>Бренды
+                            <input type="checkbox" class="pick-catg__input" name="category">
+                            <span class="checkmark1"></span>
+                        </label>
+                    </div>
+
+                    <div class="pick-catg__item">
+                        <label>Бренды
+                            <input type="checkbox" class="pick-catg__input" name="category">
+                            <span class="checkmark1"></span>
+                        </label>
+                    </div>
+
+                    <div class="pick-catg__item">
+                        <label>Бренды
+                            <input type="checkbox" class="pick-catg__input" name="category">
+                            <span class="checkmark1"></span>
+                        </label>
+                    </div>
+
+                    <div class="pick-catg__item">
+                        <label>Бренды
+                            <input type="checkbox" class="pick-catg__input" name="category">
+                            <span class="checkmark1"></span>
+                        </label>
+                    </div>
+
+                    <div class="pick-catg__item">
+                        <label>Бренды
+                            <input type="checkbox" class="pick-catg__input" name="category">
+                            <span class="checkmark1"></span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="pick-catg__col pick-catg__col-2">
+                    <div class="pick-catg__item">
+                        <label>Бренды
+                            <input type="checkbox" class="pick-catg__input" name="category">
+                            <span class="checkmark1"></span>
+                        </label>
+                    </div>
+
+                    <div class="pick-catg__item">
+                        <label>Бренды
+                            <input type="checkbox" class="pick-catg__input" name="category">
+                            <span class="checkmark1"></span>
+                        </label>
+                    </div>
+
+                    <div class="pick-catg__item">
+                        <label>Бренды
+                            <input type="checkbox" class="pick-catg__input" name="category">
+                            <span class="checkmark1"></span>
+                        </label>
+                    </div>
+
+                    <div class="pick-catg__item">
+                        <label>Бренды
+                            <input type="checkbox" class="pick-catg__input" name="category">
+                            <span class="checkmark1"></span>
+                        </label>
+                    </div>
+
+                    <div class="pick-catg__item">
+                        <label>Бренды
+                            <input type="checkbox" class="pick-catg__input" name="category">
+                            <span class="checkmark1"></span>
+                        </label>
+                    </div>
+
+                    <div class="pick-catg__item">
+                        <label>Бренды
+                            <input type="checkbox" class="pick-catg__input" name="category">
+                            <span class="checkmark1"></span>
+                        </label>
+                    </div>
+
+                    <div class="pick-catg__item">
+                        <label>Бренды
+                            <input type="checkbox" class="pick-catg__input" name="category">
+                            <span class="checkmark1"></span>
+                        </label>
+                    </div>
+
+                    <div class="pick-catg__item">
+                        <label>Бренды
+                            <input type="checkbox" class="pick-catg__input" name="category">
+                            <span class="checkmark1"></span>
+                        </label>
+                    </div>
+
+                    <div class="pick-catg__item">
+                        <label>Бренды
+                            <input type="checkbox" class="pick-catg__input" name="category">
+                            <span class="checkmark1"></span>
+                        </label>
+                    </div>
+
+                    <div class="pick-catg__item">
+                        <label>Бренды
+                            <input type="checkbox" class="pick-catg__input" name="category">
+                            <span class="checkmark1"></span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="pick-catg__col pick-catg__col-2">
+                    <div class="pick-catg__item">
+                        <label>Бренды
+                            <input type="checkbox" class="pick-catg__input" name="category">
+                            <span class="checkmark1"></span>
+                        </label>
+                    </div>
+
+                    <div class="pick-catg__item">
+                        <label>Бренды
+                            <input type="checkbox" class="pick-catg__input" name="category">
+                            <span class="checkmark1"></span>
+                        </label>
+                    </div>
+
+                    <div class="pick-catg__item">
+                        <label>Бренды
+                            <input type="checkbox" class="pick-catg__input" name="category">
+                            <span class="checkmark1"></span>
+                        </label>
+                    </div>
+
+                    <div class="pick-catg__item">
+                        <label>Бренды
+                            <input type="checkbox" class="pick-catg__input" name="category">
+                            <span class="checkmark1"></span>
+                        </label>
+                    </div>
+
+                    <div class="pick-catg__item">
+                        <label>Бренды
+                            <input type="checkbox" class="pick-catg__input" name="category">
+                            <span class="checkmark1"></span>
+                        </label>
+                    </div>
+
+                    <div class="pick-catg__item">
+                        <label>Бренды
+                            <input type="checkbox" class="pick-catg__input" name="category">
+                            <span class="checkmark1"></span>
+                        </label>
+                    </div>
+
+                    <div class="pick-catg__item">
+                        <label>Бренды
+                            <input type="checkbox" class="pick-catg__input" name="category">
+                            <span class="checkmark1"></span>
+                        </label>
+                    </div>
+
+                    <div class="pick-catg__item">
+                        <label>Бренды
+                            <input type="checkbox" class="pick-catg__input" name="category">
+                            <span class="checkmark1"></span>
+                        </label>
+                    </div>
+
+                    <div class="pick-catg__item">
+                        <label>Бренды
+                            <input type="checkbox" class="pick-catg__input" name="category">
+                            <span class="checkmark1"></span>
+                        </label>
+                    </div>
+
+                    <div class="pick-catg__item">
+                        <label>Бренды
+                            <input type="checkbox" class="pick-catg__input" name="category">
+                            <span class="checkmark1"></span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="pick-catg__col pick-catg__col-2">
+                    <div class="pick-catg__item">
+                        <label>Бренды
+                            <input type="checkbox" class="pick-catg__input" name="category">
+                            <span class="checkmark1"></span>
+                        </label>
+                    </div>
+
+                    <div class="pick-catg__item">
+                        <label>Бренды
+                            <input type="checkbox" class="pick-catg__input" name="category">
+                            <span class="checkmark1"></span>
+                        </label>
+                    </div>
+
+                    <div class="pick-catg__item">
+                        <label>Бренды
+                            <input type="checkbox" class="pick-catg__input" name="category">
+                            <span class="checkmark1"></span>
+                        </label>
+                    </div>
+
+                    <div class="pick-catg__item">
+                        <label>Бренды
+                            <input type="checkbox" class="pick-catg__input" name="category">
+                            <span class="checkmark1"></span>
+                        </label>
+                    </div>
+
+                    <div class="pick-catg__item">
+                        <label>Бренды
+                            <input type="checkbox" class="pick-catg__input" name="category">
+                            <span class="checkmark1"></span>
+                        </label>
+                    </div>
+
+                    <div class="pick-catg__item">
+                        <label>Бренды
+                            <input type="checkbox" class="pick-catg__input" name="category">
+                            <span class="checkmark1"></span>
+                        </label>
+                    </div>
+
+                    <div class="pick-catg__item">
+                        <label>Бренды
+                            <input type="checkbox" class="pick-catg__input" name="category">
+                            <span class="checkmark1"></span>
+                        </label>
+                    </div>
+
+                    <div class="pick-catg__item">
+                        <label>Бренды
+                            <input type="checkbox" class="pick-catg__input" name="category">
+                            <span class="checkmark1"></span>
+                        </label>
+                    </div>
+
+                    <div class="pick-catg__item">
+                        <label>Бренды
+                            <input type="checkbox" class="pick-catg__input" name="category">
+                            <span class="checkmark1"></span>
+                        </label>
+                    </div>
+
+                    <div class="pick-catg__item">
+                        <label>Бренды
+                            <input type="checkbox" class="pick-catg__input" name="category">
+                            <span class="checkmark1"></span>
+                        </label>
+                    </div>
+                </div>
+
+            </div>
+            <div class="pick-catg__buttons">
+                <a href="#" class="green-btn white-btn">Отметить/снять</a>
+                <a href="#" class="green-btn">Подтвердить</a>
+            </div>
+
+
+        </form>
+
+
+    </div>
+
+
+
+
+    
+
+</div>
+
+    
+
+
+
+<script src="libs/jQuery/jquery-3.4.1.min.js"></script>
+<script src="libs/slick-1.8.1/slick/slick.min.js"></script>
+<script src="js/common.js"></script>
+</body>
+</html>

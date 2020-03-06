@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="css/main.css">
+	<!-- Fonts -->
+	<link rel="stylesheet" href="fonts/BebasNeue/stylesheet.css">
+	<link rel="stylesheet" href="fonts/Gilroy/stylesheet.css">
+
+	<!-- Slick -->
+	<link rel="stylesheet" href="libs/slick-1.8.1/slick/slick.css">
+
+	<title>B2B - Счет</title>
+</head>
+<body>
+
+<header class="b2b-header">
+    <div class="b2b-header__logo">
+        <a href="#">
+            <img src="img/b2b/logo.png" alt="B2B"> B<span class="color-green no-margin">2</span>B
+        </a>
+    </div>
+
+    <div class="b2b-header__right" id="b2bMenu">
+        <div class="b2b-header__notifications">
+            <a href="#"><img src="img/b2b/bell.png" alt="">
+            <div class="notifications-number">1</div></a>
+        </div>
+
+        <div class="b2b-header__cart">
+            <a href="#">
+                <img src="img/b2b/cart.png" alt="">
+                <div class="notifications-number">1</div>
+            </a>
+        </div>
+
+        <div class="b2b-header__cashout" id="cashOut">
+            <a href="#">
+                <img src="img/b2b/account.png" class="b2b-header__cashout-img" alt="">
+                <img src="img/b2b/account-hover.png" class="b2b-header__cashout-img-hover" alt="">
+                Вывод средств
+            </a>
+
+            <div class="b2b-header__cashout-hover">
+                <form action="">
+                    <label for="card-number">Номер карты</label>
+                    <input type="text" class="cashout__input" id="card-number" name="card-number" placeholder="0000000000000000">
+                    <label for="full-name">ФИО Владельца</label>
+                    <input type="text" class="cashout__input" id="full-name" name="full-name" placeholder="Иванов Иван Иванович">
+                    <label for="to-leave">На счету оставить</label>
+                    <input type="text" class="cashout__input" id="to-leave" name="to-leave" placeholder="20">
+                    <button type="submit">Готово</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="b2b-header__user">
+            <a href="#">
+                <img src="img/b2b/user-pic.png" alt="">
+                Иван Иван
+            </a>
+        </div>
+
+        <div class="b2b-header__settings">
+            <a href="#">
+                <img src="img/b2b/settings.png" alt="">
+            </a>
+        </div>
+    </div>
+</header>
+
+<aside class="b2b-sidebar">
+    <div class="b2b-side__menu">
+        <img src="img/b2b/menu.png" id="b2bMenuButton" alt="Menu">
+    </div>
+
+    <div class="b2b-side__user">
+        <a href="#">
+            <img src="img/b2b/user-pic.png" alt="">
+        </a>
+    </div>
+
+    <ul class="b2b-nav">
+        <li class="b2b-nav__link">
+            <a href="b2b-catalog.html" class="">
+                <img src="img/b2b/catalog.png" alt="" class="b2b-nav__link-img">
+                <img src="img/b2b/catalog-hover.png" alt="" class="b2b-nav__link-img--hover">
+            </a>
+            <div class="b2b-nav__sublink b2b-nav__sublink--catalog">
+                Каталог
+                <div class="b2b-nav__catalog">
+                    Инструменты
+
+                    <div class="b2b-nav__subcatalog">
+                        <a href="#">Электроинструменты</a>
+                        <a href="#">Электроинструменты</a>
+                        <a href="#">Электроинструменты</a>
+                        <a href="#">Электроинструменты</a>
+                        <a href="#">Электроинструменты</a>
+                        <a href="#">Электроинструменты</a>
+                        <a href="#">Электроинструменты</a>
+                        <a href="#">Электроинструменты</a>
+                        <a href="#">Электроинструменты</a>
+                    </div>
+                </div>
+
+                <div class="b2b-nav__catalog">
+                    Инструменты
+
+                    <div class="b2b-nav__subcatalog">
+                        <a href="#">Электроинструменты</a>
+                        <a href="#">Электроинструменты</a>
+                        <a href="#">Электроинструменты</a>
+                        <a href="#">Электроинструменты</a>
+                        <a href="#">Электроинструменты</a>
+                        <a href="#">Электроинструменты</a>
+                        <a href="#">Электроинструменты</a>
+                        <a href="#">Электроинструменты</a>
+                        <a href="#">Электроинструменты</a>
+                    </div>
+                </div>
+
+                <div class="b2b-nav__catalog">
+                    Инструменты
+
+                    <div class="b2b-nav__subcatalog">
+                        <a href="#">Электроинструменты</a>
+                        <a href="#">Электроинструменты</a>
+                        <a href="#">Электроинструменты</a>
+                        <a href="#">Электроинструменты</a>
+                        <a href="#">Электроинструменты</a>
+                        <a href="#">Электроинструменты</a>
+                        <a href="#">Электроинструменты</a>
+                        <a href="#">Электроинструменты</a>
+                        <a href="#">Электроинструменты</a>
+                    </div>
+                </div>
+
+                <div class="b2b-nav__catalog">
+                    Инструменты
+
+                    <div class="b2b-nav__subcatalog">
+                        <a href="#">Электроинструменты</a>
+                        <a href="#">Электроинструменты</a>
+                        <a href="#">Электроинструменты</a>
+                        <a href="#">Электроинструменты</a>
+                        <a href="#">Электроинструменты</a>
+                        <a href="#">Электроинструменты</a>
+                        <a href="#">Электроинструменты</a>
+                        <a href="#">Электроинструменты</a>
+                        <a href="#">Электроинструменты</a>
+                    </div>
+                </div>
+
+                <div class="b2b-nav__catalog">
+                    Инструменты
+
+                    <div class="b2b-nav__subcatalog">
+                        <a href="#">Электроинструменты</a>
+                        <a href="#">Электроинструменты</a>
+                        <a href="#">Электроинструменты</a>
+                        <a href="#">Электроинструменты</a>
+                        <a href="#">Электроинструменты</a>
+                        <a href="#">Электроинструменты</a>
+                        <a href="#">Электроинструменты</a>
+                        <a href="#">Электроинструменты</a>
+                        <a href="#">Электроинструменты</a>
+                    </div>
+                </div>
+
+                <div class="b2b-nav__catalog">
+                    Инструменты
+
+                    <div class="b2b-nav__subcatalog">
+                        <a href="#">Электроинструменты</a>
+                        <a href="#">Электроинструменты</a>
+                        <a href="#">Электроинструменты</a>
+                        <a href="#">Электроинструменты</a>
+                        <a href="#">Электроинструменты</a>
+                        <a href="#">Электроинструменты</a>
+                        <a href="#">Электроинструменты</a>
+                        <a href="#">Электроинструменты</a>
+                        <a href="#">Электроинструменты</a>
+                    </div>
+                </div>
+
+                <div class="b2b-nav__catalog">
+                    Инструменты
+
+                    <div class="b2b-nav__subcatalog">
+                        <a href="#">Электроинструменты</a>
+                        <a href="#">Электроинструменты</a>
+                        <a href="#">Электроинструменты</a>
+                        <a href="#">Электроинструменты</a>
+                        <a href="#">Электроинструменты</a>
+                        <a href="#">Электроинструменты</a>
+                        <a href="#">Электроинструменты</a>
+                        <a href="#">Электроинструменты</a>
+                        <a href="#">Электроинструменты</a>
+                    </div>
+                </div>
+            </div>
+        </li>
+
+        <li class="b2b-nav__link">
+            <a href="b2b-orders.html" class="">
+                <img src="img/b2b/orders.png" alt="" class="b2b-nav__link-img">
+                <img src="img/b2b/orders-hover.png" alt="" class="b2b-nav__link-img--hover">
+            </a>
+            <div class="b2b-nav__sublink">
+                Заказы
+                
+            </div>
+        </li>
+
+        <li class="b2b-nav__link">
+            <a href="b2b-refunds.html" class="">
+                <img src="img/b2b/refunds.png" alt="" class="b2b-nav__link-img">
+                <img src="img/b2b/refunds-hover.png" alt="" class="b2b-nav__link-img--hover">
+            </a>
+            <div class="b2b-nav__sublink">
+                Возвраты
+            </div>
+        </li>
+
+        <li class="b2b-nav__link">
+            <a href="b2b-account.html" class="active">
+                <img src="img/b2b/account.png" alt="" class="b2b-nav__link-img">
+                <img src="img/b2b/account-hover.png" alt="" class="b2b-nav__link-img--hover">
+            </a>
+            <div class="b2b-nav__sublink">
+                Счет
+            </div>
+        </li>
+
+        <li class="b2b-nav__link">
+            <a href="b2b-contacts.html" class="">
+                <img src="img/b2b/contacts.png" alt="" class="b2b-nav__link-img">
+                <img src="img/b2b/contacts-hover.png" alt="" class="b2b-nav__link-img--hover">
+            </a>
+            <div class="b2b-nav__sublink">
+                Контакты
+            </div>
+        </li>
+
+        <li class="b2b-nav__link">
+            <a href="b2b-settings.html" class="">
+                <img src="img/b2b/settings.png" alt="" class="b2b-nav__link-img">
+                <img src="img/b2b/settings-hover.png" alt="" class="b2b-nav__link-img--hover">
+            </a>
+            <div class="b2b-nav__sublink">
+                Настройки
+            </div>
+        </li>
+
+        <li class="b2b-nav__link">
+            <a href="b2b-questions.html" class="">
+                <img src="img/b2b/questions.png" alt="" class="b2b-nav__link-img">
+                <img src="img/b2b/questions-hover.png" alt="" class="b2b-nav__link-img--hover">
+            </a>
+            <div class="b2b-nav__sublink">
+                Вопросы
+            </div>
+        </li>
+    </ul>
+</aside>
+
+<div class="b2b-container">
+
+    <div class="b2b-top">
+        <div class="b2b-pagetitle title-underline">
+            Счет
+        </div>
+
+    </div>
+
+    <div class="b2b-subtop">
+        <div class="subtop__categoryname">
+            Хронология счета
+        </div>
+
+        <div class="b2b-subtop__select">
+            <select name="chrono" class="catalog__right-select catalog__right-select--2">
+                <option value="1">20</option>
+                <option value="2">2</option>
+                <option value="3">2</option>
+                <option value="4">2</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="account__inner">
+        <table class="account-table">
+            <tr class="account-table__header">
+                <th>Дата</th>
+                <th>Движение средств</th>
+                <th>Счет</th>
+                <th>Описание</th>
+            </tr>
+
+            <tr class="account-table__row">
+                <td>2019-08-20 19:17:04</td>
+                <td> <img src="img/b2b/down-arr.png" class="account-table-img" alt="">
+                <img src="img/b2b/down-arr-hover.png" class="account-table-img--hover" alt=""> 57,3</td>
+                <td>1877,68</td>
+                <td>Возврат товара по заказу</td>
+            </tr>
+
+            <tr class="account-table__row">
+                <td>2019-08-20 19:17:04</td>
+                <td> 
+                    <img src="img/b2b/up-arr.png" class="account-table-img" alt="">
+                    <img src="img/b2b/up-arr-hover.png" class="account-table-img--hover" alt=""> 68,9</td>
+                <td>1877,68</td>
+                <td>Заработок по заказу <span class="color-green no-margin">080819035</span></td>
+            </tr>
+
+            <tr class="account-table__row">
+                <td>2019-08-20 19:17:04</td>
+                <td> 
+                    <img src="img/b2b/up-arr.png" class="account-table-img" alt="">
+                    <img src="img/b2b/up-arr-hover.png" class="account-table-img--hover" alt=""> 77,5</td>
+                <td>1877,68</td>
+                <td>Заработок по заказу <span class="color-green no-margin">080819035</span></td>
+            </tr>
+
+            <tr class="account-table__row">
+                <td>2019-08-20 19:17:04</td>
+                <td> 
+                    <img src="img/b2b/up-arr.png" class="account-table-img" alt="">
+                    <img src="img/b2b/up-arr-hover.png" class="account-table-img--hover" alt=""> 77,5</td>
+                <td>1877,68</td>
+                <td>Заработок по заказу <span class="color-green no-margin">080819035</span></td>
+            </tr>
+
+            <tr class="account-table__row">
+                <td>2019-08-20 19:17:04</td>
+                <td> 
+                    <img src="img/b2b/up-arr.png" class="account-table-img" alt="">
+                    <img src="img/b2b/up-arr-hover.png" class="account-table-img--hover" alt=""> 77,5</td>
+                <td>1877,68</td>
+                <td>Заработок по заказу <span class="color-green no-margin">080819035</span></td>
+            </tr>
+
+            <tr class="account-table__row">
+                <td>2019-08-20 19:17:04</td>
+                <td> 
+                    <img src="img/b2b/up-arr.png" class="account-table-img" alt="">
+                    <img src="img/b2b/up-arr-hover.png" class="account-table-img--hover" alt=""> 77,5</td>
+                <td>1877,68</td>
+                <td>Заработок по заказу <span class="color-green no-margin">080819035</span></td>
+            </tr>
+
+            <tr class="account-table__row">
+                <td>2019-08-20 19:17:04</td>
+                <td> <img src="img/b2b/down-arr.png" class="account-table-img" alt="">
+                <img src="img/b2b/down-arr-hover.png" class="account-table-img--hover" alt=""> 57,3</td>
+                <td>1877,68</td>
+                <td>Возврат товара по заказу</td>
+            </tr>
+
+            <tr class="account-table__row">
+                <td>2019-08-20 19:17:04</td>
+                <td> <img src="img/b2b/down-arr.png" class="account-table-img" alt="">
+                <img src="img/b2b/down-arr-hover.png" class="account-table-img--hover" alt=""> 57,3</td>
+                <td>1877,68</td>
+                <td>Возврат товара по заказу</td>
+            </tr>
+
+            <tr class="account-table__row">
+                <td>2019-08-20 19:17:04</td>
+                <td> <img src="img/b2b/down-arr.png" class="account-table-img" alt="">
+                <img src="img/b2b/down-arr-hover.png" class="account-table-img--hover" alt=""> 57,3</td>
+                <td>1877,68</td>
+                <td>Возврат товара по заказу</td>
+            </tr>
+
+            
+        </table>
+    </div>
+
+    
+
+</div>
+
+    
+
+
+
+<script src="libs/jQuery/jquery-3.4.1.min.js"></script>
+<script src="libs/slick-1.8.1/slick/slick.min.js"></script>
+<script src="js/common.js"></script>
+</body>
+</html>
