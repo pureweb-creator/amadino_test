@@ -1,19 +1,20 @@
 $gilroy: "Gilroy", sans-serif
 $bebas: "Bebas Neue", sans-serif
+$m_font: "Open Sans", sans-serif
 $green: #15B163
 $shadow: 0 3px 20px rgba(0,0,0,.2)
 $shadow2: 0 3px 10px rgba(0,0,0,.2)
 
 *,
-*:after,
-*:before
+*::after,
+*::before
 	box-sizing: border-box
 
 body
 	margin: 0
-	font-family: $gilroy
+	font-family: $m_font
 	color: #000
-	font-size: 16px
+	font-size: 14px
 	line-height: 1.2
 	overflow-x: hidden
 
@@ -23,20 +24,25 @@ h1,h2,h3,h4,h5,h6,p
 ul, li
 	margin: 0
 	padding: 0
+	list-style: none
 
 a
 	color: inherit
+	display: block
 	text-decoration: none
+	transition: all .3s ease
 
 input, textarea, button, select
-	font-family: $gilroy
+	font-family: $m_font
 	border: 0
 
 img
 	height: auto
+	width: auto
+	max-width: 100%
 
 .title-underline
-	text-transform: uppercase
+	// text-transform: uppercase
 	font-size: 36px
 	font-family: $bebas
 	position: relative
@@ -49,7 +55,7 @@ img
 		height: 5px
 		display: block
 		position: absolute
-		bottom: 11px
+		bottom: 0
 		left: -3px
 		background-color: rgba(21, 177, 99,.6)
 
@@ -77,7 +83,7 @@ img
 	position: absolute
 	bottom: -25px
 	left: 50%
-	transform: translateX(-50%)
+	// transform: translateX(-50%)
 	height: 50px
 	width: 145px
 	font-size: 18px
@@ -89,11 +95,9 @@ img
 	padding: 39px 0
 	background-color: #fff
 	border-bottom: 1px solid $green
-	z-index: 9
-	position: fixed
 	top: 0
-	left: 0
 	right: 0
+	width: 100%
 	min-height: 150px
 	max-height: 150px
 
@@ -101,35 +105,52 @@ img
 
 .nav__link
 	font-weight: 700
-	font-size: 20px
+	font-size: 14px
+	transition: all .3s ease
 	margin-right: 30px
+	display: block
+	position: relative
+	&::after
+		content: ""
+		display: block
+		height: 3px
+		background: $green
+		position: absolute
+		bottom: -10px
+		border-radius: 15px
+		right: 0
+		width: 0
+		transition: all .3s ease
 	&:last-child
 		margin-right: 0
 	&:hover
 		color: $green
+		&::after
+			left: 0
+			width: 100%
 
 .nav
-	margin-bottom: 18px
+	margin-bottom: 30px
+	display: flex
 
 .header__search
 	display: block
 	width: 100%
-	height: 25px
 	padding-bottom: 7px
-	border-top: 0
-	border-left: 0
-	border-right: 0
-	border-bottom: 1px solid #000
 	outline: none
-	font-family: $gilroy
+	font-family: $m_font
+	border:  1px solid $green
+	border-radius: 5px
+	padding: 8px 0 8px 40px
 	font-weight: 500
 	background: url("../img/path1.png") no-repeat
-	background-position-x: 100%
-	background-position-y: 10%
+	background-size: auto 40%
+	background-position-x: 2%
+	background-position-y: 50%
 	&::placeholder
-		font-size: 16px
+		font-size: 13px
 		color: #000
-		font-family: $gilroy
+		font-family: $m_font
 
 .color-green
 	color: $green
@@ -141,7 +162,7 @@ img
 .header-container
 	display: flex
 	align-items: center
-	justify-content: space-between
+	justify-content: space-around
 	max-width: 1670px
 	width: 100%
 	margin: 0 auto
@@ -150,8 +171,11 @@ img
 	display: flex
 	align-items: center
 	font-weight: 700
-	font-size: 20px
+	font-size: 14px
 	margin-bottom: 20px
+	#signUpButton
+		display: flex
+		align-items: center
 
 .header__right
 	img
@@ -187,8 +211,8 @@ img
 	display: flex
 	align-items: center
 	font-weight: 700
-	font-size: 20px
-	font-family: $bebas
+	font-size: 13px
+	font-family: $m_font
 	justify-content: space-between
 
 .contact-phone
@@ -208,7 +232,7 @@ img
 	z-index: 10
 	top: 0
 	left: 0
-	padding-top: 150px
+	padding-top: 0px
 	min-height: 100%
 	
 .page-wrapper
@@ -218,7 +242,7 @@ img
 	text-align: center
 	height: 150px
 	padding: 35px 0
-	position: fixed
+	position: absolute
 	top: 0
 	left: 0
 	border-bottom: 1px solid $green
@@ -228,12 +252,12 @@ img
 	min-width: 300px
 	border-right: 1px solid $green
 
-
 .aside__inner
-	padding-left: 23.444%
+	padding-left: 5%
 	padding-top: 50px
 	background-color: #fff
 	padding-bottom: 300px
+	position: relative
 
 .aside__title
 	margin-bottom: 34px
@@ -241,18 +265,38 @@ img
 .aside__nav
 	list-style: none
 	margin-bottom: 150px
-	position: relative
 
 .aside__nav-item a
-	font-size: 20px
+	font-size: 14px
 	font-weight: 700
 	line-height: 1
 
 .aside__nav-item
 	padding: 10px 0
 	position: relative
+	transition: all .3s ease
 	margin-left: -23.444%
 	padding-left: 23.444%
+	position: static
+	&:hover,&:active
+		a::after
+			opacity: 1
+	& > a
+		position: relative
+	& > a::after
+		content: ""
+		display: block
+		opacity: 0
+		transition: all .3s ease
+		width: 0
+		height: 0
+		border: 10px solid transparent
+		border-right-color: #fff
+		position: absolute
+		right: 0
+		top: 50%
+		transform: translateY(-50%)
+		z-index: 9999
 	&:hover
 		color: #fff
 		background-color: $green
@@ -284,8 +328,10 @@ img
 	display: none
 	position: absolute
 	left: 100%
-	top: -127px
+	top: 0
 	min-height: 600px
+	padding: 25px 0
+	box-sizing: content-box
 	max-height: calc(100vh - 200px)
 	width: 77vw
 	background-color: #fff
@@ -301,6 +347,7 @@ img
 	width: 250px
 	margin-bottom: 20px
 	border-bottom: 2px solid $green
+	padding-bottom: 10px
 	&:hover
 		.aside__nav-sublist2x
 			display: flex
@@ -316,7 +363,7 @@ img
 			text-decoration: underline
 	& > a
 		font-weight: 700
-		font-size: 20px
+		font-size: 16px
 		position: relative
 		color: #000
 		background-color: #fff
@@ -326,16 +373,6 @@ img
 			height: 100px
 			width: auto
 			display: block
-		&::after
-			content: ""
-			width: 70%
-			position: absolute
-			height: 2px
-			border-top: 1px solid #000
-			background-color: #00000066
-			bottom: 0
-			left: 15px
-			box-shadow: $shadow
 
 .aside__nav-sublist2x
 	padding-bottom: 10px
@@ -347,6 +384,7 @@ img
 	.aside__nav-siblist2x-item
 		a
 			width: 100%
+			font-size: 13px
 	a
 		display: block
 		width: 200px
@@ -412,7 +450,7 @@ li.aside__nav-siblist2x-item
 	padding: 5px 10px
 	width: 268px
 	color: #000
-	font-family: $gilroy
+	font-family: $m_font
 	outline: none
 	box-shadow: $shadow
 	margin-bottom: 20px
@@ -435,16 +473,11 @@ li.aside__nav-siblist2x-item
 	margin-bottom: 10px
 
 
-
-
-
-
-
-
 // Containers
 .inner-wrapper
 	width: 78.23%
-	margin: 200px auto 0
+	padding: 0 5%
+	margin: 50px auto 0
 .main-container
 	width: 100%
 	max-width: 1246px
@@ -452,7 +485,7 @@ li.aside__nav-siblist2x-item
 	
 
 .info-container
-	padding: 50px 0 50px 50px
+	padding: 50px 0 50px 0px
 
 .footer-container
 	max-width: 1510px
@@ -520,20 +553,25 @@ li.aside__nav-siblist2x-item
 		right: -200px
 		background-color: $green
 
-.banner-big
-	margin-bottom: 50px
-
 .banners__title
 	font-size: 24px
+	margin-left: 50px
 	font-weight: 700
 	margin-bottom: 30px
 
 .banners__wrapper
 	display: flex
 	justify-content: space-between
+	.slick-slide
+		background-size: contain !important
+		width: 200px
+		margin: 0 50px
+	a
+		// box-shadow: 0 3px 20px rgba(0,0,0,0.5)
 	img
 		width: initial
 		height: initial
+		display: none !important
 
 // Section
 .section__header
@@ -602,7 +640,7 @@ li.aside__nav-siblist2x-item
 .product-title
 	width: 186px
 	margin-bottom: 10px
-	min-height: 6em
+	min-height: 3em
 	a
 		font-size: 17px
 		font-weight: 600
@@ -683,9 +721,9 @@ li.aside__nav-siblist2x-item
 
 .info-block__button a
 	color: $green
-	font-size: 36px
-	font-family: $bebas
-	display: flex
+	font-size: 20px
+	font-family: $m_font
+	display: inline-flex
 	align-items: center
 	font-weight: 700
 	transition: .2s linear
@@ -693,11 +731,11 @@ li.aside__nav-siblist2x-item
 	&:after
 		content: ""
 		height: 2px
-		width: 147px
+		width: 80%
 		background-color: $green
 		position: absolute
-		bottom: 6px
-		right: 41px
+		bottom: -6px
+		left: 0
 		transition: .2s ease-out
 
 	&:hover
@@ -705,14 +743,9 @@ li.aside__nav-siblist2x-item
 		&:after
 			width: 0
 	img
+		width: 25px
 		margin-left: 10px
 		margin-bottom: 2px
-
-.info-block__button--articles a:after
-	width: 131px
-
-.info-block__button--video a:after
-	width: 122px
 
 .news-block__title
 	margin-top: 7px
@@ -720,12 +753,16 @@ li.aside__nav-siblist2x-item
 .news-block__date
 	margin-bottom: 10px
 
-.news-block__topic
+.news-block__topic,.articles-block__topic,.video-block__topic
 	color: $green
 	margin-bottom: 10px
-	font-size: 20px
+	a
+		font-size: 16px !important
 	a:hover
 		text-decoration: underline
+
+.news-block__text, .articles-block__text, .video-block__text
+		font-size: 13px
 
 .news-block__item
 	margin-bottom: 30px
@@ -809,6 +846,7 @@ li.aside__nav-siblist2x-item
 
 .about-us__inner
 	display: flex
+	flex-direction: column
 	justify-content: space-between
 
 .about-us__title
@@ -818,11 +856,12 @@ li.aside__nav-siblist2x-item
 	line-height: 1.4
 
 .about-us__info
-	width: 46.754%
+	width: 90%
+	margin: 0 auto
 
 .about-us__advantages
-	margin-top: 127px
-	width: 45.43%
+	width: 90%
+	margin: 127px auto 0 auto
 
 .about-us__advantages-line
 	margin-bottom: 98px
@@ -979,7 +1018,7 @@ p.footer__link:hover
 		outline: none
 		box-shadow: $shadow
 	&::placeholder
-		font-family: $gilroy
+		font-family: $m_font
 
 	
 
@@ -1083,7 +1122,7 @@ p.footer__link:hover
 		border: 0
 		box-shadow: $shadow
 		margin-bottom: 25px
-		font-family: $gilroy
+		font-family: $m_font
 		font-size: 20px
 		color: #A9A9A9
 	button
@@ -1236,7 +1275,11 @@ p.footer__link:hover
 	display: flex
 	justify-content: space-between
 	align-items: center
+	flex-direction: column
 	margin-bottom: 40px
+
+	.goods-shortinfo__buy
+		margin-top: 30px
 
 .goods-shortinfo__price
 	font-size: 36px
@@ -1244,7 +1287,7 @@ p.footer__link:hover
 	font-family: $bebas
 	color: $green
 	span
-		font-size: 56px
+		font-size: 46px
 
 .goods-shortinfo__line
 	display: flex
@@ -1278,6 +1321,8 @@ p.footer__link:hover
 	padding: 0 5px
 	z-index: 2
 	position: relative
+	img
+		width: 100px
 
 .goods-shipment
 	padding: 30px 20px
@@ -1297,6 +1342,8 @@ p.footer__link:hover
 	display: flex
 	width: 641px
 	margin-bottom: 50px
+	i
+		margin-left: 10px
 
 .product-tabs__reviews
 	margin-bottom: 70px
@@ -1550,15 +1597,12 @@ p.footer__link:hover
 .leave-review
 	max-width: 672px
 	width: 100%
-	margin: 0 auto
-	border: 2px solid $green
 	padding: 40px 0 50px
 	position: relative
 
 .leave-review__inner
 	width: 100%
 	max-width: 472px
-	margin: 0 auto
 
 .leave-review__header
 	margin-bottom: 30px
@@ -1789,10 +1833,11 @@ p.footer__link:hover
 	margin-bottom: 40px
 
 .news__date
-	font-weight: 700
-	font-family: $bebas
-	font-size: 36px
+	font-weight: 400
+	font-family: $m_font
+	font-size: 16px
 	color: $green
+	margin-top: 50px
 
 .news__picture
 	width: 303px
@@ -1849,6 +1894,7 @@ p.footer__link:hover
 	position: fixed
 	width: 100%
 	height: 100%
+	z-index: 2
 	display: none
 
 .header__menu.show
@@ -2115,7 +2161,7 @@ p.footer__link:hover
 			box-shadow: $shadow2
 			margin-top: 20px
 			cursor: pointer
-			font-family: $gilroy
+			font-family: $m_font
 			
 
 
@@ -2556,6 +2602,14 @@ p.footer__link:hover
 		font-size: 24px
 		margin-bottom: 15px
 
+
+input::-webkit-input-placeholder
+	transition: all .3s ease
+
+input:focus::-webkit-input-placeholder
+    color: #ccc
+
+
 .settings
 	padding: 0 50px
 	font-size: 24px
@@ -2832,7 +2886,7 @@ p.footer__link:hover
 	background-position-x: 10px
 	background-position-y: 10px
 	position: relative
-	font-family: $gilroy
+	font-family: $m_font
 	font-size: 20px
 	&::-webkit-inner-spin-button
 		display: none
@@ -2990,7 +3044,6 @@ p.footer__link:hover
 	justify-content: space-between
 	align-items: center
 	padding: 0 22px
-	background-color: $green
 	position: absolute
 	left: -2px
 	bottom: -25px
@@ -3071,11 +3124,11 @@ p.footer__link:hover
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1600px)
 	/**/
-	.main-container
-		overflow: hidden
+	// .main-container
+	// 	overflow: hidden
 
 	.info-container
-		padding: 50px 10px 50px
+		padding: 50px 10px 50px 10px
 
 	.aside__filter-input
 		width: 90%
@@ -3183,7 +3236,7 @@ p.footer__link:hover
 		width: 50%
 
 	.about-us__advantages-item
-		font-size: 16px
+		font-size: 14px
 
 		
 
@@ -3393,6 +3446,8 @@ p.footer__link:hover
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 1024px)
 	/**/
+	.banners__wrapper, .section__header
+		z-index: -1
 	.page-wrapper
 		flex-direction: column
 		width: 100%
@@ -3400,6 +3455,7 @@ p.footer__link:hover
 	.inner-wrapper
 		margin: 0 auto
 		width: 100%
+		padding: 0 5%
 	.header
 		width: 100%
 	.aside__nav-sublist-item
@@ -3470,11 +3526,12 @@ p.footer__link:hover
 		width: 100%
 
 	.aside
-		margin-top: 200px
+		margin-top: 0
+		margin-bottom: 50px
 		width: 100%
 		position: relative
-		z-index: 5
-		height: 80px
+		z-index: 1
+		height: auto
 		padding: 20px 0
 		border-bottom: 1px solid $green
 		border-right: 0
@@ -3659,7 +3716,7 @@ p.footer__link:hover
 @media only screen and (max-width : 734px)
 	/**/
 	.aside__nav-sublist-item
-		width: 50%
+		width: 100%
 	.reviews__item
 		padding: 40px 20px
 	.reviews__text
@@ -3860,6 +3917,7 @@ p.footer__link:hover
 		margin-right: 0
 	.product-card
 		width: 230px
+		margin: 0 auto
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 510px)
@@ -3946,6 +4004,10 @@ p.footer__link:hover
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
 	/**/
+	.slick-dots
+		width: 90%
+	.sale-wrapper-outer, .new-items-wrapper .sale-wrapper-outer
+		padding: 0 !important
 	.b2b-settings__warning
 		margin: 0 0 50px
 	.order-info__bottom
@@ -3987,8 +4049,8 @@ p.footer__link:hover
 
 	.title-underline
 		font-size: 32px
-		&::after
-			bottom: 10px
+		margin-top: 20px
+		margin-bottom: 20px
 
 	.info-container--product
 		display: none
@@ -4061,11 +4123,12 @@ p.footer__link:hover
 	.product-card
 		width: 270px
 		padding: 20px
+		margin: 0 auto
 
 	.banners
-		display: none
+		// display: none
 	.sale, .hits, .new-items, .about-us
-		display: none
+		// display: none
 
 	.aside.show
 		height: auto
@@ -4091,19 +4154,21 @@ p.footer__link:hover
 		margin: 0 auto
 
 	.product-card--category
-		width: 100%
+		width: 90%
+		margin-bottom: 50px
 		padding: 20px 15px
 		height: 180px
 		display: flex
+		justify-content: center
 		flex-wrap: wrap
 		position: relative
-		&:nth-last-child(1), &:nth-last-child(2), &:nth-last-child(3), &:nth-last-child(4), &:nth-last-child(5), &:nth-last-child(6), &:nth-last-child(7)
-			display: none
+		// &:nth-last-child(1), &:nth-last-child(2), &:nth-last-child(3), &:nth-last-child(4), &:nth-last-child(5), &:nth-last-child(6), &:nth-last-child(7)
+		// 	display: none
 		.product-img
 			display: inline-block
-			width: 118px
+			width: 70%
+			height: auto
 			margin: 0 10px 10px 0
-			height: 84px
 			overflow: hidden
 			
 		.product-title
@@ -4129,6 +4194,8 @@ p.footer__link:hover
 		.product-button a
 			bottom: 20px
 			right: 15px
+			height: 40px
+			width: 40%
 
 	.offer
 		display: none
@@ -4339,3 +4406,142 @@ p.footer__link:hover
 	
 	.allnews__image
 		top: 175px
+
+
+/**
+ * =====================================
+ * CUSTOM STYLES
+ * Roman Semenikhin / PUREWEB
+ * =====================================
+ */
+
+// Homepage
+.contact-phone
+	position: relative
+	&:hover
+		.right__sub_contact_phones
+			visibility: visible	
+.right__sub_contact_phones
+	background: $green
+	transition: all .3s ease
+	top: 40px
+	visibility: hidden
+	position: absolute
+	color: #fff
+	width: 100%
+	&::after
+		content: ""
+		display: block
+		width: 0
+		height: 0
+		border: 8px solid #fff
+		border-bottom-color: $green
+		top: -16px
+		left: 50%
+		transform: translateX(-50%) 
+		position: absolute
+	li
+		padding: 10px 15px
+		&:hover
+			background: darken($green, 5%)
+			a
+				color: #fff
+	a
+		justify-content: center
+		transition: none
+.news__block
+ 	margin-bottom: 20px
+
+.aside__soc_links
+	display: flex
+	a
+		font-size: 22px
+		margin-right: 10px
+		i
+			transition: all .3s ease
+
+	.fa-viber:hover
+		color: #7C519E
+
+	.fa-telegram:hover
+		color: #2CA4D8
+
+.stocks
+	display: table
+	margin-left: auto
+	padding: 10px 15px
+	border: 1px solid $green
+	border-radius: 5px
+
+// Breadcrumbs
+.breadcrumbs-nav
+	ul
+		display: flex
+		flex-wrap: wrap
+		li
+			list-style: none
+			margin-right: 10px
+			position: relative
+			&::after
+				content: "›"
+				display: block
+				color: rgb(55, 93, 129)
+				position: absolute
+				top: 0
+				right: -8px
+
+// Cards
+.discount
+	&__price
+		color: red
+
+	.old__price
+		font-size: 26px
+
+.category__inner, .offer__slider, .sale-wrapper, .hits-wrapper, .new-items-wrapper, 
+		&__price
+			font-size: 34px
+
+		.discount__number
+			font-size: 18px
+
+		.old__price
+			font-size: 18px
+			text-decoration: line-through
+
+// Product Cart
+.product-tabs__tab-content 
+  display: none /* по умолчанию прячем все блоки */
+
+.product-tabs__tab-content.active 
+  display: block /* по умолчанию показываем нужный блок */
+
+
+// News Page
+.allnews__date
+	font-size: 12px
+	margin-top: 10px
+
+@media (max-width: 480px)
+	.leave-review__btn
+		position: static
+	.leave-review__stars
+		width: 100%
+	.about-us__advantages-line
+		margin-bottom: 150px
+
+	.goods-shortinfo__purchase
+		flex-direction: column
+
+	.same-price .product-card
+		flex-direction: column
+		align-items: center
+		width: 90%
+		.product-img
+			height: auto !important
+			width: 70% !important
+		.product-code
+			position: static !important
+		.product-button a
+			width: 40%
+			height: 40px
