@@ -4,15 +4,24 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<link rel="stylesheet" href="css/main.min.css">
 	<!-- Fonts -->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="fonts/BebasNeue/stylesheet.css">
 	<link rel="stylesheet" href="fonts/Gilroy/stylesheet.css">
 
-	<!-- Slick -->
+	<!-- Libs -->
+	<link rel="stylesheet" type="text/css" href="https://amadino.com.ua/assets/f3c20633/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
 	<link rel="stylesheet" href="libs/slick-1.8.1/slick/slick.css">
+	<link rel="stylesheet" type="text/css" href="https://amadino.com.ua/assets/f465a09/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="https://amadino.com.ua/flickity/flickity.min.css">
+	<link rel="stylesheet" type="text/css" href="https://amadino.com.ua/assets/9b8159c5/css/activeform.min.css">
+
+
+	<!-- MAIN CSS FILE -->
+	<link rel="stylesheet" type="text/css" href="https://amadino.com.ua/css/style.css?2">
+	<link rel="stylesheet" href="css/main.min.css">
 
 	<title>Главная</title>
 </head>
@@ -33,6 +42,11 @@
 			<input type="search" class="header__search" placeholder="Поиск">
 		</div>
 
+		<div class="header__actions d-flex">
+			<a href="#" class="favourite"><i class="far fa-heart"></i><span class="favourite__number">0</span></a>
+			<a href="#" class="comparsions"><i class="fas fa-balance-scale"></i></a>
+		</div>
+
 		<div class="header__right">
 			<div class="right__sup">
 				<div class="signup-button">
@@ -42,8 +56,9 @@
 				</div>
 				<div class="cart-button">
 					<a href="cart.html">
-						<img src="img/cart-icon.png" alt="">Корзина
-						<span class="cart-number"></span>
+						<i class="fas fa-shopping-cart cart__button_cart_icon"></i>
+						Корзина
+						<span class="cart-number">0</span>
 					</a>
 				</div>
 			</div>
@@ -66,12 +81,7 @@
 		</div>
 
 		<div class="header-mobile">
-
 			<div class="hm__top">
-				<div class="header__logo">
-					<a href="index.html"><img src="img/header-logo.png" alt="Amadin"></a>
-				</div>
-
 				<img src="img/burger-menu.png" class="burger-button" id="burgerButton" alt="">
 			</div>
 
@@ -79,14 +89,9 @@
 				<input type="search" class="header__search" placeholder="Поиск">
 			</div>
 			<div class="hm__bottom">
-
-				<div class="contact-phone">
-					<a href="tel:+0800750250"><img src="img/phone-icon.png" alt=""> 0800  <span class="color-green">750 250</span></a>
-				</div>
-
 				<div class="cart-button">
 					<a href="cart.html">
-						<img src="img/cart-icon.png" alt="">Корзина
+						<i class="fas fa-shopping-cart cart__button_cart_icon"></i>
 						<span class="cart-number"></span>
 					</a>
 				</div>
@@ -107,6 +112,11 @@
 					<a href="#">Доставка и оплата</a>
 					<a href="#">Контакты</a>
 				</div>
+				<div class="header__actions d-flex" style="display: flex !important; padding-left: 40px">
+					<a href="#" class="favourite"><i class="far fa-heart"></i><span class="favourite__number">0</span></a>
+					<a href="#" class="comparsions"><i class="fas fa-balance-scale"></i></a>
+				</div>
+
 			</div>
 
 			<div class="header__menu-black">
@@ -1120,12 +1130,14 @@
             <br>
             <ul class="news__block">
                 <li>
-                    16 окт. 2019 г.
+               
                     <a href="/news/makita-drel.html">Аккумуляторная дрель Makita</a>
+                    16 окт. 2019 г.
                 </li>
                 <li>
-                    15 окт. 2019 г.
+                    
                     <a href="/news/df333dwye.html">Аккумуляторная дрель-шуруповерт Makita DF333DWYE</a>
+                    15 окт. 2019 г.
                 </li>
             </ul>
             <div class="aside__tel">
@@ -1211,11 +1223,18 @@
 					<div class="sale-wrapper">
 						<div class="sale-wrapper-outer">
 							<div class="product-card">
+								<div class="products-card__label label_type_action">
+									акция
+								</div>
+								<a href="#" class="products-card__wish_btn"><i class="far fa-heart"></i></a>
+								<a href="#" class="products-card__compare_btn"><i class="fas fa-balance-scale"></i></a>
 								<div class="product-img">
 									<a href="product-page.html"><img src="img/home/tachka.png" alt="Садовая Тачка"></a>
+									<img src="img/free_shipping.png" alt="Бесплатная доставка в отделения Нова Пошта" class="products-card__label products-card__free_shipping">
 								</div>
 								<div class="product-title">
 									<a href="product-page.html">Forte WB6407A Тачка садовая</a>
+									<span class="hasnt">Нет в наличии</span>
 								</div>
 								<div class="product-price">
 									<span class=" old__price">566</span>
@@ -1229,11 +1248,18 @@
 
 						<div class="sale-wrapper-outer">
 							<div class="product-card">
+								<div class="products-card__label label_type_popularity">
+									топ
+								</div>
+								<a href="#" class="products-card__wish_btn"><i class="far fa-heart"></i></a>
+								<a href="#" class="products-card__compare_btn"><i class="fas fa-balance-scale"></i></a>
 								<div class="product-img">
 									<a href="product-page.html"><img src="img/home/tachka.png" alt="Садовая Тачка"></a>
+									<img src="img/free_shipping.png" alt="Бесплатная доставка в отделения Нова Пошта" class="products-card__label products-card__free_shipping">
 								</div>
 								<div class="product-title">
 									<a href="product-page.html">Forte WB6407A Тачка садовая</a>
+									<span class="has">Есть в наличии</span>
 								</div>
 								<div class="product-price">
 									<span class=" old__price">566</span>
@@ -1247,11 +1273,18 @@
 
 						<div class="sale-wrapper-outer">
 							<div class="product-card">
+								<div class="products-card__label label_type_bestseller">
+									хит продаж
+								</div>
+								<a href="#" class="products-card__wish_btn"><i class="far fa-heart"></i></a>
+								<a href="#" class="products-card__compare_btn"><i class="fas fa-balance-scale"></i></a>
 								<div class="product-img">
 									<a href="product-page.html"><img src="img/home/tachka.png" alt="Садовая Тачка"></a>
+									<img src="img/free_shipping.png" alt="Бесплатная доставка в отделения Нова Пошта" class="products-card__label products-card__free_shipping">
 								</div>
 								<div class="product-title">
 									<a href="product-page.html">Forte WB6407A Тачка садовая</a>
+									<span class="hasnt">Нет в наличии</span>
 								</div>
 								<div class="product-price">
 									<span class=" old__price">566</span>
@@ -1906,50 +1939,50 @@
 					</div>
 
 					<div class="news-block__item">
-						<div class="news-block__date">
-							2019-06-11
-						</div>
 						<h3 class="news-block__topic"><a href="news-1.html">Встречайте новинки мотокос от брендов Grubhelm, Werk, Forte и Свитязь!</a></h3>
 						<div class="news-block__text">
 							<a href="news-1.html" title="Читать далее..">
 								Крупные компании представили, как и новые линейки моделей, так и улучшили уже знакомые нам мотокосы. В наличии появилось 17 единиц...
 							</a>
+						</div>
+						<div class="news-block__date">
+							2019-06-11
 						</div>
 					</div>
 
 					<div class="news-block__item">
-						<div class="news-block__date">
-							2019-06-11
-						</div>
 						<h3 class="news-block__topic"><a href="news-1.html">Встречайте новинки мотокос от брендов Grubhelm, Werk, Forte и Свитязь!</a></h3>
 						<div class="news-block__text">
 							<a href="news-1.html" title="Читать далее..">
 								Крупные компании представили, как и новые линейки моделей, так и улучшили уже знакомые нам мотокосы. В наличии появилось 17 единиц...
 							</a>
+						</div>
+						<div class="news-block__date">
+							2019-06-11
 						</div>
 					</div>
 
 					<div class="news-block__item">
-						<div class="news-block__date">
-							2019-06-11
-						</div>
 						<h3 class="news-block__topic"><a href="news-1.html">Встречайте новинки мотокос от брендов Grubhelm, Werk, Forte и Свитязь!</a></h3>
 						<div class="news-block__text">
 							<a href="news-1.html" title="Читать далее..">
 								Крупные компании представили, как и новые линейки моделей, так и улучшили уже знакомые нам мотокосы. В наличии появилось 17 единиц...
 							</a>
+						</div>
+						<div class="news-block__date">
+							2019-06-11
 						</div>
 					</div>
 
 					<div class="news-block__item">
-						<div class="news-block__date">
-							2019-06-11
-						</div>
 						<h3 class="news-block__topic"><a href="news-1.html">Встречайте новинки мотокос от брендов Grubhelm, Werk, Forte и Свитязь!</a></h3>
 						<div class="news-block__text">
 							<a href="news-1.html" title="Читать далее..">
 								Крупные компании представили, как и новые линейки моделей, так и улучшили уже знакомые нам мотокосы. В наличии появилось 17 единиц...
 							</a>
+						</div>
+						<div class="news-block__date">
+							2019-06-11
 						</div>
 					</div>
 

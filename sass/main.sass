@@ -5,6 +5,15 @@ $green: #15B163
 $shadow: 0 3px 20px rgba(0,0,0,.2)
 $shadow2: 0 3px 10px rgba(0,0,0,.2)
 
+/**
+ * Rewrite bootstrap custom styles
+ */
+a, a:hover, a:visited, a:active
+	text-decoration: none !important
+
+sub,sup
+	line-height: initial
+
 html
 	overflow-x: hidden
 
@@ -95,16 +104,12 @@ img
 
 // Header
 .header
-	padding: 39px 0
+	padding: 15px 0
 	background-color: #fff
 	border-bottom: 1px solid $green
 	top: 0
 	right: 0
 	width: 100%
-	min-height: 150px
-	max-height: 150px
-
-
 
 .nav__link
 	color: black
@@ -165,7 +170,7 @@ img
 
 .header-container
 	display: flex
-	align-items: center
+	align-items: start
 	justify-content: space-around
 	max-width: 1670px
 	width: 100%
@@ -176,7 +181,7 @@ img
 	align-items: center
 	font-weight: 700
 	font-size: 14px
-	margin-bottom: 20px
+	margin-bottom: 34px
 	#signUpButton
 		display: flex
 		align-items: center
@@ -203,11 +208,13 @@ img
 		position: relative
 		display: flex
 		align-items: center
+		&:hover
+			color: initial
 		.cart-number
 			position: absolute
 			left: 14px
-			top: 0
-			font-size: 16px
+			top: -10px
+			font-size: 13px
 			color: #fff
 
 
@@ -244,8 +251,7 @@ img
 
 .aside__logo
 	text-align: center
-	height: 150px
-	padding: 35px 0
+	padding: 28.8px 0
 	position: absolute
 	top: 0
 	left: 0
@@ -253,8 +259,11 @@ img
 	z-index: 200
 	background-color: #fff
 	width: 21.77%
-	min-width: 300px
 	border-right: 1px solid $green
+
+	a
+		img
+			width: 50%
 
 .aside__inner
 	padding-left: 5%
@@ -353,9 +362,9 @@ img
 	display: block
 	position: relative
 	width: 250px
-	margin-bottom: 20px
+	margin-bottom: 10px
 	border-bottom: 2px solid $green
-	padding-bottom: 10px
+	// padding-bottom: 10px
 	&:hover
 		.aside__nav-sublist2x
 			display: flex
@@ -509,12 +518,13 @@ li.aside__nav-siblist2x-item
 
 .slick-dots
 	display: flex
-	justify-content: space-between
-	width: 160px
+	justify-content: center
+	width: auto
 	margin: 20px auto 0
 	li
 		width: 20px
 		height: 20px
+		margin: 0 1px
 		border: 2px solid $green
 		border-radius: 50%
 		cursor: pointer
@@ -586,19 +596,6 @@ li.aside__nav-siblist2x-item
 	text-align: center
 	position: relative
 	margin-bottom: 24px
-	&:before, &:after
-		content: ""
-		height: 1px
-		width: 800px
-		background-color: $green
-		top: 50%
-		display: block
-		position: absolute
-		transform: translateY(-50%)
-	&:before
-		left: -275px
-	&:after
-		right: -275px
 
 .section__header-newitems
 	&:before
@@ -623,8 +620,8 @@ li.aside__nav-siblist2x-item
 .sale
 	max-height: 600px
 .product-card
-	padding: 20px
-	width: 274px
+	padding: 20px 10px
+	width: 220px
 	position: relative
 	box-shadow: $shadow
 	transition: all .3s ease
@@ -636,12 +633,14 @@ li.aside__nav-siblist2x-item
 	padding: 0 20px
 
 .product-img
-	width: 205px
+	width: 100%
 	height: 146px
 	margin: 0 auto 10px
+	position: relative
 	a img
 		display: block
-		width: 205px
+		width: 90%
+		margin: 0 auto
 		height: auto
 
 .product-title
@@ -759,7 +758,8 @@ li.aside__nav-siblist2x-item
 	margin-top: 7px
 
 .news-block__date
-	margin-bottom: 10px
+	margin-top: 10px
+	font-size: 12px
 
 .news-block__topic,.articles-block__topic,.video-block__topic
 	color: $green
@@ -779,6 +779,7 @@ li.aside__nav-siblist2x-item
 
 .articles-block
 	width: 392px
+	margin: 0 50px
 
 .articles-block__header
 	display: flex
@@ -918,6 +919,7 @@ li.aside__nav-siblist2x-item
 	display: block
 	font-weight: 300
 	font-size: 20px
+	color: #fff
 	margin-bottom: 8px
 	&:last-child
 		margin-bottom: 0
@@ -1232,12 +1234,18 @@ p.footer__link:hover
 	position: relative
 	.good-img__current
 		width: 434px
+		display: flex
+    	justify-content: center
+    	align-items: center
+
+	.products-card__free_shipping
+		bottom: 100px
+		width: 100px !important
+		left: 10px
+
+	img
+		width: 100%
 		height: auto
-		img
-			width: 100%
-			height: auto
-
-
 
 .goods-img__bottom
 	position: absolute
@@ -1631,6 +1639,25 @@ p.footer__link:hover
 .cart
 	display: flex
 	justify-content: space-between
+
+.cart__button_cart_icon
+	font-size: 24px
+	display: inline-block
+	margin-right: 10px
+	&:hover
+		color: initial
+
+.cart-number
+	display: none
+	background: $green
+	width: 20px
+	text-align: center
+	border-radius: 100px
+	height: 20px
+	line-height: 20px
+
+.cart-number.active
+	display: inline-block
 
 .cart__title
 	font-weight: 700
@@ -3273,6 +3300,8 @@ input:focus::-webkit-input-placeholder
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1300px)
 	/**/
+	.header__actions
+		display: none !important
 	.aside
 		padding-top: 0
 	.header-container
@@ -3322,7 +3351,7 @@ input:focus::-webkit-input-placeholder
 		display: block
 
 	.header-mobile
-		display: block
+		display: flex
 
 	.header
 		padding: 20px 0
@@ -3400,6 +3429,7 @@ input:focus::-webkit-input-placeholder
 
 	.product-card
 		width: 240px
+		margin: 0 auto
 
 	.header-mobile
 		width: 100%
@@ -3470,6 +3500,7 @@ input:focus::-webkit-input-placeholder
 		padding: 0 5%
 	.header
 		width: 100%
+		padding-top: 0
 	.aside__nav-sublist-item
 		width: 33%
 		& > a
@@ -3531,11 +3562,6 @@ input:focus::-webkit-input-placeholder
 
 	.aside__inner--mob
 		display: block
-
-	.header__logo
-		width: 0
-	.header-mobile
-		width: 100%
 
 	.aside
 		margin-top: 0
@@ -3735,7 +3761,7 @@ input:focus::-webkit-input-placeholder
 		padding-left: 25px
 	
 	.product-card
-		width: 280px
+		width: 220px
 
 
 	.refunds-table
@@ -4168,7 +4194,6 @@ input:focus::-webkit-input-placeholder
 		width: 90%
 		margin-bottom: 50px
 		padding: 20px 15px
-		height: 180px
 		display: flex
 		justify-content: center
 		flex-wrap: wrap
@@ -4187,20 +4212,10 @@ input:focus::-webkit-input-placeholder
 			width: 166px
 
 		.product-code
-			display: inline-block
-			position: absolute
-			top: 68px
-			left: 142px
-
-		.product-oldprice
-			position: absolute
-			bottom: 47px
-			left: 15px
+			display: inline-block	
 
 		.product-price
-			position: absolute
-			bottom: 13px
-			left: 15px
+			width: 100%					
 
 		.product-button a
 			bottom: 20px
@@ -4427,6 +4442,38 @@ input:focus::-webkit-input-placeholder
  */
 
 // Homepage
+.d-flex
+	display: flex
+
+.header__actions
+	margin-top: auto
+	font-size: 24px
+	.favourite
+		position: relative
+		.favourite__number
+			position: absolute
+			font-size: 12px
+			background: red
+			color: #fff
+			border-radius: 100px
+			line-height: 15px
+			width: 15px	
+			height: 15px
+			text-align: center
+			right: 15px
+	i:first-child
+		margin-right: 20px
+	.fa-heart
+		color: red
+
+.has,.hasnt
+	display: block
+	margin: 10px 0
+	font-size: 12px
+.has
+	color: $green
+.hasnt
+	color: red
 .product-button
 	display: none
 .contact-phone
@@ -4462,6 +4509,24 @@ input:focus::-webkit-input-placeholder
 	a
 		justify-content: center
 		transition: none
+
+// Mobile menu
+.header-mobile
+	flex-wrap: wrap
+	align-items: center
+	justify-content: center
+.hm__top
+	order: 1
+	margin-bottom: 0
+
+.hm__middle
+	order: 2
+	width: 100%
+	margin-bottom: 0
+
+.hm__bottom
+	margin-right: auto
+
 .news__block
  	margin-bottom: 20px
 
@@ -4483,52 +4548,142 @@ input:focus::-webkit-input-placeholder
 	display: table
 	margin-left: auto
 	padding: 10px 15px
-	border: 1px solid $green
 	border-radius: 5px
 
 // Breadcrumbs
 .breadcrumbs-nav
+	margin: 15px 0
 	ul
 		display: flex
 		flex-wrap: wrap
-		li
-			list-style: none
-			margin-right: 10px
-			position: relative
-			&::after
-				content: "›"
-				display: block
-				color: rgb(55, 93, 129)
-				position: absolute
-				top: 0
-				right: -8px
+
+.breadcrumbs-nav li
+	float: left
+	margin-right: 10px
+	display: block
+	overflow: hidden
+
+.breadcrumbs-nav li:last-child:after
+	content: ''
+	display: none
+
+.breadcrumbs-nav li:after
+	display: block
+	margin: 0 5px
+	color: #375d81
+	float: right
+
+.breadcrumbs-nav li a, .breadcrumbs-nav li span
+	color: #121111
+
+.breadcrumbs-nav li.active a, .breadcrumbs-nav li.active span
+	color: #666
+
+.news__block 
+	padding-bottom: 45px
+
+.news__block li
+	padding: 5px 0
+	list-style-type: circle
 
 // Cards
+.products-card__label
+	position: absolute
+	top: 5px
+	left: 10px
+	border-radius: 100px
+	display: inline-block
+	line-height: 24px
+	padding: 0 8px
+	text-transform: uppercase
+	font-size: 12px
+	color: #fff
+
+.label_type_popularity
+	background: #ffa900
+
+.label_type_action
+	background: #f84147
+
+.label_type_bestseller
+	background: #d83798
+
+.products-card__wish_btn, .products-card__compare_btn
+	position: absolute
+	top: 40px
+	z-index: 999
+	right: 10px
+	font-size: 24px
+	color: #ffa900
+	&:hover
+		color: #b10
+
+.products-card__compare_btn
+	top: 80px
+	color: silver
+	&:hover
+		color: silver
+
+.products-card__free_shipping
+	width: 50px !important
+	bottom: 0
+	padding: 0
+	left: 0
+	top: unset
+
+.product__icons
+	position: absolute
+	top: 0
+	left: 0
+	display: flex
+	img
+		width: 25px
+		height: 25px
+		object-fit: cover
+.good-img__current__discount
+	font-size: 18px
+	background: #f84147
+	color: #fff
+	font-family: $m_font
+	position: absolute
+	top: 0
+	right: 0
+	font-size: 16px
+	padding: 5px 10px
+
+.goods-shortinfo__purchase .discount__price small
+	font-size: 24px !important
+
 .discount
 	&__price
 		color: red
 
 	.old__price
 		font-size: 26px
+		margin-right: 5px
 
 .category__inner, .offer__slider, .sale-wrapper, .hits-wrapper, .new-items-wrapper, 
-		&__price
-			font-size: 34px
+	&__price
+		font-size: 34px
 
-		.discount__number
-			font-size: 18px
-			background: #FF7373
-			color: #fff
-			font-family: $m_font
-			position: absolute
-			top: 0
-			right: 0
-			font-size: 16px
-			padding: 5px 10px
+	.discount__number
+		font-size: 18px
+		background: #f84147
+		color: #fff
+		font-family: $m_font
+		position: absolute
+		top: 0
+		right: 0
+		font-size: 16px
+		padding: 5px 10px
 
-		.old__price
-			font-size: 20px
-			text-decoration: line-through
+	.old__price
+		font-size: 25px
+		margin-right: 10px
+		text-decoration: line-through
+
+	.discount__price small
+		font-size: 18px !important
 
 // Product Cart
 .product-tabs__tab-content 
@@ -4568,3 +4723,8 @@ input:focus::-webkit-input-placeholder
 		.product-button a
 			width: 40%
 			height: 40px
+
+	.goods-img .products-card__free_shipping
+		width: 50px !important
+		bottom: 50px
+	

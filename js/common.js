@@ -1,22 +1,22 @@
 $(document).ready(function(){
     $('.sale-wrapper').slick({
         infinite: true,
-        slidesToShow: 3,
-        slidesToScroll: 3,
+        slidesToShow: 4,
+        slidesToScroll: 1,
         arrows: false,
         dots: true,
         responsive: [{
             breakpoint: 1300,
             settings: {
-                slidesToShow: 3,
-                slidesToScroll: 2
+                slidesToShow: 2,
+                slidesToScroll: 1
             }
         },
         {
             breakpoint: 738,
             settings: {
-                slidesToShow: 2,
-                slidesToScroll: 2
+                slidesToShow: 1,
+                slidesToScroll: 1
             }
         },
         {
@@ -29,21 +29,21 @@ $(document).ready(function(){
     });
 
     $('.banners__wrapper').slick({
-        slidesToShow: 3,
+        slidesToShow: 4,
         arrows: false,
         autoplay: true,
         responsive: [{
             breakpoint: 1300,
             settings: {
-                slidesToShow: 3,
-                slidesToScroll: 2
+                slidesToShow: 2,
+                slidesToScroll: 1
             }
         },
         {
             breakpoint: 738,
             settings: {
-                slidesToShow: 2,
-                slidesToScroll: 2
+                slidesToShow: 1,
+                slidesToScroll: 1
             }
         },
         {
@@ -57,22 +57,22 @@ $(document).ready(function(){
 
     $('.hits-wrapper').slick({
         infinite: true,
-        slidesToShow: 3,
-        slidesToScroll: 3,
+        slidesToShow: 4,
+        slidesToScroll: 1,
         arrows: false,
         dots: true,
         responsive: [{
             breakpoint: 1300,
             settings: {
-                slidesToShow: 3,
-                slidesToScroll: 2
+                slidesToShow: 2,
+                slidesToScroll: 1
             }
         },
         {
             breakpoint: 738,
             settings: {
-                slidesToShow: 2,
-                slidesToScroll: 2
+                slidesToShow: 1,
+                slidesToScroll: 1
             }
         },
         {
@@ -86,22 +86,22 @@ $(document).ready(function(){
 
     $('.new-items-wrapper').slick({
         infinite: true,
-        slidesToShow: 3,
-        slidesToScroll: 3,
+        slidesToShow: 4,
+        slidesToScroll: 1,
         arrows: false,
         dots: true,
         responsive: [{
             breakpoint: 1300,
             settings: {
-                slidesToShow: 3,
-                slidesToScroll: 2
+                slidesToShow: 1,
+                slidesToScroll: 1
             }
         },
         {
             breakpoint: 738,
             settings: {
-                slidesToShow: 2,
-                slidesToScroll: 2
+                slidesToShow: 1,
+                slidesToScroll: 1
             }
         },
         {
@@ -115,22 +115,22 @@ $(document).ready(function(){
 
     $('.offer-wrapper').slick({
         infinite: true,
-        slidesToShow: 3,
-        slidesToScroll: 3,
+        slidesToShow: 2,
+        slidesToScroll: 1,
         arrows: false,
         dots: true,
         responsive: [{
             breakpoint: 1300,
             settings: {
                 slidesToShow: 3,
-                slidesToScroll: 2
+                slidesToScroll: 1
             }
         },
         {
             breakpoint: 738,
             settings: {
-                slidesToShow: 2,
-                slidesToScroll: 2
+                slidesToShow: 1,
+                slidesToScroll: 1
             }
         },
         {
