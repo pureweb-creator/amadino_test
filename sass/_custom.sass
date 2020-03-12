@@ -1,0 +1,497 @@
+/**
+ * =====================================
+ * CUSTOM STYLES
+ * Roman Semenikhin / PUREWEB
+ * =====================================
+ */
+
+// Specification
+.btn.focus, .btn:focus, .btn:hover
+	color: #fff
+.d-flex
+	display: flex
+
+// Hero
+.header__actions
+	margin-top: auto
+	font-size: 24px
+	.favourite
+		position: relative
+		.favourite__number
+			position: absolute
+			font-size: 12px
+			background: red
+			color: #fff
+			border-radius: 100px
+			line-height: 15px
+			width: 15px	
+			height: 15px
+			text-align: center
+			right: 15px
+	i:first-child
+		margin-right: 20px
+	.fa-heart
+		color: red
+
+.product-button a
+	height: 35px
+	width: auto
+	right: -70%
+	text-transform: capitalize
+	min-width: 70px
+	font-size: 14px
+	font-family: $m_font
+	background: #F84147
+
+.contact-phone
+	position: relative
+	&:hover
+		.right__sub_contact_phones
+			visibility: visible	
+
+.right__sub_contact_phones
+	background: $green
+	transition: all .3s ease
+	top: 40px
+	visibility: hidden
+	position: absolute
+	z-index: 2
+	color: #fff
+	width: 100%
+	&::after
+		content: ""
+		display: block
+		width: 0
+		height: 0
+		border: 8px solid #fff
+		border-bottom-color: $green
+		top: -16px
+		left: 50%
+		transform: translateX(-50%) 
+		position: absolute
+	li
+		padding: 10px 15px
+		&:hover
+			background: darken($green, 5%)
+			a
+				color: #fff
+	a
+		justify-content: center
+		transition: none
+
+.order-call
+	position: relative
+	margin-top: auto
+	&__btn
+		font-family: $m_font
+		font-weight: 300
+		box-shadow: unset
+		font-size: 14px
+		margin-left: auto
+		transition: all .3s ease
+		&:hover
+			color: #fff
+			background: darken($green, 10%)
+			box-shadow: $shadow2
+	&__form
+		position: absolute
+		z-index: 2
+		border-radius: 4px
+		top: 47px
+		right: 0
+		width: 300px
+		background: #e1e1e1
+		padding: 15px
+
+		.form__input
+			display: block
+			width: 100%
+			border-radius: 5px
+			border: 1px solid #ccc
+			margin-bottom: 10px
+			padding: 10px 0 10px 15px
+
+// Mobile menu
+.header-mobile
+	flex-wrap: wrap
+	align-items: center
+	justify-content: center
+	padding: 0 15px
+.hm__logo
+	width: 100px
+.hm__top
+	order: 1
+	margin-bottom: 0
+	width: 50px
+
+.hm__middle
+	order: 2
+	width: 100%
+	margin-bottom: 0
+
+.hm__bottom
+	margin-right: auto
+
+.news__block
+ 	margin-bottom: 20px
+
+.aside__soc_links
+	display: flex
+	a
+		font-size: 22px
+		margin-right: 10px
+		i
+			transition: all .3s ease
+
+	.fa-viber:hover
+		color: #7C519E
+
+	.fa-telegram:hover
+		color: #2CA4D8
+
+.stocks
+	display: table
+	margin-left: auto
+	padding: 10px 15px
+	border-radius: 5px
+
+// Breadcrumbs
+.breadcrumbs-nav
+	margin: 15px 0
+	ul
+		display: flex
+		flex-wrap: wrap
+
+.breadcrumbs-nav li
+	float: left
+	margin-right: 10px
+	display: block
+	overflow: hidden
+
+.breadcrumbs-nav li::after
+	content: ''
+	display: none
+
+.breadcrumbs-nav li a, .breadcrumbs-nav li span
+	color: #121111
+
+.breadcrumbs-nav li.active a, .breadcrumbs-nav li.active span
+	color: #666
+
+.news__block 
+	padding-bottom: 45px
+
+.news__block li
+	padding: 5px 0
+	list-style-type: circle
+
+// Cards
+.products-card__label
+	position: absolute
+	top: 5px
+	left: 10px
+	border-radius: 100px
+	display: inline-block
+	line-height: 24px
+	padding: 0 8px
+	font-size: 12px
+	color: #fff
+
+.label_type_popularity
+	background: #ffa900
+
+.label_type_action
+	background: #f84147
+
+.label_type_bestseller
+	background: #d83798
+
+.products-card__wish_btn, .products-card__compare_btn
+	position: absolute
+	top: 40px
+	z-index: 2
+	right: 10px
+	font-size: 24px
+	color: #ffa900
+	&:hover
+		color: #b10
+
+.products-card__add_btn
+	position: absolute
+	bottom: 0
+	right: 0
+	color: $green
+	top: 50%
+	transform: translateY(-50%)
+
+.products-card__compare_btn
+	top: 80px
+	color: silver
+	&:hover
+		color: silver
+
+.products-card__free_shipping
+	width: 50px !important
+	bottom: 0
+	padding: 0
+	left: 0
+	top: unset
+
+.product__icons
+	position: absolute
+	top: 0
+	left: 0
+	display: flex
+	img
+		width: 25px
+		height: 25px
+		object-fit: cover
+
+.has,.hasnt
+	display: block
+	margin: 10px 0
+	font-size: 12px
+.has
+	color: $green
+.hasnt
+	color: red
+
+.mark_list
+	font-size: 12px
+	color: #FAC63B
+	li
+		margin-right: 3px
+
+.features
+	margin-top: 20px
+	position: absolute
+
+	li:last-child
+		color: #ccc
+	.feature__name
+		font-weight: 900
+
+.good-img__current__discount
+	font-size: 18px
+	background: #f84147
+	color: #fff
+	font-family: $m_font
+	position: absolute
+	top: 0
+	right: 0
+	font-size: 16px
+	padding: 5px 10px
+
+.goods-shortinfo__purchase .discount__price small
+	font-size: 24px !important
+
+.discount
+	&__price
+		color: red
+
+	.old__price
+		font-size: 26px
+		margin-right: 5px
+
+.category__inner, .offer__slider, .sale-wrapper, .hits-wrapper, .new-items-wrapper, 
+	&__price
+		font-size: 34px
+
+	.discount__number
+		font-size: 18px
+		background: #f84147
+		color: #fff
+		font-family: $m_font
+		position: absolute
+		top: 0
+		right: 0
+		font-size: 16px
+		padding: 5px 10px
+
+	.old__price
+		font-size: 25px
+		margin-right: 10px
+		text-decoration: line-through
+
+	.discount__price small
+		font-size: 18px !important
+
+// Product Card
+.product-card
+	transition:  all .3s ease
+	overflow:  hidden
+	&:hover
+		.product-button a
+			right: 0
+
+.goods-shopinfo__soc-links
+	font-size: 22px
+	margin-top: 15px
+	li
+		margin-right: 5px
+		transition: all .3s ease
+		&:hover
+			transform: translateY(-5px)
+		.fa-facebook
+			color: #157DC3
+		.fa-twitter-square
+			color: #64A8F2
+		.fa-vk
+			color: #5181B8
+		.fa-odnoklassniki-square
+			color: #F7931E
+
+.product-tabs__tab-content 
+  display: none /* по умолчанию прячем все блоки */
+
+.product-tabs__tab-content.active 
+  display: block /* по умолчанию показываем нужный блок */
+
+.js-rating-product
+	margin-left: 10px
+	color: #D4D4D4
+	margin-bottom: 15px
+
+.star
+	margin-right: 4px
+	cursor: pointer
+	&.active, &:hover
+		color: #FAC63B !important
+
+.reviews__item
+	border-bottom: 1px solid silver
+	padding: 10px
+	.name	
+		font-weight: 700
+		font-size: 16px
+	.stars, .rating__stars
+		margin-left: 5px
+		font-size: 12px
+		color: #FAC63B
+	.reviews__pubdate
+		margin-left: auto
+
+	.reviews__text
+		padding: 15px 0
+
+	.reply
+		color: #69A000
+
+	.mark
+		margin-left: auto
+		.like
+			color: #69A000
+		.dislike
+			color: #FF7373
+			transform: rotate(180deg)
+		&__number
+			font-size: 12px
+
+
+// News Page
+.allnews__date
+	font-size: 12px
+	margin-top: 10px
+
+// Modal cart
+.remodal
+	.product-card
+		width: 100%
+		align-items: center
+		justify-content: space-around
+		.product-img
+			width: auto
+			margin: 0
+			a
+				height: 100%
+				img
+					height: 100%
+					width: auto
+					margin: 0
+		.product-title
+			width: auto
+			min-height: auto
+			margin: 0
+
+// Categories page
+.category__inner
+	.sale-wrapper-outer
+		margin-bottom: 40px
+.sale-wrapper-outer
+	height: 333px
+	width: 25%
+	&:hover
+		.product-card
+			position: absolute
+			background: #fff
+			z-index: 99
+			.features
+				position: relative
+
+
+// Cart
+.promocode
+	margin-bottom: 20px
+.promocode__label
+	cursor: pointer
+	text-decoration: underline
+.enter-promocode__input
+	margin-top: 10px
+	border: 1px solid $green
+	padding: 5px 15px
+	border-radius: 5px
+	margin-bottom: 10px
+
+.enter-promocode__btn
+	font-size: 14px
+	font-family: $m_font
+
+.contact__required-msg
+	margin-bottom: 25px
+.checkbox
+	margin-top: 20px
+	.contact__label
+		margin-bottom: 10px
+
+
+// Responsive
+@media (max-width: 768px)
+	.product-card
+		flex-direction: column
+		align-items: center
+
+@media (max-width: 480px)
+	.product-card:hover .product-button a
+		right: -22px
+	.order
+		margin-top: 20px
+	.banners__wrapper .slick-slide
+		margin: 0
+	.leave-review__btn
+		position: static
+	.leave-review__stars
+		width: 100%
+	.about-us__advantages-line
+		margin-bottom: 150px
+
+	.goods-shortinfo__purchase
+		flex-direction: column
+
+	.same-price .product-card
+		flex-direction: column
+		align-items: center
+		width: 90%
+		.product-img
+			height: auto !important
+			width: 70% !important
+		.product-code
+			position: static !important
+		.product-button a
+			width: 40%
+			height: 40px
+
+	.goods-img .products-card__free_shipping
+		width: 50px !important
+		bottom: 50px
+
+@import "remodal"

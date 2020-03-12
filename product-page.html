@@ -4,15 +4,25 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<link rel="stylesheet" href="css/main.min.css">
 	<!-- Fonts -->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="fonts/BebasNeue/stylesheet.css">
 	<link rel="stylesheet" href="fonts/Gilroy/stylesheet.css">
 
-	<!-- Slick -->
+	<!-- Libs -->
+	<link rel="stylesheet" type="text/css" href="https://amadino.com.ua/assets/f3c20633/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+	<link rel="stylesheet" type="text/css" href="libs/remodal.css">
+	<link rel="stylesheet" type="text/css" href="libs/remodal-default-theme.css">
 	<link rel="stylesheet" href="libs/slick-1.8.1/slick/slick.css">
+	<link rel="stylesheet" type="text/css" href="https://amadino.com.ua/assets/f465a09/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="https://amadino.com.ua/flickity/flickity.min.css">
+	<link rel="stylesheet" type="text/css" href="https://amadino.com.ua/assets/9b8159c5/css/activeform.min.css">
+
+	<!-- MAIN CSS FILE -->
+	<link rel="stylesheet" type="text/css" href="https://amadino.com.ua/css/style.css?2">
+	<link rel="stylesheet" href="css/main.min.css">
 
 	<title>Forte WB6407A Тачка садовая</title>
     
@@ -23,7 +33,6 @@
 	<div class="header-container">
 		<div class="header__logo">
 		</div>
-
 		<div class="header__nav">
 			<nav class="nav">
 				<a href="#" class="nav__link">О компании</a>
@@ -33,28 +42,33 @@
 			</nav>
 			<input type="search" class="header__search" placeholder="Поиск">
 		</div>
-
-		<div class="header__actions d-flex">
-			<a href="#" class="favourite"><i class="far fa-heart"></i><span class="favourite__number">0</span></a>
-			<a href="#" class="comparsions"><i class="fas fa-balance-scale"></i></a>
+		<div class="order-call">
+			<button class="order-call__btn btn">
+				Заказать звонок
+			</button>
+			<form action="#" method="POST" class="order-call__form">
+				<input type="text" name="name" id="order-call__name" placeholder="Имя" class="form__input">
+				<input type="tel" name="tel" id="order-call__tel" placeholder="Телефон" class="form__input">
+				<button class="order-call__btn btn">
+					Заказать звонок
+				</button>
+			</form>
 		</div>
-
 		<div class="header__right">
 			<div class="right__sup">
 				<div class="signup-button">
-					<a href="#" id="signUpButton">
+					<a href="#reg-auth-modal" id="signUpButton">
 						<img src="img/reg-icon.png" alt="">Регистрация/Вход
 					</a>
 				</div>
 				<div class="cart-button">
-					<a href="cart.html">
+					<a href="#modal">
 						<i class="fas fa-shopping-cart cart__button_cart_icon"></i>
 						Корзина
 						<span class="cart-number">0</span>
 					</a>
 				</div>
-			</div>
-			
+			</div>			
 			<div class="right__sub">
 				<div class="contact-phone">
 					<a href="tel:+0800750250"><img src="img/phone-icon.png" alt=""> 0800 <span class="color-green">750 250</span></a>
@@ -65,14 +79,16 @@
 					</ul>
 				</div>
 
-				<div class="contact-schedule">
-					<img src="img/clock-icon.png" alt=""><span class="color-green">9:00</span> до <span class="color-green">18:00</span>Пн - Пт
+				<div class="header__actions d-flex">
+					<a href="#" class="favourite"><i class="far fa-heart"></i><span class="favourite__number">0</span></a>
+					<a href="#" class="comparsions"><i class="fas fa-balance-scale"></i></a>
 				</div>
-			</div>
-			
+			</div>	
 		</div>
-
 		<div class="header-mobile">
+			<div class="hm__logo">
+				<a href="index.html" class="logo"><img src="img/header-logo.png" alt="Amadino"></a>
+			</div>
 			<div class="hm__top">
 				<img src="img/burger-menu.png" class="burger-button" id="burgerButton" alt="">
 			</div>
@@ -82,16 +98,14 @@
 			</div>
 			<div class="hm__bottom">
 				<div class="cart-button">
-					<a href="cart.html">
+					<a href="#modal">
 						<i class="fas fa-shopping-cart cart__button_cart_icon"></i>
 						<span class="cart-number"></span>
 					</a>
 				</div>
 
-			</div>
-			
+			</div>		
 		</div>
-
 		<div class="header__menu" id="mobileMenu">
 			<div class="header__menu-inner">
 				<div class="header__menu-reg">
@@ -115,106 +129,103 @@
 
 			</div>
 		</div>
-
-		
 	</div>
 </header>
-<div class="comment-modal" id="commentModal">
-	<img src="img/home/x-modal-icon.png" title="Назад" alt="Назад" class="reg__close" id="exitCommentButton">
 
-	<div class="comment-block">
-		<h3 class="comment__title">
-			Оставить свой отзыв о товаре
-		</h3>
-		<form method="POST" id="commentForm">
-			<input class="comment-from__input" type="text" name="title" placeholder="Заголовок отзыва" required>
-			<textarea class="comment-from__input" name="message" cols="30" placeholder="Оставьте отзыв" rows="10" required></textarea>
-			<div class="comment-form__info">
-				<p>Добавить изображение</p>
-				<small>не более 15 мб</small>
-			</div>
-			<div class="comment-form__pics">
-				<label>
-					<input type="file" name="pic" accept="image/*">
-				</label>
-			</div>
-			<div class="comment-form__bottom">
-				<div class="comment-form__stars">
-					<img src="img/star-unfilled.png" alt="">
-					<img src="img/star-unfilled.png" alt="">
-					<img src="img/star-unfilled.png" alt="">
-					<img src="img/star-unfilled.png" alt="">
-					<img src="img/star-unfilled.png" alt="">
-				</div>
-				<button type="submit" class="btn">Оставить отзыв</button>
-			</div>
-		</form>
-	</div>
-
-
+<!-- Register main -->
+<div class="registration remodal-bg" id="registrationModal">
+    <div class="modal-first remodal" id="modalFirst" data-remodal-id="reg-auth-modal">
+        <h2 class="reg__title modal-first__title">Выберите, что вам подоходит: </h2>
+        <button class="modal__buyers-button" id="buyersButton"><a href="#reg-auth-buyers-modal">Вход/Регистрация для покупателей</a></button>
+        <button class="modal__partners-button" id="partnersButton"><a href="#reg-auth-parthners-modal">Вход/Регистрация для партнеров</a></button>
+    </div>
 </div>
 
-<div class="registration" id="registrationModal">
-	
-	<img src="img/home/x-modal-icon.png" title="Назад" alt="Назад" class="reg__close" id="exitButton">
-	
-	<!-- 1st screen -->
-	<div class="modal-first" id="modalFirst">
-		<button class="modal__buyers-button" id="buyersButton">Я покупатель или хочу им стать</button>
-
-		<button class="modal__partners-button" id="partnersButton">Я партнер или хочу им стать</button>
-	</div>
-	<!-- /1st screen -->
-	<div class="modal__buyers" id="buyers">
-
-		<div class="modal__signin">
-			<div class="reg__title">Вход для покупателей</div>
-			<form action="#" class="modal__signing">
-				<input type="text" name placeholder="Имя">
-				<input type="text" name placeholder="Фамилия">
-				<input type="email" name placeholder="E-mail">
-				<button class="btn">Войти</button>
-			</form>
-		</div>
-
-		<div class="modal__signup">
-			<div class="reg__title">Регистрация покупателя</div>
-			<form action="#" class="modal__signing">
-				<input type="text" name placeholder="Имя">
-				<input type="text" name placeholder="Фамилия">
-				<input type="email" name placeholder="E-mail">
-				<button class="btn">Зарегистрироваться</button>
-			</form>
-		</div>
-
-	</div>
-
-	<div class="modal__partners" id="partners">
-
-		<div class="modal__signin">
-			<div class="reg__title">Вход для партнеров</div>
-			<form action="#" class="modal__signing">
-				<input type="text" name placeholder="Имя">
-				<input type="text" name placeholder="Фамилия">
-				<input type="email" name placeholder="E-mail">
-				<button class="btn">Войти как партнер</button>
-			</form>
-		</div>
-
-		<div class="modal__signup">
-			<div class="reg__title">Регистрация для партнеров</div>
-			<form action="#" class="modal__signing">
-				<input type="text" name placeholder="Имя">
-				<input type="text" name placeholder="Фамилия">
-				<input type="email" name placeholder="E-mail">
-				<button class="btn">Зарегистрироваться</button>
-			</form>
-		</div>
-
-	</div>
-
+<!-- Register for Buyers -->
+<div class="remodal-bg">
+    <div class="modal__buyers remodal" id="buyers" data-remodal-id="reg-auth-buyers-modal">
+        <div class="modal__signin">
+            <div class="reg__title">Войти</div>
+            <form action="#" method="POST" class="modal__signing">
+                <input type="email" name="auth-buyer-email" placeholder="E-mail">
+                <input type="password" name="auth-buyer-password" placeholder="Пароль">
+                <button class="btn">Войти</button>
+            </form>
+        </div>
+        <div class="modal__signup">
+            <div class="reg__title">Зарегистрироваться</div>
+            <form action="#" method="POST" class="modal__signing">
+                <input type="text" name="reg-buyer-name" placeholder="Имя">
+                <input type="email" name="reg-buyer-email" placeholder="E-mail">
+                <input type="password" name="reg-buyer-password" placeholder="Пароль">
+                <label class="contact__label contact__label--2">
+                    <input type="checkbox" name="policy" id="reg-buyer-policy" class="contact__radio policy" checked> 
+                    Я соглашаюсь с пользовательским соглашением и политикой конфиденциаьлности портала Amadino.com.ua
+                    <span class="checkmark"></span>
+                </label>
+                <button class="btn">Зарегистрироваться</button>
+            </form>
+        </div>
+    </div>
 </div>
 
+<!-- Register for Parthners -->
+<div class="remodal-bg">
+    <div class="modal__partners remodal" id="partners" data-remodal-id="reg-auth-parthners-modal">
+        <div class="modal__signin">
+            <div class="reg__title">Вход для партнеров</div>
+            <form action="#" class="modal__signing">
+                <input type="text" name placeholder="Имя">
+                <input type="text" name placeholder="Фамилия">
+                <input type="email" name placeholder="E-mail">
+                <button class="btn">Войти как партнер</button>
+            </form>
+        </div>
+
+        <div class="modal__signup">
+            <div class="reg__title">Регистрация для партнеров</div>
+            <form action="#" class="modal__signing">
+                <input type="text" name placeholder="Имя">
+                <input type="text" name placeholder="Фамилия">
+                <input type="email" name placeholder="E-mail">
+                <label class="contact__label contact__label--2">
+                    <input type="checkbox" name="policy" id="reg-buyer-policy" class="contact__radio policy" checked> 
+                    Я соглашаюсь с пользовательским соглашением и политикой конфиденциаьлности портала Amadino.com.ua
+                    <span class="checkmark"></span>
+                </label>
+                <button class="btn">Зарегистрироваться</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Product cart -->
+<div class="remodal-bg">
+    <div class="remodal" data-remodal-id="modal">
+      <h2 class="remodal-title">Корзина</h2>
+      <p class="cards-wrapper">
+        <div class="cards-wrapper__item">
+            <div class="product-card d-flex">
+                <button class="remodal-close"></button>
+                <div class="product-img">
+                    <a href="product-page.html"><img src="img/home/tachka.png" alt="Садовая Тачка"></a>
+                </div>
+                <div class="product-title">
+                    <a href="product-page.html">Forte WB6407A Тачка садовая</a>
+                </div>
+                <div class="product-price submit-cart">
+                    <div class="product-card__price">
+                        <span class="discount__price">499 <small>грн</small></span>
+                    </div>
+                </div>
+            </div>
+        </div>  
+      </p>
+      <br><br><br>
+      <button data-remodal-action="cancel" class="continue">Продложить покупки</button>
+      <button class="order"><a href="cart.html">Оформить заказ</a></button>
+    </div>
+</div>
 <div class="page-wrapper">
 	<aside class="aside">
 		<div class="aside__logo">
@@ -627,31 +638,31 @@
                                                             <li class="aside__nav-siblist2x-item">
                                     <a href="/tehnika-oborudovanie-instrument/elektrooborudovanie/ocistiteli-vysokogo-davlenia">Очистители высокого давления</a>
                                 </li>
-                                                            <li class="aside__nav-siblist2x-item">
+                                <li class="aside__nav-siblist2x-item">
                                     <a href="/tehnika-oborudovanie-instrument/elektrooborudovanie/pazorez">Пазорез</a>
                                 </li>
-                                                            <li class="aside__nav-siblist2x-item">
+                                <li class="aside__nav-siblist2x-item">
                                     <a href="/tehnika-oborudovanie-instrument/elektrooborudovanie/pila-kanatnaa">Пила канатная</a>
                                 </li>
-                                                            <li class="aside__nav-siblist2x-item">
+                                <li class="aside__nav-siblist2x-item">
                                     <a href="/tehnika-oborudovanie-instrument/elektrooborudovanie/pnevmointrument">Пневмоинтрумент</a>
                                 </li>
-                                                            <li class="aside__nav-siblist2x-item">
+                                <li class="aside__nav-siblist2x-item">
                                     <a href="/tehnika-oborudovanie-instrument/elektrooborudovanie/rezbonareznye-masiny">Резьбонарезные машины</a>
                                 </li>
-                                                            <li class="aside__nav-siblist2x-item">
+                                <li class="aside__nav-siblist2x-item">
                                     <a href="/tehnika-oborudovanie-instrument/elektrooborudovanie/rejsmusovye-stanki">Рейсмусовые станки</a>
                                 </li>
-                                                            <li class="aside__nav-siblist2x-item">
+                                <li class="aside__nav-siblist2x-item">
                                     <a href="/tehnika-oborudovanie-instrument/elektrooborudovanie/rucnye-lentocnye-pily">Ручные ленточные пилы</a>
                                 </li>
-                                                            <li class="aside__nav-siblist2x-item">
+                                <li class="aside__nav-siblist2x-item">
                                     <a href="/tehnika-oborudovanie-instrument/elektrooborudovanie/svarocnoe-oborudovanie-i-aksessuary">Сварочное оборудование и аксессуары</a>
                                 </li>
-                                                            <li class="aside__nav-siblist2x-item">
+                                <li class="aside__nav-siblist2x-item">
                                     <a href="/tehnika-oborudovanie-instrument/elektrooborudovanie/stanki-metalloobrabatyvausie">Станки металлообрабатывающие</a>
                                 </li>
-                                                            <li class="aside__nav-siblist2x-item">
+                                <li class="aside__nav-siblist2x-item">
                                     <a href="/tehnika-oborudovanie-instrument/elektrooborudovanie/stanki-sverlilnye">Станки сверлильные</a>
                                 </li>
                                                             <li class="aside__nav-siblist2x-item">
@@ -1158,13 +1169,15 @@
             <h3 class="aside__title title-underline">Новости</h3>
             <br>
             <ul class="news__block">
-                <li>
+                <li class="articles-block__topic">
+               
+                    <a href="/news/makita-drel.html" >Аккумуляторная дрель Makita</a>
                     16 окт. 2019 г.
-                    <a href="/news/makita-drel.html">Аккумуляторная дрель Makita</a>
                 </li>
-                <li>
-                    15 окт. 2019 г.
+                <li class="articles-block__topic">
+                    
                     <a href="/news/df333dwye.html">Аккумуляторная дрель-шуруповерт Makita DF333DWYE</a>
+                    15 окт. 2019 г.
                 </li>
             </ul>
             <div class="aside__tel">
@@ -1185,9 +1198,9 @@
 			<div class="row breadcrumbs-nav">
 			    <ul class="" itemscope itemtype="http://schema.org/BreadcrumbList">
 			    	<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a href="/" itemprop="item"><span itemprop="name">Главная</span></a></li>
-					<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a href="/aktivnyj-otdyh-sport-i-turizm" itemprop="item"><span itemprop="name">АКТИВНЫЙ ОТДЫХ, СПОРТ И ТУРИЗМ</span></a></li>
-					<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a href="/aktivnyj-otdyh-sport-i-turizm/akkumulatornye-radio" itemprop="item"><span itemprop="name">Аккумуляторные радио</span></a></li>
-					<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="active"><span itemprop="name">Аккумуляторный радиоприемник Makita DMR108</span></li>
+					<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a href="/aktivnyj-otdyh-sport-i-turizm" itemprop="item"><span itemprop="name">&gt; АКТИВНЫЙ ОТДЫХ, СПОРТ И ТУРИЗМ</span></a></li>
+					<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a href="/aktivnyj-otdyh-sport-i-turizm/akkumulatornye-radio" itemprop="item"><span itemprop="name">&gt; Аккумуляторные радио</span></a></li>
+					<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="active"><span itemprop="name">&gt; Аккумуляторный радиоприемник Makita DMR108</span></li>
 				</ul>
 			</div>
 			<div class="product-top">
@@ -1242,10 +1255,15 @@
 
 					<div class="goods-shortinfo__stats">
 						<div class="goods-shortinfo__line">
-							<div class="goods-shortinfo__option">Официальный дилер</div>
+							<div class="goods-shortinfo__option">Мы являемся официальным дилером торговой марки</div>
 							<div class="goods-shortinfo__value"><img src="img/brand_1.jpg" alt="BOSH" class="value_img"></div>
 						</div>
 					</div>
+					<ul class="goods-shopinfo__soc-links d-flex">
+						<li><a href="#"><i class="fab fa-facebook"></i></a></li>
+						<li><a href="#"><i class="fab fa-twitter-square"></i></a></li>
+						<li><a href="#"><i class="fab fa-odnoklassniki-square"></i></a></li>
+					</ul>
 				</div>
 
 				<div class="goods-shipment">
@@ -1308,7 +1326,9 @@
 				<div class="product-tabs__header">
 					<div class="product-tabs__tab-button btn active">Все о товаре</div>
 			        <div class="product-tabs__tab-button btn">характеристики</div>
-			        <div class="product-tabs__tab-button btn"><span class="number-of-reviews">0</span> отзывы</div>
+			        <div class="product-tabs__tab-button btn">Расходные материалы</div>
+			        <div class="product-tabs__tab-button btn">Сервисные центры</div><!-- 
+			        <div class="product-tabs__tab-button btn"><span class="number-of-reviews">0</span> отзывы</div> -->
 			        <div class="product-tabs__tab-button btn">Сравнить <i class="fas fa-chart-bar"></i></div>
 			        <div class="product-tabs__tab-button btn">В избранные<i class="far fa-heart"></i></div>
 				</div>
@@ -1343,7 +1363,10 @@
 							</div>
 
 						</div>
-
+					</div>
+				</div>
+				<div class="product-tabs__tab-content">
+					<div class="product-tabs__about-goods" id="allinfo">
 						<div class="product-tabs__characts">
 							<h3 class="product-tabs__description-title">
 								Характеристики Forte WB6407A Тачка садовая
@@ -1388,7 +1411,7 @@
 					<div class="product-tabs__about-goods" id="allinfo">
 						<div class="product-tabs__description">
 							<h2 class="product-tabs__description-title">
-								характеристики
+								Расходные материалы
 							</h2>
 
 							<div class="product-tabs__description-text">
@@ -1412,46 +1435,6 @@
 									Рукоятка с резиновой накладкой для удобной работы с электроинструментом
 								</div>
 							</div>
-
-						</div>
-
-						<div class="product-tabs__characts">
-							<h3 class="product-tabs__description-title">
-								Характеристики Forte WB6407A Тачка садовая
-							</h3>
-
-							<div class="goods-shortinfo__stats">
-							<div class="goods-shortinfo__line">
-								<div class="goods-shortinfo__option">Производитель</div>
-								<div class="goods-shortinfo__value">Grunhelm</div>
-							</div>
-
-							<div class="goods-shortinfo__line">
-								<div class="goods-shortinfo__option">Страна происхождения</div>
-								<div class="goods-shortinfo__value">Германия</div>
-							</div>
-
-							<div class="goods-shortinfo__line">
-								<div class="goods-shortinfo__option">Тип питания</div>
-								<div class="goods-shortinfo__value">Сеть</div>
-							</div>
-
-							<div class="goods-shortinfo__line">
-								<div class="goods-shortinfo__option">Мощность</div>
-								<div class="goods-shortinfo__value">1700 Вт</div>
-							</div>
-
-							<div class="goods-shortinfo__line">
-								<div class="goods-shortinfo__option">Длина шины</div>
-								<div class="goods-shortinfo__value">350 см</div>
-							</div>
-
-							<div class="goods-shortinfo__line">
-								<div class="goods-shortinfo__option">Скорость вращения цепи</div>
-								<div class="goods-shortinfo__value">13 м/с</div>
-							</div>
-						</div>
-
 						</div>
 					</div>
 				</div>
@@ -1459,7 +1442,7 @@
 					<div class="product-tabs__about-goods" id="allinfo">
 						<div class="product-tabs__description">
 							<h2 class="product-tabs__description-title">
-								отзывы
+								Сервисные центры
 							</h2>
 
 							<div class="product-tabs__description-text">
@@ -1483,46 +1466,6 @@
 									Рукоятка с резиновой накладкой для удобной работы с электроинструментом
 								</div>
 							</div>
-
-						</div>
-
-						<div class="product-tabs__characts">
-							<h3 class="product-tabs__description-title">
-								Характеристики Forte WB6407A Тачка садовая
-							</h3>
-
-							<div class="goods-shortinfo__stats">
-							<div class="goods-shortinfo__line">
-								<div class="goods-shortinfo__option">Производитель</div>
-								<div class="goods-shortinfo__value">Grunhelm</div>
-							</div>
-
-							<div class="goods-shortinfo__line">
-								<div class="goods-shortinfo__option">Страна происхождения</div>
-								<div class="goods-shortinfo__value">Германия</div>
-							</div>
-
-							<div class="goods-shortinfo__line">
-								<div class="goods-shortinfo__option">Тип питания</div>
-								<div class="goods-shortinfo__value">Сеть</div>
-							</div>
-
-							<div class="goods-shortinfo__line">
-								<div class="goods-shortinfo__option">Мощность</div>
-								<div class="goods-shortinfo__value">1700 Вт</div>
-							</div>
-
-							<div class="goods-shortinfo__line">
-								<div class="goods-shortinfo__option">Длина шины</div>
-								<div class="goods-shortinfo__value">350 см</div>
-							</div>
-
-							<div class="goods-shortinfo__line">
-								<div class="goods-shortinfo__option">Скорость вращения цепи</div>
-								<div class="goods-shortinfo__value">13 м/с</div>
-							</div>
-						</div>
-
 						</div>
 					</div>
 				</div>
@@ -1554,46 +1497,6 @@
 									Рукоятка с резиновой накладкой для удобной работы с электроинструментом
 								</div>
 							</div>
-
-						</div>
-
-						<div class="product-tabs__characts">
-							<h3 class="product-tabs__description-title">
-								Характеристики Forte WB6407A Тачка садовая
-							</h3>
-
-							<div class="goods-shortinfo__stats">
-							<div class="goods-shortinfo__line">
-								<div class="goods-shortinfo__option">Производитель</div>
-								<div class="goods-shortinfo__value">Grunhelm</div>
-							</div>
-
-							<div class="goods-shortinfo__line">
-								<div class="goods-shortinfo__option">Страна происхождения</div>
-								<div class="goods-shortinfo__value">Германия</div>
-							</div>
-
-							<div class="goods-shortinfo__line">
-								<div class="goods-shortinfo__option">Тип питания</div>
-								<div class="goods-shortinfo__value">Сеть</div>
-							</div>
-
-							<div class="goods-shortinfo__line">
-								<div class="goods-shortinfo__option">Мощность</div>
-								<div class="goods-shortinfo__value">1700 Вт</div>
-							</div>
-
-							<div class="goods-shortinfo__line">
-								<div class="goods-shortinfo__option">Длина шины</div>
-								<div class="goods-shortinfo__value">350 см</div>
-							</div>
-
-							<div class="goods-shortinfo__line">
-								<div class="goods-shortinfo__option">Скорость вращения цепи</div>
-								<div class="goods-shortinfo__value">13 м/с</div>
-							</div>
-						</div>
-
 						</div>
 					</div>
 				</div>
@@ -1625,46 +1528,6 @@
 									Рукоятка с резиновой накладкой для удобной работы с электроинструментом
 								</div>
 							</div>
-
-						</div>
-
-						<div class="product-tabs__characts">
-							<h3 class="product-tabs__description-title">
-								Характеристики Forte WB6407A Тачка садовая
-							</h3>
-
-							<div class="goods-shortinfo__stats">
-							<div class="goods-shortinfo__line">
-								<div class="goods-shortinfo__option">Производитель</div>
-								<div class="goods-shortinfo__value">Grunhelm</div>
-							</div>
-
-							<div class="goods-shortinfo__line">
-								<div class="goods-shortinfo__option">Страна происхождения</div>
-								<div class="goods-shortinfo__value">Германия</div>
-							</div>
-
-							<div class="goods-shortinfo__line">
-								<div class="goods-shortinfo__option">Тип питания</div>
-								<div class="goods-shortinfo__value">Сеть</div>
-							</div>
-
-							<div class="goods-shortinfo__line">
-								<div class="goods-shortinfo__option">Мощность</div>
-								<div class="goods-shortinfo__value">1700 Вт</div>
-							</div>
-
-							<div class="goods-shortinfo__line">
-								<div class="goods-shortinfo__option">Длина шины</div>
-								<div class="goods-shortinfo__value">350 см</div>
-							</div>
-
-							<div class="goods-shortinfo__line">
-								<div class="goods-shortinfo__option">Скорость вращения цепи</div>
-								<div class="goods-shortinfo__value">13 м/с</div>
-							</div>
-						</div>
-
 						</div>
 					</div>
 				</div>
@@ -1672,33 +1535,107 @@
 
 			<div class="commentaries" id="reviews-section">
 				<div class="section__header section__header--offer">
-					<h3 class="title-underline">Отзывы и комментарии</h3>
+					<h3 class="title-underline">Отзывы покупателей на Forte WB6407A Тачка садовая (2 отзывов)</h3>
 				</div>
 
-				<div class="product-tabs__reviews">
-
-					<div class="reviews__wrapper">						
+				<div class="reviews">
+					<div class="reviews__wrapper">
+						<div class="reviews__item">
+							<div class="reviews--top d-flex">
+								<span class="name">
+									Валентин Господарчук
+								</span>
+								<div class="rating__stars d-flex">
+									<a class="star" title-val="1" title="ужасно"><i class="fas fa-star"></i></a>
+									<a class="star" title-val="2" title="плохо"><i class="fas fa-star"></i></a>
+									<a class="star" title-val="3" title="обычно"><i class="fas fa-star"></i></a>
+									<a class="star" title-val="4" title="хорошо"><i class="fas fa-star"></i></a>
+									<a class="star" title-val="5" title="отлично"><i class="fas fa-star"></i></a>
+								</div>
+								<div class="reviews__pubdate">12.03.2020</div>
+							</div>
+							<div class="reviews--center">
+								<p class="reviews__text">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad delectus doloribus voluptates odio porro qui minus mollitia nulla, quos? Enim quae quod, provident fuga hic nisi ipsa deleniti! Suscipit, ex.
+								</p>
+							</div>
+							<div class="reviews--bottom d-flex">
+								<a href="#leave-review" class="reply"><i class="fas fa-reply"></i> Ответить</a>
+								<div class="mark d-flex">
+									<a href="#">
+										<i class="fas fa-thumbs-up like"></i>
+										<span class="mark__number">12</span>
+									</a> |
+									<a href="#">
+										<i class="fas fa-thumbs-up dislike"></i>
+										<span class="mark__number">0</span>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="reviews__item">
+							<div class="reviews--top d-flex">
+								<span class="name">
+									Валентин Господарчук
+								</span>
+								<div class="rating__stars d-flex">
+									<a class="star" title-val="1" title="ужасно"><i class="fas fa-star"></i></a>
+									<a class="star" title-val="2" title="плохо"><i class="fas fa-star"></i></a>
+									<a class="star" title-val="3" title="обычно"><i class="fas fa-star"></i></a>
+									<a class="star" title-val="4" title="хорошо"><i class="fas fa-star"></i></a>
+									<a class="star" title-val="5" title="отлично"><i class="fas fa-star"></i></a>
+								</div>
+								<div class="reviews__pubdate">12.03.2020</div>
+							</div>
+							<div class="reviews--center">
+								<p class="reviews__text">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad delectus doloribus voluptates odio porro qui minus mollitia nulla, quos? Enim quae quod, provident fuga hic nisi ipsa deleniti! Suscipit, ex.
+								</p>
+							</div>
+							<div class="reviews--bottom d-flex">
+								<a href="#leave-review" class="reply"><i class="fas fa-reply"></i> Ответить</a>
+								<div class="mark d-flex">
+									<a href="#">
+										<i class="fas fa-thumbs-up like"></i>
+										<span class="mark__number">12</span>
+									</a> |
+									<a href="#">
+										<i class="fas fa-thumbs-up dislike"></i>
+										<span class="mark__number">0</span>
+									</a>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 
 				<div class="leave-review">
-					<div class="leave-review__stars">
-						<img src="img/star-unfilled.png" alt="">
-						<img src="img/star-unfilled.png" alt="">
-						<img src="img/star-unfilled.png" alt="">
-						<img src="img/star-unfilled.png" alt="">
-						<img src="img/star-unfilled.png" alt="">
-					</div>
 					<div class="leave-review__inner">
-						
 						<div class="leave-review__header">
 							Оставить свой отзыв о товаре
 						</div>
 
-						<form action="" class="leave-review__form">
+						<form action="" class="leave-review__form" id="leave-review">
+							<div class="form__rating d-flex">
+							<span>Ваша оценка:</span>
+							<div id="star-rating" class="js-rating-product">
+								<input title="ужасно" type="radio" name="rating" value="1" style="display: none;">
+								<input title="плохо" type="radio" name="rating" value="2" style="display: none;">
+								<input title="обычно" type="radio" name="rating" value="3" style="display: none;">
+								<input title="хорошо" type="radio" name="rating" value="4" style="display: none;">
+								<input title="отлично" type="radio" name="rating" value="5" style="display: none;">
+								<div class="stars d-flex">
+									<a class="star" title-val="1" title="ужасно"><i class="fas fa-star"></i></a>
+									<a class="star" title-val="2" title="плохо"><i class="fas fa-star"></i></a>
+									<a class="star" title-val="3" title="обычно"><i class="fas fa-star"></i></a>
+									<a class="star" title-val="4" title="хорошо"><i class="fas fa-star"></i></a>
+									<a class="star" title-val="5" title="отлично"><i class="fas fa-star"></i></a>
+								</div>
+							</div>
+							</div>
 							<input type="text" class="leave-review__input" placeholder="Введите имя">
 							<textarea name="message" id="" cols="30" rows="5" class="leave-review__input leave-review__input--textarea" placeholder="Оставьте отзыв или сообщение"></textarea>
-							<button type="submit" class="btn leave-review__btn">оставить отзыв</button>
+							<button type="submit" class="btn leave-review__btn">Оставить отзыв</button>
 						</form>
 
 					</div>
@@ -1818,126 +1755,6 @@
 								</div>
 							</div>
 						</div>
-
-						<div class="sale-wrapper-outer">
-							<div class="product-card">
-								<div class="product-img">
-									<a href="#"><img src="img/home/tachka.png" alt="Садовая Тачка"></a>
-								</div>
-								<div class="product-title">
-									<a href="#">Forte WB6407A Тачка садовая</a>
-								</div>
-								<div class="product-code">
-									Код товара: 12354
-								</div>
-								<div class="product-price">
-									<span>566</span> грн
-								</div>
-								<div class="product-button">
-									<a href="#">купить</a>
-								</div>
-							</div>
-						</div>
-
-						<div class="sale-wrapper-outer">
-							<div class="product-card">
-								<div class="product-img">
-									<a href="#"><img src="img/home/tachka.png" alt="Садовая Тачка"></a>
-								</div>
-								<div class="product-title">
-									<a href="#">Forte WB6407A Тачка садовая</a>
-								</div>
-								<div class="product-code">
-									Код товара: 12354
-								</div>
-								<div class="product-price">
-									<span>566</span> грн
-								</div>
-								<div class="product-button">
-									<a href="#">купить</a>
-								</div>
-							</div>
-						</div>
-
-						<div class="sale-wrapper-outer">
-							<div class="product-card">
-								<div class="product-img">
-									<a href="#"><img src="img/home/tachka.png" alt="Садовая Тачка"></a>
-								</div>
-								<div class="product-title">
-									<a href="#">Forte WB6407A Тачка садовая</a>
-								</div>
-								<div class="product-code">
-									Код товара: 12354
-								</div>
-								<div class="product-price">
-									<span>566</span> грн
-								</div>
-								<div class="product-button">
-									<a href="#">купить</a>
-								</div>
-							</div>
-						</div>
-
-						<div class="sale-wrapper-outer">
-							<div class="product-card">
-								<div class="product-img">
-									<a href="#"><img src="img/home/tachka.png" alt="Садовая Тачка"></a>
-								</div>
-								<div class="product-title">
-									<a href="#">Forte WB6407A Тачка садовая</a>
-								</div>
-								<div class="product-code">
-									Код товара: 12354
-								</div>
-								<div class="product-price">
-									<span>566</span> грн
-								</div>
-								<div class="product-button">
-									<a href="#">купить</a>
-								</div>
-							</div>
-						</div>
-
-						<div class="sale-wrapper-outer">
-							<div class="product-card">
-								<div class="product-img">
-									<a href="#"><img src="img/home/tachka.png" alt="Садовая Тачка"></a>
-								</div>
-								<div class="product-title">
-									<a href="#">Forte WB6407A Тачка садовая</a>
-								</div>
-								<div class="product-code">
-									Код товара: 12354
-								</div>
-								<div class="product-price">
-									<span>566</span> грн
-								</div>
-								<div class="product-button">
-									<a href="#">купить</a>
-								</div>
-							</div>
-						</div>
-
-						<div class="sale-wrapper-outer">
-							<div class="product-card">
-								<div class="product-img">
-									<a href="#"><img src="img/home/tachka.png" alt="Садовая Тачка"></a>
-								</div>
-								<div class="product-title">
-									<a href="#">Forte WB6407A Тачка садовая</a>
-								</div>
-								<div class="product-code">
-									Код товара: 12354
-								</div>
-								<div class="product-price">
-									<span>566</span> грн
-								</div>
-								<div class="product-button">
-									<a href="#">купить</a>
-								</div>
-							</div>
-						</div>
 					</div>
 				</div>
 			</div>
@@ -1993,19 +1810,10 @@
 	</div>
 </footer>
 
-
-
-
-
-
-
-
-
-
-
-
-<script src="libs/jQuery/jquery-3.4.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.js"></script>
 <script src="libs/slick-1.8.1/slick/slick.min.js"></script>
+<script src="libs/remodal.js"></script>
 <script src="js/common.js"></script>
 </body>
 </html>
