@@ -153,11 +153,14 @@
 	display: table
 	margin-left: auto
 	padding: 10px 15px
+	font-family: $bebas
+	font-weight: 700
 	border-radius: 5px
+	font-size: 18px
 
 // Breadcrumbs
 .breadcrumbs-nav
-	margin: 15px 0
+	margin: 15px
 	ul
 		display: flex
 		flex-wrap: wrap
@@ -324,6 +327,10 @@
 		.product-button a
 			right: 0
 
+.main-container--cats
+	.product-card
+		margin-bottom: 50px
+
 .goods-shopinfo__soc-links
 	font-size: 22px
 	margin-top: 15px
@@ -435,6 +442,7 @@
 // Cart
 .promocode
 	margin-bottom: 20px
+	font-weight: 700
 .promocode__label
 	cursor: pointer
 	text-decoration: underline
@@ -456,6 +464,34 @@
 	.contact__label
 		margin-bottom: 10px
 
+.select_block_pickups
+	.pickups__drop_link
+		border: 1px solid silver
+		border-radius: 5px
+		padding: 10px 15px
+		position: relative
+		&::after
+			position: absolute
+			font-family: "Font Awesome 5 Free"
+			font-weight: 900
+			content: "\f107"
+			color: #333
+			right: 15px
+	.pickups__suggest-select-wrap
+		background: #fff
+		padding: 10px 15px
+		margin-top: 10px
+		box-shadow: 0 0 10px silver
+		.pickups__suggest-select-wrap-l
+			.pickups__suggest-select-wrap-l-i
+				padding: 10px 5px
+				border-bottom: 1px solid silver
+				a
+					transition: all .3s ease
+					&:hover
+						color: red
+				&:last-child
+					border-bottom: unset
 
 // Responsive
 @media (max-width: 1400px)
@@ -487,14 +523,15 @@
 		right: -9px
 
 	.category__inner
-		grid-template-columns: 1fr
+		grid-column-gap: 0
 		.sale-wrapper-outer
-			width: 70%
+			width: 100%
 			margin: 0 auto
 
 @media (max-width: 480px)
 	.product-card:hover .product-button a
-		right: -22px
+		right: -12px
+		top: -5px
 	.order
 		margin-top: 20px
 	.banners__wrapper .slick-slide
@@ -514,7 +551,6 @@
 		align-items: center
 		width: 90%
 		.product-img
-			height: auto !important
 			width: 70% !important
 		.product-code
 			position: static !important
@@ -527,3 +563,4 @@
 		bottom: 50px
 
 @import "remodal"
+@import "responsive-product-cart"

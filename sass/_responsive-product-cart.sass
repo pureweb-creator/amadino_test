@@ -1,0 +1,36 @@
+@media (max-width: 576px)
+
+	// Slider cards
+	.banners, .aside__title, .aside .news__block
+		display: none
+	.inner-wrapper, .main-container
+		padding: 0
+	.sale__slider, .new-items__slider, .hits-wrapper
+		.sale-wrapper-outer .product-card
+			position: static
+	.sale-wrapper-outer
+		height: 290px
+		.product-card
+			box-shadow: unset
+			border-left: 1px solid silver
+			padding: 10px
+			.products-card__label
+				top: 0
+			.products-card__free_shipping
+				top: unset
+
+			.products-card__label, .discount__number, .has, .hasnt
+				font-size: 11px 
+			.product-img
+				display: flex
+				align-items: center
+				img
+					width: 80%
+			.product-title a
+				font-size: 12px
+
+			.product-price span
+				font-size: 22px
+				&.old__price
+					font-size: 16px
+					margin-right: 0

@@ -28,8 +28,6 @@
 	<title>Корзина</title>
 </head>
 <body>
-	
-	
 <header class="header">
     <div class="header-container">
         <div class="header__logo">
@@ -110,7 +108,7 @@
         <div class="header__menu" id="mobileMenu">
             <div class="header__menu-inner">
                 <div class="header__menu-reg">
-                    <a href="#" id="regButton2"><img src="img/reg-mobie.png" alt=""> Регистрация/Вход</a>
+                    <a href="#reg-auth-modal" id="regButton2"><img src="img/reg-mobie.png" alt=""> Регистрация/Вход</a>
                 </div>
                 <div class="header__menu-nav">
                     <a href="index.html">Главная</a>
@@ -136,6 +134,7 @@
 <!-- Register main -->
 <div class="registration remodal-bg" id="registrationModal">
     <div class="modal-first remodal" id="modalFirst" data-remodal-id="reg-auth-modal">
+        <span data-remodal-action="close" class="remodal-close"></span>
         <h2 class="reg__title modal-first__title">Выберите, что вам подоходит: </h2>
         <button class="modal__buyers-button" id="buyersButton"><a href="#reg-auth-buyers-modal">Вход/Регистрация для покупателей</a></button>
         <button class="modal__partners-button" id="partnersButton"><a href="#reg-auth-parthners-modal">Вход/Регистрация для партнеров</a></button>
@@ -145,6 +144,7 @@
 <!-- Register for Buyers -->
 <div class="remodal-bg">
     <div class="modal__buyers remodal" id="buyers" data-remodal-id="reg-auth-buyers-modal">
+        <span data-remodal-action="close" class="remodal-close"></span>
         <div class="modal__signin">
             <div class="reg__title">Войти</div>
             <form action="#" method="POST" class="modal__signing">
@@ -173,6 +173,7 @@
 <!-- Register for Parthners -->
 <div class="remodal-bg">
     <div class="modal__partners remodal" id="partners" data-remodal-id="reg-auth-parthners-modal">
+        <span data-remodal-action="close" class="remodal-close"></span>
         <div class="modal__signin">
             <div class="reg__title">Вход для партнеров</div>
             <form action="#" class="modal__signing">
@@ -203,9 +204,38 @@
 <!-- Product cart -->
 <div class="remodal-bg">
     <div class="remodal" data-remodal-id="modal">
-      <h2 class="remodal-title">Корзина</h2>
-      <p class="cards-wrapper">
-        <div>
+    <span data-remodal-action="close" class="remodal-close"></span>
+    <h2 class="remodal-title">Корзина</h2>
+    <p class="cards-wrapper">
+        <div class="cards-wrapper__item">
+            <div class="product-card d-flex">
+                <button class="remodal-close"></button>
+                <div class="product-img">
+                    <a href="product-page.html"><img src="img/home/tachka.png" alt="Садовая Тачка"></a>
+                </div>
+                <div class="product-title">
+                    <a href="product-page.html">Forte WB6407A Тачка садовая</a>
+                </div>
+                <div class="product-price submit-cart">
+                    <div class="product-card__price">
+                        <span class="discount__price">499 <small>грн</small></span>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card d-flex">
+                <button class="remodal-close"></button>
+                <div class="product-img">
+                    <a href="product-page.html"><img src="img/home/tachka.png" alt="Садовая Тачка"></a>
+                </div>
+                <div class="product-title">
+                    <a href="product-page.html">Forte WB6407A Тачка садовая</a>
+                </div>
+                <div class="product-price submit-cart">
+                    <div class="product-card__price">
+                        <span class="discount__price">499 <small>грн</small></span>
+                    </div>
+                </div>
+            </div>
             <div class="product-card d-flex">
                 <button class="remodal-close"></button>
                 <div class="product-img">
@@ -1292,11 +1322,11 @@
 
                     <div class="checkbox">
                         <label class="contact__label contact__label--2">
-                            <input type="checkbox" name="subscribe" id="" class="contact__radio" checked> Подписаться на рассылку акций и новостей
+                            <input type="checkbox" name="subscribe" id="subscribe" class="contact__radio" checked> Подписаться на рассылку акций и новостей
                             <span class="checkmark"></span>
                         </label>
                         <label class="contact__label contact__label--2">
-                            <input type="checkbox" name="callback" id="" class="contact__radio" checked> Перезвонить для уточнения заказа?
+                            <input type="checkbox" name="callback" id="callback" class="contact__radio" checked> Перезвонить для уточнения заказа?
                             <span class="checkmark"></span>
                         </label>
                     </div>
@@ -1310,11 +1340,11 @@
 					<form action="#" class="contact">
 						<div class="contact__face-type">
 							<label class="contact__label">
-								<input type="radio" name="face" id="" class="contact__radio"> Физ.лицо
+								<input type="radio" name="face" id="individual" class="contact__radio"> Физ.лицо
 								<span class="checkmark"></span>
 							</label>
 							<label class="contact__label">
-								<input type="radio" name="face" id="" class="contact__radio"> Юр.лицо
+								<input type="radio" name="face" id="entity" class="contact__radio"> Юр.лицо
 								<span class="checkmark"></span>
 							</label>
 						</div>
@@ -1322,6 +1352,16 @@
 						<input type="text" class="contact__input" required placeholder="Ф.И.О*">
 						<input type="tel" class="contact__input" required placeholder="Контактный телефон*">
 						<input type="email" class="contact__input" required placeholder="Укажите e-mail*">
+                        <div class="select_block_pickups">
+                            <a href="#!" class="pickups__drop_link">Выберите отделение</a>
+                            <div class="pickups__suggest-select-wrap">
+                                <ul class="pickups__suggest-select-wrap-l">
+                                    <li class="pickups__suggest-select-wrap-l-i"><a href="#!">Отделение №1</a></li>
+                                    <li class="pickups__suggest-select-wrap-l-i"><a href="#!">Отделение №2</a></li>
+                                    <li class="pickups__suggest-select-wrap-l-i"><a href="#!">Отделение №3</a></li>
+                                </ul>
+                            </div>  
+                        </div>
 						
 						<textarea name="Adress" id="shipping_address" cols="30" rows="2" class="contact__input contact__input--textarea" placeholder="Адрес доставки*"></textarea>
                         <div class="kyev-delivery-box">
@@ -1329,8 +1369,6 @@
                             <input type="text" class="contact__input" required placeholder="Улица*">
                             <input type="text" class="contact__input" required placeholder="Дом*"> 
                         </div>
-						<textarea name="Adress" id="" cols="30" rows="2" class="contact__input contact__input--textarea" placeholder="Комментарии"></textarea>
-
 						<div class="contact__what">
 							Выберите тип доставки:
 						</div>
@@ -1350,10 +1388,6 @@
                             <input type="radio" name="shipment" id="shipping_meest_express" class="contact__radio"> Meest Express
                             <span class="checkmark"></span>
                         </label>
-                         <label class="contact__label contact__label--2">
-                            <input type="radio" name="shipment" id="shipping_courier" class="contact__radio"> Перевозчик
-                            <span class="checkmark"></span>
-                        </label>
 						<label class="contact__label contact__label--2">
 							<input type="radio" name="shipment" id="shipping_in_kiev" class="contact__radio"> Курьер по г. Киеву
 							<span class="checkmark"></span>
@@ -1367,23 +1401,23 @@
 							Способ Оплаты:
 						</div>
 						<label class="contact__label contact__label--2">
-							<input type="radio" name="pay-way" id="" class="contact__radio"> оплата Visa/MasterCard
+							<input type="radio" name="pay-way" id="pay-way-visa-mastercard" class="contact__radio"> оплата Visa/MasterCard
 							<span class="checkmark"></span>
 						</label>
 						<label class="contact__label contact__label--2">
-							<input type="radio" name="pay-way" id="" class="contact__radio"> Банковский перевод с НДС или без НДС
+							<input type="radio" name="pay-way" id="pay-way-bank-transfer" class="contact__radio"> Банковский перевод с НДС или без НДС
 							<span class="checkmark"></span>
 						</label>
                         <label class="contact__label contact__label--2">
-                            <input type="radio" name="pay-way" id="" class="contact__radio"> Наложенный платеж
+                            <input type="radio" name="pay-way" id="pay-way-c-o-d" class="contact__radio"> Наложенный платеж
                             <span class="checkmark"></span>
                         </label>
                         <label class="contact__label contact__label--2">
-                            <input type="radio" name="pay-way" id="" class="contact__radio"> Google Pay
+                            <input type="radio" name="pay-way" id="pay-way-google-pay" class="contact__radio"> Google Pay
                             <span class="checkmark"></span>
                         </label>
                         <label class="contact__label contact__label--2">
-                            <input type="radio" name="pay-way" id="" class="contact__radio"> Apple Pay
+                            <input type="radio" name="pay-way" id="pay-way-apple-pay" class="contact__radio"> Apple Pay
                             <span class="checkmark"></span>
                         </label>
 						<button href="#" class="btn mobile-cart-btn" type="submit">Оформить заказ</button>
@@ -1623,6 +1657,7 @@
 		</div>
 	</div>
 </footer>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="libs/remodal.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.js"></script>

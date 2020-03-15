@@ -56,7 +56,7 @@ $(document).ready(function(){
         {
             breakpoint: 576,
             settings: {
-                slidesToShow: 1,
+                slidesToShow: 2,
                 slidesToScroll: 1
             }
         }]
@@ -92,7 +92,7 @@ $(document).ready(function(){
         {
             breakpoint: 576,
             settings: {
-                slidesToShow: 1,
+                slidesToShow: 2,
                 slidesToScroll: 1
             }
         }]
@@ -122,13 +122,6 @@ $(document).ready(function(){
             breakpoint: 768,
             settings: {
                 slidesToShow: 2,
-                slidesToScroll: 1
-            }
-        },
-        {
-            breakpoint: 576,
-            settings: {
-                slidesToShow: 1,
                 slidesToScroll: 1
             }
         }]
@@ -162,17 +155,6 @@ $(document).ready(function(){
             }
         }]
     });
-
-    if ($(window).width() < 420) {
-        $('.new-items-wrapper').slick('unslick');
-        $('.new-items-wrapper').slick({
-            infinite: true,
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            arrows: false,
-            dots: false
-        });
-    }
 
     // Mobile menu
     $('#burgerButton').on('click', function(){
@@ -244,8 +226,20 @@ $(document).ready(function(){
     $('.bought-table__item-delete a').on('click', function(){
         $(this).parent().parent().remove()
     });
-    $('.remodal-close').on('click', function(){
-        $(this).parent().parent().remove()
+    $('.cards-wrapper__item .remodal-close').on('click', function(){
+        $(this).parent().remove()
+    });
+
+    // Choose shipping
+    $('.pickups__suggest-select-wrap').slideUp();
+    $('.pickups__drop_link').on('click', function(){
+        $('.pickups__suggest-select-wrap').slideToggle(200);
+    });
+
+    $('.pickups__suggest-select-wrap-l-i a').on('click', function(){
+        var pickupsListItemValue = $(this).text();
+        $('.pickups__drop_link').text(pickupsListItemValue);
+        $('.pickups__suggest-select-wrap').slideUp(200);
     });
 
     // Aside
@@ -359,7 +353,7 @@ $(document).ready(function(){
             $('.goods-img__item').removeClass('active');
             target.parent().addClass('active');
             var copy = target.clone();
-            $('.good-img__current').empty().append(copy);
+            $('.good-img__current-image').empty().append(copy);
         }        
     });
 
@@ -388,19 +382,25 @@ $(document).ready(function(){
     });
 
     // Shipping
-    $('#shipping_address, .kyev-delivery-box').hide();
+    $('#shipping_address, .kyev-delivery-box, .select_block_pickups').hide();
 
-    $('#shipping_in_ukraine, #shipping_courier').on('click', function(){
+    $('#shipping_in_ukraine, #pickup').on('click', function(){
         $("#shipping_address").show(200);
-        $('.kyev-delivery-box').hide(200);
+        $('.kyev-delivery-box, .select_block_pickups').hide(200);
+    });
+
+    $('#shipping_novaya_pochta, #chipping_justin, #shipping_meest_express').on('click', function(){
+        $('.kyev-delivery-box, #shipping_address').hide(200);
+        $('.select_block_pickups').show(200);
     });
     $('#shipping_in_kiev').on('click', function(){
         $('.kyev-delivery-box').show(200);
+        $('.select_block_pickups').hide(200);
     });
     $('#pickup').on('click', function(){
-        $(".kyev-delivery-box, #shipping_address").hide(200);
+        $(".kyev-delivery-box").hide(200);
     });
-    $('#pickup, #shipping_in_kiev').on('click', function(){
+    $('#shipping_in_kiev').on('click', function(){
         $("#shipping_address").hide(200);
     });
 

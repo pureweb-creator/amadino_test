@@ -109,7 +109,7 @@
 		<div class="header__menu" id="mobileMenu">
 			<div class="header__menu-inner">
 				<div class="header__menu-reg">
-					<a href="#" id="regButton2"><img src="img/reg-mobie.png" alt=""> Регистрация/Вход</a>
+					<a href="#reg-auth-modal" id="regButton2"><img src="img/reg-mobie.png" alt=""> Регистрация/Вход</a>
 				</div>
 				<div class="header__menu-nav">
 					<a href="index.html">Главная</a>
@@ -134,97 +134,129 @@
 
 <!-- Register main -->
 <div class="registration remodal-bg" id="registrationModal">
-	<div class="modal-first remodal" id="modalFirst" data-remodal-id="reg-auth-modal">
-		<h2 class="reg__title modal-first__title">Выберите, что вам подоходит: </h2>
-		<button class="modal__buyers-button" id="buyersButton"><a href="#reg-auth-buyers-modal">Вход/Регистрация для покупателей</a></button>
-		<button class="modal__partners-button" id="partnersButton"><a href="#reg-auth-parthners-modal">Вход/Регистрация для партнеров</a></button>
-	</div>
+    <div class="modal-first remodal" id="modalFirst" data-remodal-id="reg-auth-modal">
+        <span data-remodal-action="close" class="remodal-close"></span>
+        <h2 class="reg__title modal-first__title">Выберите, что вам подоходит: </h2>
+        <button class="modal__buyers-button" id="buyersButton"><a href="#reg-auth-buyers-modal">Вход/Регистрация для покупателей</a></button>
+        <button class="modal__partners-button" id="partnersButton"><a href="#reg-auth-parthners-modal">Вход/Регистрация для партнеров</a></button>
+    </div>
 </div>
 
 <!-- Register for Buyers -->
 <div class="remodal-bg">
-	<div class="modal__buyers remodal" id="buyers" data-remodal-id="reg-auth-buyers-modal">
-		<div class="modal__signin">
-			<div class="reg__title">Войти</div>
-			<form action="#" method="POST" class="modal__signing">
-				<input type="email" name="auth-buyer-email" placeholder="E-mail">
-				<input type="password" name="auth-buyer-password" placeholder="Пароль">
-				<button class="btn">Войти</button>
-			</form>
-		</div>
-		<div class="modal__signup">
-			<div class="reg__title">Зарегистрироваться</div>
-			<form action="#" method="POST" class="modal__signing">
-				<input type="text" name="reg-buyer-name" placeholder="Имя">
-				<input type="email" name="reg-buyer-email" placeholder="E-mail">
-				<input type="password" name="reg-buyer-password" placeholder="Пароль">
-				<label class="contact__label contact__label--2">
+    <div class="modal__buyers remodal" id="buyers" data-remodal-id="reg-auth-buyers-modal">
+        <span data-remodal-action="close" class="remodal-close"></span>
+        <div class="modal__signin">
+            <div class="reg__title">Войти</div>
+            <form action="#" method="POST" class="modal__signing">
+                <input type="email" name="auth-buyer-email" placeholder="E-mail">
+                <input type="password" name="auth-buyer-password" placeholder="Пароль">
+                <button class="btn">Войти</button>
+            </form>
+        </div>
+        <div class="modal__signup">
+            <div class="reg__title">Зарегистрироваться</div>
+            <form action="#" method="POST" class="modal__signing">
+                <input type="text" name="reg-buyer-name" placeholder="Имя">
+                <input type="email" name="reg-buyer-email" placeholder="E-mail">
+                <input type="password" name="reg-buyer-password" placeholder="Пароль">
+                <label class="contact__label contact__label--2">
                     <input type="checkbox" name="policy" id="reg-buyer-policy" class="contact__radio policy" checked> 
                     Я соглашаюсь с пользовательским соглашением и политикой конфиденциаьлности портала Amadino.com.ua
                     <span class="checkmark"></span>
                 </label>
-				<button class="btn">Зарегистрироваться</button>
-			</form>
-		</div>
-	</div>
+                <button class="btn">Зарегистрироваться</button>
+            </form>
+        </div>
+    </div>
 </div>
 
 <!-- Register for Parthners -->
 <div class="remodal-bg">
-	<div class="modal__partners remodal" id="partners" data-remodal-id="reg-auth-parthners-modal">
-		<div class="modal__signin">
-			<div class="reg__title">Вход для партнеров</div>
-			<form action="#" class="modal__signing">
-				<input type="text" name placeholder="Имя">
-				<input type="text" name placeholder="Фамилия">
-				<input type="email" name placeholder="E-mail">
-				<button class="btn">Войти как партнер</button>
-			</form>
-		</div>
+    <div class="modal__partners remodal" id="partners" data-remodal-id="reg-auth-parthners-modal">
+        <span data-remodal-action="close" class="remodal-close"></span>
+        <div class="modal__signin">
+            <div class="reg__title">Вход для партнеров</div>
+            <form action="#" class="modal__signing">
+                <input type="text" name placeholder="Имя">
+                <input type="text" name placeholder="Фамилия">
+                <input type="email" name placeholder="E-mail">
+                <button class="btn">Войти как партнер</button>
+            </form>
+        </div>
 
-		<div class="modal__signup">
-			<div class="reg__title">Регистрация для партнеров</div>
-			<form action="#" class="modal__signing">
-				<input type="text" name placeholder="Имя">
-				<input type="text" name placeholder="Фамилия">
-				<input type="email" name placeholder="E-mail">
-				<label class="contact__label contact__label--2">
+        <div class="modal__signup">
+            <div class="reg__title">Регистрация для партнеров</div>
+            <form action="#" class="modal__signing">
+                <input type="text" name placeholder="Имя">
+                <input type="text" name placeholder="Фамилия">
+                <input type="email" name placeholder="E-mail">
+                <label class="contact__label contact__label--2">
                     <input type="checkbox" name="policy" id="reg-parthner-policy" class="contact__radio policy" checked> 
                     Я соглашаюсь с пользовательским соглашением и политикой конфиденциаьлности портала Amadino.com.ua
                     <span class="checkmark"></span>
                 </label>
-				<button class="btn">Зарегистрироваться</button>
-			</form>
-		</div>
-	</div>
+                <button class="btn">Зарегистрироваться</button>
+            </form>
+        </div>
+    </div>
 </div>
 
 <!-- Product cart -->
 <div class="remodal-bg">
-	<div class="remodal" data-remodal-id="modal">
-	  <h2 class="remodal-title">Корзина</h2>
-	  <p class="cards-wrapper">
-		<div class="cards-wrapper__item">
-			<div class="product-card d-flex">
-				<button class="remodal-close"></button>
-				<div class="product-img">
-					<a href="product-page.html"><img src="img/home/tachka.png" alt="Садовая Тачка"></a>
-				</div>
-				<div class="product-title">
-					<a href="product-page.html">Forte WB6407A Тачка садовая</a>
-				</div>
-				<div class="product-price submit-cart">
-					<div class="product-card__price">
-						<span class="discount__price">499 <small>грн</small></span>
-					</div>
-				</div>
-			</div>
-		</div>	
-	  </p>
-	  <br><br><br>
-	  <button data-remodal-action="cancel" class="continue">Продложить покупки</button>
-	  <button class="order"><a href="cart.html">Оформить заказ</a></button>
-	</div>
+    <div class="remodal" data-remodal-id="modal">
+    <span data-remodal-action="close" class="remodal-close"></span>
+    <h2 class="remodal-title">Корзина</h2>
+    <p class="cards-wrapper">
+        <div class="cards-wrapper__item">
+            <div class="product-card d-flex">
+                <button class="remodal-close"></button>
+                <div class="product-img">
+                    <a href="product-page.html"><img src="img/home/tachka.png" alt="Садовая Тачка"></a>
+                </div>
+                <div class="product-title">
+                    <a href="product-page.html">Forte WB6407A Тачка садовая</a>
+                </div>
+                <div class="product-price submit-cart">
+                    <div class="product-card__price">
+                        <span class="discount__price">499 <small>грн</small></span>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card d-flex">
+                <button class="remodal-close"></button>
+                <div class="product-img">
+                    <a href="product-page.html"><img src="img/home/tachka.png" alt="Садовая Тачка"></a>
+                </div>
+                <div class="product-title">
+                    <a href="product-page.html">Forte WB6407A Тачка садовая</a>
+                </div>
+                <div class="product-price submit-cart">
+                    <div class="product-card__price">
+                        <span class="discount__price">499 <small>грн</small></span>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card d-flex">
+                <button class="remodal-close"></button>
+                <div class="product-img">
+                    <a href="product-page.html"><img src="img/home/tachka.png" alt="Садовая Тачка"></a>
+                </div>
+                <div class="product-title">
+                    <a href="product-page.html">Forte WB6407A Тачка садовая</a>
+                </div>
+                <div class="product-price submit-cart">
+                    <div class="product-card__price">
+                        <span class="discount__price">499 <small>грн</small></span>
+                    </div>
+                </div>
+            </div>
+        </div>  
+      </p>
+      <br><br><br>
+      <button data-remodal-action="cancel" class="continue">Продложить покупки</button>
+      <button class="order"><a href="cart.html">Оформить заказ</a></button>
+    </div>
 </div>
 
 <div class="page-wrapper">
@@ -1200,7 +1232,6 @@
 					<img src="img/home/placeholder-main.jpg" alt="">
 				</div>
 				<a href="#" class="stocks">Все акции</a>
-				<br><br>
         		<h4 class="banners__title title-underline"><a href="/brand">Все Бренды &rarr;</a></h4>
         		<div class="banners__wrapper" style="padding: 0 25px;">
             

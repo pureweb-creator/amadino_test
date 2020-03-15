@@ -1,6 +1,9 @@
 .remodal
 	max-width: 980px
 
+	.product-card
+		margin-bottom: 40px
+
 .modal__buyers, .modal__partners
 	width: 500px
 
@@ -51,3 +54,19 @@
 	a
 		color: #fff
 		font-size: 14px
+
+@media (max-width: 768px)
+	.modal__buyers, .modal__partners
+		width: 90%
+		padding: 35px 15px
+
+@media (max-width: 425px)
+	.modal-first
+		width: 90%
+		padding: 35px 15px
+	.modal-first__title
+		font-size: 18px
+	.modal__buyers-button a, .modal__partners-button a
+		font-size: 12px
+	.reg__title
+		margin-bottom: 25px
