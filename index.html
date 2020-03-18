@@ -11,12 +11,12 @@
 	<link rel="stylesheet" href="fonts/Gilroy/stylesheet.css">
 
 	<!-- Libs -->
-	<link rel="stylesheet" type="text/css" href="https://amadino.com.ua/assets/f3c20633/css/bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+    <link href="https://amadino.com.ua/" rel="canonical">
+    <link href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="libs/remodal.css">
 	<link rel="stylesheet" type="text/css" href="libs/remodal-default-theme.css">
 	<link rel="stylesheet" href="libs/slick-1.8.1/slick/slick.css">
-	<link rel="stylesheet" type="text/css" href="https://amadino.com.ua/assets/f465a09/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="https://amadino.com.ua/flickity/flickity.min.css">
 	<link rel="stylesheet" type="text/css" href="https://amadino.com.ua/assets/9b8159c5/css/activeform.min.css">
 
@@ -28,7 +28,8 @@
 	<title>Главная</title>
 </head>
 <body>
-	
+
+<!-- Hero -->
 <header class="header">
 	<div class="header-container">
 		<div class="header__logo">
@@ -36,29 +37,43 @@
 		<div class="header__nav">
 			<nav class="nav">
 				<a href="#" class="nav__link">О компании</a>
-				<a href="#" class="nav__link">Возврат товара</a>
+				<a href="#" class="nav__link">Возврат и гарантия товара</a>
 				<a href="#" class="nav__link">Доставка и оплата</a>
 				<a href="#" class="nav__link">Контакты</a>
+                <a href="#" class="nav__link">Акции</a>
 			</nav>
-			<input type="search" class="header__search" placeholder="Поиск">
+            <form action="/site/search" method="GET" id="w0" role="form" class="search-form"> 
+                <button type="submit" class="search-form__button"><img src="img/path1.png" alt="search icon"></button>
+                <input type="search" class="header__search ui-autocomplete-input search-form__input" name="SearchForm[q]" placeholder="Поиск по сайту" id="search_field" autocomplete="off" required>
+            </form>
 		</div>
-		<div class="order-call">
-			<button class="order-call__btn btn">
-				Заказать звонок
-			</button>
-			<form action="#" method="POST" class="order-call__form">
-				<input type="text" name="name" id="order-call__name" placeholder="Имя" class="form__input">
-				<input type="tel" name="tel" id="order-call__tel" placeholder="Телефон" class="form__input">
-				<button class="order-call__btn btn">
-					Заказать звонок
-				</button>
-			</form>
-		</div>
+        <div class="header__top-line">
+            <div class="lang d-flex">
+                <span class="title">Язык: </span>
+                <a href="#!" class="lang__link lang__ru lang__active">ru</a>
+                <span class="divider">|</span>
+                <a href="#!" class="lang__link lang__eg">eg</a>
+                 <span class="divider">|</span>
+                <a href="#!" class="lang__link lang__ua">ua</a>
+            </div>
+            <div class="order-call">
+                <button class="order-call__btn btn">
+                    Заказать звонок
+                </button>
+                <form action="#" method="POST" class="order-call__form">
+                    <input type="text" name="name" id="order-call__name" placeholder="Имя" class="form__input">
+                    <input type="tel" name="tel" id="order-call__tel" placeholder="Телефон" class="form__input">
+                    <button class="order-call__btn btn">
+                        Заказать звонок
+                    </button>
+                </form>
+            </div>
+        </div>
 		<div class="header__right">
 			<div class="right__sup">
 				<div class="signup-button">
 					<a href="#reg-auth-modal" id="signUpButton">
-						<img src="img/reg-icon.png" alt="">Регистрация/Вход
+						<i class="fa fa-sign-in-alt"></i>Регистрация/Вход
 					</a>
 				</div>
 				<div class="cart-button">
@@ -71,7 +86,7 @@
 			</div>			
 			<div class="right__sub">
 				<div class="contact-phone">
-					<a href="tel:+0800750250"><img src="img/phone-icon.png" alt=""> 0800 <span class="color-green">750 250</span></a>
+					<a href="tel:+0800750250"><i class="fa fa-phone" style="transform: rotate(90deg); font-size: 18px; margin-right: 10px"></i> 0800 <span class="color-green">750 250</span></a>
 					<ul class="right__sub_contact_phones">
 						<li><a href="tel:+0800750250">0800 <span>750 250</span></a></li>
 						<li><a href="tel:+0800750250">0800 <span>750 250</span></a></li>
@@ -90,11 +105,14 @@
 				<a href="index.html" class="logo"><img src="img/header-logo.png" alt="Amadino"></a>
 			</div>
 			<div class="hm__top">
-				<img src="img/burger-menu.png" class="burger-button" id="burgerButton" alt="">
+				<i class="fa fa-bars" id="burgerButton"></i>
 			</div>
 
 			<div class="hm__middle">
-				<input type="search" class="header__search" placeholder="Поиск">
+				<form action="/site/search" method="GET" id="w0" role="form" class="search-form"> 
+                    <button type="submit" class="search-form__button"><img src="img/path1.png" alt="search icon"></button>
+                    <input type="search" class="header__search ui-autocomplete-input search-form__input" name="SearchForm[q]" placeholder="Поиск по сайту" id="search_field" autocomplete="off" required>
+                </form>
 			</div>
 			<div class="hm__bottom">
 				<div class="cart-button">
@@ -109,7 +127,7 @@
 		<div class="header__menu" id="mobileMenu">
 			<div class="header__menu-inner">
 				<div class="header__menu-reg">
-					<a href="#reg-auth-modal" id="regButton2"><img src="img/reg-mobie.png" alt=""> Регистрация/Вход</a>
+					<a href="#reg-auth-modal" id="regButton2"><i class="fa fa-sign-in-alt"></i> Регистрация/Вход</a>
 				</div>
 				<div class="header__menu-nav">
 					<a href="index.html">Главная</a>
@@ -162,7 +180,7 @@
                 <input type="password" name="reg-buyer-password" placeholder="Пароль">
                 <label class="contact__label contact__label--2">
                     <input type="checkbox" name="policy" id="reg-buyer-policy" class="contact__radio policy" checked> 
-                    Я соглашаюсь с пользовательским соглашением и политикой конфиденциаьлности портала Amadino.com.ua
+                    Я соглашаюсь с пользовательским соглашением и политикой конфиденциальности портала Amadino.com.ua
                     <span class="checkmark"></span>
                 </label>
                 <button class="btn">Зарегистрироваться</button>
@@ -193,7 +211,7 @@
                 <input type="email" name placeholder="E-mail">
                 <label class="contact__label contact__label--2">
                     <input type="checkbox" name="policy" id="reg-parthner-policy" class="contact__radio policy" checked> 
-                    Я соглашаюсь с пользовательским соглашением и политикой конфиденциаьлности портала Amadino.com.ua
+                    Я соглашаюсь с пользовательским соглашением и политикой конфиденциальности портала Amadino.com.ua
                     <span class="checkmark"></span>
                 </label>
                 <button class="btn">Зарегистрироваться</button>
@@ -259,6 +277,7 @@
     </div>
 </div>
 
+<!-- Main -->
 <div class="page-wrapper">
 	<aside class="aside">
 		<div class="aside__logo">
@@ -266,10 +285,11 @@
 				<img src="img/header-logo.png" alt="Amadin">
 			</a>
 		</div>
+        <a href="#" class="mobile__categories_title">Все Категории: </a>
 		<div class="aside__inner">
             <ul class="aside__nav">
                 <li class="aside__nav-item">
-                    <a href="/aktivnyj-otdyh-sport-i-turizm">&gt; Активный отдых, спорт и туризм</a>
+                    <a href="/aktivnyj-otdyh-sport-i-turizm"><i class="fas fa-volleyball-ball"></i> Активный отдых, спорт и туризм</a>
                     <ul class="aside__nav-sublist">
                         <li class="aside__nav-sublist-item">
                         	<a href="/aktivnyj-otdyh-sport-i-turizm/akkumulatornye-radio">
@@ -405,7 +425,7 @@
                     </ul>
                 </li>
                 <li class="aside__nav-item">
-                    <a href="/tehnika-oborudovanie-instrument">&gt; Техника, оборудование, инструмент</a>
+                    <a href="/tehnika-oborudovanie-instrument"><i class="fas fa-wrench"></i> Техника, оборудование, инструмент</a>
 
                         <ul class="aside__nav-sublist">
                                         <li class="aside__nav-sublist-item">
@@ -734,7 +754,9 @@
                                 </ul>
                 </li>
                 <li class="aside__nav-item">
-                    <a href="/daca-sad-i-ogorod">&gt; Дача, сад и огород</a>
+                    <a href="/daca-sad-i-ogorod">
+                    <span data-balloon-pos="up" class="shovel"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="shovel" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="fa-shovel fa-pro-icon"><path fill="currentColor" d="M500.3 96.38L415.62 11.7c-15.59-15.59-40.97-15.59-56.56 0l-32.67 32.67c-18.94 18.94-29.25 44.31-29.25 70.55 0 6.53.64 13.13 1.95 19.69 1.74 8.69 4.75 16.84 8.53 24.53L197.36 269.39l-45.26-45.26c-12.5-12.5-32.76-12.5-45.25 0l-67.88 67.88C-11.02 342-6.29 473.03 16.34 495.66c22.63 22.63 153.66 27.36 203.65-22.63l67.88-67.88c12.5-12.5 12.5-32.76 0-45.25l-45.26-45.26 110.26-110.26c7.7 3.79 15.87 6.8 24.57 8.54 32.81 6.56 66.53-3.64 90.19-27.3l32.67-32.67c15.6-15.6 15.6-40.97 0-56.57zm-77.92 43.99a35.87 35.87 0 0 1-32.42 9.8c-14.23-2.86-25.27-13.91-28.13-28.17-2.33-11.83 1.31-23.91 9.8-32.38l15.7-15.7 50.75 50.75-15.7 15.7z" class=""></path></svg></span>
+                    Дача, сад и огород</a>
 
                         <ul class="aside__nav-sublist">
                                         <li class="aside__nav-sublist-item">
@@ -999,7 +1021,9 @@
                                 </ul>
                 </li>
                 <li class="aside__nav-item">
-                    <a href="/bezopasnost-i-videonabludenie">&gt; Безопасность и видеонаблюдение</a>
+                    <a href="/bezopasnost-i-videonabludenie">
+                    <span><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="cctv" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="fa-cctv fa-pro-icon"><path fill="currentColor" d="M517.45 168.58L139.24 2.29a32 32 0 0 0-39.67 13.84L4.23 183a32 32 0 0 0 16.85 46l156.57 64.85L137.81 400H64v-32a16 16 0 0 0-16-16H16a16 16 0 0 0-16 16v128a16 16 0 0 0 16 16h32a16 16 0 0 0 16-16v-32h96a32 32 0 0 0 30-20.77l46.85-124.94 68.52 28.38a32 32 0 0 0 27.89-2.94l189.26-118.31c22.21-13.88 19.25-47.11-5.07-56.84zm48.47 105.2l-35.45-15.59-138.4 86.5 119.58 52.58a16.86 16.86 0 0 0 22.22-8.65l40.7-92.62a16.85 16.85 0 0 0-8.65-22.22z" class=""></path></svg></span>
+                    Безопасность и видеонаблюдение</a>
 
                         <ul class="aside__nav-sublist">
                                         <li class="aside__nav-sublist-item">
@@ -1030,7 +1054,7 @@
                                 </ul>
                 </li>
                 <li class="aside__nav-item">
-                    <a href="/tovary-dla-doma">&gt; Товары для дома</a>
+                    <a href="/tovary-dla-doma"><i class="fas fa-home"></i> Товары для дома</a>
 
                         <ul class="aside__nav-sublist">
                                         <li class="aside__nav-sublist-item">
@@ -1153,7 +1177,7 @@
                                 </ul>
                 </li>
                 <li class="aside__nav-item">
-                    <a href="/krasota-i-zdorove">&gt; Красота и здоровье</a>
+                    <a href="/krasota-i-zdorove"><i class="fas fa-hand-holding-heart"></i> Красота и здоровье</a>
 
                         <ul class="aside__nav-sublist">
                                         <li class="aside__nav-sublist-item">
@@ -1231,8 +1255,7 @@
 				<div class="banner-big">
 					<img src="img/home/placeholder-main.jpg" alt="">
 				</div>
-				<a href="#" class="stocks">Все акции</a>
-        		<h4 class="banners__title title-underline"><a href="/brand">Все Бренды &rarr;</a></h4>
+				<a href="#" class="stocks title-underline">Все акции</a>
         		<div class="banners__wrapper" style="padding: 0 25px;">
             
                     <a href="/brand/bosch" style="display: block; width: 350px; height:120px; background: transparent url('img/brand_1.jpg') center center no-repeat;">
@@ -1284,6 +1307,7 @@
                         <img src="/images/spacer.gif" style="width: 350px; height:120px;" width="350" height="120" alt="ECOSOFT" title="Товары ECOSOFT"/>
                     </a>
             	</div>
+                <h4 class="banners__title title-underline stocks"><a href="/brand">Все Бренды</a></h4>
 			</div>
 
 			<div class="sale">
@@ -1307,7 +1331,77 @@
 								</div>
 								<div class="product-title">
 									<a href="product-page.html">Forte WB6407A Тачка садовая</a>
-									<span class="hasnt">Нет в наличии</span>
+									<span class="has">Есть в наличии</span>
+								</div>
+								<ul class="mark_list d-flex">
+									<li><i class="fas fa-star"></i></li>
+									<li><i class="fas fa-star"></i></li>
+									<li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+									<li><i class="far fa-star"></i></li>
+								</ul>
+								<div class="product-price submit-cart">
+									<div class="product-card__price">
+										<span class=" old__price">566</span>
+										<span class="discount__price">499 <small>грн</small></span>
+									</div>
+									<a href="#" class="products-card__add_btn"><i class="fas fa-shopping-cart"></i></a>
+									<div class="product-button">
+										<a href="product-page.html">купить</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="sale-wrapper-outer">
+							<div class="product-card">
+								<div class="products-card__label label_type_popularity">
+									топ продаж
+								</div>
+								<a href="#" class="products-card__wish_btn"><i class="far fa-heart"></i></a>
+								<a href="#" class="products-card__compare_btn"><i class="fas fa-balance-scale"></i></a>
+								<span class="discount__number">-10%</span>
+								<div class="product-img">
+									<a href="product-page.html"><img src="img/product-image-2.jpg" alt="Дрель-шуруповерт Metabo"></a>
+									<img src="img/free_shipping.png" alt="Бесплатная доставка в отделения Нова Пошта" class="products-card__label products-card__free_shipping">
+								</div>
+								<div class="product-title">
+									<a href="product-page.html">Дрель-шуруповерт Metabo</a>
+									<span class="has">Есть в наличии</span>
+								</div>
+								<ul class="mark_list d-flex">
+									<li><i class="fas fa-star"></i></li>
+									<li><i class="fas fa-star"></i></li>
+									<li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+									<li><i class="far fa-star"></i></li>
+								</ul>
+								<div class="product-price submit-cart">
+									<div class="product-card__price">
+										<span class=" old__price">1699</span>
+										<span class="discount__price">1499 <small>грн</small></span>
+									</div>
+									<a href="#" class="products-card__add_btn"><i class="fas fa-shopping-cart"></i></a>
+									<div class="product-button">
+										<a href="product-page.html">купить</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="sale-wrapper-outer">
+							<div class="product-card">
+								<div class="products-card__label label_type_bestseller">
+									хит сезона
+								</div>
+								<a href="#" class="products-card__wish_btn"><i class="far fa-heart"></i></a>
+								<a href="#" class="products-card__compare_btn"><i class="fas fa-balance-scale"></i></a>
+								<span class="discount__number">-9%</span>
+								<div class="product-img">
+									<a href="product-page.html"><img src="img/product-image-3.jpg" alt="Торцовочная пила Metabo KGS 216 M"></a>
+									<img src="img/free_shipping.png" alt="Бесплатная доставка в отделения Нова Пошта" class="products-card__label products-card__free_shipping">
+								</div>
+								<div class="product-title">
+									<a href="product-page.html">Торцовочная пила Metabo KGS 216 M</a>
+									<span class="has">Есть в наличии</span>
 								</div>
 								<ul class="mark_list d-flex">
 									<li><i class="fas fa-star"></i></li>
@@ -1317,8 +1411,8 @@
 								</ul>
 								<div class="product-price submit-cart">
 									<div class="product-card__price">
-										<span class=" old__price">566</span>
-										<span class="discount__price">499 <small>грн</small></span>
+										<span class=" old__price">2199</span>
+										<span class="discount__price">1814 <small>грн</small></span>
 									</div>
 									<a href="#" class="products-card__add_btn"><i class="fas fa-shopping-cart"></i></a>
 									<div class="product-button">
@@ -1336,79 +1430,11 @@
 								<a href="#" class="products-card__compare_btn"><i class="fas fa-balance-scale"></i></a>
 								<span class="discount__number">-20%</span>
 								<div class="product-img">
-									<a href="product-page.html"><img src="img/home/tachka.png" alt="Садовая Тачка"></a>
+									<a href="product-page.html"><img src="img/product-image-4.jpg" alt="Газонокосилка бензиновая AL-KO Classic 4.66 P-A edition"></a>
 									<img src="img/free_shipping.png" alt="Бесплатная доставка в отделения Нова Пошта" class="products-card__label products-card__free_shipping">
 								</div>
 								<div class="product-title">
-									<a href="product-page.html">Forte WB6407A Тачка садовая</a>
-									<span class="hasnt">Нет в наличии</span>
-								</div>
-								<ul class="mark_list d-flex">
-									<li><i class="fas fa-star"></i></li>
-									<li><i class="fas fa-star"></i></li>
-									<li><i class="fas fa-star"></i></li>
-									<li><i class="far fa-star"></i></li>
-								</ul>
-								<div class="product-price submit-cart">
-									<div class="product-card__price">
-										<span class=" old__price">566</span>
-										<span class="discount__price">499 <small>грн</small></span>
-									</div>
-									<a href="#" class="products-card__add_btn"><i class="fas fa-shopping-cart"></i></a>
-									<div class="product-button">
-										<a href="product-page.html">купить</a>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="sale-wrapper-outer">
-							<div class="product-card">
-								<div class="products-card__label label_type_action">
-									акция
-								</div>
-								<a href="#" class="products-card__wish_btn"><i class="far fa-heart"></i></a>
-								<a href="#" class="products-card__compare_btn"><i class="fas fa-balance-scale"></i></a>
-								<span class="discount__number">-20%</span>
-								<div class="product-img">
-									<a href="product-page.html"><img src="img/home/tachka.png" alt="Садовая Тачка"></a>
-									<img src="img/free_shipping.png" alt="Бесплатная доставка в отделения Нова Пошта" class="products-card__label products-card__free_shipping">
-								</div>
-								<div class="product-title">
-									<a href="product-page.html">Forte WB6407A Тачка садовая</a>
-									<span class="hasnt">Нет в наличии</span>
-								</div>
-								<ul class="mark_list d-flex">
-									<li><i class="fas fa-star"></i></li>
-									<li><i class="fas fa-star"></i></li>
-									<li><i class="fas fa-star"></i></li>
-									<li><i class="far fa-star"></i></li>
-								</ul>
-								<div class="product-price submit-cart">
-									<div class="product-card__price">
-										<span class=" old__price">566</span>
-										<span class="discount__price">499 <small>грн</small></span>
-									</div>
-									<a href="#" class="products-card__add_btn"><i class="fas fa-shopping-cart"></i></a>
-									<div class="product-button">
-										<a href="product-page.html">купить</a>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="sale-wrapper-outer">
-							<div class="product-card">
-								<div class="products-card__label label_type_action">
-									акция
-								</div>
-								<a href="#" class="products-card__wish_btn"><i class="far fa-heart"></i></a>
-								<a href="#" class="products-card__compare_btn"><i class="fas fa-balance-scale"></i></a>
-								<span class="discount__number">-20%</span>
-								<div class="product-img">
-									<a href="product-page.html"><img src="img/home/tachka.png" alt="Садовая Тачка"></a>
-									<img src="img/free_shipping.png" alt="Бесплатная доставка в отделения Нова Пошта" class="products-card__label products-card__free_shipping">
-								</div>
-								<div class="product-title">
-									<a href="product-page.html">Forte WB6407A Тачка садовая</a>
+									<a href="product-page.html">Газонокосилка AL-KO Classic 4.66 P-A edition</a>
 									<span class="hasnt">Нет в наличии</span>
 								</div>
 								<ul class="mark_list d-flex">
@@ -1495,6 +1521,7 @@
 									<li><i class="fas fa-star"></i></li>
 									<li><i class="fas fa-star"></i></li>
 									<li><i class="far fa-star"></i></li>
+                                    <li><i class="far fa-star"></i></li>
 								</ul>
 								<div class="product-price submit-cart">
 									<div class="product-card__price">
@@ -1517,23 +1544,24 @@
 								<a href="#" class="products-card__compare_btn"><i class="fas fa-balance-scale"></i></a>
 								<span class="discount__number">-20%</span>
 								<div class="product-img">
-									<a href="product-page.html"><img src="img/home/tachka.png" alt="Садовая Тачка"></a>
+									<a href="product-page.html"><img src="img/product-image-2.jpg" alt="Садовая Тачка"></a>
 									<img src="img/free_shipping.png" alt="Бесплатная доставка в отделения Нова Пошта" class="products-card__label products-card__free_shipping">
 								</div>
 								<div class="product-title">
-									<a href="product-page.html">Forte WB6407A Тачка садовая</a>
+									<a href="product-page.html">Дрель-шуруповерт Metabo PowerMax</a>
 									<span class="hasnt">Нет в наличии</span>
 								</div>
 								<ul class="mark_list d-flex">
 									<li><i class="fas fa-star"></i></li>
 									<li><i class="fas fa-star"></i></li>
 									<li><i class="fas fa-star"></i></li>
-									<li><i class="far fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
 								</ul>
 								<div class="product-price submit-cart">
 									<div class="product-card__price">
-										<span class=" old__price">566</span>
-										<span class="discount__price">499 <small>грн</small></span>
+										<span class=" old__price">1999</span>
+										<span class="discount__price">1814 <small>грн</small></span>
 									</div>
 									<a href="#" class="products-card__add_btn"><i class="fas fa-shopping-cart"></i></a>
 									<div class="product-button">
@@ -1976,6 +2004,8 @@
 		</div> <!-- /info-container -->
 	</div>		
 </div>
+
+<!-- About -->
 <div class="about-us">
 	<div class="footer-container">
 		<div class="about-us__inner">
@@ -2019,6 +2049,8 @@
 		</div>
 	</div>
 </div>
+
+<!-- Footer -->
 <footer class="footer">
 	<div class="footer-container">
 		<div class="footer__inner">
@@ -2068,10 +2100,12 @@
 	</div>
 </footer>
 
+<!-- Enqueue scripts -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.js"></script>
 <script src="libs/slick-1.8.1/slick/slick.min.js"></script>
 <script src="libs/remodal.js"></script>
 <script src="js/common.js"></script>
+
 </body>
 </html>

@@ -194,6 +194,13 @@ $(document).ready(function(){
         };
     });
 
+    // Mobile Categories
+    if($(window).width() <= 480 ){
+        $('.aside__inner').hide();
+        $('.mobile__categories_title').on('click', function(){
+            $('.aside__inner').slideToggle();
+        });
+    }
 
    // Masked input 
    $('#order-call__tel').mask('+380(99) 999-99-99');

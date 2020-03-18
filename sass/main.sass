@@ -110,8 +110,7 @@ img
 
 .nav__link
 	color: black
-	font-weight: 700
-	font-size: 14px
+	font-size: 13px
 	transition: all .3s ease
 	margin-right: 30px
 	display: block
@@ -139,6 +138,17 @@ img
 	margin-bottom: 30px
 	display: flex
 
+.search-form
+	position: relative
+
+	&__button
+		background: transparent
+		position: absolute
+		top: 50%
+		left: 1%
+		transform: translateY(-50%)
+
+
 .header__search
 	display: block
 	width: 100%
@@ -149,10 +159,10 @@ img
 	border-radius: 5px
 	padding: 8px 0 8px 40px
 	font-weight: 500
-	background: url("../img/path1.png") no-repeat
-	background-size: auto 40%
-	background-position-x: 2%
-	background-position-y: 50%
+	transition: all .3s ease
+	&:hover
+		border-color: #012909
+		box-shadow: -2px 2px 5px inset silver
 	&::placeholder
 		font-size: 13px
 		color: #000
@@ -241,6 +251,9 @@ img
 	left: 0
 	padding-top: 0px
 	min-height: 100%
+
+.mobile__categories_title
+	display: none
 	
 .page-wrapper
 	display: flex
@@ -248,14 +261,13 @@ img
 .aside__logo
 	text-align: center
 	padding: 28.9px 0
+	height: 82px
 	position: absolute
 	top: 0
 	left: 0
-	border-bottom: 1px solid $green
 	z-index: 200
 	background-color: #fff
 	width: 21.77%
-	border-right: 1px solid $green
 
 	a
 		img
@@ -281,8 +293,9 @@ img
 	font-size: 14px
 	font-weight: 700
 	line-height: 1
-.aside__nav-item a:hover
+.aside__nav-item:hover > a
 	color: white
+	margin-left: 10px
 	text-decoration: none
 
 .aside__nav-item
@@ -292,6 +305,8 @@ img
 	margin-left: -23.444%
 	padding-left: 23.444%
 	position: static
+	i, svg
+		margin-right: 8px
 	&:hover,&:active
 		a::after
 			opacity: 1
@@ -316,6 +331,8 @@ img
 		background-color: $green
 		.aside__nav-sublist
 			display: flex
+			opacity: 1
+			visibility: visible
 	&:last-child
 		margin-bottom: 0
 
@@ -337,7 +354,9 @@ img
 		max-height: 150px
 		
 .aside__nav-sublist
-	display: none
+	visibility: hidden
+	opacity: 0
+	transition: all .3s ease
 	position: absolute
 	left: 100%
 	top: 0
@@ -568,7 +587,7 @@ li.aside__nav-siblist2x-item
 		background-color: $green
 
 .banners__title
-	font-size: 24px
+	font-size: 22px
 	margin-left: 0px
 	font-weight: 700
 	font-family: $bebas
@@ -637,11 +656,15 @@ li.aside__nav-siblist2x-item
 	height: 146px
 	margin: 0 auto 10px
 	position: relative
+	a
+		height: 100%
 	a img
 		display: block
-		width: 90%
+		width: auto
+		position: relative
+		z-index: -1
 		margin: 0 auto
-		height: auto
+		height: 100%
 
 .product-title
 	width: 186px
@@ -711,7 +734,7 @@ li.aside__nav-siblist2x-item
 		position: absolute
 		bottom: -50px
 		right: -200px
-		background-color: $green
+		background-color: #e9e9e9
 
 // Info
 .info-cont__inner
@@ -851,7 +874,7 @@ li.aside__nav-siblist2x-item
 
 // about us
 .about-us
-	border-top: 1px solid $green
+	border-top: 1px solid #e9e9e9
 	position: relative
 	z-index: 11
 	background-color: #fff
@@ -1482,11 +1505,9 @@ p.footer__link:hover
 	justify-content: space-between
 
 .cart__button_cart_icon
-	font-size: 24px
+	font-size: 20px
 	margin-right: 7px
 	display: inline-block
-	&:hover
-		color: initial
 
 .cart-number
 	display: none
@@ -3120,7 +3141,7 @@ input:focus::-webkit-input-placeholder
 		width: 100%
 		.hm__bottom
 			margin-left: auto
-			margin-right: unset
+			margin-right: unset !important
 		.hm__middle
 			width: 70%
 			margin: auto
@@ -3540,6 +3561,8 @@ input:focus::-webkit-input-placeholder
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 806px)
 	/**/
+	.goods-shipment
+		display: none
 	.product-card
 		width: 220px
 	.goods-img__bottom

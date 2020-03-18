@@ -8,31 +8,220 @@
 // Specification
 .btn.focus, .btn:focus, .btn:hover
 	color: #fff
+
 .d-flex
 	display: flex
 
 // Hero
-.header__actions
-	margin-top: auto
-	font-size: 24px
-	.favourite
-		position: relative
-		.favourite__number
-			position: absolute
+.header
+	.header__top-line
+		a
+			text-transform: uppercase
+			opacity: 0.5
 			font-size: 12px
-			background: red
-			color: #fff
-			border-radius: 100px
-			line-height: 15px
-			width: 15px	
-			height: 15px
-			text-align: center
-			right: 15px
-	i:first-child
-		margin-right: 20px
-	.fa-heart
-		color: red
+			line-height: 20px
 
+		.order-call
+			position: relative
+			margin-top: auto
+			&__btn
+				font-family: $m_font
+				font-weight: 300
+				box-shadow: unset
+				font-size: 14px
+				margin-left: auto
+				transition: all .3s ease
+				&:hover
+					color: #fff
+					background: darken($green, 10%)
+					box-shadow: $shadow2
+			&__form
+				position: absolute
+				z-index: 2
+				border-radius: 4px
+				top: 47px
+				right: 0
+				width: 300px
+				background: #e1e1e1
+				padding: 15px
+
+				.form__input
+					display: block
+					width: 100%
+					border-radius: 5px
+					border: 1px solid #ccc
+					margin-bottom: 10px
+					padding: 10px 0 10px 15px
+
+		.lang
+			margin-bottom: 30px
+			color: #e9e9e9
+			
+			.title
+				color: #333
+				display: inline-block
+				margin-right: 10px
+
+		.lang__active
+			opacity: 1
+
+		.divider	
+			font-size: 11px
+			opacity: 0.5
+			line-height: 20px
+	.header__right
+		.signup-button a, .cart-button a
+			font-weight: 400
+
+		.signup-button i
+			margin-right: 5px
+			font-size: 20px
+
+		.header__actions
+			margin-top: auto
+			font-size: 24px
+
+			.favourite
+				position: relative
+				.favourite__number
+					position: absolute
+					font-size: 12px
+					background: red
+					color: #fff
+					border-radius: 100px
+					line-height: 15px
+					width: 15px	
+					height: 15px
+					text-align: center
+					right: 15px
+			i:first-child
+				margin-right: 20px
+			.fa-heart
+				color: red
+
+		.contact-phone
+			position: relative
+			&:hover
+				.right__sub_contact_phones
+					opacity: 1
+					visibility: visible
+
+		.right__sub_contact_phones
+			background: $green
+			transition: all .3s ease
+			top: 40px
+			opacity: 0
+			visibility: hidden
+			position: absolute
+			z-index: 2
+			color: #fff
+			width: 100%
+			&::after
+				content: ""
+				display: block
+				width: 0
+				height: 0
+				border: 8px solid #fff
+				border-bottom-color: $green
+				top: -16px
+				left: 50%
+				transform: translateX(-50%) 
+				position: absolute
+			li
+				padding: 10px 15px
+				&:hover
+					background: darken($green, 5%)
+					a
+						color: #fff
+			a
+				justify-content: center
+				transition: none
+
+// Mobile menu
+.header-mobile
+	flex-wrap: wrap
+	align-items: center
+	justify-content: center
+	padding: 0 15px
+	.hm__logo
+		width: 100px
+	
+	.hm__top
+		order: 1
+		margin-bottom: 0
+		width: 50px
+
+	.hm__middle
+		order: 2
+		width: 100%
+		margin-bottom: 0
+
+	.hm__bottom
+		margin-right: auto
+
+// Breadcrumbs
+.breadcrumbs-nav
+	margin: 15px
+	ul
+		display: flex
+		flex-wrap: wrap
+
+		li
+			float: left
+			margin-right: 10px
+			display: block
+			overflow: hidden
+
+			&.active a, &.active span
+				color: #666
+
+			a, span
+				color: #121111
+
+
+			&::after
+				content: ''
+				display: none
+
+// Aside
+.aside
+	.news__block 
+		padding-bottom: 45px
+		margin-bottom: 20px
+	
+		li
+			padding: 5px 0
+			list-style-type: none
+
+	.fa-pro-icon
+		width: 15px
+
+	.aside__soc_links
+		display: flex
+		a
+			font-size: 22px
+			margin-right: 10px
+			i
+				transition: all .3s ease
+
+		.fa-viber:hover
+			color: #7C519E
+
+		.fa-telegram:hover
+			color: #2CA4D8
+
+// Index Main
+.stocks
+	display: table
+	margin-left: auto
+	padding: 10px 0 0 0
+	font-family: $bebas
+	font-weight: 700
+	font-size: 18px
+	&.title-underline::after
+		height: 4px
+
+// Cards
 .product-button a
 	height: 35px
 	width: auto
@@ -43,152 +232,6 @@
 	font-family: $m_font
 	background: #F84147
 
-.contact-phone
-	position: relative
-	&:hover
-		.right__sub_contact_phones
-			visibility: visible	
-
-.right__sub_contact_phones
-	background: $green
-	transition: all .3s ease
-	top: 40px
-	visibility: hidden
-	position: absolute
-	z-index: 2
-	color: #fff
-	width: 100%
-	&::after
-		content: ""
-		display: block
-		width: 0
-		height: 0
-		border: 8px solid #fff
-		border-bottom-color: $green
-		top: -16px
-		left: 50%
-		transform: translateX(-50%) 
-		position: absolute
-	li
-		padding: 10px 15px
-		&:hover
-			background: darken($green, 5%)
-			a
-				color: #fff
-	a
-		justify-content: center
-		transition: none
-
-.order-call
-	position: relative
-	margin-top: auto
-	&__btn
-		font-family: $m_font
-		font-weight: 300
-		box-shadow: unset
-		font-size: 14px
-		margin-left: auto
-		transition: all .3s ease
-		&:hover
-			color: #fff
-			background: darken($green, 10%)
-			box-shadow: $shadow2
-	&__form
-		position: absolute
-		z-index: 2
-		border-radius: 4px
-		top: 47px
-		right: 0
-		width: 300px
-		background: #e1e1e1
-		padding: 15px
-
-		.form__input
-			display: block
-			width: 100%
-			border-radius: 5px
-			border: 1px solid #ccc
-			margin-bottom: 10px
-			padding: 10px 0 10px 15px
-
-// Mobile menu
-.header-mobile
-	flex-wrap: wrap
-	align-items: center
-	justify-content: center
-	padding: 0 15px
-.hm__logo
-	width: 100px
-.hm__top
-	order: 1
-	margin-bottom: 0
-	width: 50px
-
-.hm__middle
-	order: 2
-	width: 100%
-	margin-bottom: 0
-
-.hm__bottom
-	margin-right: auto
-
-.news__block
- 	margin-bottom: 20px
-
-.aside__soc_links
-	display: flex
-	a
-		font-size: 22px
-		margin-right: 10px
-		i
-			transition: all .3s ease
-
-	.fa-viber:hover
-		color: #7C519E
-
-	.fa-telegram:hover
-		color: #2CA4D8
-
-.stocks
-	display: table
-	margin-left: auto
-	padding: 10px 15px
-	font-family: $bebas
-	font-weight: 700
-	border-radius: 5px
-	font-size: 18px
-
-// Breadcrumbs
-.breadcrumbs-nav
-	margin: 15px
-	ul
-		display: flex
-		flex-wrap: wrap
-
-.breadcrumbs-nav li
-	float: left
-	margin-right: 10px
-	display: block
-	overflow: hidden
-
-.breadcrumbs-nav li::after
-	content: ''
-	display: none
-
-.breadcrumbs-nav li a, .breadcrumbs-nav li span
-	color: #121111
-
-.breadcrumbs-nav li.active a, .breadcrumbs-nav li.active span
-	color: #666
-
-.news__block 
-	padding-bottom: 45px
-
-.news__block li
-	padding: 5px 0
-	list-style-type: circle
-
-// Cards
 .products-card__label
 	position: absolute
 	top: 5px
@@ -198,6 +241,7 @@
 	line-height: 24px
 	padding: 0 8px
 	font-size: 12px
+	text-transform: uppercase
 	color: #fff
 
 .label_type_popularity
@@ -254,6 +298,7 @@
 	display: block
 	margin: 10px 0
 	font-size: 12px
+
 .has
 	color: $green
 .hasnt
@@ -349,10 +394,10 @@
 			color: #F7931E
 
 .product-tabs__tab-content 
-  display: none /* по умолчанию прячем все блоки */
+  display: none
 
 .product-tabs__tab-content.active 
-  display: block /* по умолчанию показываем нужный блок */
+  display: block
 
 .js-rating-product
 	margin-left: 10px
@@ -428,16 +473,15 @@
 		padding: 0
 	.product-card
 		width: 100%
-.sale-wrapper-outer
-	height: 333px
-	&:hover
-		.product-card
-			position: absolute
-			background: #fff
-			z-index: 99
-			.features
-				position: relative
-
+	.sale-wrapper-outer
+		height: 333px
+		&:hover
+			.product-card
+				position: absolute
+				background: #fff
+				z-index: 99
+				.features
+					position: relative
 
 // Cart
 .promocode
@@ -513,7 +557,6 @@
 	.product-card
 		flex-direction: column
 		align-items: center
-
 @media (max-width: 567px)
 	.slick-initialized .slick-slide
 		display: flex
@@ -527,8 +570,16 @@
 		.sale-wrapper-outer
 			width: 100%
 			margin: 0 auto
-
 @media (max-width: 480px)
+	.mobile__categories_title
+		font-family: $m_font
+		font-weight: 700
+		margin-left: 15px
+		background: $green
+		display: inline-block
+		padding: 10px 15px
+		color: #fff
+		border-radius: 5px
 	.product-card:hover .product-button a
 		right: -12px
 		top: -5px
@@ -564,3 +615,4 @@
 
 @import "remodal"
 @import "responsive-product-cart"
+@import "theme-dark"

@@ -1,0 +1,29 @@
+/* autoComplete */
+$('#search_field').autocomplete({
+    source: function (request, response) {
+        $.ajax({
+            url: '/catalog/suggest',
+            data: {
+                term: request.term
+            },
+            success: function (data) {
+                response($.map(JSON.parse(data), function (item) {
+                    return {
+                        label: item.label,
+                        image: item.image,
+                        link: item.link,
+                    }
+                }));
+            }
+        });
+    },
+    select: function (event, ui) {
+        location.href = ui.item.link;
+        return false;
+    },
+    minLength: 3
+}).autocomplete("instance")._renderItem = function (ul, item) {
+    return $("<li>")
+        .append('<div class="suggest"><img src="/images/resize/1/65x65/' + item.image + '.jpg" width="65" alt=""/> <span>' + item.label + '</span></div>')
+        .appendTo(ul);
+};
