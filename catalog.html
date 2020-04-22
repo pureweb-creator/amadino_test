@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
+	<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- Fonts -->
@@ -13,21 +13,190 @@
     <!-- Libs -->
     <link rel="stylesheet" type="text/css" href="https://amadino.com.ua/assets/f3c20633/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
-    <link rel="stylesheet" href="libs/slick-1.8.1/slick/slick.css">
     <link rel="stylesheet" type="text/css" href="libs/remodal.css">
     <link rel="stylesheet" type="text/css" href="libs/remodal-default-theme.css">
+    <link rel="stylesheet" href="libs/slick-1.8.1/slick/slick.css">
     <link rel="stylesheet" type="text/css" href="https://amadino.com.ua/assets/f465a09/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="https://amadino.com.ua/flickity/flickity.min.css">
     <link rel="stylesheet" type="text/css" href="https://amadino.com.ua/assets/9b8159c5/css/activeform.min.css">
 
-
     <!-- MAIN CSS FILE -->
     <link rel="stylesheet" type="text/css" href="https://amadino.com.ua/css/style.css?2">
     <link rel="stylesheet" href="css/main.min.css">
-
-	<title>Корзина</title>
+	<title>Категории</title>
 </head>
 <body>
+<div id="cover"></div>
+<!-- Mobile Filter -->
+<div class="filter mobile-filter">
+    <div class="mobile-filter__heading">
+        <h3>Фильтр</h3>
+    </div>
+    <div class="filter__item">
+        <!-- <form novalidate> -->
+            <h4 class="filter__item-heading">
+                Цена: 
+            </h4>
+            <p class="range-slider__output d-flex">
+              <input type="number" id="amount_from_mob" class="range__input_price" name="price">
+              <input type="number" id="amount_to_mob" class="range__input_price" name="price">
+              <input class="btn filter__btn" type="submit" value="OK">
+            </p>
+            <div id="slider-range_mob"></div>
+        <!-- </form> -->
+    </div>
+    <div class="filter__item">
+        <form action="#" method="POST">
+            <h4 class="filter__item-heading">
+                <i class="fa fa-angle-right"></i> Производитель
+            </h4>
+            <ul class="filter__dropdown">
+                <li>
+                    <input type="checkbox" id="apple_mob" class="hidden_input">
+                    <label for="apple_mob">
+                        <span class="filter__dropdown__checkbox"></span>
+                        Apple <span class="filter__dropdown_product_count">(24)</span>
+                    </label>
+                </li>
+                <li>
+                    <input type="checkbox" id="samsung_mob" class="hidden_input">
+                    <label for="samsung_mob">
+                        <span class="filter__dropdown__checkbox"></span>
+                        Samsung <span class="filter__dropdown_product_count">(24)</span>
+                    </label>
+                </li>
+                <li>
+                    <input type="checkbox" id="xiaomi_mob" class="hidden_input">
+                    <label for="xiaomi_mob">
+                        <span class="filter__dropdown__checkbox"></span>
+                        Xiaomi <span class="filter__dropdown_product_count">(24)</span>
+                    </label>
+                </li>
+            </ul>
+        </form>
+    </div>
+    <div class="filter__item">
+        <form action="#" method="POST">
+            <h4 class="filter__item-heading">
+                <i class="fa fa-angle-right"></i> Беспроцентный кредит
+            </h4>
+            <ul class="filter__dropdown">
+                <li>
+                    <input type="checkbox" id="alfabank_10_payments_mob" class="hidden_input">
+                    <label for="alfabank_10_payments_mob">
+                        <span class="filter__dropdown__checkbox"></span>
+                        AlfaBank 10 платежей<span class="filter__dropdown_product_count">(24)</span>
+                    </label>
+                </li>
+                <li>
+                    <input type="checkbox" id="alfabank_3_payments_mob" class="hidden_input">
+                    <label for="alfabank_3_payments_mob">
+                        <span class="filter__dropdown__checkbox"></span>
+                        AlfaBank 3 платежa<span class="filter__dropdown_product_count">(24)</span>
+                    </label>
+                </li>
+                <li>
+                    <input type="checkbox" id="alfabank_6_payments_mob" class="hidden_input">
+                    <label for="alfabank_6_payments_mob">
+                        <span class="filter__dropdown__checkbox"></span>
+                        AlfaBank 6 платежeй<span class="filter__dropdown_product_count">(24)</span>
+                    </label>
+                </li>
+                <li>
+                    <input type="checkbox" id="installment_10_payments_mob" class="hidden_input">
+                    <label for="installment_10_payments_mob">
+                        <span class="filter__dropdown__checkbox"></span>
+                        Оплата частями 10 платежeй<span class="filter__dropdown_product_count">(24)</span>
+                    </label>
+                </li>
+            </ul>
+        </form>
+    </div>
+    <div class="filter__item">
+        <form action="#" method="POST">
+            <h4 class="filter__item-heading">
+                <i class="fa fa-angle-right"></i> Количество колес
+            </h4>
+            <ul class="filter__dropdown">
+                <li>
+                    <input type="checkbox" id="wheel_number_1_mob" class="hidden_input">
+                    <label for="wheel_number_1_mob">
+                        <span class="filter__dropdown__checkbox"></span>
+                        1<span class="filter__dropdown_product_count">(24)</span>
+                    </label>
+                </li>
+                <li>
+                    <input type="checkbox" id="wheel_number_2_mob" class="hidden_input">
+                    <label for="wheel_number_2_mob">
+                        <span class="filter__dropdown__checkbox"></span>
+                        2<span class="filter__dropdown_product_count">(24)</span>
+                    </label>
+                </li>
+                <li>
+                    <input type="checkbox" id="wheel_number_3_mob" class="hidden_input">
+                    <label for="wheel_number_3_mob">
+                        <span class="filter__dropdown__checkbox"></span>
+                        3<span class="filter__dropdown_product_count">(24)</span>
+                    </label>
+                </li>
+                <li>
+                    <input type="checkbox" id="wheel_number_4_mob" class="hidden_input">
+                    <label for="wheel_number_4_mob">
+                        <span class="filter__dropdown__checkbox"></span>
+                        4<span class="filter__dropdown_product_count">(24)</span>
+                    </label>
+                </li>
+            </ul>
+        </form>
+    </div>
+    <div class="filter__item">
+        <!-- <form action="#" novalidate> -->
+            <h4 class="filter__item-heading">
+                <i class="fa fa-angle-right"></i> Объем (л)
+            </h4>
+            <ul class="filter__dropdown">
+                <li>
+                    <p class="range-slider__output d-flex">
+                        <input type="text" id="volumeFrom_mob" name="volume" class="range__input_price">
+                        <input type="text" id="volumeTo_mob" name="volume" class="range__input_price">
+                        <input type="submit" class="btn filter__btn" value="OK">
+                    </p>
+                    <div id="slider-volume_mob"></div>
+                </li>
+            </ul>
+        <!-- </form> -->
+    </div>
+    <div class="filter__item">
+        <form action="#" method="POST">
+            <h4 class="filter__item-heading">
+                <i class="fa fa-angle-right"></i> Тип
+            </h4>
+            <ul class="filter__dropdown">
+                <li>
+                    <input type="checkbox" id="carcase_mob" class="hidden_input">
+                    <label for="carcase_mob">
+                        <span class="filter__dropdown__checkbox"></span>
+                        Кузов<span class="filter__dropdown_product_count">(24)</span>
+                    </label>
+                </li>
+                <li>
+                    <input type="checkbox" id="wheelbarrow_mob" class="hidden_input">
+                    <label for="wheelbarrow_mob">
+                        <span class="filter__dropdown__checkbox"></span>
+                        Тачка<span class="filter__dropdown_product_count">(24)</span>
+                    </label>
+                </li>
+                <li>
+                    <input type="checkbox" id="truck_mob" class="hidden_input">
+                    <label for="truck_mob">
+                        <span class="filter__dropdown__checkbox"></span>
+                        Тележка<span class="filter__dropdown_product_count">(24)</span>
+                    </label>
+                </li>
+            </ul>
+        </form>
+    </div>
+</div>
 
 <!-- Register main -->
 <div class="registration remodal-bg" id="registrationModal">
@@ -185,9 +354,8 @@
     </div>
 </nav>
 
-<!-- Main Panel -->
-<main id="panel">
 
+<main id="panel">
 <!-- Hero -->
 <header class="header">
     <div class="header-container">
@@ -304,22 +472,22 @@
                             <ul class="aside__nav-sublist">
                                 <li class="aside__nav-sublist-item">
                                     <a href="/aktivnyj-otdyh-sport-i-turizm/akkumulatornye-radio">
-                                        Аккумуляторные радио
+                                        Аккумуляторные радио 
                                     </a>
                                 </li>
                                 <li class="aside__nav-sublist-item">
                                     <a href="/aktivnyj-otdyh-sport-i-turizm/badminton-tennis-darts-basketbol-sahmaty">
-                                        Бадминтон, теннис, дартс, шахматы
+                                        Бадминтон, теннис, дартс, шахматы 
                                     </a>
                                 </li>
                                 <li class="aside__nav-sublist-item">
                                     <a href="/aktivnyj-otdyh-sport-i-turizm/multiinstrumenty-multituly">
-                                        Мультиинструменты (мультитулы)
+                                        Мультиинструменты (мультитулы) 
                                     </a>
                                 </li>
                                 <li class="aside__nav-sublist-item">
                                     <a href="/aktivnyj-otdyh-sport-i-turizm/maci-volejbolnye-i-futbolnye">
-                                        Мячи футбольные, волейбольные, баскетбольные, теннисные
+                                        Мячи футбольные, волейбольные, баскетбольные, теннисные 
                                     </a>
                                 </li>
                                 <li class="aside__nav-sublist-item">
@@ -411,9 +579,9 @@
                                         <li class="aside__nav-siblist2x-item">
                                             <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/elektroskejty">Электроскейты</a>
                                         </li>
-                                    </ul> 
-                                </li>       
-                            </ul>
+                                    </ul>
+                                </li>
+                            </ul>        
                         </div>
                         <div class="submenu__col">
                             <ul class="aside__nav-sublist">
@@ -440,12 +608,12 @@
                                 </li>
                                 <li class="aside__nav-sublist-item">
                                     <a href="/aktivnyj-otdyh-sport-i-turizm/termosy-i-termo-posuda">
-                                        Термосы и термо посуда 
+                                        Термосы и термо посуда
                                     </a>
                                 </li>
                                 <li class="aside__nav-sublist-item">
                                     <a href="/aktivnyj-otdyh-sport-i-turizm/turisticeskie-gorelki-plity-i-aksessuary">
-                                        Туристические горелки, плиты и аксессуары 
+                                        Туристические горелки, плиты и аксессуары
                                     </a>
                                 </li>
                                 <li class="aside__nav-sublist-item">
@@ -1400,6 +1568,172 @@
                     </div>
                 </li>
             </ul>
+            <div class="filter">
+                <div class="filter__item">
+                    <!-- <form novalidate> -->
+                        <h4 class="filter__item-heading">
+                            Цена: 
+                        </h4>
+                        <p class="range-slider__output d-flex">
+                          <input type="number" id="amount_from" class="range__input_price" name="price">
+                          <input type="number" id="amount_to" class="range__input_price" name="price">
+                          <input class="btn filter__btn" type="submit" value="OK">
+                        </p>
+                        <div id="slider-range"></div>
+                    <!-- </form> -->
+                </div>
+                <div class="filter__item">
+                    <form action="#" method="POST">
+                        <h4 class="filter__item-heading">
+                            <i class="fa fa-angle-right"></i> Производитель
+                        </h4>
+                        <ul class="filter__dropdown">
+                            <li>
+                                <input type="checkbox" id="apple" class="hidden_input">
+                                <label for="apple">
+                                    <span class="filter__dropdown__checkbox"></span>
+                                    Apple <span class="filter__dropdown_product_count">(24)</span>
+                                </label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="samsung" class="hidden_input">
+                                <label for="samsung">
+                                    <span class="filter__dropdown__checkbox"></span>
+                                    Samsung <span class="filter__dropdown_product_count">(24)</span>
+                                </label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="xiaomi" class="hidden_input">
+                                <label for="xiaomi">
+                                    <span class="filter__dropdown__checkbox"></span>
+                                    Xiaomi <span class="filter__dropdown_product_count">(24)</span>
+                                </label>
+                            </li>
+                        </ul>
+                    </form>
+                </div>
+                <div class="filter__item">
+                    <form action="#" method="POST">
+                        <h4 class="filter__item-heading">
+                            <i class="fa fa-angle-right"></i> Беспроцентный кредит
+                        </h4>
+                        <ul class="filter__dropdown">
+                            <li>
+                                <input type="checkbox" id="alfabank_10_payments" class="hidden_input">
+                                <label for="alfabank_10_payments">
+                                    <span class="filter__dropdown__checkbox"></span>
+                                    AlfaBank 10 платежей<span class="filter__dropdown_product_count">(24)</span>
+                                </label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="alfabank_3_payments" class="hidden_input">
+                                <label for="alfabank_3_payments">
+                                    <span class="filter__dropdown__checkbox"></span>
+                                    AlfaBank 3 платежa<span class="filter__dropdown_product_count">(24)</span>
+                                </label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="alfabank_6_payments" class="hidden_input">
+                                <label for="alfabank_6_payments">
+                                    <span class="filter__dropdown__checkbox"></span>
+                                    AlfaBank 6 платежeй<span class="filter__dropdown_product_count">(24)</span>
+                                </label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="installment_10_payments" class="hidden_input">
+                                <label for="installment_10_payments">
+                                    <span class="filter__dropdown__checkbox"></span>
+                                    Оплата частями 10 платежeй<span class="filter__dropdown_product_count">(24)</span>
+                                </label>
+                            </li>
+                        </ul>
+                    </form>
+                </div>
+                <div class="filter__item">
+                    <form action="#" method="POST">
+                        <h4 class="filter__item-heading">
+                            <i class="fa fa-angle-right"></i> Количество колес
+                        </h4>
+                        <ul class="filter__dropdown">
+                            <li>
+                                <input type="checkbox" id="wheel_number_1" class="hidden_input">
+                                <label for="wheel_number_1">
+                                    <span class="filter__dropdown__checkbox"></span>
+                                    1<span class="filter__dropdown_product_count">(24)</span>
+                                </label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="wheel_number_2" class="hidden_input">
+                                <label for="wheel_number_2">
+                                    <span class="filter__dropdown__checkbox"></span>
+                                    2<span class="filter__dropdown_product_count">(24)</span>
+                                </label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="wheel_number_3" class="hidden_input">
+                                <label for="wheel_number_3">
+                                    <span class="filter__dropdown__checkbox"></span>
+                                    3<span class="filter__dropdown_product_count">(24)</span>
+                                </label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="wheel_number_4" class="hidden_input">
+                                <label for="wheel_number_4">
+                                    <span class="filter__dropdown__checkbox"></span>
+                                    4<span class="filter__dropdown_product_count">(24)</span>
+                                </label>
+                            </li>
+                        </ul>
+                    </form>
+                </div>
+                <div class="filter__item">
+                    <!-- <form action="#" novalidate> -->
+                        <h4 class="filter__item-heading">
+                            <i class="fa fa-angle-right"></i> Объем (л)
+                        </h4>
+                        <ul class="filter__dropdown">
+                            <li>
+                                <p class="range-slider__output d-flex">
+                                    <input type="text" id="volumeFrom" name="volume" class="range__input_price">
+                                    <input type="text" id="volumeTo" name="volume" class="range__input_price">
+                                    <input type="submit" class="btn filter__btn" value="OK">
+                                </p>
+                                <div id="slider-volume"></div>
+                            </li>
+                        </ul>
+                    <!-- </form> -->
+                </div>
+                <div class="filter__item">
+                    <form action="#" method="POST">
+                        <h4 class="filter__item-heading">
+                            <i class="fa fa-angle-right"></i> Тип
+                        </h4>
+                        <ul class="filter__dropdown">
+                            <li>
+                                <input type="checkbox" id="carcase" class="hidden_input">
+                                <label for="carcase">
+                                    <span class="filter__dropdown__checkbox"></span>
+                                    Кузов<span class="filter__dropdown_product_count">(24)</span>
+                                </label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="wheelbarrow" class="hidden_input">
+                                <label for="wheelbarrow">
+                                    <span class="filter__dropdown__checkbox"></span>
+                                    Тачка<span class="filter__dropdown_product_count">(24)</span>
+                                </label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="truck" class="hidden_input">
+                                <label for="truck">
+                                    <span class="filter__dropdown__checkbox"></span>
+                                    Тележка<span class="filter__dropdown_product_count">(24)</span>
+                                </label>
+                            </li>
+                        </ul>
+                    </form>
+                </div>
+            </div>
             <h3 class="aside__title title-underline">Новости</h3>
             <br>
             <ul class="news__block">
@@ -1426,387 +1760,515 @@
             </ul>
         </div>
     </aside>
+
 	<div class="inner-wrapper">
-		<div class="main-container main-container--cart">
-			<div class="cart">
-				<div class="bought">
-					<div class="cart__title title-underline">
-						Ваши покупки
-					</div>
-					<table class="bought-table">
-						<tr class="bought-table__head">
-							<th>Товар</th>
-							<th>Кол-во</th>
-							<th>Цена</th>
-							<th>Удалить</th>
-						</tr>
-						<tr class="bought-table__row">
-							<td class="bought-table__item">
-								<div class="bought-table__item-img">
-									<img src="img/cart-item.png" alt="">
-								</div>
-								<div class="bought-table__item-name">
-									Forte WB6407A Тачка садовая
-								</div>
-							</td>
-							<td class="bought-table__item-number">
-								1
-							</td>
-							<td class="bought-table__item-price">
-								566
-							</td>
-							<td class="bought-table__item-delete">
-								<a href="#">
-									<img src="img/cart-delete.png" alt="">
-								</a>
-							</td>
-						</tr>
-
-						<tr class="bought-table__row">
-							<td class="bought-table__item">
-								<div class="bought-table__item-img">
-									<img src="img/cart-item.png" alt="">
-								</div>
-								<div class="bought-table__item-name">
-									Forte WB6407A Тачка садовая
-								</div>
-							</td>
-							<td class="bought-table__item-number">
-								1
-							</td>
-							<td class="bought-table__item-price">
-								566
-							</td>
-							<td class="bought-table__item-delete">
-								<a href="#">
-									<img src="img/cart-delete.png" alt="">
-								</a>
-							</td>
-						</tr>
-
-						<tr class="bought-table__row">
-							<td class="bought-table__item">
-								<div class="bought-table__item-img">
-									<img src="img/cart-item.png" alt="">
-								</div>
-								<div class="bought-table__item-name">
-									Forte WB6407A Тачка садовая
-								</div>
-							</td>
-							<td class="bought-table__item-number">
-								1
-							</td>
-							<td class="bought-table__item-price">
-								566
-							</td>
-							<td class="bought-table__item-delete">
-								<a href="#">
-									<img src="img/cart-delete.png" alt="">
-								</a>
-							</td>
-						</tr>
-					</table>
-
-                    <div class="promocode">
-                        <span class="promocode__label">Ввести промокод</span>
-                        <form action="#" method="POST" class="enter-promocode"> 
-                            <input type="text" name="promocode" class="enter-promocode__input">
-                            <button type="submit" class="enter-promocode__btn btn">Подтверить</button>
-                        </form>
-                    </div>
-
-					<div class="bought-bottom">
-						<button type="submit" id="cartButton" class="btn">Оформить заказ</button>
-						<div class="bought-bottom__info">
-							Итого: <span id="totalPrice" class="color-green cart-price">1698 <span class="small-sized">грн</span></span>
-						</div>
-					</div>
-
-                    <div class="checkbox">
-                        <label class="contact__label contact__label--2">
-                            <input type="checkbox" name="subscribe" id="subscribe" class="contact__radio" checked> Подписаться на рассылку акций и новостей
-                            <span class="checkmark"></span>
-                        </label>
-                        <label class="contact__label contact__label--2">
-                            <input type="checkbox" name="callback" id="callback" class="contact__radio" checked> Перезвонить для уточнения заказа?
-                            <span class="checkmark"></span>
-                        </label>
+		<div class="main-container main-container--cats">
+			<div class="category-barrow">
+				<div class="section__header section__header--barrow" id="category_heading">
+					<h3 class="title-underline">Тачки</h3>
+                    <div class="category-barrow__view d-flex">
+                        <button class="category-view__button cateogry-view__button_filter">
+                            <i class="fa fa-filter"></i>
+                            <span class="filter__name">Фильтр</span> 
+                        </button>
+                        <button class="category-view__button category-view__button_list">
+                            <i class="fa fa-th-list"></i>
+                        </button>
+                        <button class="category-view__button category-view__button_large category-view__button_state_active">
+                            <i class="fa fa-th-large"></i>
+                        </button>
                     </div>
 				</div>
-
-				<div class="contact-data">
-					<div class="cart__title title-underline">
-						контактные данные
-					</div>
-
-					<form action="#" class="contact">
-						<div class="contact__face-type">
-							<label class="contact__label">
-								<input type="radio" name="face" id="individual" class="contact__radio"> Физ.лицо
-								<span class="checkmark"></span>
-							</label>
-							<label class="contact__label">
-								<input type="radio" name="face" id="entity" class="contact__radio"> Юр.лицо
-								<span class="checkmark"></span>
-							</label>
-						</div>
-                        <p class="contact__required-msg">Поля, помеченные <span style="color: red;">*</span>, обязательны для заполнения</p>
-						<input type="text" class="contact__input" required placeholder="Ф.И.О*">
-						<input type="tel" class="contact__input" required placeholder="Контактный телефон*">
-						<input type="email" class="contact__input" required placeholder="Укажите e-mail*">
-                        <div class="select_block_pickups">
-                            <a href="#!" class="pickups__drop_link">Выберите отделение</a>
-                            <div class="pickups__suggest-select-wrap">
-                                <ul class="pickups__suggest-select-wrap-l">
-                                    <li class="pickups__suggest-select-wrap-l-i"><a href="#!">Отделение №1</a></li>
-                                    <li class="pickups__suggest-select-wrap-l-i"><a href="#!">Отделение №2</a></li>
-                                    <li class="pickups__suggest-select-wrap-l-i"><a href="#!">Отделение №3</a></li>
+				<div class="category__inner">
+                    <div class="sale-wrapper-outer">
+                        <div class="product-card">
+                            <div class="products-card__label label_type_action">
+                                акция
+                            </div>
+                            <div class="product-card__actions">
+                                <a href="#!" class="products-card__wish_btn action"><i class="far fa-heart"></i></a>
+                                <a href="#!" class="products-card__compare_btn action"><i class="fas fa-balance-scale"></i></a>
+                            </div>
+                            <span class="discount__number">-20%</span>
+                            <div class="part part1">
+                                <div class="product-img">
+                                    <a href="product-page.html"><img src="img/home/tachka.png" alt="Садовая Тачка"></a>
+                                    <img src="img/free_shipping.png" alt="Бесплатная доставка в отделения Нова Пошта" class="products-card__label products-card__free_shipping">
+                                </div>
+                            </div>
+                            <div class="part part2">
+                                <div class="product-title">
+                                    <a href="product-page.html">Forte WB6407A Тачка садовая</a>
+                                    <span class="hasnt">Нет в наличии</span>
+                                </div>
+                                <ul class="mark_list d-flex">
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="far fa-star"></i></li>
                                 </ul>
-                            </div>  
+                                <ul class="features features2">
+                                    <li><span class="feature__name">Имя: </span>Значение</li>
+                                    <li><span class="feature__name">Имя: </span>Значение</li>
+                                    <li><span class="feature__name">Имя: </span>Значение</li>
+                                    <li><span class="feature__name">Имя: </span>Значение</li>
+                                    <li><span class="feature__name">Имя: </span>Значение</li>
+                                    <li><span class="feature__name">Имя: </span>Значение</li>
+                                    <li><span class="feature__name">Имя: </span>Значение</li>
+                                </ul>
+                            </div>
+                            <div class="part part1 part3">
+                                <div class="product-price submit-cart">
+                                    <div class="product-card__price">
+                                        <span class=" old__price">566</span>
+                                        <span class="discount__price">499 <small>грн</small></span>
+                                    </div>
+                                    <a href="#" class="products-card__add_btn"><i class="fas fa-shopping-cart"></i></a>
+                                    <div class="product-button">
+                                        <a href="product-page.html">купить</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <ul class="features">
+                                <li><span class="feature__name">Имя: </span>Значение</li>
+                                <li><span class="feature__name">Имя: </span>Значение</li>
+                                <li><span class="feature__name">Имя: </span>Значение</li>
+                                <li><span class="feature__name">Имя: </span>Значение</li>
+                                <li><span class="feature__name">Имя: </span>Значение</li>
+                                <li><span class="feature__name">Имя: </span>Значение</li>
+                                <li><span class="feature__name">Имя: </span>Значение</li>
+                            </ul>
                         </div>
-						
-						<textarea name="Adress" id="shipping_address" cols="30" rows="2" class="contact__input contact__input--textarea" placeholder="Адрес доставки*"></textarea>
-                        <div class="kyev-delivery-box">
-                            <input type="text" class="contact__input" required placeholder="Город*">
-                            <input type="text" class="contact__input" required placeholder="Улица*">
-                            <input type="text" class="contact__input" required placeholder="Дом*"> 
+                    </div>
+                    <div class="sale-wrapper-outer">
+                        <div class="product-card">
+                            <div class="products-card__label label_type_action">
+                                акция
+                            </div>
+                            <div class="product-card__actions">
+                                <a href="#!" class="products-card__wish_btn action"><i class="far fa-heart"></i></a>
+                                <a href="#!" class="products-card__compare_btn action"><i class="fas fa-balance-scale"></i></a>
+                            </div>
+                            <span class="discount__number">-20%</span>
+                            <div class="part part1">
+                                <div class="product-img">
+                                    <a href="product-page.html"><img src="img/home/tachka.png" alt="Садовая Тачка"></a>
+                                    <img src="img/free_shipping.png" alt="Бесплатная доставка в отделения Нова Пошта" class="products-card__label products-card__free_shipping">
+                                </div>
+                            </div>
+                            <div class="part part2">
+                                <div class="product-title">
+                                    <a href="product-page.html">Forte WB6407A Тачка садовая</a>
+                                    <span class="hasnt">Нет в наличии</span>
+                                </div>
+                                <ul class="mark_list d-flex">
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="far fa-star"></i></li>
+                                </ul>
+                                <ul class="features features2">
+                                    <li><span class="feature__name">Имя: </span>Значение</li>
+                                    <li><span class="feature__name">Имя: </span>Значение</li>
+                                    <li><span class="feature__name">Имя: </span>Значение</li>
+                                    <li><span class="feature__name">Имя: </span>Значение</li>
+                                    <li><span class="feature__name">Имя: </span>Значение</li>
+                                    <li><span class="feature__name">Имя: </span>Значение</li>
+                                    <li><span class="feature__name">Имя: </span>Значение</li>
+                                </ul>
+                            </div>
+                            <div class="part part1 part3">
+                                <div class="product-price submit-cart">
+                                    <div class="product-card__price">
+                                        <span class=" old__price">566</span>
+                                        <span class="discount__price">499 <small>грн</small></span>
+                                    </div>
+                                    <a href="#" class="products-card__add_btn"><i class="fas fa-shopping-cart"></i></a>
+                                    <div class="product-button">
+                                        <a href="product-page.html">купить</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <ul class="features">
+                                <li><span class="feature__name">Имя: </span>Значение</li>
+                                <li><span class="feature__name">Имя: </span>Значение</li>
+                                <li><span class="feature__name">Имя: </span>Значение</li>
+                                <li><span class="feature__name">Имя: </span>Значение</li>
+                                <li><span class="feature__name">Имя: </span>Значение</li>
+                                <li><span class="feature__name">Имя: </span>Значение</li>
+                                <li><span class="feature__name">Имя: </span>Значение</li>
+                            </ul>
                         </div>
-						<div class="contact__what">
-							Выберите тип доставки:
-						</div>
-						<label class="contact__label contact__label--2">
-							<input type="radio" name="shipment" id="pickup" class="contact__radio"> Самовывоз
-							<span class="checkmark"></span>
-						</label>
-                        <label class="contact__label contact__label--2">
-                            <input type="radio" name="shipment" id="shipping_novaya_pochta" class="contact__radio"> Новая Почта
-                            <span class="checkmark"></span>
-                        </label>
-                        <label class="contact__label contact__label--2">
-                            <input type="radio" name="shipment" id="chipping_justin" class="contact__radio"> Justin
-                            <span class="checkmark"></span>
-                        </label>
-                        <label class="contact__label contact__label--2">
-                            <input type="radio" name="shipment" id="shipping_meest_express" class="contact__radio"> Meest Express
-                            <span class="checkmark"></span>
-                        </label>
-						<label class="contact__label contact__label--2">
-							<input type="radio" name="shipment" id="shipping_in_kiev" class="contact__radio"> Курьер по г. Киеву
-							<span class="checkmark"></span>
-						</label>
-						<label class="contact__label contact__label--2">
-							<input type="radio" name="shipment" id="shipping_in_ukraine" class="contact__radio"> Доставка по Украине
-							<span class="checkmark"></span>
-						</label>
-
-						<div class="contact__what">
-							Способ Оплаты:
-						</div>
-						<label class="contact__label contact__label--2">
-							<input type="radio" name="pay-way" id="pay-way-visa-mastercard" class="contact__radio"> оплата Visa/MasterCard
-							<span class="checkmark"></span>
-						</label>
-						<label class="contact__label contact__label--2">
-							<input type="radio" name="pay-way" id="pay-way-bank-transfer" class="contact__radio"> Банковский перевод с НДС или без НДС
-							<span class="checkmark"></span>
-						</label>
-                        <label class="contact__label contact__label--2">
-                            <input type="radio" name="pay-way" id="pay-way-c-o-d" class="contact__radio"> Наложенный платеж
-                            <span class="checkmark"></span>
-                        </label>
-                        <label class="contact__label contact__label--2">
-                            <input type="radio" name="pay-way" id="pay-way-google-pay" class="contact__radio"> Google Pay
-                            <span class="checkmark"></span>
-                        </label>
-                        <label class="contact__label contact__label--2">
-                            <input type="radio" name="pay-way" id="pay-way-apple-pay" class="contact__radio"> Apple Pay
-                            <span class="checkmark"></span>
-                        </label>
-						<button href="#" class="btn mobile-cart-btn" type="submit">Оформить заказ</button>
-					</form>
+                    </div>
+                    <div class="sale-wrapper-outer">
+                        <div class="product-card">
+                            <div class="products-card__label label_type_action">
+                                акция
+                            </div>
+                            <div class="product-card__actions">
+                                <a href="#!" class="products-card__wish_btn action"><i class="far fa-heart"></i></a>
+                                <a href="#!" class="products-card__compare_btn action"><i class="fas fa-balance-scale"></i></a>
+                            </div>
+                            <span class="discount__number">-20%</span>
+                            <div class="part part1">
+                                <div class="product-img">
+                                    <a href="product-page.html"><img src="img/home/tachka.png" alt="Садовая Тачка"></a>
+                                    <img src="img/free_shipping.png" alt="Бесплатная доставка в отделения Нова Пошта" class="products-card__label products-card__free_shipping">
+                                </div>
+                            </div>
+                            <div class="part part2">
+                                <div class="product-title">
+                                    <a href="product-page.html">Forte WB6407A Тачка садовая</a>
+                                    <span class="hasnt">Нет в наличии</span>
+                                </div>
+                                <ul class="mark_list d-flex">
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="far fa-star"></i></li>
+                                </ul>
+                                <ul class="features features2">
+                                    <li><span class="feature__name">Имя: </span>Значение</li>
+                                    <li><span class="feature__name">Имя: </span>Значение</li>
+                                    <li><span class="feature__name">Имя: </span>Значение</li>
+                                    <li><span class="feature__name">Имя: </span>Значение</li>
+                                    <li><span class="feature__name">Имя: </span>Значение</li>
+                                    <li><span class="feature__name">Имя: </span>Значение</li>
+                                    <li><span class="feature__name">Имя: </span>Значение</li>
+                                </ul>
+                            </div>
+                            <div class="part part1 part3">
+                                <div class="product-price submit-cart">
+                                    <div class="product-card__price">
+                                        <span class=" old__price">566</span>
+                                        <span class="discount__price">499 <small>грн</small></span>
+                                    </div>
+                                    <a href="#" class="products-card__add_btn"><i class="fas fa-shopping-cart"></i></a>
+                                    <div class="product-button">
+                                        <a href="product-page.html">купить</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <ul class="features">
+                                <li><span class="feature__name">Имя: </span>Значение</li>
+                                <li><span class="feature__name">Имя: </span>Значение</li>
+                                <li><span class="feature__name">Имя: </span>Значение</li>
+                                <li><span class="feature__name">Имя: </span>Значение</li>
+                                <li><span class="feature__name">Имя: </span>Значение</li>
+                                <li><span class="feature__name">Имя: </span>Значение</li>
+                                <li><span class="feature__name">Имя: </span>Значение</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="sale-wrapper-outer">
+                        <div class="product-card">
+                            <div class="products-card__label label_type_action">
+                                акция
+                            </div>
+                            <div class="product-card__actions">
+                                <a href="#!" class="products-card__wish_btn action"><i class="far fa-heart"></i></a>
+                                <a href="#!" class="products-card__compare_btn action"><i class="fas fa-balance-scale"></i></a>
+                            </div>
+                            <span class="discount__number">-20%</span>
+                            <div class="part part1">
+                                <div class="product-img">
+                                    <a href="product-page.html"><img src="img/home/tachka.png" alt="Садовая Тачка"></a>
+                                    <img src="img/free_shipping.png" alt="Бесплатная доставка в отделения Нова Пошта" class="products-card__label products-card__free_shipping">
+                                </div>
+                            </div>
+                            <div class="part part2">
+                                <div class="product-title">
+                                    <a href="product-page.html">Forte WB6407A Тачка садовая</a>
+                                    <span class="hasnt">Нет в наличии</span>
+                                </div>
+                                <ul class="mark_list d-flex">
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="far fa-star"></i></li>
+                                </ul>
+                                <ul class="features features2">
+                                    <li><span class="feature__name">Имя: </span>Значение</li>
+                                    <li><span class="feature__name">Имя: </span>Значение</li>
+                                    <li><span class="feature__name">Имя: </span>Значение</li>
+                                    <li><span class="feature__name">Имя: </span>Значение</li>
+                                    <li><span class="feature__name">Имя: </span>Значение</li>
+                                    <li><span class="feature__name">Имя: </span>Значение</li>
+                                    <li><span class="feature__name">Имя: </span>Значение</li>
+                                </ul>
+                            </div>
+                            <div class="part part1 part3">
+                                <div class="product-price submit-cart">
+                                    <div class="product-card__price">
+                                        <span class=" old__price">566</span>
+                                        <span class="discount__price">499 <small>грн</small></span>
+                                    </div>
+                                    <a href="#" class="products-card__add_btn"><i class="fas fa-shopping-cart"></i></a>
+                                    <div class="product-button">
+                                        <a href="product-page.html">купить</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <ul class="features">
+                                <li><span class="feature__name">Имя: </span>Значение</li>
+                                <li><span class="feature__name">Имя: </span>Значение</li>
+                                <li><span class="feature__name">Имя: </span>Значение</li>
+                                <li><span class="feature__name">Имя: </span>Значение</li>
+                                <li><span class="feature__name">Имя: </span>Значение</li>
+                                <li><span class="feature__name">Имя: </span>Значение</li>
+                                <li><span class="feature__name">Имя: </span>Значение</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="sale-wrapper-outer">
+                        <div class="product-card">
+                            <div class="products-card__label label_type_action">
+                                акция
+                            </div>
+                            <div class="product-card__actions">
+                                <a href="#!" class="products-card__wish_btn action"><i class="far fa-heart"></i></a>
+                                <a href="#!" class="products-card__compare_btn action"><i class="fas fa-balance-scale"></i></a>
+                            </div>
+                            <span class="discount__number">-20%</span>
+                            <div class="part part1">
+                                <div class="product-img">
+                                    <a href="product-page.html"><img src="img/home/tachka.png" alt="Садовая Тачка"></a>
+                                    <img src="img/free_shipping.png" alt="Бесплатная доставка в отделения Нова Пошта" class="products-card__label products-card__free_shipping">
+                                </div>
+                            </div>
+                            <div class="part part2">
+                                <div class="product-title">
+                                    <a href="product-page.html">Forte WB6407A Тачка садовая</a>
+                                    <span class="hasnt">Нет в наличии</span>
+                                </div>
+                                <ul class="mark_list d-flex">
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="far fa-star"></i></li>
+                                </ul>
+                                <ul class="features features2">
+                                    <li><span class="feature__name">Имя: </span>Значение</li>
+                                    <li><span class="feature__name">Имя: </span>Значение</li>
+                                    <li><span class="feature__name">Имя: </span>Значение</li>
+                                    <li><span class="feature__name">Имя: </span>Значение</li>
+                                    <li><span class="feature__name">Имя: </span>Значение</li>
+                                    <li><span class="feature__name">Имя: </span>Значение</li>
+                                    <li><span class="feature__name">Имя: </span>Значение</li>
+                                </ul>
+                            </div>
+                            <div class="part part1 part3">
+                                <div class="product-price submit-cart">
+                                    <div class="product-card__price">
+                                        <span class=" old__price">566</span>
+                                        <span class="discount__price">499 <small>грн</small></span>
+                                    </div>
+                                    <a href="#" class="products-card__add_btn"><i class="fas fa-shopping-cart"></i></a>
+                                    <div class="product-button">
+                                        <a href="product-page.html">купить</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <ul class="features">
+                                <li><span class="feature__name">Имя: </span>Значение</li>
+                                <li><span class="feature__name">Имя: </span>Значение</li>
+                                <li><span class="feature__name">Имя: </span>Значение</li>
+                                <li><span class="feature__name">Имя: </span>Значение</li>
+                                <li><span class="feature__name">Имя: </span>Значение</li>
+                                <li><span class="feature__name">Имя: </span>Значение</li>
+                                <li><span class="feature__name">Имя: </span>Значение</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="sale-wrapper-outer">
+                        <div class="product-card">
+                            <div class="products-card__label label_type_action">
+                                акция
+                            </div>
+                            <div class="product-card__actions">
+                                <a href="#!" class="products-card__wish_btn action"><i class="far fa-heart"></i></a>
+                                <a href="#!" class="products-card__compare_btn action"><i class="fas fa-balance-scale"></i></a>
+                            </div>
+                            <span class="discount__number">-20%</span>
+                            <div class="part part1">
+                                <div class="product-img">
+                                    <a href="product-page.html"><img src="img/home/tachka.png" alt="Садовая Тачка"></a>
+                                    <img src="img/free_shipping.png" alt="Бесплатная доставка в отделения Нова Пошта" class="products-card__label products-card__free_shipping">
+                                </div>
+                            </div>
+                            <div class="part part2">
+                                <div class="product-title">
+                                    <a href="product-page.html">Forte WB6407A Тачка садовая</a>
+                                    <span class="hasnt">Нет в наличии</span>
+                                </div>
+                                <ul class="mark_list d-flex">
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="far fa-star"></i></li>
+                                </ul>
+                                <ul class="features features2">
+                                    <li><span class="feature__name">Имя: </span>Значение</li>
+                                    <li><span class="feature__name">Имя: </span>Значение</li>
+                                    <li><span class="feature__name">Имя: </span>Значение</li>
+                                    <li><span class="feature__name">Имя: </span>Значение</li>
+                                    <li><span class="feature__name">Имя: </span>Значение</li>
+                                    <li><span class="feature__name">Имя: </span>Значение</li>
+                                    <li><span class="feature__name">Имя: </span>Значение</li>
+                                </ul>
+                            </div>
+                            <div class="part part1 part3">
+                                <div class="product-price submit-cart">
+                                    <div class="product-card__price">
+                                        <span class=" old__price">566</span>
+                                        <span class="discount__price">499 <small>грн</small></span>
+                                    </div>
+                                    <a href="#" class="products-card__add_btn"><i class="fas fa-shopping-cart"></i></a>
+                                    <div class="product-button">
+                                        <a href="product-page.html">купить</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <ul class="features">
+                                <li><span class="feature__name">Имя: </span>Значение</li>
+                                <li><span class="feature__name">Имя: </span>Значение</li>
+                                <li><span class="feature__name">Имя: </span>Значение</li>
+                                <li><span class="feature__name">Имя: </span>Значение</li>
+                                <li><span class="feature__name">Имя: </span>Значение</li>
+                                <li><span class="feature__name">Имя: </span>Значение</li>
+                                <li><span class="feature__name">Имя: </span>Значение</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="sale-wrapper-outer">
+                        <div class="product-card">
+                            <div class="products-card__label label_type_action">
+                                акция
+                            </div>
+                            <div class="product-card__actions">
+                                <a href="#!" class="products-card__wish_btn action"><i class="far fa-heart"></i></a>
+                                <a href="#!" class="products-card__compare_btn action"><i class="fas fa-balance-scale"></i></a>
+                            </div>
+                            <span class="discount__number">-20%</span>
+                            <div class="part part1">
+                                <div class="product-img">
+                                    <a href="product-page.html"><img src="img/home/tachka.png" alt="Садовая Тачка"></a>
+                                    <img src="img/free_shipping.png" alt="Бесплатная доставка в отделения Нова Пошта" class="products-card__label products-card__free_shipping">
+                                </div>
+                            </div>
+                            <div class="part part2">
+                                <div class="product-title">
+                                    <a href="product-page.html">Forte WB6407A Тачка садовая</a>
+                                    <span class="hasnt">Нет в наличии</span>
+                                </div>
+                                <ul class="mark_list d-flex">
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="far fa-star"></i></li>
+                                </ul>
+                                <ul class="features features2">
+                                    <li><span class="feature__name">Имя: </span>Значение</li>
+                                    <li><span class="feature__name">Имя: </span>Значение</li>
+                                    <li><span class="feature__name">Имя: </span>Значение</li>
+                                    <li><span class="feature__name">Имя: </span>Значение</li>
+                                    <li><span class="feature__name">Имя: </span>Значение</li>
+                                    <li><span class="feature__name">Имя: </span>Значение</li>
+                                    <li><span class="feature__name">Имя: </span>Значение</li>
+                                </ul>
+                            </div>
+                            <div class="part part1 part3">
+                                <div class="product-price submit-cart">
+                                    <div class="product-card__price">
+                                        <span class=" old__price">566</span>
+                                        <span class="discount__price">499 <small>грн</small></span>
+                                    </div>
+                                    <a href="#" class="products-card__add_btn"><i class="fas fa-shopping-cart"></i></a>
+                                    <div class="product-button">
+                                        <a href="product-page.html">купить</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <ul class="features">
+                                <li><span class="feature__name">Имя: </span>Значение</li>
+                                <li><span class="feature__name">Имя: </span>Значение</li>
+                                <li><span class="feature__name">Имя: </span>Значение</li>
+                                <li><span class="feature__name">Имя: </span>Значение</li>
+                                <li><span class="feature__name">Имя: </span>Значение</li>
+                                <li><span class="feature__name">Имя: </span>Значение</li>
+                                <li><span class="feature__name">Имя: </span>Значение</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="sale-wrapper-outer">
+                        <div class="product-card">
+                            <div class="products-card__label label_type_action">
+                                акция
+                            </div>
+                            <div class="product-card__actions">
+                                <a href="#!" class="products-card__wish_btn action"><i class="far fa-heart"></i></a>
+                                <a href="#!" class="products-card__compare_btn action"><i class="fas fa-balance-scale"></i></a>
+                            </div>
+                            <span class="discount__number">-20%</span>
+                            <div class="part part1">
+                                <div class="product-img">
+                                    <a href="product-page.html"><img src="img/home/tachka.png" alt="Садовая Тачка"></a>
+                                    <img src="img/free_shipping.png" alt="Бесплатная доставка в отделения Нова Пошта" class="products-card__label products-card__free_shipping">
+                                </div>
+                            </div>
+                            <div class="part part2">
+                                <div class="product-title">
+                                    <a href="product-page.html">Forte WB6407A Тачка садовая</a>
+                                    <span class="hasnt">Нет в наличии</span>
+                                </div>
+                                <ul class="mark_list d-flex">
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="far fa-star"></i></li>
+                                </ul>
+                                <ul class="features features2">
+                                    <li><span class="feature__name">Имя: </span>Значение</li>
+                                    <li><span class="feature__name">Имя: </span>Значение</li>
+                                    <li><span class="feature__name">Имя: </span>Значение</li>
+                                    <li><span class="feature__name">Имя: </span>Значение</li>
+                                    <li><span class="feature__name">Имя: </span>Значение</li>
+                                    <li><span class="feature__name">Имя: </span>Значение</li>
+                                    <li><span class="feature__name">Имя: </span>Значение</li>
+                                </ul>
+                            </div>
+                            <div class="part part1 part3">
+                                <div class="product-price submit-cart">
+                                    <div class="product-card__price">
+                                        <span class=" old__price">566</span>
+                                        <span class="discount__price">499 <small>грн</small></span>
+                                    </div>
+                                    <a href="#" class="products-card__add_btn"><i class="fas fa-shopping-cart"></i></a>
+                                    <div class="product-button">
+                                        <a href="product-page.html">купить</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <ul class="features">
+                                <li><span class="feature__name">Имя: </span>Значение</li>
+                                <li><span class="feature__name">Имя: </span>Значение</li>
+                                <li><span class="feature__name">Имя: </span>Значение</li>
+                                <li><span class="feature__name">Имя: </span>Значение</li>
+                                <li><span class="feature__name">Имя: </span>Значение</li>
+                                <li><span class="feature__name">Имя: </span>Значение</li>
+                                <li><span class="feature__name">Имя: </span>Значение</li>
+                            </ul>
+                        </div>
+                    </div>		
 				</div>
+                <ul class="pagination">
+                    <li class="active">1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                    <li>5</li>
+                </ul>
 			</div>
-            <div class="sale">
-                <div class="section__header">
-                    <h3 class="title-underline">Расходные материалы к: Forte WB6407A Тачка садовая</h3>
-                </div>
-
-                <div class="sale__slider">
-                    <div class="sale-wrapper">
-                        <div class="sale-wrapper-outer sale-wrapper-outer_cart">
-                            <div class="product-card">
-                                <div class="products-card__label label_type_action">
-                                    акция
-                                </div>
-                                <a href="#" class="products-card__wish_btn"><i class="far fa-heart"></i></a>
-                                <a href="#" class="products-card__compare_btn"><i class="fas fa-balance-scale"></i></a>
-                                <span class="discount__number">-20%</span>
-                                <div class="product-img">
-                                    <a href="product-page.html"><img src="img/home/tachka.png" alt="Садовая Тачка"></a>
-                                    <img src="img/free_shipping.png" alt="Бесплатная доставка в отделения Нова Пошта" class="products-card__label products-card__free_shipping">
-                                </div>
-                                <div class="product-title">
-                                    <a href="product-page.html">Forte WB6407A Тачка садовая</a>
-                                    <span class="hasnt">Нет в наличии</span>
-                                </div>
-                                <ul class="mark_list d-flex">
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li><i class="far fa-star"></i></li>
-                                </ul>
-                                <div class="product-price submit-cart">
-                                    <div class="product-card__price">
-                                        <span class=" old__price">566</span>
-                                        <span class="discount__price">499 <small>грн</small></span>
-                                    </div>
-                                    <a href="#" class="products-card__add_btn"><i class="fas fa-shopping-cart"></i></a>
-                                    <div class="product-button">
-                                        <a href="product-page.html">купить</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="sale-wrapper-outer">
-                            <div class="product-card">
-                                <div class="products-card__label label_type_action">
-                                    акция
-                                </div>
-                                <a href="#" class="products-card__wish_btn"><i class="far fa-heart"></i></a>
-                                <a href="#" class="products-card__compare_btn"><i class="fas fa-balance-scale"></i></a>
-                                <span class="discount__number">-20%</span>
-                                <div class="product-img">
-                                    <a href="product-page.html"><img src="img/home/tachka.png" alt="Садовая Тачка"></a>
-                                    <img src="img/free_shipping.png" alt="Бесплатная доставка в отделения Нова Пошта" class="products-card__label products-card__free_shipping">
-                                </div>
-                                <div class="product-title">
-                                    <a href="product-page.html">Forte WB6407A Тачка садовая</a>
-                                    <span class="hasnt">Нет в наличии</span>
-                                </div>
-                                <ul class="mark_list d-flex">
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li><i class="far fa-star"></i></li>
-                                </ul>
-                                <div class="product-price submit-cart">
-                                    <div class="product-card__price">
-                                        <span class=" old__price">566</span>
-                                        <span class="discount__price">499 <small>грн</small></span>
-                                    </div>
-                                    <a href="#" class="products-card__add_btn"><i class="fas fa-shopping-cart"></i></a>
-                                    <div class="product-button">
-                                        <a href="product-page.html">купить</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="sale-wrapper-outer">
-                            <div class="product-card">
-                                <div class="products-card__label label_type_action">
-                                    акция
-                                </div>
-                                <a href="#" class="products-card__wish_btn"><i class="far fa-heart"></i></a>
-                                <a href="#" class="products-card__compare_btn"><i class="fas fa-balance-scale"></i></a>
-                                <span class="discount__number">-20%</span>
-                                <div class="product-img">
-                                    <a href="product-page.html"><img src="img/home/tachka.png" alt="Садовая Тачка"></a>
-                                    <img src="img/free_shipping.png" alt="Бесплатная доставка в отделения Нова Пошта" class="products-card__label products-card__free_shipping">
-                                </div>
-                                <div class="product-title">
-                                    <a href="product-page.html">Forte WB6407A Тачка садовая</a>
-                                    <span class="hasnt">Нет в наличии</span>
-                                </div>
-                                <ul class="mark_list d-flex">
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li><i class="far fa-star"></i></li>
-                                </ul>
-                                <div class="product-price submit-cart">
-                                    <div class="product-card__price">
-                                        <span class=" old__price">566</span>
-                                        <span class="discount__price">499 <small>грн</small></span>
-                                    </div>
-                                    <a href="#" class="products-card__add_btn"><i class="fas fa-shopping-cart"></i></a>
-                                    <div class="product-button">
-                                        <a href="product-page.html">купить</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="sale-wrapper-outer">
-                            <div class="product-card">
-                                <div class="products-card__label label_type_action">
-                                    акция
-                                </div>
-                                <a href="#" class="products-card__wish_btn"><i class="far fa-heart"></i></a>
-                                <a href="#" class="products-card__compare_btn"><i class="fas fa-balance-scale"></i></a>
-                                <span class="discount__number">-20%</span>
-                                <div class="product-img">
-                                    <a href="product-page.html"><img src="img/home/tachka.png" alt="Садовая Тачка"></a>
-                                    <img src="img/free_shipping.png" alt="Бесплатная доставка в отделения Нова Пошта" class="products-card__label products-card__free_shipping">
-                                </div>
-                                <div class="product-title">
-                                    <a href="product-page.html">Forte WB6407A Тачка садовая</a>
-                                    <span class="hasnt">Нет в наличии</span>
-                                </div>
-                                <ul class="mark_list d-flex">
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li><i class="far fa-star"></i></li>
-                                </ul>
-                                <div class="product-price submit-cart">
-                                    <div class="product-card__price">
-                                        <span class=" old__price">566</span>
-                                        <span class="discount__price">499 <small>грн</small></span>
-                                    </div>
-                                    <a href="#" class="products-card__add_btn"><i class="fas fa-shopping-cart"></i></a>
-                                    <div class="product-button">
-                                        <a href="product-page.html">купить</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="sale-wrapper-outer">
-                            <div class="product-card">
-                                <div class="products-card__label label_type_action">
-                                    акция
-                                </div>
-                                <a href="#" class="products-card__wish_btn"><i class="far fa-heart"></i></a>
-                                <a href="#" class="products-card__compare_btn"><i class="fas fa-balance-scale"></i></a>
-                                <span class="discount__number">-20%</span>
-                                <div class="product-img">
-                                    <a href="product-page.html"><img src="img/home/tachka.png" alt="Садовая Тачка"></a>
-                                    <img src="img/free_shipping.png" alt="Бесплатная доставка в отделения Нова Пошта" class="products-card__label products-card__free_shipping">
-                                </div>
-                                <div class="product-title">
-                                    <a href="product-page.html">Forte WB6407A Тачка садовая</a>
-                                    <span class="hasnt">Нет в наличии</span>
-                                </div>
-                                <ul class="mark_list d-flex">
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li><i class="far fa-star"></i></li>
-                                </ul>
-                                <div class="product-price submit-cart">
-                                    <div class="product-card__price">
-                                        <span class=" old__price">566</span>
-                                        <span class="discount__price">499 <small>грн</small></span>
-                                    </div>
-                                    <a href="#" class="products-card__add_btn"><i class="fas fa-shopping-cart"></i></a>
-                                    <div class="product-button">
-                                        <a href="product-page.html">купить</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> <!-- /sale --> 
-			
 		</div> <!-- /main-container -->
 	</div>
 </div>
@@ -1862,11 +2324,241 @@
 
 </main>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="libs/remodal.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.js"></script>
+<script src="libs/jQuery/jquery-3.4.1.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
 <script src="libs/slick-1.8.1/slick/slick.min.js"></script>
+<script src="libs/remodal.js"></script>
 <script src="libs/slideout.min.js"></script>
+<script src="libs/mask.js"></script>
 <script src="js/common.js"></script>
+
+<!-- Desktop range -->
+<script>
+    $( function() {
+        // Product Price
+        $( "#slider-range" ).slider({
+          range: true,
+          min: 0,
+          max: 500,
+          values: [ 75, 300 ],
+          slide: function( event, ui ) {
+            $( "#amount_from" ).val( ui.values[ 0 ] );
+            $( "#amount_to" ).val( ui.values[ 1 ] );
+          }
+        });
+        $( "#amount_from" ).val( $( "#slider-range" ).slider( "values", 0 ) );
+        $( "#amount_to" ).val( $( "#slider-range" ).slider( "values", 1 ) );
+
+        $('input#amount_from').on('change', function(){
+            var
+                amountFromVal = $('#amount_from').val(),
+                amountToVal   = $('#amount_to').val();
+
+            if(parseInt(amountFromVal) > parseInt(amountToVal)){
+                amountFromVal = amountToVal;
+                $('input#amount_from').val(amountFromVal);
+            }
+
+            $("#slider-range").slider("values", 0, amountFromVal);
+        });
+
+        $('input#amount_to').on('change', function(){
+            var
+                amountFromVal = $('#amount_from').val(),
+                amountToVal   = $('#amount_to').val();
+
+            if(parseInt(amountToVal) < parseInt(amountFromVal)){
+                amountToVal = amountFromVal;
+                $("#amount_to").val(amountToVal);
+            }
+
+            $("#slider-range").slider("values", 1, amountToVal);
+        });
+
+        // Volume
+        $( "#slider-volume" ).slider({
+          range: true,
+          min: 0,
+          max: 200,
+          values: [ 0, 50 ],
+          slide: function( event, ui ) {
+            $( "#volumeFrom" ).val( ui.values[ 0 ]);
+            $( "#volumeTo" ).val( ui.values[ 1 ]);
+          }
+        });
+
+        $( "#volumeFrom" ).val($( "#slider-range" ).slider( "values", 0 ));
+        $( "#volumeTo" ).val($( "#slider-range" ).slider( "values", 1 ) );
+
+        $('input#volumeFrom').on('change', function(){
+            var
+                amountFromVal = $('#volumeFrom').val(),
+                amountToVal   = $('#volumeTo').val();
+
+            if(parseInt(amountFromVal) > parseInt(amountToVal)){
+                amountFromVal = amountToVal;
+                $('input#volumeFrom').val(amountFromVal);
+            }
+
+            $("#slider-volume").slider("values", 0, amountFromVal);
+        });
+
+        $('input#volumeTo').on('change', function(){
+            var
+                amountFromVal = $('#volumeFrom').val(),
+                amountToVal   = $('#volumeTo').val();
+
+            if(parseInt(amountFromVal) > parseInt(amountToVal)){
+                amountFromVal = amountToVal;
+                $('input#volumeTo').val(amountFromVal);
+            }
+
+            if(parseInt(amountToVal) < parseInt(amountFromVal)){
+                amountToVal = amountFromVal;
+                $('input#volumeTo').val(amountToVal);
+            }
+
+            $("#slider-volume").slider("values", 1, amountToVal);
+        });
+      } );
+</script>
+
+<!-- Mobile Range -->
+<script>
+    $(function(){
+        // Product Price
+        $( "#slider-range_mob" ).slider({
+          range: true,
+          min: 0,
+          max: 500,
+          values: [ 75, 300 ],
+          slide: function( event, ui ) {
+            $( "#amount_from_mob" ).val( ui.values[ 0 ] );
+            $( "#amount_to_mob" ).val( ui.values[ 1 ] );
+          }
+        });
+        
+        $( "#amount_from_mob" ).val( $( "#slider-range_mob" ).slider( "values", 0 ) );
+        $( "#amount_to_mob" ).val( $( "#slider-range_mob" ).slider( "values", 1 ) );
+
+        $('input#amount_from_mob').on('change', function(){
+            var
+                amountFromValMob = $('#amount_from_mob').val(),
+                amountToValMob   = $('#amount_to_mob').val();
+
+            if(parseInt(amountFromValMob) > parseInt(amountToValMob)){
+                amountFromValMob = amountToValMob;
+                $('input#amount_from_mob').val(amountFromValMob);
+            }
+
+            $("#slider-range_mob").slider("values", 0, amountFromValMob);
+        });
+
+        $('input#amount_to_mob').on('change', function(){
+            var
+                amountFromValMob = $('#amount_from_mob').val(),
+                amountToValMob   = $('#amount_to_mob').val();
+
+            if(parseInt(amountToValMob) < parseInt(amountFromValMob)){
+                amountToValMob = amountFromValMob;
+                $("#amount_to_mob").val(amountToValMob);
+            }
+
+            $("#slider-range_mob").slider("values", 1, amountToValMob);
+        });
+
+        // Volume
+        $( "#slider-volume_mob" ).slider({
+          range: true,
+          min: 0,
+          max: 200,
+          values: [ 0, 50 ],
+          slide: function( event, ui ) {
+            $( "#volumeFrom_mob" ).val( ui.values[ 0 ]);
+            $( "#volumeTo_mob" ).val( ui.values[ 1 ]);
+          }
+        });
+
+        $( "#volumeFrom_mob" ).val($( "#slider-volume_mob" ).slider( "values", 0 ));
+        $( "#volumeTo_mob" ).val($( "#slider-volume_mob" ).slider( "values", 1 ) );
+
+        $('input#volumeFrom_mob').on('change', function(){
+            var
+                amountFromValMob = $('#volumeFrom_mob').val(),
+                amountToValMob   = $('#volumeTo_mob').val();
+
+            if(parseInt(amountFromValMob) > parseInt(amountToValMob)){
+                amountFromValMob = amountToValMob;
+                $('input#volumeFrom_mob').val(amountFromValMob);
+            }
+
+            $("#slider-volume_mob").slider("values", 0, amountFromValMob);
+        });
+
+        $('input#volumeTo_mob').on('change', function(){
+            var
+                amountFromValMob = $('#volumeFrom_mob').val(),
+                amountToValMob   = $('#volumeTo_mob').val();
+
+            if(parseInt(amountFromValMob) > parseInt(amountToValMob)){
+                amountFromValMob = amountToValMob;
+                $('input#volumeTo_mob').val(amountFromValMob);
+            }
+
+            if(parseInt(amountToValMob) < parseInt(amountFromValMob)){
+                amountToValMob = amountFromValMob;
+                $('input#volumeTo_mob').val(amountToValMob);
+            }
+
+            $("#slider-volume_mob").slider("values", 1, amountToValMob);
+        });
+    });
+</script>
+
+<!-- Filter -->
+<script>
+    $('.filter__item-heading').on('click', function(){
+        $(this).parent().find(".filter__dropdown").slideToggle();
+        $(this).find(".fa-angle-right").toggleClass("dropdown-open-icon")
+    });
+
+    if($(window).width() < 1024){
+        window.onscroll = function() {myFunction()};
+        var header = document.getElementById("category_heading");
+
+        var sticky = header.offsetTop;
+
+        // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+        function myFunction() {
+          if (window.pageYOffset > sticky) {
+            header.classList.add("sticky");
+          } else {
+            header.classList.remove("sticky");
+          }
+        }
+    }
+
+    // Mobile filter
+    $('.cateogry-view__button_filter').on('click', function(){
+        $('.mobile-filter').addClass("open");
+        $("html, body").css({"overflow": "hidden"});
+
+        $("#cover").css({
+            "opacity": "1",
+            "visibility": "visible"
+        });
+
+        $('#cover').on("click", function(){
+            $(this).css({
+                "opacity": "0",
+                "visibility": "hidden"
+            });
+
+            $('.mobile-filter').removeClass("open");
+            $("html, body").css({"overflow": "auto"});
+        });
+    });
+</script>
 </body>
 </html>

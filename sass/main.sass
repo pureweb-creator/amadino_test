@@ -1,18 +1,23 @@
 $gilroy: "Gilroy", sans-serif
 $bebas: "Bebas Neue", sans-serif
 $m_font: "Open Sans", sans-serif
-$green: #15B163
+$green: #00a046
 $shadow: 0 3px 20px rgba(0,0,0,.2)
 $shadow2: 0 3px 10px rgba(0,0,0,.2)
 
+
+@import "slideout"
 /**
  * Rewrite bootstrap custom styles
  */
+*
+	outline: none !important
+
 a, a:hover, a:visited, a:active
 	text-decoration: none !important
 
 sub,sup
-	line-height: initial
+	line-height: initial !important
 
 html
 	overflow-x: hidden
@@ -55,41 +60,49 @@ img
 
 .title-underline
 	font-size: 36px
-	font-family: $bebas
+	font-family: $m_font
 	position: relative
 	display: inline-block
-	&:after
-		content: ""
-		width: 103%
-		height: 5px
-		display: block
-		position: absolute
-		bottom: 0
-		left: -3px
-		background-color: rgba(21, 177, 99,.6)
 
 // Button
 .btn
 	background-color: $green
-	font-family: $bebas
+	font-family: $m_font
 	border: 0
 	display: flex
 	transition: all .3s ease
 	justify-content: center
 	align-items: center
 	color: #fff
-	font-size: 20px
+	font-size: 18px
 	cursor: pointer
 	box-shadow: $shadow
-	font-weight: 700
 	&:hover
 		background: darken($green, 10%)
 
 .buy-btn
-	width: 129px
+	width: auto
 	height: 50px
-	font-size: 26px
 	box-shadow: none
+
+	.fa-shopping-cart
+		margin-right: 13px
+
+.buy-one-click
+	font-size: 12px
+	margin-top: 10px
+	margin-left: auto
+	border-bottom: 1px dashed silver
+
+.goods-shortinfo__price__price
+	margin-right: 20px
+
+.buy-credit
+	background: #F84147
+	margin-right: 20px
+
+	&:hover
+		background: darken(#F84147, 20)
 
 .leave-review__btn
 	height: 40px
@@ -135,7 +148,7 @@ img
 			width: 100%
 
 .nav
-	margin-bottom: 30px
+	margin-bottom: 30px !important
 	display: flex
 
 .search-form
@@ -252,11 +265,21 @@ img
 	padding-top: 0px
 	min-height: 100%
 
+.desktop__categories_title
+	display: block
+
 .mobile__categories_title
 	display: none
 	
 .page-wrapper
 	display: flex
+	overflow: hidden
+
+/**
+ * =========================================
+ * 	ASIDE
+ * =========================================
+ */
 
 .aside__logo
 	text-align: center
@@ -282,36 +305,39 @@ img
 	z-index: 3
 
 .aside__title
-	margin-bottom: 34px
+	margin-bottom: 15px
+	font-size: 26px
 
 .aside__nav
 	list-style: none
 	margin-bottom: 150px
+	position: relative
 
-.aside__nav-item a
-	color: #000
-	font-size: 14px
-	font-weight: 700
-	line-height: 1
-.aside__nav-item:hover > a
-	color: white
-	margin-left: 10px
-	text-decoration: none
+.submenu
+	display: none
+	padding: 10px
+	background: #eae7e7
+	box-shadow: $shadow2
+	position: absolute
+	left: 100%
+	width: 900px
+	top: 0
+	grid-template-columns: repeat(3, 1fr)
+	grid-gap: 30px
+	&.active
+		display: grid
 
 .aside__nav-item
-	padding: 10px 0
-	position: relative
-	transition: all .3s ease
-	margin-left: -23.444%
-	padding-left: 23.444%
-	position: static
 	i, svg
 		margin-right: 8px
+
 	&:hover,&:active
 		a::after
 			opacity: 1
 	& > a
 		position: relative
+		line-height: 2.5em !important
+
 	& > a::after
 		content: ""
 		display: block
@@ -320,186 +346,62 @@ img
 		width: 0
 		height: 0
 		border: 10px solid transparent
-		border-right-color: #fff
+		border-right-color: #eae7e7
 		position: absolute
 		right: 0
 		top: 50%
 		transform: translateY(-50%)
 		z-index: 9999
 	&:hover
-		color: #fff
 		background-color: $green
-		.aside__nav-sublist
-			display: flex
-			opacity: 1
-			visibility: visible
+		& > a
+			color: #fff
 	&:last-child
 		margin-bottom: 0
+	
+	margin-left: -5%
+	width: 105%
+	padding-left: 5%
+	transition: all .3s ease
+
+.submenu_active
+	display: grid
+	opacity: 1
+	visibility: visible
+	transition: all .3s ease
+	position: static
+	margin-left: -2% !important
+
+@media (min-width: 1024px)
+	.aside__nav-item:hover
+		.submenu
+			display: grid
+			opacity: 1
+			visibility: visible
+
+.aside__nav-item a
+	color: #000
+	font-size: 14px
+	font-weight: 700
+	line-height: 2em
+
+.aside__nav-siblist2x-item a
+	font-weight: 400
+
+.aside__nav-item:hover > a
+	margin-left: 10px
+	text-decoration: none
+
+.aside__nav-sublist-item
+	a:hover
+		color: red
+		text-decoration: underline !important
 
 .aside__tel a
 	display: block
-	font-size: 30px
+	font-size: 22px
 	font-weight: 700
-	font-family: $bebas
-
-.aside__nav-sublist-image
-	background-color: #fff
-	text-align: center
-	width: 100%
-	margin-bottom: 15px
-	img
-		width: 100%
-		height: auto
-		max-width: 120px
-		max-height: 150px
-		
-.aside__nav-sublist
-	visibility: hidden
-	opacity: 0
-	transition: all .3s ease
-	position: absolute
-	left: 100%
-	top: 0
-	z-index: 3
-	min-height: 600px
-	padding: 25px 0
-	box-sizing: content-box
-	max-height: calc(100vh - 200px)
-	width: 77vw
-	background-color: #fff
-	min-width: 245px
-	list-style: none
-	box-shadow: $shadow2
-	flex-direction: column
-	flex-wrap: wrap
-
-.aside__nav-sublist-item
-	display: block
-	position: relative
-	width: 250px
-	margin-bottom: 10px
-	border-bottom: 2px solid $green
-	// padding-bottom: 10px
-	&:hover
-		.aside__nav-sublist2x
-			display: flex
-	a
-		display: block
-		padding: 5px 0 5px 20px
-		font-size: 16px
-		font-weight: 400
-		color: #000
-		&:hover
-			background-color: #fff
-			color: #000
-			text-decoration: underline
-	& > a
-		font-weight: 700
-		font-size: 16px
-		position: relative
-		color: #000
-		background-color: #fff
-		&:hover
-			text-decoration: none
-		img
-			height: 100px
-			width: auto
-			display: block
-
-.aside__nav-sublist2x
-	padding-bottom: 10px
-	display: flex
-	position: relative
-	background-color: #fff
-	list-style: none
-	flex-direction: column
-	.aside__nav-siblist2x-item
-		a
-			width: 100%
-			font-size: 13px
-	a
-		display: block
-		width: 200px
-		&:hover
-			background-color: #fff
-			color: #000
-
-.aside__nab-siblist2x-more
-	text-align: start
-	padding: 2px 0
-	background-color: #fff
-	margin-bottom: 5px
-	a
-		font-weight: 700
-		color: #000
-		position: relative
-		&::after
-			content: ""
-			width: 7px
-			height: 7px
-			border-bottom: 2px solid #000
-			border-left: 2px solid #000
-			transform: rotate(-45deg)
-			position: absolute
-			left: 65px
-			top: 8px
-
-		&:hover
-			text-decoration: underline
-
-li.aside__nav-siblist2x-item
-	&.show
-		display: block !important
-
-	&:nth-child(6)
-		// background-color: red
-
-
-// filter
-.filter__discard
-	font-size: 20px
-	font-weight: 700
-	color: $green
-	display: flex
-	align-items: center
-	cursor: pointer
-	margin-bottom: 30px
-	img
-		margin-right: 8px
-	&:hover
-		text-decoration: underline
-
-.aside__filter-title, .aside__price-range-title
-	font-weight: 700
-	font-size: 20px
-	margin-bottom: 20px
-
-.aside__filter-input
-	width: 100%
-	background-color: #f1f1f1
-	font-size: 18px
-	border: 0
-	padding: 5px 10px
-	width: 268px
-	color: #000
 	font-family: $m_font
-	outline: none
-	box-shadow: $shadow
-	margin-bottom: 20px
-	&::placeholder
-		color: #000
-
-.aside__filter-item
-	display: flex
-	align-items: center
-	font-size: 20px
-	cursor: pointer
-	margin-bottom: 8px
-	img
-		margin-right: 10px
-
-.aside__filter
-	margin-bottom: 30px
 
 .aside__price-range-title
 	margin-bottom: 10px
@@ -623,10 +525,64 @@ li.aside__nav-siblist2x-item
 
 .section__header--barrow
 	margin-bottom: 44px
+	align-items: center
+	justify-content: space-between
+	display: flex
 	&:before
 		left: -235px
 	&:after
 		right: -235px	
+
+#category_heading
+	transition: all .3s ease
+
+	&.sticky
+		padding: 10px 0
+		position: fixed
+		transition: all .3s ease
+		top: 0
+		left: 0
+		width: 100%
+		background: #fff
+		box-shadow: 0 5px 5px #e9e9e9
+		z-index: 9999
+		.title-underline
+			display: none
+		.category-barrow__view
+			width: 100%
+			justify-content: space-between
+		.category-view__button_list
+			margin-left: auto
+		.cateogry-view__button_filter
+			display: block
+			margin-right: 0
+	&.sticky + .category__inner 
+  		padding-top: 105.200px
+
+.category-view__button
+	border: 0
+	font-size: 20px
+	color: silver
+	opacity: .5
+	background: transparent
+
+.category-view__button_state_active
+	color: $green
+	opacity: 1
+
+.cateogry-view__button_filter
+	opacity: 1
+	display: none
+	margin-right: 30px
+	align-items: center
+	i
+		color: $green
+
+	.filter__name
+		display: inline-block
+		margin-left: 10px
+		color: #000 
+		font-size: 14px
 
 .section__header--offer
 	margin-bottom: 44px
@@ -635,14 +591,11 @@ li.aside__nav-siblist2x-item
 	&:after
 		right: -355px
 // sale
-.sale
-	max-height: 600px
 .product-card
 	padding: 20px 10px
 	width: 220px
 	position: relative
 	box-shadow: $shadow
-	transition: all .3s ease
 
 .sale__slider
 	margin-bottom: 50px
@@ -650,6 +603,7 @@ li.aside__nav-siblist2x-item
 .sale-wrapper-outer
 	padding: 0 20px
 	position: relative
+	margin-bottom: 50px
 
 .product-img
 	width: 100%
@@ -658,13 +612,14 @@ li.aside__nav-siblist2x-item
 	position: relative
 	a
 		height: 100%
+		display: flex
+		align-items: center
 	a img
 		display: block
 		width: auto
 		position: relative
 		z-index: -1
 		margin: 0 auto
-		height: 100%
 
 .product-title
 	width: 186px
@@ -672,7 +627,10 @@ li.aside__nav-siblist2x-item
 	min-height: 3em
 	a
 		color: black
-		font-size: 17px
+		font-size: 14px
+		height: 33.6px
+		width: 100%
+		overflow: hidden
 		font-weight: 600
 		line-height: 1.2222
 
@@ -692,15 +650,16 @@ li.aside__nav-siblist2x-item
 
 .product-price
 	font-size: 20px
-	font-weight: 700
 	text-align: left
 	position: relative
 	margin-top: 15px
 	color: $green
-	font-family: $bebas
+	font-family: $m_font
 	line-height: 1
 	span
-		font-size: 34px
+		font-size: 22px
+		display: block
+		margin-top: 5px
 
 .product-button a
 	position: absolute
@@ -1177,13 +1136,14 @@ p.footer__link:hover
 	display: grid
 	grid-template-columns: repeat(4, 1fr)
 
-.category__page-buttons
-	display: flex
+.pagination
 	width: 280px
+	display: flex
 	justify-content: space-between
-	margin: 40px auto 50px auto
+	grid-column: 1/5
+	margin: 40px auto 70px auto
 
-.page-button
+.pagination > li
 	font-size: 30px
 	color: #fff
 	font-family: $bebas
@@ -1219,73 +1179,15 @@ p.footer__link:hover
 	padding: 50px 0
 	position: relative
 	display: flex
-	&:after
-		content: ""
-		width: 1920px
-		height: 1px
-		position: absolute
-		bottom: 0
-		right: -200px
-		background-color: $green
-
-.goods-img
-	padding-bottom: 70px
-	width: 480px
-	height: 480px
-	display: flex
-	justify-content: center
-	align-items: center
-	border: 1px solid $green
-	margin-right: 50px
-	position: relative
-	.good-img__current
-		width: 434px
-		display: flex
-    	justify-content: center
-    	align-items: center
-
-	.products-card__free_shipping
-		bottom: 100px
-		width: 100px !important
-		left: 10px
-
-	img
-		width: 100%
-		height: auto
-
-.goods-img__bottom
-	position: absolute
-	bottom: 0
-	right: 0
-	left: 0
-	width: 100%
-	height: 81px
-	display: flex
-	justify-content: space-around
-
-.goods-img__item
-	width: 24%
-	display: block
-	transition: all .2s ease-in-out
-	img
-		width: 100%
-		height: auto
-		display: block
-	&:hover
-		background-color: rgba(0,0,0,.11)
-	&.active
-		background-color: rgba(0,0,0,.11)
 		
 .reversed
 	transform: scale(1,-1)
 
 .goods-shortinfo
 	width: 374px
-	margin-right: 100px
+	margin-right: 30px
 	.goods-shortinfo__line
 		flex-direction: column
-		img
-			margin-top: 10px
 
 .goods-shortinfo__title
 	font-size: 26px
@@ -1304,11 +1206,15 @@ p.footer__link:hover
 
 	.goods-shortinfo__buy
 		margin-top: 30px
+		justify-content: space-between
+		flex-wrap: wrap
+		width: 100%
 
 .goods-shortinfo__price
 	font-size: 36px
-	font-weight: 700
-	font-family: $bebas
+	font-family: $m_font
+	justify-content: space-between
+	width: 100%
 	color: $green
 	span
 		font-size: 46px
@@ -1323,7 +1229,6 @@ p.footer__link:hover
 	justify-content: space-between
 	font-size: 18px
 	position: relative
-	padding: 10px
 	&:last-child
 		margin-bottom: 0
 
@@ -1336,22 +1241,31 @@ p.footer__link:hover
 .goods-shortinfo__value
 	padding: 0 5px
 	z-index: 2
+	margin-top: 15px
+	font-size: 12px
+	align-items: flex-start
 	position: relative
+	& > p
+		margin-left: 20px
+		font-weight: 700
+	.original
+		display: inline-block
+		margin-bottom: 5px
 	img
-		width: 100px
+		width: 120px
 
 .goods-shipment
-	padding: 30px 20px
+	padding: 10px
 	border: 1px solid $green
-	font-size: 14px
 	width: 237px
 
 .goods-shipment__where
 	font-weight: 700
-	margin-bottom: 12px
+	margin-bottom: 9px
 
 .goods-shipment__how
-	margin-bottom: 13px
+	margin-bottom: 7px
+	font-size: 13px
 
 // tabs
 .product-tabs__header
@@ -1390,7 +1304,7 @@ p.footer__link:hover
 	color: $green
 	box-shadow: none
 	border: 1px solid $green
-	font-size: 18px
+	font-size: 14px
 	transition: .2s linear
 	border-top: 0
 	&:last-child
@@ -1413,6 +1327,9 @@ p.footer__link:hover
 		color: #fff
 		padding: 3px 7px 0
 		margin-right: 10px
+
+.reviews__item_type_reply
+	margin-left: 15px
 
 .product-tabs__tab-button:not(:first-child), .product-tabs__tab-button:not(:last-child)
 	border-radius: unset
@@ -1465,6 +1382,11 @@ p.footer__link:hover
 .product-tabs__characts
 	width: 46.95%
 	max-width: 585px
+	.goods-shortinfo__value
+		font-size: 18px
+		margin-top: 0
+	.goods-shortinfo__line
+		padding: 10px
 
 // Reviews
 .commentaries
@@ -1786,140 +1708,8 @@ p.footer__link:hover
 		img
 			margin-right: 8px
 
-.header__menu
-	position: fixed
-	width: 100%
-	height: 100%
-	z-index: 201
-	opacity: 0
-	visibility: hidden
-	transition: visibility 0.3s linear,opacity 0.3s linear
-
-
-.header__menu.show
-	opacity: 1
-	visibility: visible
-
-.header__menu-inner
-	width: 250px
-	position: fixed
-	right: 0
-	top: 0
-	z-index: 1000
-	background-color: #fff
-	height: 100%
-	opacity: 1
-	transition: all .3s ease
-
-.header__menu-black
-	position: fixed
-	z-index: 900
-	background-color: rgba(0,0,0,.4)
-	top: 0
-	left: 0
-	width: 100%
-	height: 100%
-
-
-.header__menu-reg
-	margin-bottom: 20px
-	a
-		display: block
-		color: #fff
-		font-size: 18px
-		background-color: $green
-		font-weight: 700
-		padding: 23px 0
-		text-align: center
-
-.header__menu-nav
-	a
-		display: block
-		padding: 10px 0 10px 40px
-		font-weight: 700
-		font-size: 18px
-
-
 .aside__inner--mob
 	display: none
-
-.category__subheader
-	display: none
-
-.filter-mob
-	width: 235px
-	height: 100vh
-	position: fixed
-	top: 0
-	left: 0
-	background-color: #fff
-	z-index: 920
-
-.filter-mob__header
-	margin-bottom: 20px
-	a
-		display: flex
-		align-items: center
-		color: #fff
-		font-size: 30px
-		font-family: $bebas
-		background-color: $green
-		font-weight: 700
-		padding: 20px 10px
-		text-align: start
-
-.filter-mob__outer
-	position: fixed
-	width: 100%
-	height: 100%
-	display: none
-	z-index: 900
-
-.filter-mob__outer.show
-	display: block
-
-.filter-mob__tab
-	border-bottom: 1px solid $green
-	padding-left: 15px
-	padding-bottom: 20px
-	overflow: hidden
-	height: 40px
-
-.filter-mob__tab.show
-	height: auto
-
-.filter-tab__title
-	font-size: 16px
-	font-weight: 700
-	padding-bottom: 30px
-	padding-top: 10px
-
-.filter-tab__item
-	display: block
-	padding-left: 25px
-	margin-bottom: 10px
-	font-size: 14px
-	position: relative
-	&::before
-		content: ""
-		width: 14px
-		height: 14px
-		position: absolute
-		top: 1px
-		left: 1px
-		background: url('../img/green-plus.png') center no-repeat
-
-.filter-mob__discard
-	margin-top: 20px
-	color: $green
-	a
-		font-size: 18px
-		font-weight: 700
-		display: flex
-		align-items: center
-		padding: 10px 0 10px 30px
-		img
-			transform: rotate(45deg)
 
 .mobile-cart-btn
 	display: none
@@ -2900,6 +2690,9 @@ input:focus::-webkit-input-placeholder
 	font-size: 14px
 	line-height: 1.488
 
+.product-tabs
+	border-top: 1px solid silver
+
 .product-tabs__tab-content
 	padding-bottom: 50px
 	&.show
@@ -3000,9 +2793,6 @@ input:focus::-webkit-input-placeholder
 	.info-container
 		padding: 50px 10px 50px 10px
 
-	.aside__filter-input
-		width: 90%
-
 	.account__inner
 		padding: 0 50px
 		overflow-x: scroll
@@ -3086,11 +2876,14 @@ input:focus::-webkit-input-placeholder
 		width: 100%
 		margin-right: 0
 		margin-top: 40px
-	.goods-img
-		margin-right: 0
 
+	.goods-shortinfo__purchase
+		.goods-shortinfo__buy, 
+		.goods-shortinfo__price
+			justify-content: flex-start
 
-	
+	.goods-shipment
+		width: auto
 
 	.cart-button
 		margin-left: 10px
@@ -3100,16 +2893,12 @@ input:focus::-webkit-input-placeholder
 
 	.product-img 
 		width: 100%
-		a img
-			width: 100%
 
 	.product-button a
 		width: 50%
 
 	.about-us__advantages-item
 		font-size: 14px
-
-		
 
 	.section__header:after
 		right: 59%
@@ -3131,7 +2920,7 @@ input:focus::-webkit-input-placeholder
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1300px)
 	/**/
-	.header__actions, .order-call
+	.header__actions:not(#menu .header__actions), .order-call
 		display: none !important
 	.aside
 		padding-top: 0
@@ -3157,10 +2946,6 @@ input:focus::-webkit-input-placeholder
 		padding: 0 15px
 	.product-card
 		width: 280px
-
-	.aside__nav-sublist
-		top: 0
-		min-height: 100%
 
 	.cart-button
 		margin-left: 10px
@@ -3260,8 +3045,10 @@ input:focus::-webkit-input-placeholder
 			min-width: 70px
 
 /* Large Devices, Wide Screens */
-@media only screen and (max-width : 1200px)
-	/**/
+@media only screen and (max-width : 1204px)
+	/* ASIDE */
+	.submenu
+		width: auto
 
 	.product-card
 		width: 240px
@@ -3291,6 +3078,10 @@ input:focus::-webkit-input-placeholder
 	.oi__left table th
 		width: 70%
 
+	// Product Page
+	.goods-slider
+		width: 100% !important
+
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1100px)
 	/**/
@@ -3316,9 +3107,34 @@ input:focus::-webkit-input-placeholder
 			order: 1
 
 /* Medium Devices, Desktops */
-@media only screen and (max-width : 1024px)
-	/**/
-	.banners__wrapper, .section__header
+@media only screen and (max-width: 1024px)
+	// Filter
+	.cateogry-view__button_filter
+		display: flex
+	/* ASIDE */
+	.mobile__categories_title
+		display: inline-block !important
+	.aside__title
+		margin-top: 34px
+		margin-bottom: 0
+		font-size: 26px
+
+	.aside .news__block
+		padding-bottom: 0
+	.aside__nav-item
+		width: 107%
+		position: relative
+		& > a > i
+			position: relative
+			z-index: 2
+	.aside__nav-item>a::after
+		display: none
+	.submenu
+		top: unset
+		left: 0
+		z-index: 3
+		margin-left: 5%
+	.banners__wrapper
 		z-index: -1
 
 	.page-wrapper
@@ -3332,50 +3148,6 @@ input:focus::-webkit-input-placeholder
 	.header
 		width: 100%
 		padding-top: 0
-	.aside__nav-sublist-item
-		width: 33%
-		& > a
-			img
-				display: block
-			color: #000!important
-			font-weight: 700!important
-	.aside__nav-sublist, .aside__nav-sublist2x
-		border-left: 3px solid #000
-		border-bottom: 3px solid #000
-		position: relative
-		left: 20px
-		top: 4px
-		width: calc(100% - 40px)
-	.aside__nav-sublist-image
-		text-align: start
-		padding-left: 15px
-	.aside__nav-sublist2x
-		background-color: #fff
-		a
-			color: #000
-			&:hover
-				background-color: #000
-				color: #fff
-	.aside__nav-item:hover
-		color: $green
-		background-color: #fff
-
-	.aside__nav-sublist
-		background-color: #fff
-		flex-wrap: wrap
-		flex-direction: row
-		max-height: 100%
-		a 
-			color: $green
-			font-weight: 400
-
-	.aside__nav-sublist-item:hover
-		background-color: #fff
-		& > a
-			color: #000
-			font-weight: 700
-	.aside__inner--cats.aside__inner
-		display: none
 
 	.order-info__bottom
 		flex-direction: column
@@ -3438,22 +3210,6 @@ input:focus::-webkit-input-placeholder
 
 	.registration.show
 		transform: translateY(1630px)
-
-	.category__subheader
-		display: flex
-		justify-content: space-between
-		width: 100%
-		a
-			padding: 20px 0
-			font-weight: 700
-			font-size: 26px
-			color: $green
-			font-family: $bebas
-			display: flex
-			align-items: center
-			cursor: pointer
-			img
-				margin-right: 5px
 
 	.section__header-sorting
 		display: none
@@ -3565,17 +3321,11 @@ input:focus::-webkit-input-placeholder
 		display: none
 	.product-card
 		width: 220px
-	.goods-img__bottom
-		height: auto
-
 	.goods-shipment
 		order: 2
 		width: 100%
 		text-align: center
 		margin: 30px auto
-
-	.goods-img
-		width: 100%
 
 	.b2b-top
 		flex-direction: column
@@ -3587,9 +3337,9 @@ input:focus::-webkit-input-placeholder
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 734px)
-	/**/
-	.aside__nav-sublist-item
-		width: 100%
+	/* ASIDE */
+	.submenu
+		grid-template-columns: 1fr 1fr
 	.reviews__item
 		padding: 40px 20px
 	.reviews__text
@@ -3790,7 +3540,9 @@ input:focus::-webkit-input-placeholder
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 510px)
-	/**/
+	/*ASIDE*/
+	.submenu
+		grid-template-columns: 1fr
 	.product-card
 		width: 200px
 		padding: 10px
@@ -3870,7 +3622,11 @@ input:focus::-webkit-input-placeholder
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
-	/**/
+	/* Aside */
+	.aside__nav-item
+		width: 110%
+	.submenu_active
+		margin-left: -5% !important
 	.slick-dots
 		width: 90%
 	.sale-wrapper-outer, .new-items-wrapper .sale-wrapper-outer
@@ -3903,12 +3659,6 @@ input:focus::-webkit-input-placeholder
 	.settings__input-3
 		width: 100%
 		margin-bottom: 25px
-
-	.goods-img img
-		width: 100%
-
-	.goods-img
-		height: 360px
 
 	.leave-review__header
 		font-size: 18px
@@ -3984,11 +3734,9 @@ input:focus::-webkit-input-placeholder
 		padding: 0
 		.section__header
 			padding: 0 15px
-		.category__subheader
-			padding: 0 15px
 
 	.product-card
-		width: 210px
+		width: auto
 		padding: 20px
 		margin: 0 auto
 
@@ -4005,9 +3753,6 @@ input:focus::-webkit-input-placeholder
 		text-align: center
 		margin-bottom: 40px
 
-	.product-top, .product-tabs
-		padding: 0 15px
-
 	.commentaries
 		padding: 0 15px 0px
 
@@ -4022,6 +3767,9 @@ input:focus::-webkit-input-placeholder
 
 	.offer
 		display: none
+
+	#category_heading.sticky
+		top: -20px
 
 	.section__header--barrow
 		text-align: left
@@ -4046,9 +3794,6 @@ input:focus::-webkit-input-placeholder
 
 	.modal__signing input
 		padding: 10px 20px
-	.goods-img
-		padding-bottom: 30px
-		height: 310px
 
 	.banners--product
 		display: none
@@ -4059,9 +3804,6 @@ input:focus::-webkit-input-placeholder
 	.new-items-wrapper
 		.sale-wrapper-outer
 			padding: 0 20px
-
-	.product-top:after
-		display: none
 
 	.news__title
 		width: 100%
@@ -4180,4 +3922,12 @@ input:focus::-webkit-input-placeholder
 	.allnews__image
 		top: 175px
 
+	// Product Page
+	.goods-shortinfo__buy
+		flex-wrap: wrap
+		.buy-btn
+			width: 100%
+		.buy-credit
+			margin-right: 0
+			margin-bottom: 10px
 @import "custom"

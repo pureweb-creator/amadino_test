@@ -3,13 +3,14 @@
 	.banners, .aside__title, .aside .news__block
 		display: none
 	.inner-wrapper, .main-container
-		padding: 0
+		padding: 0 3px
 	.sale__slider, .new-items__slider, .hits-wrapper
 		.sale-wrapper-outer .product-card
 			position: static
 	.category__inner .sale-wrapper-outer
 		height: 290px
 	.sale-wrapper-outer
+		margin-bottom: 0
 		.product-card
 			box-shadow: unset
 			border-left: 1px solid silver
@@ -25,7 +26,7 @@
 				display: flex
 				align-items: center
 				img
-					width: 80%
+					width: auto
 			.product-title a
 				font-size: 12px
 
@@ -33,4 +34,10 @@
 				font-size: 22px
 				&.old__price
 					font-size: 16px
-					margin-right: 
+			.products-card__add_btn
+				bottom: unset
+				top: 0
+				transform: unset
+			.product-button a
+				font-size: 11px
+				height: 30px
