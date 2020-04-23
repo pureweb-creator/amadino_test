@@ -1537,11 +1537,6 @@
                         <img src="img/img5.jpg" alt="Product">
                     </div>
                     <input type="range" id="range" min="1" value="1" max="5" step="1" />
-                    <div class="subscribe">
-                        <h3 class="subscribe__title title-underline">Подпишитесь и узнавайте первыми о наших акциях, распродажах, конкурсах, скидках</h3>
-                        <input type="email" name="subscribe_email" class="subscribe__input leave-review__input" placeholder="E-mail">
-                        <button class="btn subscribe__btn">Подписатсья</button>
-                    </div>
 				</div>
                 
 				<div class="goods-shortinfo">
@@ -1567,26 +1562,6 @@
                            <span>Нет в наличии</span>
                        </div> -->
                     </div>
-                    <ul class="goods-labels d-flex">
-                        <li>
-                            <a href="#!"><img src="img/cashback.png" alt="icon"></a>
-                            <div class="goods-labels__hint">
-                                <a href="#!">Кэшбэк. Получайте бонусы</a>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="#!"><img src="img/unpacking.png" alt="icon"></a>
-                            <div class="goods-labels__hint">
-                                100 грн. за распаковку 
-                            </div>
-                        </li>
-                        <li>
-                            <a href="#!"><img src="img/vk.png" alt="icon"></a>
-                            <div class="goods-labels__hint">
-                                100 за грн. репост в социальных сетях
-                            </div>
-                        </li>
-                    </ul>
 					<div class="goods-shortinfo__purchase">
 						<div class="goods-shortinfo__price discount d-flex">
                             <div class="goods-shortinfo__price__price">
@@ -1614,6 +1589,26 @@
                             </div>
 						</div>
 					</div>
+                    <ul class="goods-labels d-flex">
+                        <li>
+                            <a href="#!"><img src="img/cashback.png" alt="icon"></a>
+                            <div class="goods-labels__hint">
+                                <a href="#!">Кэшбэк. Получайте бонусы</a>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#!"><img src="img/unpacking.png" alt="icon"></a>
+                            <div class="goods-labels__hint">
+                                100 грн. за распаковку 
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#!"><img src="img/share.png" alt="icon"></a>
+                            <div class="goods-labels__hint">
+                                100 за грн. репост в социальных сетях
+                            </div>
+                        </li>
+                    </ul>
 
 					<div class="goods-shortinfo__stats">
 						<div class="goods-shortinfo__line">
@@ -1719,7 +1714,6 @@
                     </div>
 				</div>
 			</div>
-
             <div class="kits">
                 <div class="kits-tile">
                     <h3 class="kits__heading">Вместе дешевле: </h3>
@@ -2470,6 +2464,16 @@
 </footer>
 
 </main>
+
+<div class="subscribe">
+    <h3 class="subscribe__title title-underline">Следить за скидками и акциями <i class="far fa-envelope"></i></h3>
+    <form action="#" method="POST" class="subscribe__form">
+        <input type="email" required name="subscribe_email" class="subscribe__input" placeholder="E-mail">
+        <input type="text" name="subscribe_name" class="subscribe__input" placeholder="Имя">
+        <input type="text" name="subscribe_city" class="subscribe__input" placeholder="Город">
+        <button class="btn subscribe__btn">Подписаться</button>
+    </form>
+</div>
 
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.js"></script>

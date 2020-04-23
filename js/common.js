@@ -268,6 +268,17 @@ $(document).ready(function(){
         ]
     });
 
+    // Subscribe form in bottom
+    $('.subscribe__title').on('click', function(){
+        $('.subscribe__form').slideToggle();
+    });
+
+    $(document).click(function (e) {
+        if ( !$('.subscribe__title, .subscribe__form').is(e.target)) {
+           $('.subscribe__form').slideToggle();
+        };
+    });
+
     $('.slider-for, .slider-nav').on('init reInit',function(event,slick){
       var amount = slick.slideCount;
       $('#range').attr('max',amount);
