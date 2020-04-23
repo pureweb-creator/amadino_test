@@ -565,20 +565,19 @@ $(document).ready(function(){
     $('.products-card__wish_btn').on('click', function(){
         $(this).find('.fa-heart').toggleClass("fas wish_btn--clicked");
     });
+});
 
-    // Slideout
+// Slideout
     var slideout = new Slideout({
+      
+    // var slideout = new Slideout({
         'panel': document.getElementById('panel'),
         'menu': document.getElementById('menu'),
         'padding': 256,
         'tolerance': 70
-      });
+    });
 
-    $('#menu').css({"display": "block"});
-
-      // Toggle button
-      document.querySelector('#burgerButton').addEventListener('click', function() {
+        // Toggle button
+    document.querySelector('#burgerButton').addEventListener('click', function() {
         slideout.toggle();
-      });
-
-});
+    });

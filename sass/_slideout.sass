@@ -12,6 +12,8 @@ body
   overflow-y: scroll
   -webkit-overflow-scrolling: touch
   z-index: 0
+  display: none
+
 
 .slideout-menu-left 
   left: 0
@@ -25,7 +27,7 @@ body
   position: relative
   z-index: 1
   will-change: transform
-  background-color: #FFF /* A background-color is required */
+  background-color: #FFF/* A background-color is required */
   min-height: 100vh
 
 
@@ -38,10 +40,11 @@ body
 .slideout-open .slideout-menu 
   display: block
 
+
 #menu
   background: #F7F7F9
   padding: 10px
-  display: none
+  //display: none
 
   .menu__list
     border-bottom: 1px solid silver
