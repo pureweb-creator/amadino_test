@@ -275,7 +275,7 @@ $(document).ready(function(){
 
     $(document).click(function (e) {
         if ( !$('.subscribe__title, .subscribe__form').is(e.target)) {
-           $('.subscribe__form').slideToggle();
+           $('.subscribe__form').slideUp();
         };
     });
 
