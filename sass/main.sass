@@ -81,25 +81,30 @@ img
 		background: darken($green, 10%)
 
 .buy-btn
-	width: auto
+	width: 47%
 	height: 50px
+	font-size: 14px
 	box-shadow: none
 
 	.fa-shopping-cart
 		margin-right: 13px
 
+.buy-main
+	margin-right: 20px
+
 .buy-one-click
 	font-size: 12px
 	margin-top: 10px
 	margin-left: auto
-	border-bottom: 1px dashed silver
+	a
+		border-bottom: 1px dashed silver
 
 .goods-shortinfo__price__price
 	margin-right: 20px
 
 .buy-credit
+	font-size: 14px
 	background: #F84147
-	margin-right: 20px
 
 	&:hover
 		background: darken(#F84147, 20)
@@ -328,6 +333,11 @@ img
 		display: grid
 
 .aside__nav-item
+	border-bottom: 1px solid #ccc
+
+	&:last-child
+		border-bottom: none
+
 	i, svg
 		margin-right: 8px
 
@@ -393,6 +403,7 @@ img
 	text-decoration: none
 
 .aside__nav-sublist-item
+	border-bottom: 1px solid #ccc
 	a:hover
 		color: red
 		text-decoration: underline !important
@@ -492,7 +503,11 @@ img
 	font-size: 22px
 	margin-left: 0px
 	font-weight: 700
-	font-family: $bebas
+	color: $green
+	font-family: $m_font
+	a
+		color: $green
+
 
 .banners__wrapper
 	display: flex
@@ -3928,7 +3943,7 @@ input:focus::-webkit-input-placeholder
 		flex-wrap: wrap
 		.buy-btn
 			width: 100%
-		.buy-credit
+		.buy-main
 			margin-right: 0
 			margin-bottom: 10px
 @import "custom"

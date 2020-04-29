@@ -1,3 +1,11 @@
+document.body.onload = function(){
+    var preloader = document.getElementById('page-preloader')
+
+    if( !preloader.classList.contains('done') ){
+        preloader.classList.add('done');
+    }
+}
+
 $(document).ready(function(){
     // Sliders
     $('.banners__wrapper').slick({
@@ -271,11 +279,18 @@ $(document).ready(function(){
     // Subscribe form in bottom
     $('.subscribe__title').on('click', function(){
         $('.subscribe__form').slideToggle();
+        $('.subscribe-close').fadeToggle();
+    });
+
+    $('.subscribe-close').on('click', function(){
+        $('.subscribe__form').slideUp();
+        $('.subscribe-close').fadeToggle();
     });
 
     $(document).click(function (e) {
         if ( !$('.subscribe *').is(e.target)) {
            $('.subscribe__form').slideUp();
+           $('.subscribe-close').fadeOut();
         };
     });
 
@@ -310,9 +325,10 @@ $(document).ready(function(){
             e.preventDefault();
         });
 
-        $('.aside__nav-item').on('click', function(){
             $(".submenu").removeClass("submenu_active");
-            $(this).find(".submenu").addClass("submenu_active");
+
+        $('.aside__nav-item').on('click', function(){
+            $(this).find(".submenu").toggleClass("submenu_active");
 
             $("html,body").animate({
                 scrollTop: $(".submenu_active").parent().offset().top
@@ -371,7 +387,7 @@ $(document).ready(function(){
     });
 
    // Masked input 
-   $('#order-call__tel, #buy-one-click__tel').mask('+380(99) 999-99-99');
+   $('#order-call__tel, #buy-one-click__tel').mask('+380 (99) 999-99-99');
 
     // Star rating
     var cStars = function(nowPos) {
@@ -568,16 +584,16 @@ $(document).ready(function(){
 });
 
 // Slideout
-    var slideout = new Slideout({
-      
-    // var slideout = new Slideout({
-        'panel': document.getElementById('panel'),
-        'menu': document.getElementById('menu'),
-        'padding': 256,
-        'tolerance': 70
-    });
+var slideout = new Slideout({
+  
+// var slideout = new Slideout({
+    'panel': document.getElementById('panel'),
+    'menu': document.getElementById('menu'),
+    'padding': 256,
+    'tolerance': 70
+});
 
-        // Toggle button
-    document.querySelector('#burgerButton').addEventListener('click', function() {
-        slideout.toggle();
-    });
+    // Toggle button
+document.querySelector('#burgerButton').addEventListener('click', function() {
+    slideout.toggle();
+});

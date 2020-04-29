@@ -245,10 +245,14 @@
 	margin-left: auto
 	padding: 10px 0 0 0
 	font-family: $bebas
+	color: $green
 	font-weight: 700
 	font-size: 18px
 	&.title-underline::after
-		height: 4px
+		height: 3px
+		background: $green
+		content: ""
+		display: block
 
 // Cards
 .product-button a
@@ -512,6 +516,20 @@
 	bottom: 0
 	z-index: 99
 	left: 50px
+
+	.subscribe-close
+		position: absolute
+		display: none
+		top: -35px
+		right: 0
+		background: #fff
+		color: $green
+		border: 1.5px solid $green
+		border-radius: 100px
+		width: 25px
+		height: 25px
+		text-align: center
+		line-height: 22px
 
 	&__form
 		padding: 30px 15px 10px 15px
@@ -882,9 +900,13 @@
 	.goods-shortinfo__buy
 		// align-items: flex-sta
 		flex-direction: column
-	.buy-credit
+	.buy-btn
+		width: 60%
+	.buy-main
 		margin-bottom: 10px
 		margin-right: 0
+	.buy-one-click
+		margin-left: 0
 	
 @media (max-width: 1400px)
 	.category__inner
@@ -897,6 +919,8 @@
 		margin-left: 20px
 	.pagination
 		grid-column: 1/3
+	.buy-btn
+		width: auto
 @media (max-width: 1024px)
 	//  ASIDE
 	.aside .desktop__categories_title,
@@ -941,6 +965,11 @@
 	// Product Card
 	.product-card:hover .product-button a
 		right: -9px
+	
+	.buy-main
+		font-size: 14px
+	.buy-btn
+		width: 47%
 
 	.category__inner
 		grid-column-gap: 0
@@ -992,7 +1021,7 @@
 				.discount__price
 					font-size: 18px
 		.product-button a		
-@media (max-width: 480px)
+@media (max-width: 483px)
 	// Breadcrumbs
 	.breadcrumbs-nav__item:not(:last-child)
 		display: none
@@ -1012,6 +1041,15 @@
 			width: 35px !important
 		.features2	
 			display: none
+	.buy-one-click
+		margin-left: 0
+		width: 100%
+		a
+			display: inline-block
+		form
+			right: unset
+			left: 0
+			top: 40px !important
 
 	// Product tabs
 	.product-tabs__header
@@ -1063,4 +1101,5 @@
 @import "remodal"
 @import "responsive-product-cart"
 @import "theme-dark"
+@import "preloader"
 @import "editor-text"
