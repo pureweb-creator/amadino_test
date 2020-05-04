@@ -786,7 +786,7 @@
 	.product-card
 		width: 100%
 	.sale-wrapper-outer
-		height: 333px
+		// height: 333px
 		&:hover
 			.product-card
 				position: absolute
@@ -928,6 +928,19 @@
 
 	.aside__inner
 		margin-top: 25px
+
+	// Catalog
+	#category_heading
+		flex-direction: column
+		h3
+			width: 100%
+			text-align: left
+			margin-bottom: 15px
+		.category-barrow__view
+			width: 100%
+			.category-view__button_list
+				margin-left: auto
+
 		
 @media (max-width: 992px)
 	.speed-nav-filter
@@ -952,6 +965,11 @@
 		grid-template-columns: repeat(3, 1fr)
 	.brands
 		grid-template-columns: repeat(2, 1fr)
+@media (max-width: 576px)
+	.sale-wrapper-outer
+		padding: 0
+		.product-card
+			width: 100%
 @media (max-width: 567px)
 	// Callback
 	.subscribe
@@ -1029,6 +1047,8 @@
 		grid-column: 1/3
 
 	// Product Card
+	.product-title a
+		height: 50px
 	.category__inner.category__inner_state_list
 		.product-card
 			grid-template-rows: 1fr 1fr
