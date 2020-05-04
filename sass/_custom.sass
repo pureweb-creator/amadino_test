@@ -860,7 +860,7 @@
 		margin-bottom: 0
 
 // Subcategories
-.speed-nav-filter, .tabs__content
+.speed-nav-filter, .tabs__content.active 
 	display: grid
 	grid-template-columns: repeat(5, 1fr)
 	grid-gap: 30px
@@ -878,7 +878,7 @@
 	a:hover
 		text-decoration: underline !important
 		color: red
-.tabs__content
+.tabs__content a
     border: 1px solid #15B163
     width: 100%
 
@@ -887,10 +887,10 @@
 
 .tabs__content 
   	display: none/* по умолчанию прячем все блоки */
-	grid-template-columns: repeat(4, 1fr)
 
 .tabs__content.active 
   display: grid/* по умолчанию показываем нужный блок */
+  grid-template-columns: repeat(4, 1fr)
 
 
 // Responsive
@@ -963,7 +963,7 @@
 		align-items: center
 	.speed-nav-filter
 		grid-template-columns: repeat(3, 1fr)
-	.tabs__content
+	.tabs__content.active 
 		grid-template-columns: repeat(2, 1fr)
 @media (max-width: 576px)
 	.sale-wrapper-outer
