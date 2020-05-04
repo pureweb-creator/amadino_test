@@ -860,7 +860,7 @@
 		margin-bottom: 0
 
 // Subcategories
-.speed-nav-filter, .brands
+.speed-nav-filter, .tabs__content
 	display: grid
 	grid-template-columns: repeat(5, 1fr)
 	grid-gap: 30px
@@ -883,14 +883,14 @@
     width: 100%
 
 .brands
-	grid-template-columns: repeat(4, 1fr)
 	margin-bottom: 50px
 
 .tabs__content 
-  display: none/* по умолчанию прячем все блоки */
+  	display: none/* по умолчанию прячем все блоки */
+	grid-template-columns: repeat(4, 1fr)
 
 .tabs__content.active 
-  display: block/* по умолчанию показываем нужный блок */
+  display: grid/* по умолчанию показываем нужный блок */
 
 
 // Responsive
@@ -963,7 +963,7 @@
 		align-items: center
 	.speed-nav-filter
 		grid-template-columns: repeat(3, 1fr)
-	.brands
+	.tabs__content
 		grid-template-columns: repeat(2, 1fr)
 @media (max-width: 576px)
 	.sale-wrapper-outer
