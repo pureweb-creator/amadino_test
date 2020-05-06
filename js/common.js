@@ -604,8 +604,8 @@ $( function() {
         $( "#slider-range" ).slider({
           range: true,
           min: 0,
-          max: 500,
-          values: [ 75, 300 ],
+          max: parseInt($('#amount_to').val()) + 100,
+          values: [ $('#amount_from').val(), $('#amount_to').val() ],
           slide: function( event, ui ) {
             $( "#amount_from" ).val( ui.values[ 0 ] );
             $( "#amount_to" ).val( ui.values[ 1 ] );
@@ -693,8 +693,8 @@ $(function(){
     $( "#slider-range_mob" ).slider({
       range: true,
       min: 0,
-      max: 500,
-      values: [ 75, 300 ],
+      max: parseInt($('#amount_to_mob').val())+100,
+      values: [ $('#amount_from_mob').val(), $('#amount_to_mob').val() ],
       slide: function( event, ui ) {
         $( "#amount_from_mob" ).val( ui.values[ 0 ] );
         $( "#amount_to_mob" ).val( ui.values[ 1 ] );
