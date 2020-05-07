@@ -412,6 +412,10 @@
 	.discount__price small
 		font-size: 18px !important
 
+.slick-track
+	.sale-wrapper-outer
+		margin-top: 25px
+
 // Product card
 .product-card
 	overflow:  hidden
@@ -507,6 +511,13 @@
 		right: 0
 		position: absolute
 		top: 0
+
+	.zoom-box img
+		transition: all .3s ease
+
+	.zoom-box:hover
+		img
+			transform: scale(1.5)
 
 .subscribe
 	margin-top: 30px
@@ -974,6 +985,9 @@
 		.product-card
 			width: 100%
 @media (max-width: 567px)
+	// Main
+	.slick-track .sale-wrapper-outer
+		margin-top: 0
 	// Callback
 	.subscribe
 		display: none

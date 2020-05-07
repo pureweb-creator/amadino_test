@@ -323,6 +323,7 @@ img
 
 .submenu
 	display: none
+	min-height: 100%
 	padding: 10px
 	background: #eae7e7
 	box-shadow: $shadow2
@@ -1265,10 +1266,11 @@ p.footer__link:hover
 	z-index: 2
 	margin-top: 15px
 	font-size: 12px
+	flex-direction: column
 	align-items: flex-start
 	position: relative
 	& > p
-		margin-left: 20px
+		margin-top: 20px
 		font-weight: 700
 	.original
 		display: inline-block
@@ -1373,6 +1375,8 @@ p.footer__link:hover
 	width: 100%
 	margin-bottom: 20px
 	font-size: 14px
+	p
+		text-align: justify
 
 .product-tabs__description
 	width: 46.468%
