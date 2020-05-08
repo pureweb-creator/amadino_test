@@ -207,74 +207,74 @@ $(document).ready(function(){
         }]
     });
 
-    $('.slider-for').slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: false,
-        // autoplay: true,
-        pauseOnHover: true,
-        fade: true,
-        asNavFor: '.slider-nav',
-        responsive:
-        [
-            {
-                breakpoint: 992,
-                settings:
-                {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    arrows: false,
-                }
-            }
-        ]
-    });
+    // $('.slider-for').slick({
+    //     slidesToShow: 1,
+    //     slidesToScroll: 1,
+    //     arrows: false,
+    //     // autoplay: true,
+    //     pauseOnHover: true,
+    //     fade: true,
+    //     asNavFor: '.slider-nav',
+    //     responsive:
+    //     [
+    //         {
+    //             breakpoint: 992,
+    //             settings:
+    //             {
+    //                 slidesToShow: 1,
+    //                 slidesToScroll: 1,
+    //                 arrows: false,
+    //             }
+    //         }
+    //     ]
+    // });
 
-    $('.slider-nav').slick({
-        slidesToShow: 4,
-        slidesToScroll: 1,
-        // autoplay: true,
-        pauseOnHover: true,
-        asNavFor: '.slider-for',
-        dots: false,
-        prevArrow:"<button type='button' class='slick-prev slick-arrow pull-left'><i class='fa fa-angle-left' aria-hidden='true'></i></button>",
-        nextArrow:"<button type='button' class='slick-next slick-arrow pull-left'><i class='fa fa-angle-right' aria-hidden='true'></i></button>",
-        arrows: true,
-        focusOnSelect: true,
-        centerMode: true,
-        responsive:
-        [
-            {
-                breakpoint: 1024,
-                settings:
-                {
-                    slidesToShow: 4,
-                    slidesToScroll: 1,
-                }
+    // $('.slider-nav').slick({
+    //     slidesToShow: 4,
+    //     slidesToScroll: 1,
+    //     // autoplay: true,
+    //     pauseOnHover: true,
+    //     asNavFor: '.slider-for',
+    //     dots: false,
+    //     prevArrow:"<button type='button' class='slick-prev slick-arrow pull-left'><i class='fa fa-angle-left' aria-hidden='true'></i></button>",
+    //     nextArrow:"<button type='button' class='slick-next slick-arrow pull-left'><i class='fa fa-angle-right' aria-hidden='true'></i></button>",
+    //     arrows: true,
+    //     focusOnSelect: true,
+    //     centerMode: true,
+    //     responsive:
+    //     [
+    //         {
+    //             breakpoint: 1024,
+    //             settings:
+    //             {
+    //                 slidesToShow: 4,
+    //                 slidesToScroll: 1,
+    //             }
 
-            },
+    //         },
 
-            {
-                breakpoint: 992,
-                settings:
-                {
-                    slidesToShow: 4,
-                    slidesToScroll: 1,
-                    dots: false,
-                }
+    //         {
+    //             breakpoint: 992,
+    //             settings:
+    //             {
+    //                 slidesToShow: 4,
+    //                 slidesToScroll: 1,
+    //                 dots: false,
+    //             }
 
-            },
+    //         },
 
-            {
-                breakpoint: 420,
-                settings:
-                {
-                    slidesToShow: 4,
-                    slidesToScroll: 1,
-                    dots: false,
-                }
-            }
-        ]
-    });
+    //         {
+    //             breakpoint: 420,
+    //             settings:
+    //             {
+    //                 slidesToShow: 4,
+    //                 slidesToScroll: 1,
+    //                 dots: false,
+    //             }
+    //         }
+    //     ]
+    // });
 
     // Subscribe form in bottom
     $('.subscribe__title').on('click', function(){
@@ -283,8 +283,7 @@ $(document).ready(function(){
     });
 
     $('.subscribe-close').on('click', function(){
-        $('.subscribe__form').slideUp();
-        $('.subscribe-close').fadeToggle();
+        $('.subscribe').css({"display": "none"});
     });
 
     $(document).click(function (e) {
@@ -294,18 +293,18 @@ $(document).ready(function(){
         };
     });
 
-    $('.slider-for, .slider-nav').on('init reInit',function(event,slick){
-      var amount = slick.slideCount;
-      $('#range').attr('max',amount);
-    })
+    // $('.slider-for, .slider-nav').on('init reInit',function(event,slick){
+    //   var amount = slick.slideCount;
+    //   $('#range').attr('max',amount);
+    // })
 
-    $('.slider-for, .slider-nav').on('afterChange',function(e,slick,currentSlide){
-      $('#range').val(currentSlide+1);
-    })
+    // $('.slider-for, .slider-nav').on('afterChange',function(e,slick,currentSlide){
+    //   $('#range').val(currentSlide+1);
+    // })
 
-    $('#range').on('input change',function(){
-      $('.slider-for, .slider-nav').slick('slickGoTo',this.value-1);
-    });
+    // $('#range').on('input change',function(){
+    //   $('.slider-for, .slider-nav').slick('slickGoTo',this.value-1);
+    // });
 
     // Category toggle view
     $('.category-view__button').on('click', function(){
@@ -325,9 +324,9 @@ $(document).ready(function(){
             e.preventDefault();
         });
 
-            $(".submenu").removeClass("submenu_active");
 
         $('.aside__nav-item').on('click', function(){
+            $(".aside__nav-item").not($(this)).find(".submenu").removeClass("submenu_active");
             $(this).find(".submenu").toggleClass("submenu_active");
 
             $("html,body").animate({
@@ -600,92 +599,92 @@ document.querySelector('#burgerButton').addEventListener('click', function() {
 
 // Desktop range
 $( function() {
-        // Product Price
-        $( "#slider-range" ).slider({
-          range: true,
-          min: 0,
-          max: parseInt($('#amount_to').val()) + 100,
-          values: [ $('#amount_from').val(), $('#amount_to').val() ],
-          slide: function( event, ui ) {
-            $( "#amount_from" ).val( ui.values[ 0 ] );
-            $( "#amount_to" ).val( ui.values[ 1 ] );
-          }
-        });
-        $( "#amount_from" ).val( $( "#slider-range" ).slider( "values", 0 ) );
-        $( "#amount_to" ).val( $( "#slider-range" ).slider( "values", 1 ) );
+// Product Price
+$( "#slider-range" ).slider({
+  range: true,
+  min: 0,
+  max: parseInt($('#amount_to').val()) + 100,
+  values: [ $('#amount_from').val(), $('#amount_to').val() ],
+  slide: function( event, ui ) {
+    $( "#amount_from" ).val( ui.values[ 0 ] );
+    $( "#amount_to" ).val( ui.values[ 1 ] );
+  }
+});
+$( "#amount_from" ).val( $( "#slider-range" ).slider( "values", 0 ) );
+$( "#amount_to" ).val( $( "#slider-range" ).slider( "values", 1 ) );
 
-        $('input#amount_from').on('change', function(){
-            var
-                amountFromVal = $('#amount_from').val(),
-                amountToVal   = $('#amount_to').val();
+$('input#amount_from').on('change', function(){
+    var
+        amountFromVal = $('#amount_from').val(),
+        amountToVal   = $('#amount_to').val();
 
-            if(parseInt(amountFromVal) > parseInt(amountToVal)){
-                amountFromVal = amountToVal;
-                $('input#amount_from').val(amountFromVal);
-            }
+    if(parseInt(amountFromVal) > parseInt(amountToVal)){
+        amountFromVal = amountToVal;
+        $('input#amount_from').val(amountFromVal);
+    }
 
-            $("#slider-range").slider("values", 0, amountFromVal);
-        });
+    $("#slider-range").slider("values", 0, amountFromVal);
+});
 
-        $('input#amount_to').on('change', function(){
-            var
-                amountFromVal = $('#amount_from').val(),
-                amountToVal   = $('#amount_to').val();
+$('input#amount_to').on('change', function(){
+    var
+        amountFromVal = $('#amount_from').val(),
+        amountToVal   = $('#amount_to').val();
 
-            if(parseInt(amountToVal) < parseInt(amountFromVal)){
-                amountToVal = amountFromVal;
-                $("#amount_to").val(amountToVal);
-            }
+    if(parseInt(amountToVal) < parseInt(amountFromVal)){
+        amountToVal = amountFromVal;
+        $("#amount_to").val(amountToVal);
+    }
 
-            $("#slider-range").slider("values", 1, amountToVal);
-        });
+    $("#slider-range").slider("values", 1, amountToVal);
+});
 
-        // Volume
-        $( "#slider-volume" ).slider({
-          range: true,
-          min: 0,
-          max: 200,
-          values: [ 0, 50 ],
-          slide: function( event, ui ) {
-            $( "#volumeFrom" ).val( ui.values[ 0 ]);
-            $( "#volumeTo" ).val( ui.values[ 1 ]);
-          }
-        });
+// Volume
+$( "#slider-volume" ).slider({
+  range: true,
+  min: 0,
+  max: 200,
+  values: [ 0, 50 ],
+  slide: function( event, ui ) {
+    $( "#volumeFrom" ).val( ui.values[ 0 ]);
+    $( "#volumeTo" ).val( ui.values[ 1 ]);
+  }
+});
 
-        $( "#volumeFrom" ).val($( "#slider-range" ).slider( "values", 0 ));
-        $( "#volumeTo" ).val($( "#slider-range" ).slider( "values", 1 ) );
+$( "#volumeFrom" ).val($( "#slider-range" ).slider( "values", 0 ));
+$( "#volumeTo" ).val($( "#slider-range" ).slider( "values", 1 ) );
 
-        $('input#volumeFrom').on('change', function(){
-            var
-                amountFromVal = $('#volumeFrom').val(),
-                amountToVal   = $('#volumeTo').val();
+$('input#volumeFrom').on('change', function(){
+    var
+        amountFromVal = $('#volumeFrom').val(),
+        amountToVal   = $('#volumeTo').val();
 
-            if(parseInt(amountFromVal) > parseInt(amountToVal)){
-                amountFromVal = amountToVal;
-                $('input#volumeFrom').val(amountFromVal);
-            }
+    if(parseInt(amountFromVal) > parseInt(amountToVal)){
+        amountFromVal = amountToVal;
+        $('input#volumeFrom').val(amountFromVal);
+    }
 
-            $("#slider-volume").slider("values", 0, amountFromVal);
-        });
+    $("#slider-volume").slider("values", 0, amountFromVal);
+});
 
-        $('input#volumeTo').on('change', function(){
-            var
-                amountFromVal = $('#volumeFrom').val(),
-                amountToVal   = $('#volumeTo').val();
+$('input#volumeTo').on('change', function(){
+    var
+        amountFromVal = $('#volumeFrom').val(),
+        amountToVal   = $('#volumeTo').val();
 
-            if(parseInt(amountFromVal) > parseInt(amountToVal)){
-                amountFromVal = amountToVal;
-                $('input#volumeTo').val(amountFromVal);
-            }
+    if(parseInt(amountFromVal) > parseInt(amountToVal)){
+        amountFromVal = amountToVal;
+        $('input#volumeTo').val(amountFromVal);
+    }
 
-            if(parseInt(amountToVal) < parseInt(amountFromVal)){
-                amountToVal = amountFromVal;
-                $('input#volumeTo').val(amountToVal);
-            }
+    if(parseInt(amountToVal) < parseInt(amountFromVal)){
+        amountToVal = amountFromVal;
+        $('input#volumeTo').val(amountToVal);
+    }
 
-            $("#slider-volume").slider("values", 1, amountToVal);
-        });
-      } );
+    $("#slider-volume").slider("values", 1, amountToVal);
+});
+} );
 
 // Mobile Range
 $(function(){
@@ -819,4 +818,18 @@ $('.cateogry-view__button_filter').on('click', function(){
         $('.mobile-filter').removeClass("open");
         $("html, body").css({"overflow": "auto"});
     });
+});
+
+jQuery(function($) {
+    // Ключ localStorage
+    var LS_KEY = 'modal_shown';
+  
+    // Если модал еще не открывали
+    if (!localStorage.getItem(LS_KEY)) {
+        // Открываем модал
+        $('.subscribe').css({"display": "block"});
+      
+        // Сохраняем флаг в localStorage
+        localStorage.setItem(LS_KEY, '1');
+    }
 });

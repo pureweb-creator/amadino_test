@@ -211,6 +211,9 @@
 		padding: 10px 15px
 		color: #fff !important
 		border-radius: 5px
+	.desktop__categories_title
+		margin-left: 0
+		margin-bottom: 20px
 
 	.mobile__categories_title
 		display: none
@@ -526,6 +529,7 @@
 	box-shadow: 0 0 10px rgba(0,0,0,0.5)
 	position: fixed
 	bottom: 0
+	display: none
 	z-index: 99
 	left: 50px
 
@@ -574,7 +578,7 @@
 		margin-top: 10px
 		margin-left: auto
 
-@import "range"
+// @import "range"
 
 .goods-statuses
 	.goods-statuses__item
@@ -794,6 +798,7 @@
 // Categories page
 .category__inner
 	grid-gap: 40px
+	padding-bottom: 150px
 	.sale-wrapper-outer
 		margin-bottom: 0px
 		padding: 0
@@ -954,8 +959,6 @@
 			width: 100%
 			.category-view__button_list
 				margin-left: auto
-
-		
 @media (max-width: 992px)
 	.speed-nav-filter
 		grid-template-columns: repeat(4, 1fr)
@@ -1138,3 +1141,4 @@
 @import "theme-dark"
 @import "preloader"
 @import "editor-text"
+@import "zoom-slider"
