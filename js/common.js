@@ -580,6 +580,11 @@ $(document).ready(function(){
     $('.products-card__wish_btn').on('click', function(){
         $(this).find('.fa-heart').toggleClass("fas wish_btn--clicked");
     });
+
+    // Mobile phones
+    $('.mobile-phone__button').on('click', function(){
+        $('.mobile-phone__list').slideToggle();
+    });
 });
 
 // Slideout
