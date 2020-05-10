@@ -160,6 +160,21 @@
 	.hm__bottom
 		margin-right: auto
 
+// Banners
+#icon-slider-right, #icon-slider-left
+	width: 20px
+	cursor: pointer
+	position: absolute
+#icon-slider-left
+	top: 50%
+	transform: translateY(-50%) rotate(180deg)
+	left: 20px
+	z-index: 2
+#icon-slider-right
+	top: 50%
+	transform: translateY(-50%)
+	right: 20px
+
 // Breadcrumbs
 .breadcrumbs-nav
 	margin: 15px
@@ -521,7 +536,6 @@
 	box-shadow: 0 0 10px rgba(0,0,0,0.5)
 	position: fixed
 	bottom: 0
-	display: none
 	z-index: 99
 	left: 50px
 

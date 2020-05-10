@@ -8,6 +8,12 @@ document.body.onload = function(){
 
 $(document).ready(function(){
     // Sliders
+    $('.banner-big').slick({
+        prevArrow:"<svg fill='#000' viewBox='0 0 17 49' id='icon-slider-left'><path d='M14.5824 24.2177L0.169802 1.64078C-0.133787 1.16522 -0.0203484 0.520408 0.43077 0.190628C0.896295 -0.149684 1.53586 -0.0208369 1.84885 0.469445L17 24.2034L1.85515 48.5205C1.54761 49.0143 0.909647 49.151 0.440354 48.8163C-0.0145324 48.4918 -0.134893 47.8483 0.163502 47.3692L14.5824 24.2177Z'></path></svg>",
+        nextArrow:'<svg fill="#000" viewBox="0 0 17 49" id="icon-slider-right"><path d="M14.5824 24.2177L0.169802 1.64078C-0.133787 1.16522 -0.0203484 0.520408 0.43077 0.190628C0.896295 -0.149684 1.53586 -0.0208369 1.84885 0.469445L17 24.2034L1.85515 48.5205C1.54761 49.0143 0.909647 49.151 0.440354 48.8163C-0.0145324 48.4918 -0.134893 47.8483 0.163502 47.3692L14.5824 24.2177Z"></path></svg>',
+        autoplay: true   
+    });
+
     $('.banners__wrapper').slick({
         slidesToShow: 5,
         arrows: false,
@@ -605,46 +611,50 @@ document.querySelector('#burgerButton').addEventListener('click', function() {
 // Desktop range
 $( function() {
 // Product Price
-$( "#slider-range" ).slider({
-  range: true,
-  min: 0,
-  max: parseInt($('#amount_to').val()) + 100,
-  values: [ $('#amount_from').val(), $('#amount_to').val() ],
-  slide: function( event, ui ) {
-    $( "#amount_from" ).val( ui.values[ 0 ] );
-    $( "#amount_to" ).val( ui.values[ 1 ] );
-  }
-});
-$( "#amount_from" ).val( $( "#slider-range" ).slider( "values", 0 ) );
-$( "#amount_to" ).val( $( "#slider-range" ).slider( "values", 1 ) );
+if($("div").is("#slider-range")){
+    $( "#slider-range" ).slider({
+      range: true,
+      min: 0,
+      max: parseInt($('#amount_to').val()) + 100,
+      values: [ $('#amount_from').val(), $('#amount_to').val() ],
+      slide: function( event, ui ) {
+        $( "#amount_from" ).val( ui.values[ 0 ] );
+        $( "#amount_to" ).val( ui.values[ 1 ] );
+      }
+    });
+    $( "#amount_from" ).val( $( "#slider-range" ).slider( "values", 0 ) );
+    $( "#amount_to" ).val( $( "#slider-range" ).slider( "values", 1 ) );
 
-$('input#amount_from').on('change', function(){
-    var
-        amountFromVal = $('#amount_from').val(),
-        amountToVal   = $('#amount_to').val();
+    $('input#amount_from').on('change', function(){
+        var
+            amountFromVal = $('#amount_from').val(),
+            amountToVal   = $('#amount_to').val();
 
-    if(parseInt(amountFromVal) > parseInt(amountToVal)){
-        amountFromVal = amountToVal;
-        $('input#amount_from').val(amountFromVal);
-    }
+        if(parseInt(amountFromVal) > parseInt(amountToVal)){
+            amountFromVal = amountToVal;
+            $('input#amount_from').val(amountFromVal);
+        }
 
-    $("#slider-range").slider("values", 0, amountFromVal);
-});
+        $("#slider-range").slider("values", 0, amountFromVal);
+    });
 
-$('input#amount_to').on('change', function(){
-    var
-        amountFromVal = $('#amount_from').val(),
-        amountToVal   = $('#amount_to').val();
+    $('input#amount_to').on('change', function(){
+        var
+            amountFromVal = $('#amount_from').val(),
+            amountToVal   = $('#amount_to').val();
 
-    if(parseInt(amountToVal) < parseInt(amountFromVal)){
-        amountToVal = amountFromVal;
-        $("#amount_to").val(amountToVal);
-    }
+        if(parseInt(amountToVal) < parseInt(amountFromVal)){
+            amountToVal = amountFromVal;
+            $("#amount_to").val(amountToVal);
+        }
 
-    $("#slider-range").slider("values", 1, amountToVal);
-});
+        $("#slider-range").slider("values", 1, amountToVal);
+    });
+}
 
 // Volume
+
+if($("div").is("#slider-volume")){
 $( "#slider-volume" ).slider({
   range: true,
   min: 0,
@@ -689,96 +699,101 @@ $('input#volumeTo').on('change', function(){
 
     $("#slider-volume").slider("values", 1, amountToVal);
 });
+}
 } );
 
 // Mobile Range
 $(function(){
     // Product Price
-    $( "#slider-range_mob" ).slider({
-      range: true,
-      min: 0,
-      max: parseInt($('#amount_to_mob').val())+100,
-      values: [ $('#amount_from_mob').val(), $('#amount_to_mob').val() ],
-      slide: function( event, ui ) {
-        $( "#amount_from_mob" ).val( ui.values[ 0 ] );
-        $( "#amount_to_mob" ).val( ui.values[ 1 ] );
-      }
-    });
-    
-    $( "#amount_from_mob" ).val( $( "#slider-range_mob" ).slider( "values", 0 ) );
-    $( "#amount_to_mob" ).val( $( "#slider-range_mob" ).slider( "values", 1 ) );
+    if($("div").is("#slider-range")){
+        $( "#slider-range_mob" ).slider({
+          range: true,
+          min: 0,
+          max: parseInt($('#amount_to_mob').val())+100,
+          values: [ $('#amount_from_mob').val(), $('#amount_to_mob').val() ],
+          slide: function( event, ui ) {
+            $( "#amount_from_mob" ).val( ui.values[ 0 ] );
+            $( "#amount_to_mob" ).val( ui.values[ 1 ] );
+          }
+        });
+        
+        $( "#amount_from_mob" ).val( $( "#slider-range_mob" ).slider( "values", 0 ) );
+        $( "#amount_to_mob" ).val( $( "#slider-range_mob" ).slider( "values", 1 ) );
 
-    $('input#amount_from_mob').on('change', function(){
-        var
-            amountFromValMob = $('#amount_from_mob').val(),
-            amountToValMob   = $('#amount_to_mob').val();
+        $('input#amount_from_mob').on('change', function(){
+            var
+                amountFromValMob = $('#amount_from_mob').val(),
+                amountToValMob   = $('#amount_to_mob').val();
 
-        if(parseInt(amountFromValMob) > parseInt(amountToValMob)){
-            amountFromValMob = amountToValMob;
-            $('input#amount_from_mob').val(amountFromValMob);
-        }
+            if(parseInt(amountFromValMob) > parseInt(amountToValMob)){
+                amountFromValMob = amountToValMob;
+                $('input#amount_from_mob').val(amountFromValMob);
+            }
 
-        $("#slider-range_mob").slider("values", 0, amountFromValMob);
-    });
+            $("#slider-range_mob").slider("values", 0, amountFromValMob);
+        });
 
-    $('input#amount_to_mob').on('change', function(){
-        var
-            amountFromValMob = $('#amount_from_mob').val(),
-            amountToValMob   = $('#amount_to_mob').val();
+        $('input#amount_to_mob').on('change', function(){
+            var
+                amountFromValMob = $('#amount_from_mob').val(),
+                amountToValMob   = $('#amount_to_mob').val();
 
-        if(parseInt(amountToValMob) < parseInt(amountFromValMob)){
-            amountToValMob = amountFromValMob;
-            $("#amount_to_mob").val(amountToValMob);
-        }
+            if(parseInt(amountToValMob) < parseInt(amountFromValMob)){
+                amountToValMob = amountFromValMob;
+                $("#amount_to_mob").val(amountToValMob);
+            }
 
-        $("#slider-range_mob").slider("values", 1, amountToValMob);
-    });
+            $("#slider-range_mob").slider("values", 1, amountToValMob);
+        });
+    }
 
     // Volume
-    $( "#slider-volume_mob" ).slider({
-      range: true,
-      min: 0,
-      max: 200,
-      values: [ 0, 50 ],
-      slide: function( event, ui ) {
-        $( "#volumeFrom_mob" ).val( ui.values[ 0 ]);
-        $( "#volumeTo_mob" ).val( ui.values[ 1 ]);
-      }
-    });
+    if( $("div").is("slider-volume_mob") ){
+        $( "#slider-volume_mob" ).slider({
+          range: true,
+          min: 0,
+          max: 200,
+          values: [ 0, 50 ],
+          slide: function( event, ui ) {
+            $( "#volumeFrom_mob" ).val( ui.values[ 0 ]);
+            $( "#volumeTo_mob" ).val( ui.values[ 1 ]);
+          }
+        });
 
-    $( "#volumeFrom_mob" ).val($( "#slider-volume_mob" ).slider( "values", 0 ));
-    $( "#volumeTo_mob" ).val($( "#slider-volume_mob" ).slider( "values", 1 ) );
+        $( "#volumeFrom_mob" ).val($( "#slider-volume_mob" ).slider( "values", 0 ));
+        $( "#volumeTo_mob" ).val($( "#slider-volume_mob" ).slider( "values", 1 ) );
 
-    $('input#volumeFrom_mob').on('change', function(){
-        var
-            amountFromValMob = $('#volumeFrom_mob').val(),
-            amountToValMob   = $('#volumeTo_mob').val();
+        $('input#volumeFrom_mob').on('change', function(){
+            var
+                amountFromValMob = $('#volumeFrom_mob').val(),
+                amountToValMob   = $('#volumeTo_mob').val();
 
-        if(parseInt(amountFromValMob) > parseInt(amountToValMob)){
-            amountFromValMob = amountToValMob;
-            $('input#volumeFrom_mob').val(amountFromValMob);
-        }
+            if(parseInt(amountFromValMob) > parseInt(amountToValMob)){
+                amountFromValMob = amountToValMob;
+                $('input#volumeFrom_mob').val(amountFromValMob);
+            }
 
-        $("#slider-volume_mob").slider("values", 0, amountFromValMob);
-    });
+            $("#slider-volume_mob").slider("values", 0, amountFromValMob);
+        });
 
-    $('input#volumeTo_mob').on('change', function(){
-        var
-            amountFromValMob = $('#volumeFrom_mob').val(),
-            amountToValMob   = $('#volumeTo_mob').val();
+        $('input#volumeTo_mob').on('change', function(){
+            var
+                amountFromValMob = $('#volumeFrom_mob').val(),
+                amountToValMob   = $('#volumeTo_mob').val();
 
-        if(parseInt(amountFromValMob) > parseInt(amountToValMob)){
-            amountFromValMob = amountToValMob;
-            $('input#volumeTo_mob').val(amountFromValMob);
-        }
+            if(parseInt(amountFromValMob) > parseInt(amountToValMob)){
+                amountFromValMob = amountToValMob;
+                $('input#volumeTo_mob').val(amountFromValMob);
+            }
 
-        if(parseInt(amountToValMob) < parseInt(amountFromValMob)){
-            amountToValMob = amountFromValMob;
-            $('input#volumeTo_mob').val(amountToValMob);
-        }
+            if(parseInt(amountToValMob) < parseInt(amountFromValMob)){
+                amountToValMob = amountFromValMob;
+                $('input#volumeTo_mob').val(amountToValMob);
+            }
 
-        $("#slider-volume_mob").slider("values", 1, amountToValMob);
-    });
+            $("#slider-volume_mob").slider("values", 1, amountToValMob);
+        });
+    }
 });
 
 // Filter
@@ -825,16 +840,4 @@ $('.cateogry-view__button_filter').on('click', function(){
     });
 });
 
-jQuery(function($) {
-    // Ключ localStorage
-    var LS_KEY = 'modal_shown';
-  
-    // Если модал еще не открывали
-    if (!localStorage.getItem(LS_KEY)) {
-        // Открываем модал
-        $('.subscribe').css({"display": "block"});
-      
-        // Сохраняем флаг в localStorage
-        localStorage.setItem(LS_KEY, '1');
-    }
-});
+// Сказать Олегу пусть сделает открытие подписки один раз за сессию
