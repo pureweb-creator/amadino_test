@@ -35,7 +35,7 @@ body
 	line-height: 1.2
 	overflow-x: hidden
 
-h1,h2,h3,h4,h5,h6,p 
+h1,h2,h3,h4,h5,h6,p
 	margin: 0
 
 ul, li
@@ -222,13 +222,13 @@ img
 
 .header__logo
 	width: 228px
-	img	
+	img
 		display: none
 
 .burger-button
 	display: none
 	cursor: pointer
-	
+
 
 .cart-button
 	margin-left: 50px
@@ -278,7 +278,7 @@ img
 
 .mobile__categories_title
 	display: none
-	
+
 .page-wrapper
 	display: flex
 	overflow: hidden
@@ -375,7 +375,7 @@ img
 			color: #fff
 	&:last-child
 		margin-bottom: 0
-	
+
 	margin-left: -5%
 	width: 105%
 	padding-left: 5%
@@ -434,7 +434,7 @@ img
 	width: 100%
 	max-width: 1246px
 	margin: 0 auto
-	
+
 
 .info-container
 	padding: 50px 0 50px 0px
@@ -492,7 +492,7 @@ img
 		height: 350px
 	img
 		width: 100%
-		height: 100% 
+		height: 100%
 		object-fit: cover
 
 .banners--product
@@ -554,7 +554,7 @@ img
 	&:before
 		left: -235px
 	&:after
-		right: -235px	
+		right: -235px
 
 #category_heading
 	transition: all .3s ease
@@ -579,7 +579,7 @@ img
 		.cateogry-view__button_filter
 			display: block
 			margin-right: 0
-	&.sticky + .category__inner 
+	&.sticky + .category__inner
   		padding-top: 105.200px
 
 .category-view__button
@@ -604,7 +604,7 @@ img
 	.filter__name
 		display: inline-block
 		margin-left: 10px
-		color: #000 
+		color: #000
 		font-size: 14px
 
 .section__header--offer
@@ -894,7 +894,7 @@ img
 		bottom: 39px
 		left: 50%
 		transform: translateX(-50%)
-		
+
 .about-us__advantages-item--center img
 	bottom: 63px
 
@@ -1026,14 +1026,14 @@ p.footer__link:hover
 	box-shadow: $shadow2
 	&[name=message]
 		height: 180px
-		
+
 	&:focus
 		outline: none
 		box-shadow: $shadow
 	&::placeholder
 		font-family: $m_font
 
-	
+
 
 
 .comment-form__info
@@ -1078,7 +1078,7 @@ p.footer__link:hover
 				height: 0.1px
 				opacity: 0
 				z-index: -1
-				
+
 
 .comment-form__bottom
 	display: flex
@@ -1087,7 +1087,7 @@ p.footer__link:hover
 	button
 		width: 145px
 		height: 50px
-				
+
 .comment-form__stars
 	display: flex
 	justify-content: space-between
@@ -1157,15 +1157,14 @@ p.footer__link:hover
 .pagination
 	width: 280px
 	display: flex
-	justify-content: space-between
+	justify-content: center
 	grid-column: 1/5
 	margin: 40px auto 70px auto
 
 .pagination > li
-	font-size: 30px
-	font-family: $bebas
+	font-size: 18px
+	font-family: $m_font
 	color: #fff
-	font-weight: 700
 	display: flex
 	justify-content: center
 	align-items: center
@@ -1173,12 +1172,38 @@ p.footer__link:hover
 	height: 40px
 	background-color: $green
 	cursor: pointer
-	border: 2px solid $green
+	border-radius: 50%
+	border: 1.5px solid $green
+	margin-right: 10px
+	overflow: hidden
+	position: relative
 	a
 		color: #fff
+		position: relative
+		z-index: 2
+
 	&.active
 		background-color: #fff
 		color: $green
+		a
+			color: $green
+
+	&::after
+		content: ""
+		display: block
+		width: 40px
+		height: 40px
+		background: #fff
+		bottom: -40px
+		position: absolute
+		transition: all .3s ease
+
+	&:hover
+		a
+			color: $green
+
+		&::after
+			bottom: 0px
 
 .offer__slider
 	margin-bottom: 50px
@@ -1199,7 +1224,7 @@ p.footer__link:hover
 	padding: 50px 0
 	position: relative
 	display: flex
-		
+
 .reversed
 	transform: scale(1,-1)
 
@@ -1487,12 +1512,12 @@ p.footer__link:hover
 	font-weight: 700
 	height: 95px
 	th
-		
+
 		&:nth-child(1)
 			text-align: left
 			max-width: 391px
 			width: 55.86%
-			
+
 .bought-table__row
 	height: 120px
 
@@ -1776,7 +1801,7 @@ p.footer__link:hover
 	right: -14px
 	display: flex
 	align-items: center
-	justify-content: center	
+	justify-content: center
 	top: -14px
 	background-color: $green
 	width: 32px
@@ -1826,7 +1851,7 @@ p.footer__link:hover
 
 	background-color: $green
 	color: #fff
-	
+
 	.b2b-header__cashout-img-hover
 		display: block
 	.b2b-header__cashout-img
@@ -1835,7 +1860,7 @@ p.footer__link:hover
 .b2b-header__cashout:hover
 	background-color: $green
 	color: #fff
-	
+
 	.b2b-header__cashout-img-hover
 		display: block
 	.b2b-header__cashout-img
@@ -1876,7 +1901,7 @@ p.footer__link:hover
 			margin-top: 20px
 			cursor: pointer
 			font-family: $m_font
-			
+
 
 
 .b2b-sidebar
@@ -2123,8 +2148,8 @@ p.footer__link:hover
 		&:nth-child(8)
 			width: 7.425%
 			min-width: 124px
-			
-			
+
+
 
 	.catalog-table__head
 		height: 50px
@@ -2158,7 +2183,7 @@ p.footer__link:hover
 		box-shadow: $shadow2
 		-webkit-appearance: none
   		margin: 0
-	input[type=number]::-webkit-inner-spin-button, 
+	input[type=number]::-webkit-inner-spin-button,
 	input[type=number]::-webkit-outer-spin-button
 		-webkit-appearance: none
 		margin: 0
@@ -2199,7 +2224,7 @@ p.footer__link:hover
 			img
 				margin-right: 8px
 				margin-bottom: -2px
-			
+
 	&:hover
 		background-color: $green
 		color: #fff
@@ -2239,7 +2264,7 @@ p.footer__link:hover
 			width: 162px
 		&:nth-child(10)
 			width: 152px
-			
+
 .orders-table__header
 	font-size: 24px
 
@@ -2356,7 +2381,7 @@ input:focus::-webkit-input-placeholder
 	.green-btn
 		float: right
 		margin-top: -13px
-		
+
 .settings__bigwhat
 	margin: 60px 0 30px
 	font-size: 30px
@@ -2526,7 +2551,7 @@ input:focus::-webkit-input-placeholder
 			img
 				width: 124px
 				height: auto
-			
+
 .order-info__undertable
 	padding: 0 100px
 	display: flex
@@ -2621,7 +2646,7 @@ input:focus::-webkit-input-placeholder
 		cursor: pointer
 		&:hover
 			background-color: transparent
-			
+
 .refunds-table
 	text-align: left
 	width: 1643px
@@ -2733,7 +2758,7 @@ input:focus::-webkit-input-placeholder
 	justify-content: space-between
 	align-items: flex-start
 	position: relative
-	
+
 .product-tabs__reviewer-name
 	margin-bottom: 15px
 	font-weight: 600
@@ -2765,7 +2790,7 @@ input:focus::-webkit-input-placeholder
 	&::after
 		content: ""
 		width: 100%
-		height: 2px 
+		height: 2px
 		background-color: $green
 		display: none
 		position: absolute
@@ -2902,7 +2927,7 @@ input:focus::-webkit-input-placeholder
 		margin-top: 40px
 
 	.goods-shortinfo__purchase
-		.goods-shortinfo__buy, 
+		.goods-shortinfo__buy,
 		.goods-shortinfo__price
 			justify-content: flex-start
 
@@ -2915,7 +2940,7 @@ input:focus::-webkit-input-placeholder
 	.product-card
 		width: 220px
 
-	.product-img 
+	.product-img
 		width: 100%
 
 	.product-button a
@@ -2961,7 +2986,7 @@ input:focus::-webkit-input-placeholder
 			order: 0
 	.header__logo
 		width: 0
-	
+
 	.order-info__inner, .orders__inner, .product-info, .refunds__inner, .settings
 		padding: 0 15px
 	.catalog__right-select--2
@@ -3043,7 +3068,7 @@ input:focus::-webkit-input-placeholder
 
 	.b2b-header__notifications, .b2b-header__cart
 		margin-right: 20px
-		
+
 	.b2b-header__cashout
 		padding: 20px 10px
 		margin-right: 20px
@@ -3121,7 +3146,7 @@ input:focus::-webkit-input-placeholder
 	.section__header--offer:before
 		left: 73%
 	.section__header--offer:after
-		right: 73%	
+		right: 73%
 
 	.settings__split
 		flex-direction: column
@@ -3300,7 +3325,7 @@ input:focus::-webkit-input-placeholder
 	/**/
 	.product-card
 		width: 240px
-	
+
 	.product-tabs__about-goods
 		flex-direction: column
 	.product-tabs__characts
@@ -3368,7 +3393,7 @@ input:focus::-webkit-input-placeholder
 		padding: 40px 20px
 	.reviews__text
 		padding-left: 25px
-	
+
 	.product-card
 		width: 220px
 
@@ -3483,7 +3508,7 @@ input:focus::-webkit-input-placeholder
 		order: 3
 		font-family: $m_font
 		color: $green
-	
+
 	.allnews__info
 		display: flex
 		flex-direction: column
@@ -3552,7 +3577,7 @@ input:focus::-webkit-input-placeholder
 
 	.product-tabs
 		margin-bottom: 40px
-		
+
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 560px)
 	/**/
@@ -3705,7 +3730,7 @@ input:focus::-webkit-input-placeholder
 		padding-right: 0
 	.settings__what .green-btn
 		top: 90px
-		
+
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 420px)
 	/**/
@@ -3739,7 +3764,7 @@ input:focus::-webkit-input-placeholder
 
 	.main-container
 		padding: 0 15px
-	
+
 	.main-container--cart
 		padding: 0
 
@@ -3895,7 +3920,7 @@ input:focus::-webkit-input-placeholder
 		font-size: 14px
 		p
 			font-size: 16px
-			
+
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 360px)
 	/**/
@@ -3942,7 +3967,7 @@ input:focus::-webkit-input-placeholder
 
 	.b2b-header__cashout-hover form .cashout__input
 		padding: 11px 10px
-	
+
 	.allnews__image
 		top: 175px
 
