@@ -11,6 +11,9 @@
 		grid-row-gap: 10px
 	.category__inner .sale-wrapper-outer
 		height: auto
+	.category__inner:not(.category-view__button_list)
+		.sale-wrapper-outer
+			height: 331.8px
 	.sale-wrapper-outer
 		margin-bottom: 0
 		.product-card
@@ -24,7 +27,7 @@
 				top: unset
 
 			.products-card__label, .discount__number, .has, .hasnt
-				font-size: 11px 
+				font-size: 11px
 			.product-img
 				display: flex
 				align-items: center
