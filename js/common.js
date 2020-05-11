@@ -853,5 +853,7 @@ $(function () {
         },
     });
 
-    $('.ex1').zoom();
+    $('.ex1').zoom({
+        magnify: 1.5
+    });
 });
