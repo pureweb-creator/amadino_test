@@ -797,6 +797,8 @@ $(function(){
 });
 
 // Filter
+$('.filter__dropdown').slideDown();
+$('.filter__item-heading').find(".fa-angle-right").toggleClass("dropdown-open-icon")
 $('.filter__item-heading').on('click', function(){
     $(this).parent().find(".filter__dropdown").slideToggle();
     $(this).find(".fa-angle-right").toggleClass("dropdown-open-icon")
