@@ -8,11 +8,27 @@ document.body.onload = function(){
 $(document).ready(function(){
 
     // Subscribe for sale modal
-    $('[data-remodal-id=subscribe-for-sale-modal]').remodal().open();
+
+    // $('[data-remodal-id=subscribe-for-sale-modal]').remodal().open();
     $('.subscribe-for-sale__form input').on('click', function(){
         $('.subscribe-for-sale__form input').removeClass('active');
         $(this).toggleClass('active');
     });
+
+    // LocalStorage
+    var SS_KEY = 'modal_shown';
+
+    // Если модал еще не открывали
+    var inst = $('[data-remodal-id=subscribe-for-sale-modal]').remodal();
+    if (!sessionStorage.getItem(SS_KEY)) {
+        setTimeout(function() {
+        // Открываем модал
+        inst.open();
+      
+        // Сохраняем флаг в localStorage
+        sessionStorage.setItem(SS_KEY, '1');
+        }, 1000);
+    }
 
     // Sliders
     $('.banner-big').slick({
