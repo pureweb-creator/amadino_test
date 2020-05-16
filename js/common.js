@@ -1,10 +1,3 @@
-document.body.onload = function(){
-    var preloader = document.getElementById('page-preloader')
-
-    if( !preloader.classList.contains('done') ){
-        preloader.classList.add('done');
-    }
-}
 $(document).ready(function(){
 
     // Subscribe for sale modal
@@ -15,7 +8,7 @@ $(document).ready(function(){
         $(this).toggleClass('active');
     });
 
-    // LocalStorage
+    // sessionStorage
     var SS_KEY = 'modal_shown';
 
     // Если модал еще не открывали
@@ -24,7 +17,7 @@ $(document).ready(function(){
         setTimeout(function() {
         // Открываем модал
         inst.open();
-      
+
         // Сохраняем флаг в localStorage
         sessionStorage.setItem(SS_KEY, '1');
         }, 1000);
@@ -34,7 +27,7 @@ $(document).ready(function(){
     $('.banner-big').slick({
         prevArrow:"<svg fill='#000' viewBox='0 0 17 49' id='icon-slider-left'><path d='M14.5824 24.2177L0.169802 1.64078C-0.133787 1.16522 -0.0203484 0.520408 0.43077 0.190628C0.896295 -0.149684 1.53586 -0.0208369 1.84885 0.469445L17 24.2034L1.85515 48.5205C1.54761 49.0143 0.909647 49.151 0.440354 48.8163C-0.0145324 48.4918 -0.134893 47.8483 0.163502 47.3692L14.5824 24.2177Z'></path></svg>",
         nextArrow:'<svg fill="#000" viewBox="0 0 17 49" id="icon-slider-right"><path d="M14.5824 24.2177L0.169802 1.64078C-0.133787 1.16522 -0.0203484 0.520408 0.43077 0.190628C0.896295 -0.149684 1.53586 -0.0208369 1.84885 0.469445L17 24.2034L1.85515 48.5205C1.54761 49.0143 0.909647 49.151 0.440354 48.8163C-0.0145324 48.4918 -0.134893 47.8483 0.163502 47.3692L14.5824 24.2177Z"></path></svg>',
-        autoplay: true   
+        autoplay: true
     });
 
     $('.banners__wrapper').slick({
@@ -371,7 +364,7 @@ $(document).ready(function(){
         });
     }
 
-    // Order call & One click buying 
+    // Order call & One click buying
     var
         orderCallBtn  = $('.order-call__btn'),
         orderCallForm = $('.order-call__form');
@@ -388,10 +381,10 @@ $(document).ready(function(){
     $('.buy-one-click__link').on('click', function() {
         $(this).toggleClass("active");
         oneClickForm.fadeToggle();
-    });        
+    });
 
     $(document).click(function (e) {
-        if ( !orderCallBtn.is(e.target) && !orderCallForm.is(e.target) && orderCallForm.has(e.target).length === 0 
+        if ( !orderCallBtn.is(e.target) && !orderCallForm.is(e.target) && orderCallForm.has(e.target).length === 0
             && !$('.buy-one-click__link').is(e.target) && !oneClickForm.is(e.target) && oneClickForm.has(e.target).length === 0) {
             orderCallForm.fadeOut(200);
             oneClickForm.fadeOut(200);
@@ -408,19 +401,19 @@ $(document).ready(function(){
         });
     }
 
-    // For other pages 
+    // For other pages
     $('#aside__nav_two').hide();
     $('.desktop__categories_title').on('click', function(){
         $('#aside__nav_two').slideToggle();
     });
 
-   // Masked input 
+   // Masked input
    $('#order-call__tel, #buy-one-click__tel').mask('+380 (99) 999-99-99');
 
-    // Star rating
+    // Star rating 1
     var cStars = function(nowPos) {
     $('.stars .star').removeClass('active'); // У всех убираем active
-      
+
     for (var i = 0; nowPos + 1 > i; i++) {
         $('.stars .star').eq(i).toggleClass('active');
       }
@@ -532,7 +525,7 @@ $(document).ready(function(){
 
     b2bMenuButton.on('click', function() {
         b2bMenu.toggleClass('show');
-        
+
         if (b2bMenu.hasClass('show')) {
             disableBody();
         } else {
@@ -568,12 +561,12 @@ $(document).ready(function(){
         for (var k = 6; k < 40; k++) {
             $('.aside__nav-siblist2x-item:nth-child(' + k + ')').hide();
         }
-    }  
+    }
     hideExtraCategories();
     $('.aside__nab-siblist2x-more a').on('click', function(e) {
         e.preventDefault();
         var target = $(e.target);
-        target.parent().parent().find('.aside__nav-siblist2x-item').toggleClass('show');        
+        target.parent().parent().find('.aside__nav-siblist2x-item').toggleClass('show');
     });
 
     // Shipping
@@ -618,7 +611,7 @@ $(document).ready(function(){
 
 // Slideout
 var slideout = new Slideout({
-  
+
 // var slideout = new Slideout({
     'panel': document.getElementById('panel'),
     'menu': document.getElementById('menu'),
@@ -739,7 +732,7 @@ $(function(){
             $( "#amount_to_mob" ).val( ui.values[ 1 ] );
           }
         });
-        
+
         $( "#amount_from_mob" ).val( $( "#slider-range_mob" ).slider( "values", 0 ) );
         $( "#amount_to_mob" ).val( $( "#slider-range_mob" ).slider( "values", 1 ) );
 
@@ -817,6 +810,24 @@ $(function(){
             $("#slider-volume_mob").slider("values", 1, amountToValMob);
         });
     }
+
+    /* PROFILE */
+    // Tabs
+    $(function() {
+      $('ul.profile__tabs_caption').on('click', 'li:not(.active)', function() {
+        $(this)
+          .addClass('active').siblings().removeClass('active')
+          .closest('div.profile__tabs').find('div.profile__tabs_content').removeClass('active').eq($(this).index()).addClass('active');
+      });
+    });
+    // Remove from Wishlist
+    $('.remove').on('click', function() {
+      $(this).parent().parent().remove();
+
+      if($('.profile-inner .sale-wrapper-outer').length == 0){
+        $('.profile-inner').text("Список желаний пуст");
+      }
+    });
 });
 
 // Filter
@@ -864,8 +875,6 @@ $('.cateogry-view__button_filter').on('click', function(){
         $("html, body").css({"overflow": "auto"});
     });
 });
-
-// Сказать Олегу пусть сделает открытие подписки один раз за сессию
 
 $(function () {
     $(".slider").slick({

@@ -1,0 +1,42 @@
+.page-profile
+  .orders
+    &__item-top_line
+      background: #e9e9e9
+      padding: 10px 15px
+    .top_line__item
+        margin-right: 15px
+        margin-left: 15px
+        &:first-child
+          margin-left: 0
+
+    &__item-main_info
+      display: grid
+      padding: 20px 25px
+      grid-template-columns: 1fr 2fr 1fr
+      // align-items: center
+      border: 1px solid #e9e9e9
+    .main_info__item
+      border-right: 1px solid #e9e9e9
+      padding-left: 15px
+      &:last-child
+        border-right: 0
+    .main_info__thumbnail
+      width: 150px
+      height: 150px
+      object-fit: contain
+    .item__title
+      margin-bottom: 15px
+    .item__price
+      font-size: 20px
+    .delivery_status
+      display: inline-block
+      padding: 10px 15px
+      border-radius: 5px
+      i
+        margin-right: 10px
+    .status_completed
+      color: $green
+      background: lighten($green, 60%)
+    .status_not-completed
+      color: #333
+      background: lighten(#000, 90%)

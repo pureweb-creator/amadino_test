@@ -1,0 +1,146 @@
+// Specification
+.page-profile
+  .inner-wrapper
+    margin: 0
+    padding: 0
+    width: 100%
+    background: #f5f5f5
+  .main-container
+    margin: 0
+    padding: 0
+    max-width: 100%
+  .page-wrapper
+      min-height: 100vh
+
+// Left Panel
+.profile
+  position: relative
+  height: 100%
+  width: 150px
+  z-index: 99
+  background: #024138
+  color: rgba(255, 255, 255, 0.7)
+  a
+    color: rgba(255, 255, 255, 0.7)
+    font-size: 13px
+  &__list
+    li
+      padding: 15px 0
+      text-align: center
+      position: relative
+      &.active
+        background: #02332c
+        i
+          color: #00A046
+        &::after
+          content: ""
+          position: absolute
+          width: 0
+          height: 0
+          border: 10px solid transparent
+          border-left-color: #02332c
+          top: 50%
+          transform: translateY(-50%)
+          right: -20px
+      &:hover
+        color: rgba(255, 255, 255, 1)
+        background: #02332c
+        a
+          color: rgba(255, 255, 255, 1)
+      a
+        text-align: center
+        i
+          font-size: 27px
+          margin-bottom: 10px
+        span
+          display: block
+    .profile__list_btn_sign-out
+      background: transparent
+
+// Title
+.profile-heading
+  background: #fff
+  padding: 50px 150px
+
+// Main Content
+.profile-content
+  padding: 50px 150px 0px 150px
+  &:last-child
+    margin-bottom: 50px
+  .profile-main__title
+    margin-top: 25px
+  .profile-inner
+    padding: 30px
+    background: #fff
+    box-shadow: 0 3px 1px -2px rgba(0,0,0,.08), 0 1px 5px 0 rgba(0,0,0,.12)
+    // Tabs
+  .profile__tabs_content
+    display: none
+  .profile__tabs_content.active
+    display: block
+  .profile__tabs
+    display: grid
+    grid-template-columns: 2fr 1fr
+  .profile__tabs_caption
+    background: rgb(0, 160, 70)
+    color: #fff
+    width: 200px
+    margin-left: 50px
+    li
+      padding: 10px 15px
+      cursor: pointer
+      transition: all .2s ease
+      &:hover, &.active
+        background: rgb(0, 128, 56)
+
+  // Profile Form
+  #profile-form
+    .form-group
+      display: grid
+      grid-template-columns: 1fr 1fr
+  .invalid-feedback, .hint
+    grid-column: 2/3
+  .hint
+    font-size: 11px
+    line-height: 13px
+    color: rgb(153, 153, 153)
+    margin-top: 10px
+  .profile__refresh
+    width: 150px
+
+// Bonuses
+.bonus-number
+  font-size: 32px
+  font-weight: 700
+  display: inline-block
+  margin-left: 15px
+
+// Linked accounts
+.fa-facebook
+  color: #1877F2
+.fa-google-plus
+    color: #DC5246
+.linked-accounts
+  li:not(.linked)
+    a
+      opacity: .3
+      font-weight: 400
+  li
+    font-size: 18px
+    margin-bottom: 15px
+    a
+      font-weight: 700
+      i
+        margin-right: 10px
+        font-size: 22px
+
+
+// Profile Particles
+@import "orders"
+@import "wishlist"
+@import "viewed"
+@import "reviews"
+@import "correspondense"
+
+// Responsive layout for all pages
+@import "responsive"

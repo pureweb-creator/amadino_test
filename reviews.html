@@ -1,0 +1,369 @@
+
+<!DOCTYPE html>
+<html lang="ru-RU">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
+	<meta name="google-site-verification" content="xAmCEjc5yO1EXo6RMauVpq_mDcXXIhixJxiEryBr9LE">
+	<link rel="stylesheet" href="/css/light-modal.min.css">
+
+	<title>Личный кабинет</title>
+	<meta name="robots" content="noindex">
+	<meta name="csrf-param" content="_csrf-frontend">
+	<meta name="csrf-token" content="qLnEeTjsnT947I2YcR8RupBaROr3_vYQz7OhyutsTKLfw50xW56la02g6vVAa0fl-QI0s66mwVj8gZS5vyE2wQ==">
+
+	<link href="https://amadino.com.ua/account" rel="canonical">
+	<link href="https://amadino.com.ua/assets/90f72702/authchoice.css" rel="stylesheet">
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css" rel="stylesheet">
+	<link href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans&amp;display=swap" rel="stylesheet">
+  <link href="https://amadino.com.ua/assets/1657853f/css/jquery.resizableColumns.min.css" rel="stylesheet">
+	<link href="https://amadino.com.ua/app/fonts/BebasNeue/stylesheet.css" rel="stylesheet">
+	<link href="https://amadino.com.ua/app/fonts/Gilroy/stylesheet.css" rel="stylesheet">
+	<link href="https://amadino.com.ua/app/libs/remodal.css" rel="stylesheet">
+	<link href="https://amadino.com.ua/app/libs/remodal-default-theme.css" rel="stylesheet">
+	<link href="https://amadino.com.ua/app/libs/slick-1.8.1/slick/slick.css" rel="stylesheet">
+	<link href="https://amadino.com.ua/flickity/flickity.min.css" rel="stylesheet">
+	<link href="https://amadino.com.ua/css/style.css?3" rel="stylesheet">
+	<link href="css/main.min.css?4" rel="stylesheet">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<!-- body class is REQUIRED! -->
+<body class="page-profile">
+<div id="cover"></div>
+<div class="remodal-bg">
+	<div class="remodal" data-remodal-id="modal">
+		<span data-remodal-action="close" class="remodal-close"></span>
+		<h2 class="remodal-title">Корзина</h2>
+		<div class="cards-wrapper__item">
+			<div class="product-card d-flex">
+				<button class="remodal-close"></button>
+				<div class="product-img"></div>
+				<div class="product-title">
+					<a href="/catalog/list">В корзине нет товаров</a>
+				</div>
+				<div class="product-price submit-cart"></div>
+			</div>
+		</div>
+		<br><br><br>
+		<button data-remodal-action="cancel" class="continue">Продложить покупки</button>
+	</div>
+</div>
+<nav id="menu" class="profile-mob-menu">
+	<a href="#" class="profile-mob__username">roman.semenikhin99@gmail.com</a>
+	<ul class="menu__list">
+		<li class="active"><a href="profile.html"><i class="fas fa-database"></i><span>Личные данные</span></a></li>
+		<li><a href="profile-wishlist.html"><i class="fas fa-heart"></i><span>Список желаний</span></a></li>
+		<li><a href="orders.html"><i class="fas fa-tags"></i><span>Мои заказы</span></a></li>
+		<li><a href="#modal"><i class="fa fa-shopping-cart"></i><span>Корзина</span></a></li>
+		<li><a href="viewed.html"><i class="fa fa-eye"></i><span>Просмотренные товары</span></a></li>
+		<li><a href="reviews.html"><i class="fas fa-reply-all"></i><span>Мои отзывы</span></a></li>
+		<li><a href="correspondense.html"><i class="fas fa-comments"></i><span>Моя переписка</span></a></li>
+		<li>
+			<form class="forms" action="/site/logout" method="post">
+				<input type="hidden" name="_csrf-frontend" value="qLnEeTjsnT947I2YcR8RupBaROr3_vYQz7OhyutsTKLfw50xW56la02g6vVAa0fl-QI0s66mwVj8gZS5vyE2wQ==">
+				<button type="submit" class="profile__list_btn_sign-out"><a href="#"><i class="fas fa-sign-out-alt"></i><span>Выход</span></a></button>
+			</form>
+		</li>
+	</ul>
+</nav>
+<main id="panel">
+	<header class="header">
+		<div class="header-container">
+			<div class="header__logo">
+			</div>
+			<div class="header__nav">
+				<nav class="nav">
+					<a href="/about.html" class="nav__link">О компании</a>
+					<a href="/returns.html" class="nav__link">Возврат и гарантия товара</a>
+					<a href="/payment-deliver.html" class="nav__link">Доставка и оплата</a>
+					<a href="/contact" class="nav__link">Контакты</a>
+					<a href="/promo" class="nav__link">Акции!</a>
+				</nav>
+				<form action="/site/search" method="GET" id="w0" role="form" class="search-form">
+	                <button type="submit" class="search-form__button"><img src="img/path1.png" alt="search icon"></button>
+	                <input type="search" class="header__search ui-autocomplete-input search-form__input" name="SearchForm[q]" placeholder="Поиск по сайту" id="search_field" autocomplete="off" required>
+	            </form>
+			</div>
+			<div class="header__top-line">
+				<div class="lang d-flex">
+					<span class="title">Язык: </span>
+					<a href="#" class="lang__link lang__ru lang__active">ru</a>
+					<span class="divider">|</span>
+					<a href="#" class="lang__link lang__ua">ua</a>
+				</div>
+				<div class="order-call">
+					<button class="order-call__btn btn">Заказать звонок</button>
+					<form action="#" method="POST" class="order-call__form">
+						<input type="text" name="name" id="order-call__name" placeholder="Имя" class="form__input">
+						<input type="tel" name="tel" id="order-call__tel" placeholder="Телефон" class="form__input">
+						<button class="order-call__btn btn">Заказать звонок</button>
+					</form>
+				</div>
+			</div>
+			<div class="header__right">
+				<div class="right__sup">
+					<div class="signup-button">
+						<a href="/account"><i class="fa fa-sign-in-alt"></i>Личный кабинет</a>
+					</div>
+					<div class="cart-button">
+						<a href="#modal">
+							<i class="fas fa-shopping-cart cart__button_cart_icon"></i>Корзина
+							<span class="cart-number">0</span>
+						</a>
+					</div>
+				</div>
+				<div class="right__sub">
+					<div class="contact-phone">
+						<a href="tel:+380508781858">
+							<i class="fa fa-phone" style="transform: rotate(90deg); font-size: 18px; margin-right: 10px"></i>
+							тел:  <span class="color-green">(050) 878 18 58</span>
+						</a>
+						<ul class="right__sub_contact_phones">
+							<li><a href="tel:+380678781858">(067) 878 18 58</a></li>
+							<li><a href="tel:+380738781858">(073) 878 18 58</a></li>
+						</ul>
+					</div>
+					<div class="header__actions d-flex">
+						<a href="/catalog/favorites" class="favourite"><i class="far fa-heart"></i>
+							<span class="favourite__number">3</span></a>
+							<a href="/catalog/compare" class="comparsions"><i class="fas fa-balance-scale"></i></a>
+							<a href="#" class="bonus"><i class="fas fa-gift"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="header-mobile">
+				<div class="hm__logo">
+					<a href="https://amadino.com.ua/" class="logo"><img src="img/header-logo.png" alt="Amadino"></a>
+				</div>
+				<div class="hm__top">
+					<i class="fa fa-bars" id="burgerButton"></i>
+				</div>
+				<div class="hm__middle">
+					<form action="/site/search" method="GET" id="w2" role="form" class="search-form">
+		                <button type="submit" class="search-form__button"><img src="img/path1.png" alt="search icon"></button>
+		                <input type="search" class="header__search ui-autocomplete-input search-form__input" name="SearchForm[q]" placeholder="Поиск по сайту" id="search_field" autocomplete="off" required>
+		            </form>
+				</div>
+				<div class="hm__bottom">
+					<div class="cart-button">
+						<a href="#modal">
+							<i class="fas fa-shopping-cart cart__button_cart_icon"></i>
+							<span class="cart-number"></span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<div class="page-wrapper">
+		<aside class="account__panel">
+			<div class="aside__logo">
+				<a href="https://amadino.com.ua/">
+					<img src="img/header-logo.png" alt="Amadin">
+				</a>
+			</div>
+			<div class="profile">
+				<ul class="profile__list">
+					<!-- Active — текущая вкладка -->
+					<li><a href="profile.html"><i class="fas fa-database"></i><span>Личные данные</span></a></li>
+					<li><a href="profile-wishlist.html"><i class="fas fa-heart"></i><span>Список желаний</span></a></li>
+					<li><a href="orders.html"><i class="fas fa-tags"></i><span>Мои заказы</span></a></li>
+					<li><a href="#modal"><i class="fa fa-shopping-cart"></i><span>Корзина</span></a></li>
+					<li><a href="viewed.html"><i class="fa fa-eye"></i><span>Просмотренные товары</span></a></li>
+					<li class="active"><a href="reviews.html"><i class="fas fa-reply-all"></i><span>Мои отзывы</span></a></li>
+					<li><a href="correspondense.html"><i class="fas fa-comments"></i><span>Моя переписка</span></a></li>
+					<li>
+						<form class="forms" action="/site/logout" method="post">
+							<input type="hidden" name="_csrf-frontend" value="qLnEeTjsnT947I2YcR8RupBaROr3_vYQz7OhyutsTKLfw50xW56la02g6vVAa0fl-QI0s66mwVj8gZS5vyE2wQ==">
+							<button type="submit" class="profile__list_btn_sign-out"><a href="#"><i class="fas fa-sign-out-alt"></i><span>Выход</span></a></button>
+						</form>
+					</li>
+				</ul>
+			</div>
+		</aside>
+		<div class="inner-wrapper">
+			<div class="main-container">
+				<div class="profile-heading">
+					<div class="row breadcrumbs-nav">
+						<ul class="" itemscope itemtype="http://schema.org/BreadcrumbList">
+              <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="breadcrumbs-nav__item"><a href="/" itemprop="item"><span itemprop="name"><i class="fa fa-home"></i></span></a></li>
+							<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="breadcrumbs-nav__item active"><a href="/" itemprop="item"><span itemprop="name"><svg viewBox="0 0 13 7" id="icon-chevron-down" class="breadcrumbs-nav__icon-chevron"><path d="M6.49999 7.00046C6.26227 7.00046 6.02456 6.91471 5.84349 6.74409L0.272059 1.49409C-0.091012 1.15196 -0.091012 0.598963 0.272059 0.256838C0.635131 -0.0852871 1.22199 -0.0852871 1.58506 0.256838L6.49999 4.88821L11.4149 0.256838C11.778 -0.0852871 12.3648 -0.0852871 12.7279 0.256838C13.091 0.598963 13.091 1.15196 12.7279 1.49409L7.15649 6.74409C6.97542 6.91471 6.7377 7.00046 6.49999 7.00046Z"></path></svg>Личный кабинет</span>
+              </a></li>
+              <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="breadcrumbs-nav__item active">
+                <span itemprop="name"><svg viewBox="0 0 13 7" id="icon-chevron-down" class="breadcrumbs-nav__icon-chevron"><path d="M6.49999 7.00046C6.26227 7.00046 6.02456 6.91471 5.84349 6.74409L0.272059 1.49409C-0.091012 1.15196 -0.091012 0.598963 0.272059 0.256838C0.635131 -0.0852871 1.22199 -0.0852871 1.58506 0.256838L6.49999 4.88821L11.4149 0.256838C11.778 -0.0852871 12.3648 -0.0852871 12.7279 0.256838C13.091 0.598963 13.091 1.15196 12.7279 1.49409L7.15649 6.74409C6.97542 6.91471 6.7377 7.00046 6.49999 7.00046Z"></path></svg>Мои заказы</span>
+              </li>
+						</ul>
+					</div>
+					<h1 class="profile-main__title">Мои отзывы</h1>
+				</div>
+				<div class="profile-content">
+					<div class="profile-inner">
+						<h2>Мои отзывы</h2><br><br>
+            <div class="reviews">
+              <div class="reviews__item">
+                <div class="item__main-info">
+                  <img src="https://i2.rozetka.ua/goods/10462142/apple_ipod_earpods_with_mic_images_10462142054.jpg" alt="thumbnail" class="main_info__thumbnail">
+                </div>
+                <div class="item__main-info">
+                  <h3 class="item__main-info__title">
+                    <a href="#">Наушники Apple iPhone EarPods</a>
+                  </h3>
+                  <div class="review">
+                    <h4 class="review__author">Валентин Господарчук</h4>
+                    <span class="review__pubdate d-flex">2 мая 2020 <a href="#"><i class="fa fa-link"></i></a></span>
+                    <p class="review__text">
+                      Amadin - как всегда на высоте, спасибо
+                    </p>
+                    <a href="#" class="review__reply-link">Ответить</a>
+                  </div>
+                </div>
+              </div>
+              <div class="reviews__item">
+                <div class="item__main-info">
+                  <img src="https://i2.rozetka.ua/goods/10462142/apple_ipod_earpods_with_mic_images_10462142054.jpg" alt="thumbnail" class="main_info__thumbnail">
+                </div>
+                <div class="item__main-info">
+                  <h3 class="item__main-info__title">
+                    <a href="#">Наушники Apple iPhone EarPods</a>
+                  </h3>
+                  <div class="review">
+                    <h4 class="review__author">Валентин Господарчук</h4>
+                    <span class="review__pubdate d-flex">2 мая 2020 <a href="#"><i class="fa fa-link"></i></a></span>
+                    <p class="review__text">
+                      Хорошие наушники, спасибо
+                    </p>
+                    <a href="#" class="review__reply-link">Ответить</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer class="footer">
+		<div class="footer-container">
+			<div class="footer__inner">
+
+				<div class="footer__col">
+					<h4 class="footer__title">информация о компании</h4>
+					<a href="/about.html" class="footer__link">О компании</a>
+					<a href="/contact" class="footer__link">Контакты</a>
+					<a href="/vacancy.html" class="footer__link">Вакансии</a>
+					<a href="/privacy-policy.html" class="footer__link">Политика конфиденциальности</a>
+				</div>
+
+				<div class="footer__col">
+					<h4 class="footer__title">Помощь</h4>
+					<a href="/payment-deliver.html" class="footer__link">Оплата и доставка</a>
+					<a href="/returns.html" class="footer__link">Возврат товара</a>
+					<a href="/questions-answers.html" class="footer__link">Вопросы и ответы</a>
+					<a href="/service.html" class="footer__link">Сервисные центры</a>
+					<a href="/track-order.html" class="footer__link">Отследить заказ</a>
+				</div>
+
+				<div class="footer__col">
+					<h4 class="footer__title">Сотрудничество</h4>
+					<a href="/b2b.html" class="footer__link">Кабинет B2B для партнеров</a>
+					<a href="/vendors.html" class="footer__link">Для поставщиков</a>
+					<a href="/private-person.html" class="footer__link">Для частных лиц</a>
+					<a href="/corporate.html" class="footer__link">Для корпоративных клиентов</a>
+					<a href="/dropsiping.html" class="footer__link">Дропшиппинг</a>
+				</div>
+
+				<div class="footer__col">
+					<h4 class="footer__title">Контактная информация</h4>
+					<a href="tel:+380508781858" class="footer__link">
+					тел: (050) 878 18 58</a>
+					<a href="/contact" class="footer__link">Адрес:</a>
+					<p class="footer__link">Принимаем к оплате:</p>
+					<div class="footer__payment">
+						<img src="/app/img/home/mastercard.png" alt="">
+						<img src="/app/img/home/visa-logo.png" alt="">
+						<img src="/app/img/home/privat.png" alt="">
+					</div>
+				</div>
+
+			</div>
+			<div class="footer__year">2011 &mdash; 2020</div>
+		</div>
+	</footer>
+</main>
+<!-- <div class="subscribe">
+	<a href="#!" class="subscribe-close">&#10006;</a>
+	<h3 class="subscribe__title title-underline">Следить за скидками и акциями <i class="far fa-envelope"></i></h3>
+	<form action="#" method="POST" class="subscribe__form">
+		<input type="email" required name="subscribe_email" class="subscribe__input" placeholder="E-mail">
+		<input type="text" name="subscribe_name" class="subscribe__input" placeholder="Имя">
+		<input type="text" name="subscribe_city" class="subscribe__input" placeholder="Город">
+		<button class="btn subscribe__btn">Подписаться</button>
+	</form>
+</div> -->
+<!-- Subscribe form (sale 10%) -->
+<div class="subscribe-for-sale" data-remodal-id="subscribe-for-sale-modal">
+	<span data-remodal-action="close" class="remodal-close"></span>
+	<h4>AMADIN<br> легко понять, где покупать.</h4>
+	<p class="subscribe-for-sale__desc">
+		Подписывайтесь на рассылку и получайте скидку в размере <span style="color: red; font-weight: 700; font-size:16px">10%</span> на первый заказ.
+	</p>
+	<br>
+	<form action="#" method="POST" class="subscribe-for-sale__form">
+		<input type="text" placeholder="ФИО">
+		<input type="email" placeholder="E-mail">
+		<button class="subscribe-for-sale__btn">Отправить</button>
+	</form>
+	<p class="subscribe-for-sale__desc">
+		*Подарок применяется только на первый интернет-заказ от 500 грн
+	</p>
+</div>
+<script src="https://amadino.com.ua/assets/f695a213/yii.js"></script>
+<script src="https://amadino.com.ua/assets/f695a213/yii.gridView.js"></script>
+<script src="https://amadino.com.ua/assets/1657853f/js/kv-grid-expand.min.js"></script>
+<script src="https://amadino.com.ua/assets/a598a1b5/js/bootstrap.bundle.js"></script>
+<script src="https://amadino.com.ua/assets/ee2a2053/js/dropdown.min.js"></script>
+<script src="https://amadino.com.ua/assets/5a39932d/js/bootstrap-dialog.min.js"></script>
+<script src="https://amadino.com.ua/assets/5a39932d/js/dialog-yii.min.js"></script>
+<script src="https://amadino.com.ua/assets/1657853f/js/kv-grid-export.min.js"></script>
+<script src="https://amadino.com.ua/assets/1657853f/js/jquery.resizableColumns.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.js"></script>
+<script src="https://amadino.com.ua/app/libs/slick-1.8.1/slick/slick.min.js"></script>
+<script src="https://amadino.com.ua/app/libs/remodal.js"></script>
+<script src="https://amadino.com.ua/app/libs/slideout.min.js"></script>
+<script src="https://amadino.com.ua/js/script.js"></script>
+<script src="js/common.js?1"></script>
+<script src="https://amadino.com.ua/assets/f695a213/yii.activeForm.js"></script>
+<script>jQuery(function ($) {
+kvExpandRow(kvExpandRow_316e8def, 'w0_d7380716');
+jQuery('#w1-button').dropdown();
+krajeeYiiConfirm('krajeeDialog');
+var kvGridExp_63839ec8={"gridId":"w0","action":"/gridview/export/download","module":"gridview","encoding":"utf-8","bom":1,"target":"_blank","messages":{"allowPopups":"Чтобы скачать файл, отключите блокировку всплывающих окон в вашем браузере.","confirmDownload":"Продолжить?","downloadProgress":"Файл для экспорта генерируется. Пожалуйста, ожидайте...","downloadComplete":"Сейчас начнётся загрузка файла. Пожалуйста, ожидайте..."},"exportConversions":[{"from":"<span class=\"glyphicon glyphicon-ok text-success\"></span>","to":"Вкл"},{"from":"<span class=\"glyphicon glyphicon-remove text-danger\"></span>","to":"Выкл"}],"skipExportElements":[".sr-only",".hide"],"showConfirmAlert":true};
+var kvGridExp_f9af2e03={"filename":"экспорт-таблицы","showHeader":true,"showPageSummary":true,"showFooter":true};
+var kvGridExp_ae04b0e2={"dialogLib":"krajeeDialog","gridOpts":kvGridExp_63839ec8,"genOpts":kvGridExp_f9af2e03,"alertMsg":"Будет сгенерирован HTML файл для загрузки.","config":{"cssFile":["https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css","https://use.fontawesome.com/releases/v5.3.1/css/all.css"]}};
+var kvGridExp_170918be={"dialogLib":"krajeeDialog","gridOpts":kvGridExp_63839ec8,"genOpts":kvGridExp_f9af2e03,"alertMsg":"Будет сгенерирован CSV файл для загрузки.","config":{"colDelimiter":",","rowDelimiter":"\r\n"}};
+var kvGridExp_7abca410={"dialogLib":"krajeeDialog","gridOpts":kvGridExp_63839ec8,"genOpts":kvGridExp_f9af2e03,"alertMsg":"Будет сгенерирован текстовый файл для загрузки.","config":{"colDelimiter":"\t","rowDelimiter":"\r\n"}};
+var kvGridExp_c031b2dd={"dialogLib":"krajeeDialog","gridOpts":kvGridExp_63839ec8,"genOpts":kvGridExp_f9af2e03,"alertMsg":"Будет сгенерирован EXCEL файл для загрузки.","config":{"worksheet":"ЭкспортPабочийЛист","cssFile":""}};
+var kvGridExp_f20d8549={"dialogLib":"krajeeDialog","gridOpts":kvGridExp_63839ec8,"genOpts":kvGridExp_f9af2e03,"alertMsg":"Будет сгенерирован PDF файл для загрузки.","config":{"mode":"UTF-8","format":"A4-L","destination":"D","marginTop":20,"marginBottom":20,"cssInline":".kv-wrap{padding:20px}","methods":{"SetHeader":[{"odd":{"L":{"content":"PDF экспорт таблицы Yii2","font-size":8,"color":"#333333"},"C":{"content":"Экспорт таблицы","font-size":16,"color":"#333333"},"R":{"content":"Сгенерировано: Thu, 14-May-2020","font-size":8,"color":"#333333"}},"even":{"L":{"content":"PDF экспорт таблицы Yii2","font-size":8,"color":"#333333"},"C":{"content":"Экспорт таблицы","font-size":16,"color":"#333333"},"R":{"content":"Сгенерировано: Thu, 14-May-2020","font-size":8,"color":"#333333"}}}],"SetFooter":[{"odd":{"L":{"content":"© Krajee Yii2 Расширения","font-size":8,"font-style":"B","color":"#999999"},"R":{"content":"[ {PAGENO} ]","font-size":10,"font-style":"B","font-family":"serif","color":"#333333"},"line":true},"even":{"L":{"content":"© Krajee Yii2 Расширения","font-size":8,"font-style":"B","color":"#999999"},"R":{"content":"[ {PAGENO} ]","font-size":10,"font-style":"B","font-family":"serif","color":"#333333"},"line":true}}]},"options":{"title":"Экспорт таблицы","subject":"PDF сгенерирован расширением kartik-v/yii2-grid","keywords":"krajee, grid, сетка, export, экспорт, yii2-grid, pdf"},"contentBefore":"","contentAfter":""}};
+var kvGridExp_5bdeab47={"dialogLib":"krajeeDialog","gridOpts":kvGridExp_63839ec8,"genOpts":kvGridExp_f9af2e03,"alertMsg":"Будет сгенерирован JSON файл для загрузки.","config":{"colHeads":[],"slugColHeads":false,"jsonReplacer":function(k,v){return typeof(v)==='string'?$.trim(v):v},"indentSpace":4}};
+var kvGridInit_197b9b51=function(){
+jQuery('#w0 .export-html').gridexport(kvGridExp_ae04b0e2);jQuery('#w0 .export-csv').gridexport(kvGridExp_170918be);jQuery('#w0 .export-txt').gridexport(kvGridExp_7abca410);jQuery('#w0 .export-xls').gridexport(kvGridExp_c031b2dd);jQuery('#w0 .export-pdf').gridexport(kvGridExp_f20d8549);jQuery('#w0 .export-json').gridexport(kvGridExp_5bdeab47);jQuery('#w0-container').resizableColumns('destroy').resizableColumns({"store":null,"resizeFromBody":false});
+};
+kvGridInit_197b9b51();
+jQuery('#w0').yiiGridView({"filterUrl":"\/account\/orders","filterSelector":"#w0-filters input, #w0-filters select","filterOnFocusOut":true});
+jQuery('#w4').yiiActiveForm([], []);
+jQuery('#w5').yiiActiveForm([], []);
+});</script>
+</body>
+</html>

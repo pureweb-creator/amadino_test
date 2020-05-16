@@ -1,0 +1,119 @@
+@media (max-width: 1200px)
+  // User Profile Main
+  .profile-content, .profile-heading
+    padding: 50px 50px 0 50px
+  .profile-heading
+    padding-bottom: 50px
+
+@media (max-width: 1024px)
+  // User Profile Main
+  .profile
+    display: none
+  .profile-mob-menu
+    background: $dark_blue !important
+    &, & a
+      color: #ddd
+    .profile-mob__username
+      border-bottom: 1px solid hsla(0,0%,100%,.15) !important
+      display: block
+      padding: 10px 20px
+    .menu__list
+      padding: 10px 20px
+      border-bottom: 1px solid hsla(0,0%,100%,.15) !important
+      a
+        display: flex
+        justify-content: space-between
+        align-items: center
+        span
+          order: -1
+    .profile__list_btn_sign-out
+      width: 100%
+      background: transparent
+      padding: 0
+
+@media (max-width: 992px)
+  // User Profile Main
+  .profile-content
+    .profile__tabs
+      grid-template-columns: 1fr
+    .profile__tabs_caption
+      margin-left: 0
+      margin-bottom: 15px
+    .profile__tabs_content.active
+      grid-row: 2/3
+  // Viewed Products
+  .page-profile
+    .viewed
+      .profile__tabs_content
+        grid-template-columns: repeat(3, 1fr)
+
+@media (max-width: 768px)
+  // User Profile Main
+  .profile-heading, .profile-content
+    padding-left: 25px
+    padding-right: 25px
+  .profile-content
+    #profile-form .form-group
+      grid-template-columns: 1fr
+      grid-row-gap: 7px
+      align-items: end
+      span:first-child
+        font-weight: 700
+    .profile-form__repeat-password
+      grid-template-rows: repeat(3, 1fr)
+    .hint
+      grid-column: 1/2
+  // Viewed Products
+  .page-profile
+    .viewed
+      .profile__tabs_content
+        grid-template-columns: repeat(2, 1fr)
+      .profile__tabs_caption
+        flex-direction: column
+        width: 100%
+  // My orders
+  .orders
+    .orders__item-main_info
+      grid-template-columns: 1fr 1fr
+    .orders__item-top_line
+      flex-direction: column
+      .top_line__item
+        margin-left: 0
+    .main_info__item_product-description
+      grid-column: 2/4
+    .delivery_status
+      margin-left: -15px
+      margin-top: 15px
+
+@media (max-width: 540px)
+  // User Profile Main
+  .profile-main__title
+    font-size: 22px
+    margin-left: 15px
+  .profile-heading
+    padding-bottom: 30px
+  .profile-content, .profile-heading
+    padding-top: 30px
+    padding-left: 5px
+    padding-right: 5px
+    .profile-inner
+      padding-left: 5px
+      padding-right: 5px
+    h2
+      font-size: 20px
+    h3
+      font-size: 18px
+  // My orders
+  .orders
+    .orders__item-main_info
+      padding-left: 15px
+      padding-right: 15px
+      grid-template-columns: 1fr
+    .main_info__item_product-description
+      grid-column: 1/2
+    .delivery_status
+      margin-left: 0
+  // My Reviews
+  .page-profile
+    .reviews__item
+      grid-column-gap: 10px
