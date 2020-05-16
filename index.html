@@ -5,15 +5,16 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<!-- Fonts -->
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+	<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous"> -->
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="fonts/BebasNeue/stylesheet.css">
 	<link rel="stylesheet" href="fonts/Gilroy/stylesheet.css">
 
 	<!-- Libs -->
-    <link href="https://amadino.com.ua/" rel="canonical">
-    <link href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css" rel="stylesheet">
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://amadino.com.ua/" rel="canonical">
+	<link href="libs/all.min.css" rel="stylesheet">
+  <link href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="libs/remodal.css">
 	<link rel="stylesheet" type="text/css" href="libs/remodal-default-theme.css">
 	<link rel="stylesheet" href="libs/slick-1.8.1/slick/slick.css">
@@ -70,7 +71,9 @@
             <form action="#" method="POST" class="modal__signing">
                 <input type="email" name="auth-buyer-email" placeholder="E-mail">
                 <input type="password" name="auth-buyer-password" placeholder="Пароль">
-                <button class="btn">Войти</button>
+								<!-- Ссылку сделал чисто для верстки, для себя. Если тебе не надо в бэке, то не делай.
+										 Мне иногда требуется быстро в кабинет перейти, и по ссылке быстрее -->
+                <button class="btn"><a href="profile.html">Войти</a></button>
             </form>
         </div>
         <div class="modal__signup">
@@ -80,7 +83,7 @@
                 <input type="email" name="reg-buyer-email" placeholder="E-mail">
                 <input type="password" name="reg-buyer-password" placeholder="Пароль">
                 <label class="contact__label contact__label--2">
-                    <input type="checkbox" name="policy" id="reg-buyer-policy" class="contact__radio policy" checked> 
+                    <input type="checkbox" name="policy" id="reg-buyer-policy" class="contact__radio policy" checked>
                     Я соглашаюсь с пользовательским соглашением и политикой конфиденциальности портала Amadino.com.ua
                     <span class="checkmark"></span>
                 </label>
@@ -111,7 +114,7 @@
                 <input type="text" name placeholder="Фамилия">
                 <input type="email" name placeholder="E-mail">
                 <label class="contact__label contact__label--2">
-                    <input type="checkbox" name="policy" id="reg-parthner-policy" class="contact__radio policy" checked> 
+                    <input type="checkbox" name="policy" id="reg-parthner-policy" class="contact__radio policy" checked>
                     Я соглашаюсь с пользовательским соглашением и политикой конфиденциальности портала Amadino.com.ua
                     <span class="checkmark"></span>
                 </label>
@@ -170,7 +173,7 @@
                     </div>
                 </div>
             </div>
-        </div>  
+        </div>
       </p>
       <br><br><br>
       <button data-remodal-action="cancel" class="continue">Продложить покупки</button>
@@ -206,11 +209,11 @@
     </div>
     <div class="signup-button">
         <a href="#reg-auth-modal" id="signUpButton">
-            <i class="fa fa-sign-in-alt"></i>Регистрация/Вход
+            <i class="fal fa-sign-in-alt"></i>Регистрация/Вход
         </a>
     </div>
     <div class="header__actions d-flex">
-        <a href="#!" class="favourite"><i class="far fa-heart"></i><span class="favourite__number">0</span></a>
+        <a href="#!" class="favourite"><i class="far fa-heart"></i><span class="favourite__number favourite__number--mob">0</span></a>
         <a href="#!" class="comparsions"><i class="fas fa-balance-scale"></i></a>
         <a href="#!" class="bonus"><i class="fas fa-gift"></i></a>
     </div>
@@ -221,22 +224,22 @@
 
 <!-- Hero -->
 <header class="header">
-	<div class="header-container">
-		<div class="header__logo">
-		</div>
-		<div class="header__nav">
-			<nav class="nav">
-				<a href="#" class="nav__link">О компании</a>
-				<a href="#" class="nav__link">Возврат и гарантия товара</a>
-				<a href="#" class="nav__link">Доставка и оплата</a>
-				<a href="#" class="nav__link">Контакты</a>
+    <div class="header-container">
+        <div class="header__logo">
+        </div>
+        <div class="header__nav">
+            <nav class="nav">
+                <a href="#" class="nav__link">О компании</a>
+                <a href="#" class="nav__link">Возврат и гарантия товара</a>
+                <a href="#" class="nav__link">Доставка и оплата</a>
+                <a href="#" class="nav__link">Контакты</a>
                 <a href="#" class="nav__link">Акции</a>
-			</nav>
-            <form action="/site/search" method="GET" id="w0" role="form" class="search-form"> 
+            </nav>
+            <form action="/site/search" method="GET" id="w0" role="form" class="search-form">
                 <button type="submit" class="search-form__button"><img src="img/path1.png" alt="search icon"></button>
-                <input type="search" class="header__search ui-autocomplete-input search-form__input" name="SearchForm[q]" placeholder="Поиск по сайту" id="search_field" autocomplete="off" required>
+                <input type="search" class="header__search ui-autocomplete-input search-form__input" name="SearchForm[q]" placeholder="В поисках разума не потеряй сердце." id="search_field" autocomplete="off" required>
             </form>
-		</div>
+        </div>
         <div class="header__top-line">
             <div class="lang d-flex">
                 <span class="title">Язык: </span>
@@ -259,63 +262,63 @@
                 </form>
             </div>
         </div>
-		<div class="header__right">
-			<div class="right__sup">
-				<div class="signup-button">
-					<a href="#reg-auth-modal" id="signUpButton">
-						<i class="fa fa-sign-in-alt"></i>Регистрация/Вход
-					</a>
-				</div>
-				<div class="cart-button">
-					<a href="#modal">
-						<i class="fas fa-shopping-cart cart__button_cart_icon"></i>
-						Корзина
-						<span class="cart-number">0</span>
-					</a>
-				</div>
-			</div>			
-			<div class="right__sub">
-				<div class="contact-phone">
-					<a href="tel:+0800750250"><i class="fa fa-phone" style="transform: rotate(90deg); font-size: 18px; margin-right: 10px"></i> 0800 <span class="color-green">750 250</span></a>
-					<ul class="right__sub_contact_phones">
-						<li><a href="tel:+0800750250">0800 <span>750 250</span></a></li>
-						<li><a href="tel:+0800750250">0800 <span>750 250</span></a></li>
-						<li><a href="tel:+0800750250">0800 <span>750 250</span></a></li>
-					</ul>
-				</div>
+        <div class="header__right">
+            <div class="right__sup">
+                <div class="signup-button">
+                    <a href="#reg-auth-modal" id="signUpButton">
+                        <i class="fal fa-sign-in-alt"></i>Регистрация/Вход
+                    </a>
+                </div>
+                <div class="cart-button">
+                    <a href="#modal">
+                        <img src="img/icons8-opencart.svg" class="cart__button_cart_icon" alt="">
+                        Корзина
+                        <span class="cart-number">0</span>
+                    </a>
+                </div>
+            </div>
+            <div class="right__sub">
+                <div class="contact-phone">
+                    <a href="tel:+0800750250"><i class="fal fa-phone-alt" style="font-size: 18px; margin-right: 10px"></i> 0800 <span class="color-green">750 250</span></a>
+                    <ul class="right__sub_contact_phones">
+                        <li><a href="tel:+0800750250">0800 <span>750 250</span></a></li>
+                        <li><a href="tel:+0800750250">0800 <span>750 250</span></a></li>
+                        <li><a href="tel:+0800750250">0800 <span>750 250</span></a></li>
+                    </ul>
+                </div>
 
-				<div class="header__actions d-flex">
-					<a href="#!" class="favourite"><i class="far fa-heart"></i><span class="favourite__number">0</span></a>
-					<a href="#!" class="comparsions"><i class="fas fa-balance-scale"></i></a>
-                    <a href="#!" class="bonus"><i class="fas fa-gift"></i></a>
-				</div>
-			</div>	
-		</div>
-		<div class="header-mobile">
-			<div class="hm__logo">
-				<a href="index.html" class="logo"><img src="img/header-logo.png" alt="Amadino"></a>
-			</div>
-			<div class="hm__top">
-				<i class="fa fa-bars" id="burgerButton"></i>
-			</div>
+                <div class="header__actions d-flex">
+                    <a href="#!" class="favourite"><i class="fal fa-heart"></i><span class="favourite__number">3</span></a>
+                    <a href="#!" class="comparsions"><i class="fal fa-balance-scale"></i><span class="favourite__number">4</span></a>
+                    <a href="#!" class="bonus"><i class="fal fa-gift"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="header-mobile">
+            <div class="hm__logo">
+                <a href="index.html" class="logo"><img src="img/header-logo.png" alt="Amadino"></a>
+            </div>
+            <div class="hm__top">
+                <i class="fa fa-bars" id="burgerButton"></i>
+            </div>
 
-			<div class="hm__middle">
-				<form action="/site/search" method="GET" id="w0" role="form" class="search-form"> 
+            <div class="hm__middle">
+                <form action="/site/search" method="GET" id="w0" role="form" class="search-form">
                     <button type="submit" class="search-form__button"><img src="img/path1.png" alt="search icon"></button>
-                    <input type="search" class="header__search ui-autocomplete-input search-form__input" name="SearchForm[q]" placeholder="Поиск по сайту" id="search_field" autocomplete="off" required>
+                    <input type="search" class="header__search ui-autocomplete-input search-form__input" name="SearchForm[q]" placeholder="В поисках разума не потеряй сердце." id="search_field_mob" autocomplete="off" required>
                 </form>
-			</div>
-			<div class="hm__bottom">
-				<div class="cart-button">
-					<a href="#modal">
-						<i class="fas fa-shopping-cart cart__button_cart_icon"></i>
-						<span class="cart-number"></span>
-					</a>
-				</div>
+            </div>
+            <div class="hm__bottom">
+                <div class="cart-button">
+                    <a href="#modal">
+                          <img src="img/icons8-opencart.svg" class="cart__button_cart_icon" alt="">
+                        <span class="cart-number"></span>
+                    </a>
+                </div>
 
-			</div>		
-		</div>
-	</div>
+            </div>
+        </div>
+    </div>
 </header>
 
 <!-- Main -->
@@ -351,7 +354,7 @@
                                 </li>
                                 <li class="aside__nav-sublist-item">
                                     <a href="/aktivnyj-otdyh-sport-i-turizm/maci-volejbolnye-i-futbolnye">
-                                        Мячи футбольные, волейбольные, баскетбольные, теннисные 
+                                        Мячи футбольные, волейбольные, баскетбольные, теннисные
                                     </a>
                                 </li>
                                 <li class="aside__nav-sublist-item">
@@ -388,7 +391,7 @@
                             <ul class="aside__nav-sublist">
                                 <li class="aside__nav-sublist-item">
                                     <a href="/aktivnyj-otdyh-sport-i-turizm/nozi-skladnye">
-                                        Ножи складные 
+                                        Ножи складные
                                     </a>
                                 </li>
                                 <li class="aside__nav-sublist-item">
@@ -400,7 +403,7 @@
                                     <a href="/aktivnyj-otdyh-sport-i-turizm/passazirskie-perevozki">
                                         Пассажирские перевозки <i class="fa fa-angle-right"></i>
                                     </a>
-                                    
+
                                     <ul class="aside__nav-sublist2x">
                                         <li class="aside__nav-siblist2x-item">
                                             <a href="/aktivnyj-otdyh-sport-i-turizm/passazirskie-perevozki/aviabilety">Авиабилеты</a>
@@ -444,14 +447,14 @@
                                             <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/elektroskejty">Электроскейты</a>
                                         </li>
                                     </ul>
-                                </li>    
+                                </li>
                             </ul>
                         </div>
                         <div class="submenu__col">
                             <ul class="aside__nav-sublist">
                                 <li class="aside__nav-sublist-item">
                                     <a href="/aktivnyj-otdyh-sport-i-turizm/sanki">
-                                        Санки 
+                                        Санки
                                     </a>
                                 </li>
                                 <li class="aside__nav-sublist-item">
@@ -472,12 +475,12 @@
                                 </li>
                                 <li class="aside__nav-sublist-item">
                                     <a href="/aktivnyj-otdyh-sport-i-turizm/termosy-i-termo-posuda">
-                                        Термосы и термо посуда 
+                                        Термосы и термо посуда
                                     </a>
                                 </li>
                                 <li class="aside__nav-sublist-item">
                                     <a href="/aktivnyj-otdyh-sport-i-turizm/turisticeskie-gorelki-plity-i-aksessuary">
-                                        Туристические горелки, плиты и аксессуары 
+                                        Туристические горелки, плиты и аксессуары
                                     </a>
                                 </li>
                                 <li class="aside__nav-sublist-item">
@@ -534,7 +537,7 @@
                                 </li>
                                 <li class="aside__nav-sublist-item">
                                     <a href="/aktivnyj-otdyh-sport-i-turizm/maci-volejbolnye-i-futbolnye">
-                                        Мячи футбольные, волейбольные, баскетбольные, теннисные 
+                                        Мячи футбольные, волейбольные, баскетбольные, теннисные
                                     </a>
                                 </li>
                                 <li class="aside__nav-sublist-item">
@@ -571,7 +574,7 @@
                             <ul class="aside__nav-sublist">
                                 <li class="aside__nav-sublist-item">
                                     <a href="/aktivnyj-otdyh-sport-i-turizm/nozi-skladnye">
-                                        Ножи складные 
+                                        Ножи складные
                                     </a>
                                 </li>
                                 <li class="aside__nav-sublist-item">
@@ -583,7 +586,7 @@
                                     <a href="/aktivnyj-otdyh-sport-i-turizm/passazirskie-perevozki">
                                         Пассажирские перевозки <i class="fa fa-angle-right"></i>
                                     </a>
-                                    
+
                                     <ul class="aside__nav-sublist2x">
                                         <li class="aside__nav-siblist2x-item">
                                             <a href="/aktivnyj-otdyh-sport-i-turizm/passazirskie-perevozki/aviabilety">Авиабилеты</a>
@@ -627,14 +630,14 @@
                                             <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/elektroskejty">Электроскейты</a>
                                         </li>
                                     </ul>
-                                </li>    
+                                </li>
                             </ul>
                         </div>
                         <div class="submenu__col">
                             <ul class="aside__nav-sublist">
                                 <li class="aside__nav-sublist-item">
                                     <a href="/aktivnyj-otdyh-sport-i-turizm/sanki">
-                                        Санки 
+                                        Санки
                                     </a>
                                 </li>
                                 <li class="aside__nav-sublist-item">
@@ -655,12 +658,12 @@
                                 </li>
                                 <li class="aside__nav-sublist-item">
                                     <a href="/aktivnyj-otdyh-sport-i-turizm/termosy-i-termo-posuda">
-                                        Термосы и термо посуда 
+                                        Термосы и термо посуда
                                     </a>
                                 </li>
                                 <li class="aside__nav-sublist-item">
                                     <a href="/aktivnyj-otdyh-sport-i-turizm/turisticeskie-gorelki-plity-i-aksessuary">
-                                        Туристические горелки, плиты и аксессуары 
+                                        Туристические горелки, плиты и аксессуары
                                     </a>
                                 </li>
                                 <li class="aside__nav-sublist-item">
@@ -694,7 +697,7 @@
                             </ul>
                         </div>
                     </div>
-                </li>   
+                </li>
                 <li class="aside__nav-item">
                     <a href="subcategories.html">
                     <span data-balloon-pos="up" class="shovel"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="shovel" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="fa-shovel fa-pro-icon"><path fill="currentColor" d="M500.3 96.38L415.62 11.7c-15.59-15.59-40.97-15.59-56.56 0l-32.67 32.67c-18.94 18.94-29.25 44.31-29.25 70.55 0 6.53.64 13.13 1.95 19.69 1.74 8.69 4.75 16.84 8.53 24.53L197.36 269.39l-45.26-45.26c-12.5-12.5-32.76-12.5-45.25 0l-67.88 67.88C-11.02 342-6.29 473.03 16.34 495.66c22.63 22.63 153.66 27.36 203.65-22.63l67.88-67.88c12.5-12.5 12.5-32.76 0-45.25l-45.26-45.26 110.26-110.26c7.7 3.79 15.87 6.8 24.57 8.54 32.81 6.56 66.53-3.64 90.19-27.3l32.67-32.67c15.6-15.6 15.6-40.97 0-56.57zm-77.92 43.99a35.87 35.87 0 0 1-32.42 9.8c-14.23-2.86-25.27-13.91-28.13-28.17-2.33-11.83 1.31-23.91 9.8-32.38l15.7-15.7 50.75 50.75-15.7 15.7z" class=""></path></svg></span>
@@ -719,7 +722,7 @@
                                 </li>
                                 <li class="aside__nav-sublist-item">
                                     <a href="/aktivnyj-otdyh-sport-i-turizm/maci-volejbolnye-i-futbolnye">
-                                        Мячи футбольные, волейбольные, баскетбольные, теннисные 
+                                        Мячи футбольные, волейбольные, баскетбольные, теннисные
                                     </a>
                                 </li>
                                 <li class="aside__nav-sublist-item">
@@ -756,7 +759,7 @@
                             <ul class="aside__nav-sublist">
                                 <li class="aside__nav-sublist-item">
                                     <a href="/aktivnyj-otdyh-sport-i-turizm/nozi-skladnye">
-                                        Ножи складные 
+                                        Ножи складные
                                     </a>
                                 </li>
                                 <li class="aside__nav-sublist-item">
@@ -768,7 +771,7 @@
                                     <a href="/aktivnyj-otdyh-sport-i-turizm/passazirskie-perevozki">
                                         Пассажирские перевозки <i class="fa fa-angle-right"></i>
                                     </a>
-                                    
+
                                     <ul class="aside__nav-sublist2x">
                                         <li class="aside__nav-siblist2x-item">
                                             <a href="/aktivnyj-otdyh-sport-i-turizm/passazirskie-perevozki/aviabilety">Авиабилеты</a>
@@ -812,14 +815,14 @@
                                             <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/elektroskejty">Электроскейты</a>
                                         </li>
                                     </ul>
-                                </li>    
+                                </li>
                             </ul>
                         </div>
                         <div class="submenu__col">
                             <ul class="aside__nav-sublist">
                                 <li class="aside__nav-sublist-item">
                                     <a href="/aktivnyj-otdyh-sport-i-turizm/sanki">
-                                        Санки 
+                                        Санки
                                     </a>
                                 </li>
                                 <li class="aside__nav-sublist-item">
@@ -840,12 +843,12 @@
                                 </li>
                                 <li class="aside__nav-sublist-item">
                                     <a href="/aktivnyj-otdyh-sport-i-turizm/termosy-i-termo-posuda">
-                                        Термосы и термо посуда 
+                                        Термосы и термо посуда
                                     </a>
                                 </li>
                                 <li class="aside__nav-sublist-item">
                                     <a href="/aktivnyj-otdyh-sport-i-turizm/turisticeskie-gorelki-plity-i-aksessuary">
-                                        Туристические горелки, плиты и аксессуары 
+                                        Туристические горелки, плиты и аксессуары
                                     </a>
                                 </li>
                                 <li class="aside__nav-sublist-item">
@@ -904,7 +907,7 @@
                                 </li>
                                 <li class="aside__nav-sublist-item">
                                     <a href="/aktivnyj-otdyh-sport-i-turizm/maci-volejbolnye-i-futbolnye">
-                                        Мячи футбольные, волейбольные, баскетбольные, теннисные 
+                                        Мячи футбольные, волейбольные, баскетбольные, теннисные
                                     </a>
                                 </li>
                                 <li class="aside__nav-sublist-item">
@@ -941,7 +944,7 @@
                             <ul class="aside__nav-sublist">
                                 <li class="aside__nav-sublist-item">
                                     <a href="/aktivnyj-otdyh-sport-i-turizm/nozi-skladnye">
-                                        Ножи складные 
+                                        Ножи складные
                                     </a>
                                 </li>
                                 <li class="aside__nav-sublist-item">
@@ -953,7 +956,7 @@
                                     <a href="/aktivnyj-otdyh-sport-i-turizm/passazirskie-perevozki">
                                         Пассажирские перевозки <i class="fa fa-angle-right"></i>
                                     </a>
-                                    
+
                                     <ul class="aside__nav-sublist2x">
                                         <li class="aside__nav-siblist2x-item">
                                             <a href="/aktivnyj-otdyh-sport-i-turizm/passazirskie-perevozki/aviabilety">Авиабилеты</a>
@@ -997,14 +1000,14 @@
                                             <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/elektroskejty">Электроскейты</a>
                                         </li>
                                     </ul>
-                                </li>    
+                                </li>
                             </ul>
                         </div>
                         <div class="submenu__col">
                             <ul class="aside__nav-sublist">
                                 <li class="aside__nav-sublist-item">
                                     <a href="/aktivnyj-otdyh-sport-i-turizm/sanki">
-                                        Санки 
+                                        Санки
                                     </a>
                                 </li>
                                 <li class="aside__nav-sublist-item">
@@ -1025,12 +1028,12 @@
                                 </li>
                                 <li class="aside__nav-sublist-item">
                                     <a href="/aktivnyj-otdyh-sport-i-turizm/termosy-i-termo-posuda">
-                                        Термосы и термо посуда 
+                                        Термосы и термо посуда
                                     </a>
                                 </li>
                                 <li class="aside__nav-sublist-item">
                                     <a href="/aktivnyj-otdyh-sport-i-turizm/turisticeskie-gorelki-plity-i-aksessuary">
-                                        Туристические горелки, плиты и аксессуары 
+                                        Туристические горелки, плиты и аксессуары
                                     </a>
                                 </li>
                                 <li class="aside__nav-sublist-item">
@@ -1087,7 +1090,7 @@
                                 </li>
                                 <li class="aside__nav-sublist-item">
                                     <a href="/aktivnyj-otdyh-sport-i-turizm/maci-volejbolnye-i-futbolnye">
-                                        Мячи футбольные, волейбольные, баскетбольные, теннисные 
+                                        Мячи футбольные, волейбольные, баскетбольные, теннисные
                                     </a>
                                 </li>
                                 <li class="aside__nav-sublist-item">
@@ -1124,7 +1127,7 @@
                             <ul class="aside__nav-sublist">
                                 <li class="aside__nav-sublist-item">
                                     <a href="/aktivnyj-otdyh-sport-i-turizm/nozi-skladnye">
-                                        Ножи складные 
+                                        Ножи складные
                                     </a>
                                 </li>
                                 <li class="aside__nav-sublist-item">
@@ -1136,7 +1139,7 @@
                                     <a href="/aktivnyj-otdyh-sport-i-turizm/passazirskie-perevozki">
                                         Пассажирские перевозки <i class="fa fa-angle-right"></i>
                                     </a>
-                                    
+
                                     <ul class="aside__nav-sublist2x">
                                         <li class="aside__nav-siblist2x-item">
                                             <a href="/aktivnyj-otdyh-sport-i-turizm/passazirskie-perevozki/aviabilety">Авиабилеты</a>
@@ -1180,14 +1183,14 @@
                                             <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/elektroskejty">Электроскейты</a>
                                         </li>
                                     </ul>
-                                </li>    
+                                </li>
                             </ul>
                         </div>
                         <div class="submenu__col">
                             <ul class="aside__nav-sublist">
                                 <li class="aside__nav-sublist-item">
                                     <a href="/aktivnyj-otdyh-sport-i-turizm/sanki">
-                                        Санки 
+                                        Санки
                                     </a>
                                 </li>
                                 <li class="aside__nav-sublist-item">
@@ -1208,12 +1211,12 @@
                                 </li>
                                 <li class="aside__nav-sublist-item">
                                     <a href="/aktivnyj-otdyh-sport-i-turizm/termosy-i-termo-posuda">
-                                        Термосы и термо посуда 
+                                        Термосы и термо посуда
                                     </a>
                                 </li>
                                 <li class="aside__nav-sublist-item">
                                     <a href="/aktivnyj-otdyh-sport-i-turizm/turisticeskie-gorelki-plity-i-aksessuary">
-                                        Туристические горелки, плиты и аксессуары 
+                                        Туристические горелки, плиты и аксессуары
                                     </a>
                                 </li>
                                 <li class="aside__nav-sublist-item">
@@ -1270,7 +1273,7 @@
                                 </li>
                                 <li class="aside__nav-sublist-item">
                                     <a href="/aktivnyj-otdyh-sport-i-turizm/maci-volejbolnye-i-futbolnye">
-                                        Мячи футбольные, волейбольные, баскетбольные, теннисные 
+                                        Мячи футбольные, волейбольные, баскетбольные, теннисные
                                     </a>
                                 </li>
                                 <li class="aside__nav-sublist-item">
@@ -1307,7 +1310,7 @@
                             <ul class="aside__nav-sublist">
                                 <li class="aside__nav-sublist-item">
                                     <a href="/aktivnyj-otdyh-sport-i-turizm/nozi-skladnye">
-                                        Ножи складные 
+                                        Ножи складные
                                     </a>
                                 </li>
                                 <li class="aside__nav-sublist-item">
@@ -1319,7 +1322,7 @@
                                     <a href="/aktivnyj-otdyh-sport-i-turizm/passazirskie-perevozki">
                                         Пассажирские перевозки <i class="fa fa-angle-right"></i>
                                     </a>
-                                    
+
                                     <ul class="aside__nav-sublist2x">
                                         <li class="aside__nav-siblist2x-item">
                                             <a href="/aktivnyj-otdyh-sport-i-turizm/passazirskie-perevozki/aviabilety">Авиабилеты</a>
@@ -1363,14 +1366,14 @@
                                             <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/elektroskejty">Электроскейты</a>
                                         </li>
                                     </ul>
-                                </li>    
+                                </li>
                             </ul>
                         </div>
                         <div class="submenu__col">
                             <ul class="aside__nav-sublist">
                                 <li class="aside__nav-sublist-item">
                                     <a href="/aktivnyj-otdyh-sport-i-turizm/sanki">
-                                        Санки 
+                                        Санки
                                     </a>
                                 </li>
                                 <li class="aside__nav-sublist-item">
@@ -1391,12 +1394,12 @@
                                 </li>
                                 <li class="aside__nav-sublist-item">
                                     <a href="/aktivnyj-otdyh-sport-i-turizm/termosy-i-termo-posuda">
-                                        Термосы и термо посуда 
+                                        Термосы и термо посуда
                                     </a>
                                 </li>
                                 <li class="aside__nav-sublist-item">
                                     <a href="/aktivnyj-otdyh-sport-i-turizm/turisticeskie-gorelki-plity-i-aksessuary">
-                                        Туристические горелки, плиты и аксессуары 
+                                        Туристические горелки, плиты и аксессуары
                                     </a>
                                 </li>
                                 <li class="aside__nav-sublist-item">
@@ -1436,12 +1439,12 @@
             <br>
             <ul class="news__block">
                 <li class="articles-block__topic">
-               
+
                     <a href="/news/makita-drel.html" >Аккумуляторная дрель Makita</a>
                     16 окт. 2019 г.
                 </li>
                 <li class="articles-block__topic">
-                    
+
                     <a href="/news/df333dwye.html">Аккумуляторная дрель-шуруповерт Makita DF333DWYE</a>
                     15 окт. 2019 г.
                 </li>
@@ -1468,52 +1471,52 @@
 				</div>
 				<a href="#" class="stocks title-underline">Все акции</a>
         		<div class="banners__wrapper" style="padding: 0 25px;">
-            
+
                     <a href="/brand/bosch" style="display: block; width: 350px; height:120px; background: transparent url('img/brand_1.jpg') center center no-repeat;">
                         <img src="/images/spacer.gif" style="width: 350px; height:120px;" width="350" height="120" alt="Bosch" title="Товары Bosch"/>
                     </a>
 
-            
+
                     <a href="/brand/metabo" style="display: block; width: 350px; height:120px; background: transparent url('img/brand_2.jpg') center center no-repeat;">
                         <img src="/images/spacer.gif" style="width: 350px; height:120px;" width="350" height="120" alt="Metabo" title="Товары Metabo"/>
                     </a>
 
-            
+
                     <a href="/brand/makita" style="display: block; width: 350px; height:120px; background: transparent url('img/brand_3.jpg') center center no-repeat;">
                         <img src="/images/spacer.gif" style="width: 350px; height:120px;" width="350" height="120" alt="Makita" title="Товары Makita"/>
                     </a>
 
-            
+
                     <a href="/brand/came" style="display: block; width: 350px; height:120px; background: transparent url('img/brand_4.png') center center no-repeat;">
                         <img src="/images/spacer.gif" style="width: 350px; height:120px;" width="350" height="120" alt="Came" title="Товары Came"/>
                     </a>
 
-            
+
                     <a href="/brand/aquastream" style="display: block; width: 350px; height:120px; background: transparent url('/img/brand_5.png') center center no-repeat;">
                         <img src="/images/spacer.gif" style="width: 350px; height:120px;" width="350" height="120" alt="AquaStream" title="Товары AquaStream"/>
                     </a>
 
-            
+
                     <a href="/brand/atlas" style="display: block; width: 350px; height:120px; background: transparent url('img/brand_6.jpg') center center no-repeat;">
                         <img src="/images/spacer.gif" style="width: 350px; height:120px;" width="350" height="120" alt="Atlas" title="Товары Atlas"/>
                     </a>
 
-            
+
                     <a href="/brand/electraline" style="display: block; width: 350px; height:120px; background: transparent url('img/brand_7.png') center center no-repeat;">
                         <img src="/images/spacer.gif" style="width: 350px; height:120px;" width="350" height="120" alt="Electraline" title="Товары Electraline"/>
                     </a>
 
-            
+
                     <a href="/brand/al-ko" style="display: block; width: 350px; height:120px; background: transparent url('img/brand_8.png') center center no-repeat;">
                         <img src="/images/spacer.gif" style="width: 350px; height:120px;" width="350" height="120" alt="AL-KO" title="Товары AL-KO"/>
                     </a>
 
-            
+
                     <a href="/brand/csm-saehan" style="display: block; width: 350px; height:120px; background: transparent url('img/brand_9.png') center center no-repeat;">
                         <img src="/images/spacer.gif" style="width: 350px; height:120px;" width="350" height="120" alt="CSM-SAEHAN" title="Товары CSM-SAEHAN"/>
                     </a>
 
-            
+
                     <a href="/brand/ecosoft" style="display: block; width: 350px; height:120px; background: transparent url('img/brand_10.jpg') center center no-repeat;">
                         <img src="/images/spacer.gif" style="width: 350px; height:120px;" width="350" height="120" alt="ECOSOFT" title="Товары ECOSOFT"/>
                     </a>
@@ -1550,7 +1553,7 @@
 									<li><i class="fas fa-star"></i></li>
 									<li><i class="fas fa-star"></i></li>
 									<li><i class="fas fa-star"></i></li>
-                                    <li><i class="fas fa-star"></i></li>
+                  <li><i class="fas fa-star"></i></li>
 									<li><i class="far fa-star"></i></li>
 								</ul>
 								<div class="product-price submit-cart">
@@ -1964,8 +1967,8 @@
                         </div>
 					</div>
 				</div>
-			</div> <!-- /sale --> 
-			
+			</div> <!-- /sale -->
+
 			<div class="hits">
 				<div class="section__header">
 					<h3 class="title-underline">Хиты продаж</h3>
@@ -2419,7 +2422,7 @@
 				<div class="new-items__slider">
 
 					<div class="new-items-wrapper">
-						
+
 						<div class="sale-wrapper-outer">
                             <div class="product-card">
                                 <div class="products-card__label label_type_action">
@@ -2859,7 +2862,7 @@
 
 				</div>
 			</div>
-            
+
             <div class="new-items">
                 <div class="section__header section__header-newitems">
                     <h3 class="title-underline">Товар с уценкой</h3>
@@ -2868,7 +2871,7 @@
                 <div class="new-items__slider">
 
                     <div class="new-items-wrapper">
-                        
+
                         <div class="sale-wrapper-outer">
                             <div class="product-card">
                                 <div class="products-card__label label_type_action">
@@ -3450,7 +3453,7 @@
 				</div>
 			</div>
 		</div> <!-- /info-container -->
-	</div>		
+	</div>
 </div>
 
 <!-- About -->
@@ -3559,7 +3562,7 @@
 <script src="js/common.js"></script>
 
 <script>
-    
+
 </script>
 
 </body>

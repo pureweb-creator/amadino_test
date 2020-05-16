@@ -7,23 +7,58 @@
 
 @media (max-width: 1024px)
   // User Profile Main
+  .profile-mob-menu
+    padding-left: 0 !important
+    padding-right: 0 !important
   .profile
     display: none
   .profile-mob-menu
-    background: $dark_blue !important
+    background: lighten($dark_blue, 1%) !important
     &, & a
       color: #ddd
+    &__logo
+      width: 70%
+      padding: 0px 20px
+      margin-bottom: 15px
     .profile-mob__username
       border-bottom: 1px solid hsla(0,0%,100%,.15) !important
-      display: block
+      display: flex
+      justify-content: space-between
       padding: 10px 20px
+      i
+        font-size: 18px
     .menu__list
-      padding: 10px 20px
+      padding: 10px 0
       border-bottom: 1px solid hsla(0,0%,100%,.15) !important
+      li
+        padding: 3px 20px
+        position: relative
+        z-index: 2
+        &:hover
+          &::after
+            width: 100%
+            transition: all .3s ease
+        &::after
+          content: ""
+          display: block
+          width: 0
+          height: 100%
+          transform: translateX(-50%)
+          background: lighten($dark_blue, 5%)
+          opacity: .5
+          z-index: -1
+          position: absolute
+          left: 50%
+          top: 0
       a
         display: flex
         justify-content: space-between
         align-items: center
+        position: relative
+        .favourite__number
+          position: static
+          display: inline-block
+          margin-left: 10px
         span
           order: -1
     .profile__list_btn_sign-out
@@ -53,14 +88,18 @@
     padding-left: 25px
     padding-right: 25px
   .profile-content
+    .view-profile .form-group
+      border-bottom: 1px solid #e9e9e9
+      padding: 10px 0
+      margin-bottom: 0
+      span:first-child
+        opacity: .6
+        font-size: 12px
+
     #profile-form .form-group
       grid-template-columns: 1fr
       grid-row-gap: 7px
       align-items: end
-      span:first-child
-        font-weight: 700
-    .profile-form__repeat-password
-      grid-template-rows: repeat(3, 1fr)
     .hint
       grid-column: 1/2
   // Viewed Products

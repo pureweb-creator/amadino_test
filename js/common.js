@@ -1,3 +1,8 @@
+document.body.onload = function () {
+  document.getElementById('menu').style.opacity = "1";
+  document.getElementById('menu').style.height = "auto";
+  document.getElementById('menu').style.padding = "10px";
+}
 $(document).ready(function(){
 
     // Subscribe for sale modal
@@ -22,6 +27,11 @@ $(document).ready(function(){
         sessionStorage.setItem(SS_KEY, '1');
         }, 1000);
     }
+
+    // Header Search
+    $('.header__search').hover(function(){
+      $(this).focus();
+    });
 
     // Sliders
     $('.banner-big').slick({
