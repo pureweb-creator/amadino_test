@@ -86,12 +86,14 @@
   .profile__tabs_caption
     background: rgb(0, 160, 70)
     color: #fff
-    width: 200px
+    width: 220px
     margin-left: 50px
     li
       padding: 10px 15px
       cursor: pointer
       transition: all .2s ease
+      i
+        margin-right: 10px
       &:hover, &.active
         background: rgb(0, 128, 56)
 
@@ -100,6 +102,18 @@
     .form-group
       display: grid
       grid-template-columns: 1fr 1fr
+  .profile-form__input-wrap
+    position: relative
+    input
+      padding-right: 30px
+    .show-pass
+      position: absolute
+      right: 10px
+      cursor: pointer
+      top: 50%
+      transform: translateY(-50%)
+      font-size: 18px
+      opacity: 0
   .invalid-feedback, .hint
     grid-column: 2/3
   .hint

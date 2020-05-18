@@ -114,7 +114,7 @@
 			<div class="header__right">
 				<div class="right__sup">
 					<div class="signup-button">
-						<a href="/account"><i class="fa fa-sign-in-alt"></i>Личный кабинет</a>
+						<a href="/account"><i class="fal fa-sign-in-alt"></i>Личный кабинет</a>
 					</div>
 					<div class="cart-button">
 						<a href="#modal">
@@ -126,7 +126,7 @@
 				<div class="right__sub">
 					<div class="contact-phone">
 						<a href="tel:+380508781858">
-							<i class="fa fa-phone" style="transform: rotate(90deg); font-size: 18px; margin-right: 10px"></i>
+							<i class="fal fa-phone-alt" style="font-size: 18px; margin-right: 10px"></i>
 							тел:  <span class="color-green">(050) 878 18 58</span>
 						</a>
 						<ul class="right__sub_contact_phones">
@@ -135,10 +135,10 @@
 						</ul>
 					</div>
 					<div class="header__actions d-flex">
-						<a href="/catalog/favorites" class="favourite"><i class="far fa-heart"></i>
+						<a href="/catalog/favorites" class="favourite"><i class="fal fa-heart"></i>
 							<span class="favourite__number">3</span></a>
-							<a href="/catalog/compare" class="comparsions"><i class="fas fa-balance-scale"></i></a>
-							<a href="#" class="bonus"><i class="fas fa-gift"></i>
+							<a href="/catalog/compare" class="comparsions"><i class="fal fa-balance-scale"></i></a>
+							<a href="#" class="bonus"><i class="fal fa-gift"></i>
 						</a>
 					</div>
 				</div>
@@ -287,18 +287,28 @@
 									<input type="hidden" name="_csrf-frontend" value="Ekyqv4duj-SoD1LFvbiy8QgVIyv3c6n4UIEsmAnjr7UiOuTX2DTlvP9jCpTq7uXHP15TZYZE6M4A4AHMOrn_zw==">
 					        <div class="form-group field-profileform-username required">
 										<label for="profileform-username">Введите старый пароль</label>
-										<input type="text" id="profileform-old-password" class="form-control" name="ProfileForm[oldpass]" value="" aria-required="true">
+										<div class="profile-form__input-wrap">
+											<input type="password" id="profileform-old-password" class="form-control" name="ProfileForm[oldpass]" value="" aria-required="true">
+											<span class="show-pass"><i class="fal fa-eye"></i></span>
+										</div>
+
 										<div class="invalid-feedback"></div>
 									</div>
 									<div class="form-group field-profileform-username required">
 										<label for="profileform-username">Введите новый пароль</label>
-										<input type="text" id="profileform-new-password" class="form-control" name="ProfileForm[newpass]" value="" aria-required="true">
+										<div class="profile-form__input-wrap">
+											<input type="password" id="profileform-new-password" class="form-control" name="ProfileForm[newpass]" value="" aria-required="true">
+											<span class="show-pass"><i class="fal fa-eye"></i></span>
+										</div>
 										<div class="invalid-feedback"></div>
 									</div>
 									<div class="form-group profile-form__repeat-password field-profileform-username required">
 										<label for="profileform-username">Повторите пароль</label>
-										<input type="text" id="profileform-repeat-password" class="form-control" name="ProfileForm[repeatpass]" value="" aria-required="true">
-										<div class="invalid-feedback">sdf</div>
+										<div class="profile-form__input-wrap">
+											<input type="password" id="profileform-repeat-password" class="form-control" name="ProfileForm[repeatpass]" value="" aria-required="true">
+											<span class="show-pass"><i class="fal fa-eye"></i></span>
+										</div>
+										<div class="invalid-feedback"></div>
 										<div class="hint"> должен быть не менее 6 символов, содержать цифры и заглавные буквы и не должен совпадать с именем и эл.почтой
 										</div>
 									</div>
@@ -309,9 +319,9 @@
 						  </div>
 							<div class="profile__tabs_navigation">
 								<ul class="profile__tabs_caption">
-							    <li class="active">Просмотреть профиль</li>
-							    <li>Редактировать данные</li>
-							    <li>Изменить пароль</li>
+							    <li class="active"><i class="fal fa-eye"></i>Просмотреть профиль</li>
+							    <li><i class="fal fa-edit"></i>Редактировать данные</li>
+							    <li><i class="fal fa-unlock-alt"></i>Изменить пароль</li>
 							  </ul>
 							</div>
 						</div><!-- .tabs-->

@@ -1,17 +1,17 @@
 .page-profile
   .reviews__item
-    display: grid
-    grid-template-columns: 1fr 3fr
+    display: flex
   .main_info__thumbnail
     width: 150px
     height: 150px
     object-fit: contain
   .item__main-info__title
     a
-      text-decoration: underline !important
-      color: blue
+      color: #3e77aa
+      &:hover
+        text-decoration: underline !important
   .review__author
-    font-size: 18px
+    font-size: 16px
     font-weight: 700
     margin-top: 15px
   .review__pubdate
@@ -23,3 +23,5 @@
     color: blue
     margin: 10px 0
     text-decoration: underline !important
+    &:hover
+      color: #ff7878
