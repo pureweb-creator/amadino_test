@@ -6,10 +6,9 @@ document.body.onload = function () {
 $(document).ready(function(){
 
     // Subscribe for sale modal
-
     // $('[data-remodal-id=subscribe-for-sale-modal]').remodal().open();
-    $('.subscribe-for-sale__form input').on('click', function(){
-        $('.subscribe-for-sale__form input').removeClass('active');
+    $('.subscribe-for-sale__form label').on('click', function(){
+        $('.subscribe-for-sale__form label').removeClass('active');
         $(this).toggleClass('active');
     });
 
@@ -830,6 +829,24 @@ $(function(){
           .closest('div.profile__tabs').find('div.profile__tabs_content').removeClass('active').eq($(this).index()).addClass('active');
       });
     });
+    // Show/Hide password
+    $('input[type=password]').on('keyup', function(){
+      if( $(this).val().length === 0 ){
+        $(this).parent().find(".show-pass").css({"opacity": "0"});
+      } else if ( $(this).val().length !== 0 ) {
+        $(this).parent().find(".show-pass").css({"opacity": "1"});
+      }
+    });
+    // Change show/hide icon
+    $('.show-pass').on('click', function () {
+      $(this).find('i').toggleClass("fa-eye-slash").toggleClass("fa-eye");
+      if( $(this).find('i').hasClass("fa-eye-slash") ){
+        $(this).parent().find("input").get(0).type='text';
+      } else {
+        $(this).parent().find("input").get(0).type='password';
+      }
+    });
+
     // Remove from Wishlist
     $('.remove').on('click', function() {
       $(this).parent().parent().remove();
@@ -849,20 +866,20 @@ $('.filter__item-heading').on('click', function(){
 });
 
 // Filter mobile heading
-if($(window).width() < 1024){
-    window.onscroll = function() {myFunction()};
+if($(window).width() < 1024 && document.getElementById("category_heading")){
+  window.onscroll = function() {myFunction()};
 
-    var header = document.getElementById("category_heading");
-    var sticky = header.offsetTop;
+  var header = document.getElementById("category_heading");
+  var sticky = header.offsetTop;
 
-    // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
-    function myFunction() {
-      if (window.pageYOffset > sticky) {
-        header.classList.add("sticky");
-      } else {
-        header.classList.remove("sticky");
-      }
+  // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+  function myFunction() {
+    if (window.pageYOffset > sticky) {
+      header.classList.add("sticky");
+    } else {
+      header.classList.remove("sticky");
     }
+  }
 }
 
 // Mobile filter
@@ -896,7 +913,6 @@ $(function () {
             return '<a><img src="'+thumb+'"></a>';
         },
     });
-
     $('.ex1').zoom({
         magnify: 1.5
     });

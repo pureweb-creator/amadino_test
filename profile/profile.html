@@ -1,0 +1,443 @@
+
+<!DOCTYPE html>
+<html lang="ru-RU">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
+	<meta name="google-site-verification" content="xAmCEjc5yO1EXo6RMauVpq_mDcXXIhixJxiEryBr9LE">
+	<link rel="stylesheet" href="/css/light-modal.min.css">
+
+	<title>Личный кабинет</title>
+	<meta name="robots" content="noindex">
+	<meta name="csrf-param" content="_csrf-frontend">
+	<meta name="csrf-token" content="qLnEeTjsnT947I2YcR8RupBaROr3_vYQz7OhyutsTKLfw50xW56la02g6vVAa0fl-QI0s66mwVj8gZS5vyE2wQ==">
+
+	<link href="https://amadino.com.ua/account" rel="canonical">
+	<link href="https://amadino.com.ua/assets/90f72702/authchoice.css" rel="stylesheet">
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css" rel="stylesheet">
+	<link href="https://pro.fontawesome.com/releases/v5.2.0/css/all.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans&amp;display=swap" rel="stylesheet">
+	<link href="https://amadino.com.ua/app/fonts/BebasNeue/stylesheet.css" rel="stylesheet">
+	<link href="https://amadino.com.ua/app/fonts/Gilroy/stylesheet.css" rel="stylesheet">
+	<link href="https://amadino.com.ua/app/libs/remodal.css" rel="stylesheet">
+	<link href="https://amadino.com.ua/app/libs/remodal-default-theme.css" rel="stylesheet">
+	<link href="https://amadino.com.ua/app/libs/slick-1.8.1/slick/slick.css" rel="stylesheet">
+	<link href="https://amadino.com.ua/flickity/flickity.min.css" rel="stylesheet">
+	<link href="https://amadino.com.ua/css/style.css?3" rel="stylesheet">
+	<link href="../css/main.min.css?4" rel="stylesheet">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<!-- body class is REQUIRED! -->
+<body class="page-profile">
+<div id="cover"></div>
+<div class="remodal-bg">
+	<div class="remodal" data-remodal-id="modal">
+		<span data-remodal-action="close" class="remodal-close"></span>
+		<h2 class="remodal-title">Корзина</h2>
+		<div class="cards-wrapper__item">
+			<div class="product-card d-flex">
+				<button class="remodal-close"></button>
+				<div class="product-img"></div>
+				<div class="product-title">
+					<a href="/catalog/list">В корзине нет товаров</a>
+				</div>
+				<div class="product-price submit-cart"></div>
+			</div>
+		</div>
+		<br><br><br>
+		<button data-remodal-action="cancel" class="continue">Продложить покупки</button>
+	</div>
+</div>
+<!-- Вот такая менюшка должна быть на всех страницах. Пишу здесь, чтобы не копипастить одно и то же во все страницы -->
+<nav id="menu" class="profile-mob-menu">
+	<a href="#" class="logo profile-mob-menu__logo"><img src="../img/header-logo.png" alt="home logo"></a>
+	<a href="#" class="profile-mob__username">Roman Semenikhin<i class="fal fa-user-circle"></i></a>
+	<ul class="menu__list">
+		<li class="active"><a href="profile.html"><i class="fal fa-database"></i><span>Личные данные</span></a></li>
+		<li><a href="profile-wishlist.html"><i class="fal fa-heart"></i><span>Список желаний</span></a></li>
+		<li><a href="orders.html"><i class="fal fa-tags"></i><span>Мои заказы</span></a></li>
+		<li><a href="#modal"><i class="fal fa-shopping-cart"></i><span>Корзина<span class="favourite__number">3</span></span></a></li>
+		<li><a href="viewed.html"><i class="fal fa-eye"></i><span>Просмотренные товары</span></a></li>
+		<li><a href="reviews.html"><i class="fal fa-reply-all"></i><span>Мои отзывы</span></a></li>
+		<li><a href="correspondense.html"><i class="fal fa-comments"></i><span>Моя переписка</span></a></li>
+		<li>
+			<form class="forms" action="/site/logout" method="post">
+				<input type="hidden" name="_csrf-frontend" value="qLnEeTjsnT947I2YcR8RupBaROr3_vYQz7OhyutsTKLfw50xW56la02g6vVAa0fl-QI0s66mwVj8gZS5vyE2wQ==">
+				<button type="submit" class="profile__list_btn_sign-out"><a href="#"><i class="fal fa-sign-out-alt"></i><span>Выход</span></a></button>
+			</form>
+		</li>
+	</ul>
+</nav>
+<main id="panel">
+	<header class="header">
+		<div class="header-container">
+			<div class="header__logo">
+			</div>
+			<div class="header__nav">
+				<nav class="nav">
+					<a href="/about.html" class="nav__link">О компании</a>
+					<a href="/returns.html" class="nav__link">Возврат и гарантия товара</a>
+					<a href="/payment-deliver.html" class="nav__link">Доставка и оплата</a>
+					<a href="/contact" class="nav__link">Контакты</a>
+					<a href="/promo" class="nav__link">Акции!</a>
+				</nav>
+				<form action="/site/search" method="GET" id="w0" role="form" class="search-form">
+            <button type="submit" class="search-form__button"><img src="../img/path1.png" alt="search icon"></button>
+            <input type="search" class="header__search ui-autocomplete-input search-form__input" name="SearchForm[q]" placeholder="Поиск по сайту" id="search_field" autocomplete="off" required>
+        </form>
+			</div>
+			<div class="header__top-line">
+				<div class="lang d-flex">
+					<span class="title">Язык: </span>
+					<a href="#" class="lang__link lang__ru lang__active">ru</a>
+					<span class="divider">|</span>
+					<a href="#" class="lang__link lang__ua">ua</a>
+				</div>
+				<div class="order-call">
+					<button class="order-call__btn btn">Заказать звонок</button>
+					<form action="#" method="POST" class="order-call__form">
+						<input type="text" name="name" id="order-call__name" placeholder="Имя" class="form__input">
+						<input type="tel" name="tel" id="order-call__tel" placeholder="Телефон" class="form__input">
+						<button class="order-call__btn btn">Заказать звонок</button>
+					</form>
+				</div>
+			</div>
+			<div class="header__right">
+				<div class="right__sup">
+					<div class="signup-button">
+						<a href="/account"><i class="fal fa-sign-in-alt"></i>Личный кабинет</a>
+					</div>
+					<div class="cart-button">
+						<a href="#modal">
+							<img src="../img/icons8-opencart.svg" class="cart__button_cart_icon" alt="cart">Корзина
+							<span class="cart-number">0</span>
+						</a>
+					</div>
+				</div>
+				<div class="right__sub">
+					<div class="contact-phone">
+						<a href="tel:+380508781858">
+							<i class="fal fa-phone-alt" style="font-size: 18px; margin-right: 10px"></i>
+							тел:  <span class="color-green">(050) 878 18 58</span>
+						</a>
+						<ul class="right__sub_contact_phones">
+							<li><a href="tel:+380678781858">(067) 878 18 58</a></li>
+							<li><a href="tel:+380738781858">(073) 878 18 58</a></li>
+						</ul>
+					</div>
+					<div class="header__actions d-flex">
+						<a href="/catalog/favorites" class="favourite"><i class="fal fa-heart"></i>
+							<span class="favourite__number">3</span></a>
+							<a href="/catalog/compare" class="comparsions"><i class="fal fa-balance-scale"></i></a>
+							<a href="#" class="bonus"><i class="fal fa-gift"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="header-mobile">
+				<div class="hm__logo">
+					<a href="https://amadino.com.ua/" class="logo"><img src="../img/header-logo.png" alt="Amadino"></a>
+				</div>
+				<div class="hm__top">
+					<i class="fa fa-bars" id="burgerButton"></i>
+				</div>
+				<div class="hm__middle">
+					<form action="/site/search" method="GET" id="w2" role="form" class="search-form">
+		                <button type="submit" class="search-form__button"><img src="../img/path1.png" alt="search icon"></button>
+		                <input type="search" class="header__search ui-autocomplete-input search-form__input" name="SearchForm[q]" placeholder="Поиск по сайту" id="search_field" autocomplete="off" required>
+		            </form>
+				</div>
+				<div class="hm__bottom">
+					<div class="cart-button">
+						<a href="#modal">
+							<img src="../img/icons8-opencart.svg" class="cart__button_cart_icon" alt="cart">
+							<span class="cart-number"></span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<div class="page-wrapper">
+		<aside class="account__panel">
+			<div class="aside__logo">
+				<a href="https://amadino.com.ua/">
+					<img src="../img/header-logo.png" alt="Amadin">
+				</a>
+			</div>
+			<div class="profile">
+				<ul class="profile__list">
+					<!-- Active — текущая вкладка -->
+					<li class="active"><a href="profile.html"><i class="fas fa-database"></i><span>Личные данные</span></a></li>
+					<li><a href="profile-wishlist.html"><i class="fas fa-heart"></i><span>Список желаний</span></a></li>
+					<li><a href="orders.html"><i class="fas fa-tags"></i><span>Мои заказы</span></a></li>
+					<li><a href="#modal"><i class="fa fa-shopping-cart"></i><span>Корзина</span></a></li>
+					<li><a href="viewed.html"><i class="fa fa-eye"></i><span>Просмотренные товары</span></a></li>
+					<li><a href="reviews.html"><i class="fas fa-reply-all"></i><span>Мои отзывы</span></a></li>
+					<li><a href="correspondense.html"><i class="fas fa-comments"></i><span>Моя переписка</span></a></li>
+					<li>
+						<form class="forms" action="/site/logout" method="post">
+							<input type="hidden" name="_csrf-frontend" value="qLnEeTjsnT947I2YcR8RupBaROr3_vYQz7OhyutsTKLfw50xW56la02g6vVAa0fl-QI0s66mwVj8gZS5vyE2wQ==">
+							<button type="submit" class="profile__list_btn_sign-out"><a href="#"><i class="fas fa-sign-out-alt"></i><span>Выход</span></a></button>
+						</form>
+					</li>
+				</ul>
+			</div>
+		</aside>
+		<div class="inner-wrapper">
+			<div class="main-container">
+				<div class="profile-heading">
+					<div class="row breadcrumbs-nav">
+						<ul class="" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="breadcrumbs-nav__item"><a href="/" itemprop="item"><span itemprop="name"><i class="fa fa-home"></i></span></a></li>
+							<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="breadcrumbs-nav__item active"><span itemprop="name"><svg viewBox="0 0 13 7" id="icon-chevron-down" class="breadcrumbs-nav__icon-chevron"><path d="M6.49999 7.00046C6.26227 7.00046 6.02456 6.91471 5.84349 6.74409L0.272059 1.49409C-0.091012 1.15196 -0.091012 0.598963 0.272059 0.256838C0.635131 -0.0852871 1.22199 -0.0852871 1.58506 0.256838L6.49999 4.88821L11.4149 0.256838C11.778 -0.0852871 12.3648 -0.0852871 12.7279 0.256838C13.091 0.598963 13.091 1.15196 12.7279 1.49409L7.15649 6.74409C6.97542 6.91471 6.7377 7.00046 6.49999 7.00046Z"></path></svg>Личный кабинет</span></li>
+						</ul>
+					</div>
+					<h1 class="profile-main__title">Личные данные</h1>
+				</div>
+				<!-- Profile info -->
+				<div class="profile-content">
+					<div class="profile-inner">
+						<div class="profile__tabs">
+						  <div class="profile__tabs_content active view-profile">
+								<h2 class="profile__tabs_content-title">Просмотр профиля</h2>
+								<div id="profile-form" action="/account/profile" method="post">
+									<input type="hidden" name="_csrf-frontend" value="Ekyqv4duj-SoD1LFvbiy8QgVIyv3c6n4UIEsmAnjr7UiOuTX2DTlvP9jCpTq7uXHP15TZYZE6M4A4AHMOrn_zw==">
+					        <div class="form-group">
+										<span class="view-profile__name">Имя пользователя (e-mail или телефон)</span>
+										<span>Roman Semenikhin</span>
+									</div>
+					        <div class="form-group field-profileform-email required">
+										<span>Ваш e-mail</span>
+										<span>roman.semenikhin99@gmail.com</span>
+									</div>
+					        <div class="form-group field-profileform-name required">
+										<span>ФИО</span>
+										<span>Semenikhin Roman Alexandrovich</span>
+									</div>
+					        <div class="form-group field-profileform-street required">
+										<span>Адрес</span>
+										<span>Gorky street, 51</span>
+									</div>
+					        <div class="form-group field-profileform-city required">
+										<span>Город</span>
+										<span>Pokrovsk</span>
+									</div>
+					        <div class="form-group field-profileform-phone required">
+										<span>Телефон</span>
+										<span>+(380) - 99 - 065 - 29 - 02</span>
+									</div>
+			        	</div>
+							</div>
+						  <div class="profile__tabs_content">
+								<h2>Редактирование Профиля</h2><br><br>
+								<form id="profile-form" action="/account/profile" method="post">
+									<input type="hidden" name="_csrf-frontend" value="Ekyqv4duj-SoD1LFvbiy8QgVIyv3c6n4UIEsmAnjr7UiOuTX2DTlvP9jCpTq7uXHP15TZYZE6M4A4AHMOrn_zw==">
+					        <div class="form-group field-profileform-username required">
+										<label for="profileform-username">Имя пользователя (e-mail или телефон)</label>
+										<input type="text" id="profileform-username" class="form-control" name="ProfileForm[username]" value="Roman Semenikhin" disabled="disabled" aria-required="true">
+										<div class="invalid-feedback"></div>
+									</div>
+					        <div class="form-group field-profileform-email required">
+										<label for="profileform-email">Ваш e-mail</label>
+										<input type="text" id="profileform-email" class="form-control" name="ProfileForm[email]" value="" aria-required="true">
+
+										<div class="invalid-feedback"></div>
+									</div>
+					        <div class="form-group field-profileform-name required">
+										<label for="profileform-name">ФИО</label>
+										<input type="text" id="profileform-name" class="form-control" name="ProfileForm[name]" value="Roman Semenikhin" aria-required="true">
+
+										<div class="invalid-feedback"></div>
+									</div>
+					        <div class="form-group field-profileform-street required">
+										<label for="profileform-street">Адрес</label>
+										<input type="text" id="profileform-street" class="form-control" name="ProfileForm[street]" aria-required="true">
+
+										<div class="invalid-feedback"></div>
+									</div>
+					        <div class="form-group field-profileform-city required">
+										<label for="profileform-city">Город</label>
+										<input type="text" id="profileform-city" class="form-control" name="ProfileForm[city]" aria-required="true">
+
+										<div class="invalid-feedback"></div>
+									</div>
+					        <div class="form-group field-profileform-phone required">
+										<label for="profileform-phone">Телефон</label>
+										<input type="text" id="profileform-phone" class="form-control" name="ProfileForm[phone]" placeholder="Контактный телефон" aria-required="true" data-plugin-inputmask="inputmask_acd4809f">
+
+										<div class="invalid-feedback"></div>
+									</div>
+				        	<div class="form-group">
+				            <button type="submit" class="btn profile__refresh" name="signup-button">Обновить</button>
+									</div>
+			        	</form>
+						  </div>
+							<div class="profile__tabs_content">
+								<h2>Смена пароля</h2><br><br>
+								<form id="profile-form" action="/account/profile" method="post">
+									<input type="hidden" name="_csrf-frontend" value="Ekyqv4duj-SoD1LFvbiy8QgVIyv3c6n4UIEsmAnjr7UiOuTX2DTlvP9jCpTq7uXHP15TZYZE6M4A4AHMOrn_zw==">
+					        <div class="form-group field-profileform-username required">
+										<label for="profileform-username">Введите старый пароль</label>
+										<div class="profile-form__input-wrap">
+											<input type="password" id="profileform-old-password" class="form-control" name="ProfileForm[oldpass]" value="" aria-required="true">
+											<span class="show-pass"><i class="fal fa-eye"></i></span>
+										</div>
+
+										<div class="invalid-feedback"></div>
+									</div>
+									<div class="form-group field-profileform-username required">
+										<label for="profileform-username">Введите новый пароль</label>
+										<div class="profile-form__input-wrap">
+											<input type="password" id="profileform-new-password" class="form-control" name="ProfileForm[newpass]" value="" aria-required="true">
+											<span class="show-pass"><i class="fal fa-eye"></i></span>
+										</div>
+										<div class="invalid-feedback"></div>
+									</div>
+									<div class="form-group profile-form__repeat-password field-profileform-username required">
+										<label for="profileform-username">Повторите пароль</label>
+										<div class="profile-form__input-wrap">
+											<input type="password" id="profileform-repeat-password" class="form-control" name="ProfileForm[repeatpass]" value="" aria-required="true">
+											<span class="show-pass"><i class="fal fa-eye"></i></span>
+										</div>
+										<div class="invalid-feedback"></div>
+										<div class="hint"> должен быть не менее 6 символов, содержать цифры и заглавные буквы и не должен совпадать с именем и эл.почтой
+										</div>
+									</div>
+				        	<div class="form-group">
+				            <button type="submit" class="btn profile__refresh" name="signup-button">Обновить</button>
+									</div>
+			        	</form>
+						  </div>
+							<div class="profile__tabs_navigation">
+								<ul class="profile__tabs_caption">
+							    <li class="active"><i class="fal fa-eye"></i>Просмотреть профиль</li>
+							    <li><i class="fal fa-edit"></i>Редактировать данные</li>
+							    <li><i class="fal fa-unlock-alt"></i>Изменить пароль</li>
+							  </ul>
+							</div>
+						</div><!-- .tabs-->
+					</div>
+				</div>
+				<!-- Bonuses -->
+				<div class="profile-content">
+					<div class="profile-inner">
+						<h2>Бонусы</h2><br><br>
+            <p>На вашем счету: <span class="bonus-number">0</span> бонусов</p>
+					</div>
+				</div>
+				<!-- Linked accounts -->
+				<div class="profile-content">
+					<div class="profile-inner">
+						<h2>Привязанные аккаунты</h2><br><br>
+            <ul class="linked-accounts">
+              <li class="linked"><a href="#"><i class="fab fa-facebook"></i>Facebook</a></li>
+              <li><a href="#"><i class="fab fa-google-plus"></i>Google Plus</a></li>
+            </ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer class="footer">
+		<div class="footer-container">
+			<div class="footer__inner">
+
+				<div class="footer__col">
+					<h4 class="footer__title">информация о компании</h4>
+					<a href="/about.html" class="footer__link">О компании</a>
+					<a href="/contact" class="footer__link">Контакты</a>
+					<a href="/vacancy.html" class="footer__link">Вакансии</a>
+					<a href="/privacy-policy.html" class="footer__link">Политика конфиденциальности</a>
+				</div>
+
+				<div class="footer__col">
+					<h4 class="footer__title">Помощь</h4>
+					<a href="/payment-deliver.html" class="footer__link">Оплата и доставка</a>
+					<a href="/returns.html" class="footer__link">Возврат товара</a>
+					<a href="/questions-answers.html" class="footer__link">Вопросы и ответы</a>
+					<a href="/service.html" class="footer__link">Сервисные центры</a>
+					<a href="/track-order.html" class="footer__link">Отследить заказ</a>
+				</div>
+
+				<div class="footer__col">
+					<h4 class="footer__title">Сотрудничество</h4>
+					<a href="/b2b.html" class="footer__link">Кабинет B2B для партнеров</a>
+					<a href="/vendors.html" class="footer__link">Для поставщиков</a>
+					<a href="/private-person.html" class="footer__link">Для частных лиц</a>
+					<a href="/corporate.html" class="footer__link">Для корпоративных клиентов</a>
+					<a href="/dropsiping.html" class="footer__link">Дропшиппинг</a>
+				</div>
+
+				<div class="footer__col">
+					<h4 class="footer__title">Контактная информация</h4>
+					<a href="tel:+380508781858" class="footer__link">
+					тел: (050) 878 18 58</a>
+					<a href="/contact" class="footer__link">Адрес:</a>
+					<p class="footer__link">Принимаем к оплате:</p>
+					<div class="footer__payment">
+						<img src="../img/home/mastercard.png" alt="">
+						<img src="../img/home/visa-logo.png" alt="">
+						<img src="../img/home/privat.png" alt="">
+					</div>
+				</div>
+
+			</div>
+			<div class="footer__year">2011 &mdash; 2020</div>
+		</div>
+	</footer>
+</main>
+<!-- <div class="subscribe">
+	<a href="#!" class="subscribe-close">&#10006;</a>
+	<h3 class="subscribe__title title-underline">Следить за скидками и акциями <i class="far fa-envelope"></i></h3>
+	<form action="#" method="POST" class="subscribe__form">
+		<input type="email" required name="subscribe_email" class="subscribe__input" placeholder="E-mail">
+		<input type="text" name="subscribe_name" class="subscribe__input" placeholder="Имя">
+		<input type="text" name="subscribe_city" class="subscribe__input" placeholder="Город">
+		<button class="btn subscribe__btn">Подписаться</button>
+	</form>
+</div> -->
+<!-- Subscribe form (sale 10%) -->
+<div class="subscribe-for-sale" data-remodal-id="subscribe-for-sale-modal">
+	<span data-remodal-action="close" class="remodal-close"></span>
+	<h4>AMADIN<br> легко понять, где покупать.</h4>
+	<p class="subscribe-for-sale__desc">
+		Подписывайтесь на рассылку и получайте скидку в размере <span style="color: red; font-weight: 700; font-size:16px">10%</span> на первый заказ.
+	</p>
+	<br>
+	<form action="#" method="POST" class="subscribe-for-sale__form">
+		<input type="text" placeholder="ФИО">
+		<input type="email" placeholder="E-mail">
+		<button class="subscribe-for-sale__btn">Отправить</button>
+	</form>
+	<p class="subscribe-for-sale__desc">
+		*Подарок применяется только на первый интернет-заказ от 500 грн
+	</p>
+</div>
+<script src="https://amadino.com.ua/assets/f695a213/yii.js"></script>
+<script src="https://amadino.com.ua/assets/90f72702/authchoice.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.js"></script>
+<script src="https://amadino.com.ua/app/libs/slick-1.8.1/slick/slick.min.js"></script>
+<script src="https://amadino.com.ua/app/libs/remodal.js"></script>
+<script src="https://amadino.com.ua/app/libs/slideout.min.js"></script>
+<script src="https://amadino.com.ua/js/script.js"></script>
+<script src="../js/common.js?1"></script>
+<script src="https://amadino.com.ua/assets/f695a213/yii.activeForm.js"></script>
+<script>
+	jQuery(function ($) {
+		jQuery('#w0').authchoice();
+		jQuery('#w1').yiiActiveForm([], []);
+		jQuery('#w2').yiiActiveForm([], []);
+	});
+</script>
+</body>
+</html>

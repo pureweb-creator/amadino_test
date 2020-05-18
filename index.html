@@ -12,7 +12,7 @@
 
 	<!-- Libs -->
   <link href="https://amadino.com.ua/" rel="canonical">
-	<link href="libs/all.min.css" rel="stylesheet">
+	<link href="https://pro.fontawesome.com/releases/v5.2.0/css/all.css" rel="stylesheet">
   <link href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css" rel="stylesheet">
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="libs/remodal.css">
@@ -43,9 +43,20 @@
     </p>
     <br>
     <form action="#" method="POST" class="subscribe-for-sale__form">
-        <input type="text" placeholder="ФИО">
-        <input type="email" placeholder="E-mail">
-        <button class="subscribe-for-sale__btn">Отправить</button>
+				<div class="form-group">
+					<label for="name">
+						<input type="text" placeholder="ФИО" id="name">
+					</label>
+					<span class="error-box"></span>
+				</div>
+				<div class="form-group">
+					<label for="email">
+						<input type="email" placeholder="E-mail" id="email">
+					</label>
+					<!-- Если ошибка -->
+					<!-- <span class="error-box">Username or password is incorrect <img src="img/error-alert.svg" alt=""></span> -->
+				</div>
+        <button class="subscribe-for-sale__btn" id="validate" type="submit">Отправить</button>
     </form>
     <p class="subscribe-for-sale__desc">
         *Подарок применяется только на первый интернет-заказ от 500 грн

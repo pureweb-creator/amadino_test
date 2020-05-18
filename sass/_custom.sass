@@ -89,26 +89,58 @@
 	width: 330px
 	margin: 0 auto
 	margin-bottom: 20px
+	.form-group
+		margin-bottom: 16px
+		// &.error label::after
+		// 	background: #F44336
+	label
+		position: relative
+		width: 100%
+		&::after
+			width: 0
+			height: 2px
+			display: block
+			background: #009688
+			content: ""
+			position: absolute
+			bottom: 0px
+			left: 50%
+			transform: translateX(-50%)
+		&.active::after
+			transition: all .2s ease
+			display: block
+			width: 100%
+
 	input
 		margin: 0 auto
 		background: transparent
 		font-size: 16px
 		line-height: 24px
-		margin-bottom: 20px
 		width: 100%
-		color: rgba(0, 0, 0, 0.38)
+		font-family: 'Roboto'
+		color: #000
+		opacity: .87
 		display: block
 		padding-bottom: 6.5px
 		border-bottom: 2px solid rgba(0, 0, 0, 0.12)
-		&.active
-			border-bottom-color: #009688
-			transition: all .1s ease
+
+	.error-box
+		color: #F44336
+		font-family: 'Roboto', sans-serif
+		display: block
+		font-weight: 400
+		font-size: 12px
+		text-align: left
+		display: flex
+		align-items: center
+		justify-content: space-between
 	.subscribe-for-sale__btn
 		height: 36px
 		color: #fff
 		margin-left: auto
 		display: block
 		font-size: 14px
+		font-family: 'Roboto'
 		padding: 0px 17px
 		text-transform: uppercase
 		background: #009688
@@ -179,6 +211,8 @@
 
 			a
 				margin-right: 5px
+				&:hover
+					color: #fff
 
 			.favourite
 				width: 30px
@@ -257,6 +291,8 @@
 
 	.hm__bottom
 		margin-right: auto
+		.cart__button_cart_icon
+			width: 30px
 
 // Banners
 #icon-slider-right, #icon-slider-left

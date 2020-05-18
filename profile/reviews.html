@@ -24,7 +24,7 @@
 	<link href="https://amadino.com.ua/assets/90f72702/authchoice.css" rel="stylesheet">
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
 	<link href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css" rel="stylesheet">
-	<link href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" rel="stylesheet">
+	<link href="https://pro.fontawesome.com/releases/v5.2.0/css/all.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans&amp;display=swap" rel="stylesheet">
   <link href="https://amadino.com.ua/assets/1657853f/css/jquery.resizableColumns.min.css" rel="stylesheet">
 	<link href="https://amadino.com.ua/app/fonts/BebasNeue/stylesheet.css" rel="stylesheet">
@@ -34,7 +34,7 @@
 	<link href="https://amadino.com.ua/app/libs/slick-1.8.1/slick/slick.css" rel="stylesheet">
 	<link href="https://amadino.com.ua/flickity/flickity.min.css" rel="stylesheet">
 	<link href="https://amadino.com.ua/css/style.css?3" rel="stylesheet">
-	<link href="css/main.min.css?4" rel="stylesheet">
+	<link href="../css/main.min.css?4" rel="stylesheet">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 <!-- body class is REQUIRED! -->
@@ -90,9 +90,9 @@
 					<a href="/promo" class="nav__link">Акции!</a>
 				</nav>
 				<form action="/site/search" method="GET" id="w0" role="form" class="search-form">
-	                <button type="submit" class="search-form__button"><img src="img/path1.png" alt="search icon"></button>
-	                <input type="search" class="header__search ui-autocomplete-input search-form__input" name="SearchForm[q]" placeholder="Поиск по сайту" id="search_field" autocomplete="off" required>
-	            </form>
+            <button type="submit" class="search-form__button"><img src="../img/path1.png" alt="search icon"></button>
+            <input type="search" class="header__search ui-autocomplete-input search-form__input" name="SearchForm[q]" placeholder="Поиск по сайту" id="search_field" autocomplete="off" required>
+        </form>
 			</div>
 			<div class="header__top-line">
 				<div class="lang d-flex">
@@ -113,11 +113,11 @@
 			<div class="header__right">
 				<div class="right__sup">
 					<div class="signup-button">
-						<a href="/account"><i class="fa fa-sign-in-alt"></i>Личный кабинет</a>
+						<a href="/account"><i class="fal fa-sign-in-alt"></i>Личный кабинет</a>
 					</div>
 					<div class="cart-button">
 						<a href="#modal">
-							<i class="fas fa-shopping-cart cart__button_cart_icon"></i>Корзина
+							<img src="../img/icons8-opencart.svg" class="cart__button_cart_icon" alt="cart">Корзина
 							<span class="cart-number">0</span>
 						</a>
 					</div>
@@ -125,7 +125,7 @@
 				<div class="right__sub">
 					<div class="contact-phone">
 						<a href="tel:+380508781858">
-							<i class="fa fa-phone" style="transform: rotate(90deg); font-size: 18px; margin-right: 10px"></i>
+							<i class="fal fa-phone-alt" style="font-size: 18px; margin-right: 10px"></i>
 							тел:  <span class="color-green">(050) 878 18 58</span>
 						</a>
 						<ul class="right__sub_contact_phones">
@@ -134,31 +134,31 @@
 						</ul>
 					</div>
 					<div class="header__actions d-flex">
-						<a href="/catalog/favorites" class="favourite"><i class="far fa-heart"></i>
+						<a href="/catalog/favorites" class="favourite"><i class="fal fa-heart"></i>
 							<span class="favourite__number">3</span></a>
-							<a href="/catalog/compare" class="comparsions"><i class="fas fa-balance-scale"></i></a>
-							<a href="#" class="bonus"><i class="fas fa-gift"></i>
+							<a href="/catalog/compare" class="comparsions"><i class="fal fa-balance-scale"></i></a>
+							<a href="#" class="bonus"><i class="fal fa-gift"></i>
 						</a>
 					</div>
 				</div>
 			</div>
 			<div class="header-mobile">
 				<div class="hm__logo">
-					<a href="https://amadino.com.ua/" class="logo"><img src="img/header-logo.png" alt="Amadino"></a>
+					<a href="https://amadino.com.ua/" class="logo"><img src="../img/header-logo.png" alt="Amadino"></a>
 				</div>
 				<div class="hm__top">
 					<i class="fa fa-bars" id="burgerButton"></i>
 				</div>
 				<div class="hm__middle">
 					<form action="/site/search" method="GET" id="w2" role="form" class="search-form">
-		                <button type="submit" class="search-form__button"><img src="img/path1.png" alt="search icon"></button>
+		                <button type="submit" class="search-form__button"><img src="../img/path1.png" alt="search icon"></button>
 		                <input type="search" class="header__search ui-autocomplete-input search-form__input" name="SearchForm[q]" placeholder="Поиск по сайту" id="search_field" autocomplete="off" required>
 		            </form>
 				</div>
 				<div class="hm__bottom">
 					<div class="cart-button">
 						<a href="#modal">
-							<i class="fas fa-shopping-cart cart__button_cart_icon"></i>
+							<img src="../img/icons8-opencart.svg" class="cart__button_cart_icon" alt="cart">
 							<span class="cart-number"></span>
 						</a>
 					</div>
@@ -170,7 +170,7 @@
 		<aside class="account__panel">
 			<div class="aside__logo">
 				<a href="https://amadino.com.ua/">
-					<img src="img/header-logo.png" alt="Amadin">
+					<img src="../img/header-logo.png" alt="Amadin">
 				</a>
 			</div>
 			<div class="profile">
@@ -178,10 +178,10 @@
 					<!-- Active — текущая вкладка -->
 					<li><a href="profile.html"><i class="fas fa-database"></i><span>Личные данные</span></a></li>
 					<li><a href="profile-wishlist.html"><i class="fas fa-heart"></i><span>Список желаний</span></a></li>
-					<li class="active"><a href="orders.html"><i class="fas fa-tags"></i><span>Мои заказы</span></a></li>
+					<li><a href="orders.html"><i class="fas fa-tags"></i><span>Мои заказы</span></a></li>
 					<li><a href="#modal"><i class="fa fa-shopping-cart"></i><span>Корзина</span></a></li>
 					<li><a href="viewed.html"><i class="fa fa-eye"></i><span>Просмотренные товары</span></a></li>
-					<li><a href="reviews.html"><i class="fas fa-reply-all"></i><span>Мои отзывы</span></a></li>
+					<li class="active"><a href="reviews.html"><i class="fas fa-reply-all"></i><span>Мои отзывы</span></a></li>
 					<li><a href="correspondense.html"><i class="fas fa-comments"></i><span>Моя переписка</span></a></li>
 					<li>
 						<form class="forms" action="/site/logout" method="post">
@@ -205,54 +205,48 @@
               </li>
 						</ul>
 					</div>
-					<h1 class="profile-main__title">Мои заказы</h1>
+					<h1 class="profile-main__title">Мои отзывы</h1>
 				</div>
 				<div class="profile-content">
 					<div class="profile-inner">
-						<h2>Мои заказы</h2><br><br>
-            <div class="orders">
-            	<div class="orders__item">
-            		<div class="orders__item-top_line d-flex">
-            			<div class="top_line__item">Номер заказа: №0123819203</div>
-            			<div class="top_line__item">Общая стоимость: 239грн.</div>
-            			<div class="top_line__item">Дата заказа: 15.05.2020</div>
-            		</div>
-								<div class="orders__item-main_info">
-									<div class="main_info__item">
-										<img class="main_info__thumbnail" src="img/product-image-2.jpg" alt="product thumbnail">
-									</div>
-									<div class="main_info__item main_info__item_product-description">
-										<h3 class="item__title"><a href="#">Имя товара</a></h3>
-										<span class="item__price">239грн.</span>
-										<span class="item__count">х1</span>
-									</div>
-									<div class="main_info__item">
-										<span class="delivery_status status_completed"><i class="fa fa-check"></i>Доставлено</span>
-										<!-- <span class="delivery_status status_not-completed"><i class="fa fa-times"></i>Не доставлено</span> -->
-									</div>
-								</div>
-            	</div>
-							<div class="orders__item">
-            		<div class="orders__item-top_line d-flex">
-            			<div class="top_line__item">Номер заказа: №0123819203</div>
-            			<div class="top_line__item">Общая стоимость: 239грн.</div>
-            			<div class="top_line__item">Дата заказа: 15.05.2020</div>
-            		</div>
-								<div class="orders__item-main_info">
-									<div class="main_info__item">
-										<img class="main_info__thumbnail" src="img/product-image-2.jpg" alt="product thumbnail">
-									</div>
-									<div class="main_info__item main_info__item_product-description">
-										<h3 class="item__title"><a href="#">Имя товара</a></h3>
-										<span class="item__price">239грн.</span>
-										<span class="item__count">х1</span>
-									</div>
-									<div class="main_info__item">
-										<span class="delivery_status status_completed"><i class="fa fa-check"></i>Доставлено</span>
-										<!-- <span class="delivery_status status_not-completed"><i class="fa fa-times"></i>Не доставлено</span> -->
-									</div>
-								</div>
-            	</div>
+						<h2>Мои отзывы</h2><br><br>
+            <div class="reviews">
+              <div class="reviews__item">
+                <div class="item__main-info">
+                  <img src="https://i2.rozetka.ua/goods/10462142/apple_ipod_earpods_with_mic_images_10462142054.jpg" alt="thumbnail" class="main_info__thumbnail">
+                </div>
+                <div class="item__main-info">
+                  <h3 class="item__main-info__title">
+                    <a href="#">Наушники Apple iPhone EarPods</a>
+                  </h3>
+                  <div class="review">
+                    <h4 class="review__author">Валентин Господарчук</h4>
+                    <span class="review__pubdate d-flex">2 мая 2020 <a href="#"><i class="fa fa-link"></i></a></span>
+                    <p class="review__text">
+                      Amadin - как всегда на высоте, спасибо
+                    </p>
+                    <a href="#" class="review__reply-link">Ответить</a>
+                  </div>
+                </div>
+              </div>
+              <div class="reviews__item">
+                <div class="item__main-info">
+                  <img src="https://i2.rozetka.ua/goods/10462142/apple_ipod_earpods_with_mic_images_10462142054.jpg" alt="thumbnail" class="main_info__thumbnail">
+                </div>
+                <div class="item__main-info">
+                  <h3 class="item__main-info__title">
+                    <a href="#">Наушники Apple iPhone EarPods</a>
+                  </h3>
+                  <div class="review">
+                    <h4 class="review__author">Валентин Господарчук</h4>
+                    <span class="review__pubdate d-flex">2 мая 2020 <a href="#"><i class="fa fa-link"></i></a></span>
+                    <p class="review__text">
+                      Хорошие наушники, спасибо
+                    </p>
+                    <a href="#" class="review__reply-link">Ответить</a>
+                  </div>
+                </div>
+              </div>
             </div>
 					</div>
 				</div>
@@ -296,9 +290,9 @@
 					<a href="/contact" class="footer__link">Адрес:</a>
 					<p class="footer__link">Принимаем к оплате:</p>
 					<div class="footer__payment">
-						<img src="/app/img/home/mastercard.png" alt="">
-						<img src="/app/img/home/visa-logo.png" alt="">
-						<img src="/app/img/home/privat.png" alt="">
+						<img src="../img/home/mastercard.png" alt="">
+						<img src="../img/home/visa-logo.png" alt="">
+						<img src="../img/home/privat.png" alt="">
 					</div>
 				</div>
 
@@ -349,7 +343,7 @@
 <script src="https://amadino.com.ua/app/libs/remodal.js"></script>
 <script src="https://amadino.com.ua/app/libs/slideout.min.js"></script>
 <script src="https://amadino.com.ua/js/script.js"></script>
-<script src="js/common.js?1"></script>
+<script src="../js/common.js?1"></script>
 <script src="https://amadino.com.ua/assets/f695a213/yii.activeForm.js"></script>
 <script>jQuery(function ($) {
 kvExpandRow(kvExpandRow_316e8def, 'w0_d7380716');
