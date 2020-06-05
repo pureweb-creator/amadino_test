@@ -12,18 +12,18 @@ $(document).ready(function(){
         $(this).toggleClass('active');
     });
 
-    // sessionStorage
-    var SS_KEY = 'modal_shown';
+    // localStorage
+    var LS_KEY = 'modal_shown';
 
     // Если модал еще не открывали
     var inst = $('[data-remodal-id=subscribe-for-sale-modal]').remodal();
-    if (!sessionStorage.getItem(SS_KEY)) {
+    if (!localStorage.getItem(LS_KEY)) {
         setTimeout(function() {
         // Открываем модал
         inst.open();
 
         // Сохраняем флаг в localStorage
-        sessionStorage.setItem(SS_KEY, '1');
+        localStorage.setItem(LS_KEY, '1');
         }, 1000);
     }
 
@@ -404,17 +404,18 @@ $(document).ready(function(){
 
     // Mobile Categories for front page
     if($(window).width() <= 480 ){
-        $('.aside__inner_one').hide();
+        $('.aside__inner').hide();
+        $('.desktop__categories_title').hide();
         $('.mobile__categories_title').on('click', function(){
-            $('.aside__inner_one').slideToggle();
+            $('.aside__inner').slideToggle();
         });
+    } else {
+      $('.is-open').slideDown();
+      $('.is-close .aside__nav').slideUp();
+      $('.desktop__categories_title').on('click', function(){
+          $('.aside__nav').slideToggle();
+      });
     }
-
-    // For other pages
-    $('#aside__nav_two').hide();
-    $('.desktop__categories_title').on('click', function(){
-        $('#aside__nav_two').slideToggle();
-    });
 
    // Masked input
    $('#order-call__tel, #buy-one-click__tel').mask('+380 (99) 999-99-99');
@@ -904,6 +905,7 @@ $('.cateogry-view__button_filter').on('click', function(){
 });
 
 $(function () {
+  if(document.querySelector("#carousel > div")){
     $(".slider").slick({
         autoplay: false,
         dots: true,
@@ -916,4 +918,5 @@ $(function () {
     $('.ex1').zoom({
         magnify: 1.5
     });
+  }
 });
