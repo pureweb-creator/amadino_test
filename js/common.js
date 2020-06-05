@@ -610,7 +610,30 @@ $(document).ready(function(){
 
     // Add favourite
     $('.products-card__wish_btn').on('click', function(){
+
+        var favourite__number = $('#favourite__number');
+        var favorites_count = parseInt(favourite__number.text());
+
         $(this).find('.fa-heart').toggleClass("fas wish_btn--clicked");
+
+        if($(this).find('.fa-heart').hasClass('fas wish_btn--clicked')) {
+            favourite__number.text(favorites_count + 1);
+            $('#favourite__number_menu').text(favorites_count + 1);
+        } else {
+            favourite__number.text(favorites_count - 1);
+            $('#favourite__number_menu').text(favorites_count - 1);
+        }
+
+        var product_id = $(this).data('id');
+        if(product_id) {
+            $.post(
+                "/catalog/add-favorites",
+                {
+                    id: product_id,
+                }
+            );
+        }
+
     });
 
     // Mobile phones
