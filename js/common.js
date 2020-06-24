@@ -635,11 +635,6 @@ $(document).ready(function(){
         }
 
     });
-
-    // Mobile phones
-    $('.mobile-phone__button').on('click', function(){
-        $('.mobile-phone__list').slideToggle();
-    });
 });
 
 // Slideout
