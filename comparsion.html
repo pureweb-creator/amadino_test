@@ -1,0 +1,1712 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<!-- Fonts -->
+	<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous"> -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="fonts/BebasNeue/stylesheet.css">
+	<link rel="stylesheet" href="fonts/Gilroy/stylesheet.css">
+
+	<!-- Libs -->
+  <link href="https://amadino.com.ua/" rel="canonical">
+	<link href="https://pro.fontawesome.com/releases/v5.2.0/css/all.css" rel="stylesheet">
+  <link href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="libs/remodal.css">
+	<link rel="stylesheet" type="text/css" href="libs/remodal-default-theme.css">
+	<link rel="stylesheet" href="libs/slick-1.8.1/slick/slick.css">
+	<link rel="stylesheet" type="text/css" href="https://amadino.com.ua/flickity/flickity.min.css">
+	<link rel="stylesheet" type="text/css" href="https://amadino.com.ua/assets/9b8159c5/css/activeform.min.css">
+
+
+	<!-- MAIN CSS FILE -->
+	<link rel="stylesheet" type="text/css" href="https://amadino.com.ua/css/style.css?2">
+	<link rel="stylesheet" href="css/main.min.css">
+	<link href="https://amadino.com.ua/assets/db2d5c61/authchoice.css" rel="stylesheet">
+
+	<title>Главная</title>
+</head>
+<body>
+<!-- Subscribe form (sale 10%) -->
+<div class="subscribe-for-sale" data-remodal-id="subscribe-for-sale-modal">
+    <span data-remodal-action="close" class="remodal-close"></span>
+    <h4>AMADIN<br> легко понять, где покупать.</h4>
+    <p class="subscribe-for-sale__desc">
+      Подписывайтесь на рассылку и получайте скидку в размере <span style="color: red; font-weight: 700; font-size:16px">10%</span> на первый заказ.
+    </p>
+    <br>
+    <form action="#" method="POST" class="subscribe-for-sale__form">
+				<div class="form-group">
+					<label for="name">
+						<input type="text" placeholder="ФИО" id="name">
+					</label>
+					<span class="error-box"></span>
+				</div>
+				<div class="form-group">
+					<label for="email">
+						<input type="email" placeholder="E-mail" id="email">
+					</label>
+					<!-- Если ошибка -->
+					<!-- <span class="error-box">Username or password is incorrect <img src="img/error-alert.svg" alt=""></span> -->
+				</div>
+        <button class="subscribe-for-sale__btn" id="validate" type="submit">Отправить</button>
+    </form>
+    <p class="subscribe-for-sale__desc">
+        *Подарок применяется только на первый интернет-заказ от 500 грн
+    </p>
+</div>
+
+<!-- Register main -->
+<div class="registration remodal-bg" id="registrationModal">
+    <div class="modal-first remodal" id="modalFirst" data-remodal-id="reg-auth-modal">
+        <span data-remodal-action="close" class="remodal-close"></span>
+        <h2 class="reg__title modal-first__title">Выберите, что вам подоходит: </h2>
+        <button class="modal__buyers-button" id="buyersButton"><a href="#reg-auth-buyers-modal">Вход/Регистрация для покупателей</a></button>
+        <button class="modal__partners-button" id="partnersButton"><a href="#reg-auth-parthners-modal">Вход/Регистрация для партнеров</a></button>
+    </div>
+</div>
+
+<!-- Register for Buyers -->
+<div class="remodal-bg">
+	<div class="modal__buyers remodal remodal-is-initialized remodal-is-opened" id="buyers" data-remodal-id="reg-auth-buyers-modal" tabindex="-1">
+		<div class="modal__signin">
+				<div class="reg__title">Войти</div>
+				<form id="login-form" action="/login" method="post">
+					<input type="hidden" name="_csrf-frontend" value="rxfaSJhGW9z2BkIqb_p6xTz6ckUNHDDbTzyroAWWKV-ec4AJ9wQir6NIMkAYvk2Ne5kKNVItHbd7avLMYO5EMQ==">
+					<div class="form-group field-loginform-username required">
+						<input type="email" id="loginform-username" class="form-control" name="LoginForm[username]" placeholder="E-mail" autocomplete="username" aria-required="true">
+						<div class="invalid-feedback"></div>
+					</div>
+					<div class="form-group field-loginform-password required">
+						<input type="password" id="loginform-password" class="form-control" name="LoginForm[password]" placeholder="Пароль" autocomplete="current-password" aria-required="true">
+						<div class="invalid-feedback"></div>
+					</div>
+					<div class="row">
+						<div class="col-lg-3">
+								<button type="submit" class="btn" name="login-button">Войти</button>
+						</div>
+						<div class="col-lg-4">
+								<a class="pt-3" href="/request-password-reset"><span class="color-green">Забыли пароль?</span></a>
+							</div>
+					</div>
+				</form>
+				<br style="clear: both;">
+		</div>
+		<div class="modal__signup">
+				<div style="width: 300px; margin: 0 auto;">
+					<div id="w0">
+						<h6 style="color: #00a046">Войти как пользователь</h6>
+						<ul class="auth-clients d-flex justify-content-center" style="margin-top: 20px">
+							<li><a class="google auth-link" href="/site/auth?authclient=google" title="Google"><span class="auth-icon google"></span></a></li>
+							<li><a class="facebook auth-link" href="/site/auth?authclient=facebook" title="Facebook"><span class="auth-icon facebook"></span></a></li>
+						</ul>
+					</div>
+				</div>
+				<br><br>
+				<div class="reg__title">Зарегистрироваться</div>
+				<form id="form-signup" action="/register" method="post">
+					<input type="hidden" name="_csrf-frontend" value="rxfaSJhGW9z2BkIqb_p6xTz6ckUNHDDbTzyroAWWKV-ec4AJ9wQir6NIMkAYvk2Ne5kKNVItHbd7avLMYO5EMQ==">
+					<div class="form-group field-signupform-name required">
+						<input type="text" id="signupform-name" class="form-control" name="SignupForm[name]" placeholder="Имя" aria-required="true">
+						<div class="invalid-feedback"></div>
+					</div>
+					<div class="form-group field-signupform-email required">
+						<input type="text" id="signupform-email" class="form-control" name="SignupForm[email]" placeholder="E-mail" autocomplete="username" aria-required="true">
+						<div class="invalid-feedback"></div>
+					</div>
+					<div class="form-group field-signupform-password required">
+						<input type="password" id="signupform-password" class="form-control" name="SignupForm[password]" placeholder="Пароль" autocomplete="new-password" aria-required="true">
+						<div class="invalid-feedback"></div>
+					</div>
+					<label class="contact__label contact__label--2">
+							<input type="checkbox" name="policy" id="reg-buyer-policy" class="contact__radio policy" checked="">
+							Я соглашаюсь с пользовательским соглашением и политикой конфиденциальности портала amadino.com.ua
+							<span class="checkmark"></span>
+					</label>
+					<button type="submit" class="btn" name="signup-button">Зарегистрироваться</button>
+				</form>
+			</div>
+	</div>
+</div>
+
+<!-- Register for Parthners -->
+<div class="remodal-bg">
+    <div class="modal__partners remodal" id="partners" data-remodal-id="reg-auth-parthners-modal">
+        <span data-remodal-action="close" class="remodal-close"></span>
+        <div class="modal__signin">
+            <div class="reg__title">Вход для партнеров</div>
+            <form action="#" class="modal__signing">
+                <input type="text" name placeholder="Имя">
+                <input type="text" name placeholder="Фамилия">
+                <input type="email" name placeholder="E-mail">
+                <button class="btn">Войти как партнер</button>
+            </form>
+        </div>
+
+        <div class="modal__signup">
+            <div class="reg__title">Регистрация для партнеров</div>
+            <form action="#" class="modal__signing">
+                <input type="text" name placeholder="Имя">
+                <input type="text" name placeholder="Фамилия">
+                <input type="email" name placeholder="E-mail">
+                <label class="contact__label contact__label--2">
+                    <input type="checkbox" name="policy" id="reg-parthner-policy" class="contact__radio policy" checked>
+                    Я соглашаюсь с пользовательским соглашением и политикой конфиденциальности портала Amadino.com.ua
+                    <span class="checkmark"></span>
+                </label>
+                <button class="btn">Зарегистрироваться</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Product cart -->
+<div class="remodal-bg">
+    <div class="remodal" data-remodal-id="modal">
+    <span data-remodal-action="close" class="remodal-close"></span>
+    <h2 class="remodal-title">Корзина</h2>
+    <p class="cards-wrapper">
+        <div class="cards-wrapper__item">
+            <div class="product-card d-flex">
+                <button class="remodal-close"></button>
+                <div class="product-img">
+                    <a href="product-page.html"><img src="img/home/tachka.png" alt="Садовая Тачка"></a>
+                </div>
+                <div class="product-title">
+                    <a href="product-page.html">Forte WB6407A Тачка садовая</a>
+                </div>
+                <div class="product-price submit-cart">
+                    <div class="product-card__price">
+                        <span class="discount__price">499 <small>грн</small></span>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card d-flex">
+                <button class="remodal-close"></button>
+                <div class="product-img">
+                    <a href="product-page.html"><img src="img/home/tachka.png" alt="Садовая Тачка"></a>
+                </div>
+                <div class="product-title">
+                    <a href="product-page.html">Forte WB6407A Тачка садовая</a>
+                </div>
+                <div class="product-price submit-cart">
+                    <div class="product-card__price">
+                        <span class="discount__price">499 <small>грн</small></span>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card d-flex">
+                <button class="remodal-close"></button>
+                <div class="product-img">
+                    <a href="product-page.html"><img src="img/home/tachka.png" alt="Садовая Тачка"></a>
+                </div>
+                <div class="product-title">
+                    <a href="product-page.html">Forte WB6407A Тачка садовая</a>
+                </div>
+                <div class="product-price submit-cart">
+                    <div class="product-card__price">
+                        <span class="discount__price">499 <small>грн</small></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </p>
+      <br><br><br>
+      <button data-remodal-action="cancel" class="continue">Продложить покупки</button>
+      <button class="order"><a href="cart.html">Оформить заказ</a></button>
+    </div>
+</div>
+
+<!-- Slideout Menu -->
+<nav id="menu">
+    <ul class="menu__list">
+        <li><a href="#">О компании</a></li>
+        <li><a href="#">Возврат и гарантия товара</a></li>
+        <li><a href="#">Доставка и оплата</a></li>
+        <li><a href="#">Контакты</a></li>
+        <li><a href="#">Акции</a></li>
+    </ul>
+    <div class="mobile-phone">
+        <button class="mobile-phone__button"><i class="fa fa-phone" style="transform: rotate(90deg);"></i> &nbsp; Позвонить нам</button>
+        <ul class="mobile-phone__list">
+            <li><a href="tel:+0800750250">+0800750240</a></li>
+            <li><a href="tel:+0800750250">+0800750240</a></li>
+            <li><a href="tel:+0800750250">+0800750240</a></li>
+            <li><a href="tel:+0800750250">+0800750240</a></li>
+        </ul>
+    </div>
+    <div class="lang d-flex">
+        <span class="title">Язык: </span>
+        <a href="#!" class="lang__link lang__ru lang__active">ru</a>
+        <span class="divider">|</span>
+        <a href="#!" class="lang__link lang__eg">eg</a>
+         <span class="divider">|</span>
+        <a href="#!" class="lang__link lang__ua">ua</a>
+    </div>
+    <div class="signup-button">
+        <a href="#reg-auth-modal" id="signUpButton">
+            <i class="fal fa-sign-in-alt"></i>Регистрация/Вход
+        </a>
+    </div>
+    <div class="header__actions d-flex">
+        <a href="#!" class="favourite"><i class="far fa-heart"></i><span class="favourite__number favourite__number--mob">0</span></a>
+        <a href="#!" class="comparsions"><i class="fas fa-balance-scale"></i></a>
+        <a href="#!" class="bonus"><i class="fas fa-gift"></i></a>
+    </div>
+</nav>
+
+<!-- Main Panel -->
+<main id="panel">
+
+<!-- Hero -->
+<header class="header">
+    <div class="header-container">
+        <div class="header__logo">
+        </div>
+        <div class="header__nav">
+            <nav class="nav">
+                <a href="#" class="nav__link">О компании</a>
+                <a href="#" class="nav__link">Возврат и гарантия товара</a>
+                <a href="#" class="nav__link">Доставка и оплата</a>
+                <a href="#" class="nav__link">Контакты</a>
+                <a href="#" class="nav__link">Акции</a>
+            </nav>
+            <form action="/site/search" method="GET" id="w0" role="form" class="search-form">
+                <button type="submit" class="search-form__button"><img src="img/path1.png" alt="search icon"></button>
+                <input type="search" class="header__search ui-autocomplete-input search-form__input" name="SearchForm[q]" placeholder="В поисках разума не потеряй сердце." id="search_field" autocomplete="off" required>
+            </form>
+        </div>
+        <div class="header__top-line">
+            <div class="lang d-flex">
+                <span class="title">Язык: </span>
+                <a href="#!" class="lang__link lang__ru lang__active">ru</a>
+                <span class="divider">|</span>
+                <a href="#!" class="lang__link lang__eg">eg</a>
+                 <span class="divider">|</span>
+                <a href="#!" class="lang__link lang__ua">ua</a>
+            </div>
+            <div class="order-call">
+                <button class="order-call__btn btn">
+                    Заказать звонок
+                </button>
+                <form action="#" method="POST" class="order-call__form">
+                    <input type="text" name="name" id="order-call__name" placeholder="Имя" class="form__input">
+                    <input type="tel" name="tel" id="order-call__tel" placeholder="Телефон" class="form__input">
+                    <button class="order-call__btn btn">
+                        Заказать звонок
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div class="header__right">
+            <div class="right__sup">
+                <div class="signup-button">
+                    <a href="#reg-auth-modal" id="signUpButton">
+                        <i class="fal fa-sign-in-alt"></i>Регистрация/Вход
+                    </a>
+                </div>
+                <div class="cart-button">
+                    <a href="#modal">
+                        <img src="img/icons8-opencart.svg" class="cart__button_cart_icon" alt="">
+                        Корзина
+                        <span class="cart-number">0</span>
+                    </a>
+                </div>
+            </div>
+            <div class="right__sub">
+                <div class="contact-phone">
+                    <a href="tel:+0800750250"><i class="fal fa-phone-alt" style="font-size: 18px; margin-right: 10px"></i> 0800 <span class="color-green">750 250</span></a>
+                    <ul class="right__sub_contact_phones">
+                        <li><a href="tel:+0800750250">0800 <span>750 250</span></a></li>
+                        <li><a href="tel:+0800750250">0800 <span>750 250</span></a></li>
+                        <li><a href="tel:+0800750250">0800 <span>750 250</span></a></li>
+                    </ul>
+                </div>
+
+                <div class="header__actions d-flex">
+                    <a href="#!" class="favourite"><i class="fal fa-heart"></i><span class="favourite__number">3</span></a>
+                    <a href="#!" class="comparsions"><i class="fal fa-balance-scale"></i><span class="favourite__number">4</span></a>
+                    <a href="#!" class="bonus"><i class="fal fa-gift"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="header-mobile">
+            <div class="hm__logo">
+                <a href="index.html" class="logo"><img src="img/header-logo.png" alt="Amadino"></a>
+            </div>
+            <div class="hm__top">
+                <i class="fa fa-bars" id="burgerButton"></i>
+            </div>
+
+            <div class="hm__middle">
+                <form action="/site/search" method="GET" id="w0" role="form" class="search-form">
+                    <button type="submit" class="search-form__button"><img src="img/path1.png" alt="search icon"></button>
+                    <input type="search" class="header__search ui-autocomplete-input search-form__input" name="SearchForm[q]" placeholder="В поисках разума не потеряй сердце." id="search_field_mob" autocomplete="off" required>
+                </form>
+            </div>
+            <div class="hm__bottom">
+								<div class="mobile-phone">
+									+0800750240
+									<ul class="mobile-phone__additional">
+										<li><a href="tel:0800750240">+0800750240</a></li>
+										<li><a href="tel:0800750240">+0800750240</a></li>
+										<li><a href="tel:0800750240">+0800750240</a></li>
+									</ul>
+								</div>
+                <div class="cart-button">
+                    <a href="#modal">
+                          <img src="img/icons8-opencart.svg" class="cart__button_cart_icon" alt="">
+                        <span class="cart-number"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Main -->
+<div class="page-wrapper">
+  <aside class="aside">
+        <div class="aside__logo">
+            <a href="index.html">
+                <img src="img/header-logo.png" alt="Amadin">
+            </a>
+        </div>
+				<a href="#" class="mobile__categories_title"><i class="fa fa-list-ul categories_icon"></i> Все Категории</a>
+				<div class="aside__inner is-open pt-20">
+					<a href="#" class="desktop__categories_title"><i class="fa fa-list-ul categories_icon"></i> Все Категории</a>
+            <ul class="aside__nav">
+                <li class="aside__nav-item">
+                    <a href="subcategories.html"><i class="fas fa-volleyball-ball"></i> Активный отдых, спорт и туризм</a>
+                    <div class="submenu">
+                        <div class="submenu__col">
+                            <ul class="aside__nav-sublist">
+                                <li class="aside__nav-sublist-item">
+                                    <a href="/aktivnyj-otdyh-sport-i-turizm/akkumulatornye-radio">
+                                        Аккумуляторные радио
+                                    </a>
+                                </li>
+                                <li class="aside__nav-sublist-item">
+                                    <a href="/aktivnyj-otdyh-sport-i-turizm/badminton-tennis-darts-basketbol-sahmaty">
+                                        Бадминтон, теннис, дартс, шахматы
+                                    </a>
+                                </li>
+                                <li class="aside__nav-sublist-item">
+                                    <a href="/aktivnyj-otdyh-sport-i-turizm/multiinstrumenty-multituly">
+                                        Мультиинструменты (мультитулы)
+                                    </a>
+                                </li>
+                                <li class="aside__nav-sublist-item">
+                                    <a href="/aktivnyj-otdyh-sport-i-turizm/maci-volejbolnye-i-futbolnye">
+                                        Мячи футбольные, волейбольные, баскетбольные, теннисные
+                                    </a>
+                                </li>
+                                <li class="aside__nav-sublist-item">
+                                    <a href="/aktivnyj-otdyh-sport-i-turizm/nabory-dla-otdyha">
+                                        Наборы для отдыха <i class="fa fa-angle-right"></i>
+                                    </a>
+                                    <ul class="aside__nav-sublist2x">
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/aksessuary-k-elektrotransportu">Аксессуары к электротранспорту</a>
+                                        </li>
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/girobordy">Гироборды</a>
+                                        </li>
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/girobordy-maksi">Гироборды-макси</a>
+                                        </li>
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/monokolesa">Моноколеса</a>
+                                        </li>
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/elektrovelosipedy">Электровелосипеды</a>
+                                        </li>
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/elektrosamokaty">Электросамокаты</a>
+                                        </li>
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/elektroskejty">Электроскейты</a>
+                                        </li>
+                                     </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="submenu__col">
+                            <ul class="aside__nav-sublist">
+                                <li class="aside__nav-sublist-item">
+                                    <a href="/aktivnyj-otdyh-sport-i-turizm/nozi-skladnye">
+                                        Ножи складные
+                                    </a>
+                                </li>
+                                <li class="aside__nav-sublist-item">
+                                    <a href="/aktivnyj-otdyh-sport-i-turizm/nozi-universalnye">
+                                        Ножи универсальные
+                                    </a>
+                                </li>
+                                <li class="aside__nav-sublist-item">
+                                    <a href="/aktivnyj-otdyh-sport-i-turizm/passazirskie-perevozki">
+                                        Пассажирские перевозки <i class="fa fa-angle-right"></i>
+                                    </a>
+
+                                    <ul class="aside__nav-sublist2x">
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/passazirskie-perevozki/aviabilety">Авиабилеты</a>
+                                        </li>
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/passazirskie-perevozki/avtobusnye-bilety">
+                                                Автобусные билеты
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="aside__nav-sublist-item">
+                                    <a href="/aktivnyj-otdyh-sport-i-turizm/portativnye-pusko-zaradnye-ustrojstva">
+                                        Портативные пуско-зарядные устройства
+                                    </a>
+                                </li>
+                                <li class="aside__nav-sublist-item">
+                                    <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport">
+                                        Электротранспорт <i class="fa fa-angle-right"></i>
+                                    </a>
+                                    <ul class="aside__nav-sublist2x">
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/aksessuary-k-elektrotransportu">Аксессуары к электротранспорту</a>
+                                        </li>
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/girobordy">Гироборды</a>
+                                        </li>
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/girobordy-maksi">Гироборды-макси</a>
+                                        </li>
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/monokolesa">Моноколеса</a>
+                                        </li>
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/elektrovelosipedy">Электровелосипеды</a>
+                                        </li>
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/elektrosamokaty">Электросамокаты</a>
+                                        </li>
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/elektroskejty">Электроскейты</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="submenu__col">
+                            <ul class="aside__nav-sublist">
+                                <li class="aside__nav-sublist-item">
+                                    <a href="/aktivnyj-otdyh-sport-i-turizm/sanki">
+                                        Санки
+                                    </a>
+                                </li>
+                                <li class="aside__nav-sublist-item">
+                                    <a href="/aktivnyj-otdyh-sport-i-turizm/strahovanie">
+                                        Страхование
+                                    </a>
+
+                                    <ul class="aside__nav-sublist2x">
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/strahovanie/strahovanie-avtotransporta">Страхование автотранспорта</a>
+                                        </li>
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/strahovanie/strahovanie-turistov">
+                                                Страхование туристов
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="aside__nav-sublist-item">
+                                    <a href="/aktivnyj-otdyh-sport-i-turizm/termosy-i-termo-posuda">
+                                        Термосы и термо посуда
+                                    </a>
+                                </li>
+                                <li class="aside__nav-sublist-item">
+                                    <a href="/aktivnyj-otdyh-sport-i-turizm/turisticeskie-gorelki-plity-i-aksessuary">
+                                        Туристические горелки, плиты и аксессуары
+                                    </a>
+                                </li>
+                                <li class="aside__nav-sublist-item">
+                                    <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport">
+                                        Электротранспорт <i class="fa fa-angle-right"></i>
+                                    </a>
+                                    <ul class="aside__nav-sublist2x">
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/aksessuary-k-elektrotransportu">Аксессуары к электротранспорту</a>
+                                        </li>
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/girobordy">Гироборды</a>
+                                        </li>
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/girobordy-maksi">Гироборды-макси</a>
+                                        </li>
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/monokolesa">Моноколеса</a>
+                                        </li>
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/elektrovelosipedy">Электровелосипеды</a>
+                                        </li>
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/elektrosamokaty">Электросамокаты</a>
+                                        </li>
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/elektroskejty">Электроскейты</a>
+                                        </li>
+                                     </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="aside__nav-item">
+                    <a href="subcategories.html"><i class="fas fa-wrench"></i> Техника, оборудование, инструмент</a>
+                    <div class="submenu">
+                        <div class="submenu__col">
+                            <ul class="aside__nav-sublist">
+                                <li class="aside__nav-sublist-item">
+                                    <a href="/aktivnyj-otdyh-sport-i-turizm/akkumulatornye-radio">
+                                        Аккумуляторные радио
+                                    </a>
+                                </li>
+                                <li class="aside__nav-sublist-item">
+                                    <a href="/aktivnyj-otdyh-sport-i-turizm/badminton-tennis-darts-basketbol-sahmaty">
+                                        Бадминтон, теннис, дартс, шахматы
+                                    </a>
+                                </li>
+                                <li class="aside__nav-sublist-item">
+                                    <a href="/aktivnyj-otdyh-sport-i-turizm/multiinstrumenty-multituly">
+                                        Мультиинструменты (мультитулы)
+                                    </a>
+                                </li>
+                                <li class="aside__nav-sublist-item">
+                                    <a href="/aktivnyj-otdyh-sport-i-turizm/maci-volejbolnye-i-futbolnye">
+                                        Мячи футбольные, волейбольные, баскетбольные, теннисные
+                                    </a>
+                                </li>
+                                <li class="aside__nav-sublist-item">
+                                    <a href="/aktivnyj-otdyh-sport-i-turizm/nabory-dla-otdyha">
+                                        Наборы для отдыха <i class="fa fa-angle-right"></i>
+                                    </a>
+                                    <ul class="aside__nav-sublist2x">
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/aksessuary-k-elektrotransportu">Аксессуары к электротранспорту</a>
+                                        </li>
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/girobordy">Гироборды</a>
+                                        </li>
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/girobordy-maksi">Гироборды-макси</a>
+                                        </li>
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/monokolesa">Моноколеса</a>
+                                        </li>
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/elektrovelosipedy">Электровелосипеды</a>
+                                        </li>
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/elektrosamokaty">Электросамокаты</a>
+                                        </li>
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/elektroskejty">Электроскейты</a>
+                                        </li>
+                                     </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="submenu__col">
+                            <ul class="aside__nav-sublist">
+                                <li class="aside__nav-sublist-item">
+                                    <a href="/aktivnyj-otdyh-sport-i-turizm/nozi-skladnye">
+                                        Ножи складные
+                                    </a>
+                                </li>
+                                <li class="aside__nav-sublist-item">
+                                    <a href="/aktivnyj-otdyh-sport-i-turizm/nozi-universalnye">
+                                        Ножи универсальные
+                                    </a>
+                                </li>
+                                <li class="aside__nav-sublist-item">
+                                    <a href="/aktivnyj-otdyh-sport-i-turizm/passazirskie-perevozki">
+                                        Пассажирские перевозки <i class="fa fa-angle-right"></i>
+                                    </a>
+
+                                    <ul class="aside__nav-sublist2x">
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/passazirskie-perevozki/aviabilety">Авиабилеты</a>
+                                        </li>
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/passazirskie-perevozki/avtobusnye-bilety">
+                                                Автобусные билеты
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="aside__nav-sublist-item">
+                                    <a href="/aktivnyj-otdyh-sport-i-turizm/portativnye-pusko-zaradnye-ustrojstva">
+                                        Портативные пуско-зарядные устройства
+                                    </a>
+                                </li>
+                                <li class="aside__nav-sublist-item">
+                                    <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport">
+                                        Электротранспорт <i class="fa fa-angle-right"></i>
+                                    </a>
+                                    <ul class="aside__nav-sublist2x">
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/aksessuary-k-elektrotransportu">Аксессуары к электротранспорту</a>
+                                        </li>
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/girobordy">Гироборды</a>
+                                        </li>
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/girobordy-maksi">Гироборды-макси</a>
+                                        </li>
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/monokolesa">Моноколеса</a>
+                                        </li>
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/elektrovelosipedy">Электровелосипеды</a>
+                                        </li>
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/elektrosamokaty">Электросамокаты</a>
+                                        </li>
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/elektroskejty">Электроскейты</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="submenu__col">
+                            <ul class="aside__nav-sublist">
+                                <li class="aside__nav-sublist-item">
+                                    <a href="/aktivnyj-otdyh-sport-i-turizm/sanki">
+                                        Санки
+                                    </a>
+                                </li>
+                                <li class="aside__nav-sublist-item">
+                                    <a href="/aktivnyj-otdyh-sport-i-turizm/strahovanie">
+                                        Страхование
+                                    </a>
+
+                                    <ul class="aside__nav-sublist2x">
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/strahovanie/strahovanie-avtotransporta">Страхование автотранспорта</a>
+                                        </li>
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/strahovanie/strahovanie-turistov">
+                                                Страхование туристов
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="aside__nav-sublist-item">
+                                    <a href="/aktivnyj-otdyh-sport-i-turizm/termosy-i-termo-posuda">
+                                        Термосы и термо посуда
+                                    </a>
+                                </li>
+                                <li class="aside__nav-sublist-item">
+                                    <a href="/aktivnyj-otdyh-sport-i-turizm/turisticeskie-gorelki-plity-i-aksessuary">
+                                        Туристические горелки, плиты и аксессуары
+                                    </a>
+                                </li>
+                                <li class="aside__nav-sublist-item">
+                                    <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport">
+                                        Электротранспорт <i class="fa fa-angle-right"></i>
+                                    </a>
+                                    <ul class="aside__nav-sublist2x">
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/aksessuary-k-elektrotransportu">Аксессуары к электротранспорту</a>
+                                        </li>
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/girobordy">Гироборды</a>
+                                        </li>
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/girobordy-maksi">Гироборды-макси</a>
+                                        </li>
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/monokolesa">Моноколеса</a>
+                                        </li>
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/elektrovelosipedy">Электровелосипеды</a>
+                                        </li>
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/elektrosamokaty">Электросамокаты</a>
+                                        </li>
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/elektroskejty">Электроскейты</a>
+                                        </li>
+                                     </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="aside__nav-item">
+                    <a href="subcategories.html">
+                    <span data-balloon-pos="up" class="shovel"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="shovel" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="fa-shovel fa-pro-icon"><path fill="currentColor" d="M500.3 96.38L415.62 11.7c-15.59-15.59-40.97-15.59-56.56 0l-32.67 32.67c-18.94 18.94-29.25 44.31-29.25 70.55 0 6.53.64 13.13 1.95 19.69 1.74 8.69 4.75 16.84 8.53 24.53L197.36 269.39l-45.26-45.26c-12.5-12.5-32.76-12.5-45.25 0l-67.88 67.88C-11.02 342-6.29 473.03 16.34 495.66c22.63 22.63 153.66 27.36 203.65-22.63l67.88-67.88c12.5-12.5 12.5-32.76 0-45.25l-45.26-45.26 110.26-110.26c7.7 3.79 15.87 6.8 24.57 8.54 32.81 6.56 66.53-3.64 90.19-27.3l32.67-32.67c15.6-15.6 15.6-40.97 0-56.57zm-77.92 43.99a35.87 35.87 0 0 1-32.42 9.8c-14.23-2.86-25.27-13.91-28.13-28.17-2.33-11.83 1.31-23.91 9.8-32.38l15.7-15.7 50.75 50.75-15.7 15.7z" class=""></path></svg></span>
+                    Дача, сад и огород</a>
+                    <div class="submenu">
+                        <div class="submenu__col">
+                            <ul class="aside__nav-sublist">
+                                <li class="aside__nav-sublist-item">
+                                    <a href="/aktivnyj-otdyh-sport-i-turizm/akkumulatornye-radio">
+                                        Аккумуляторные радио
+                                    </a>
+                                </li>
+                                <li class="aside__nav-sublist-item">
+                                    <a href="/aktivnyj-otdyh-sport-i-turizm/badminton-tennis-darts-basketbol-sahmaty">
+                                        Бадминтон, теннис, дартс, шахматы
+                                    </a>
+                                </li>
+                                <li class="aside__nav-sublist-item">
+                                    <a href="/aktivnyj-otdyh-sport-i-turizm/multiinstrumenty-multituly">
+                                        Мультиинструменты (мультитулы)
+                                    </a>
+                                </li>
+                                <li class="aside__nav-sublist-item">
+                                    <a href="/aktivnyj-otdyh-sport-i-turizm/maci-volejbolnye-i-futbolnye">
+                                        Мячи футбольные, волейбольные, баскетбольные, теннисные
+                                    </a>
+                                </li>
+                                <li class="aside__nav-sublist-item">
+                                    <a href="/aktivnyj-otdyh-sport-i-turizm/nabory-dla-otdyha">
+                                        Наборы для отдыха <i class="fa fa-angle-right"></i>
+                                    </a>
+                                    <ul class="aside__nav-sublist2x">
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/aksessuary-k-elektrotransportu">Аксессуары к электротранспорту</a>
+                                        </li>
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/girobordy">Гироборды</a>
+                                        </li>
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/girobordy-maksi">Гироборды-макси</a>
+                                        </li>
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/monokolesa">Моноколеса</a>
+                                        </li>
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/elektrovelosipedy">Электровелосипеды</a>
+                                        </li>
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/elektrosamokaty">Электросамокаты</a>
+                                        </li>
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/elektroskejty">Электроскейты</a>
+                                        </li>
+                                     </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="submenu__col">
+                            <ul class="aside__nav-sublist">
+                                <li class="aside__nav-sublist-item">
+                                    <a href="/aktivnyj-otdyh-sport-i-turizm/nozi-skladnye">
+                                        Ножи складные
+                                    </a>
+                                </li>
+                                <li class="aside__nav-sublist-item">
+                                    <a href="/aktivnyj-otdyh-sport-i-turizm/nozi-universalnye">
+                                        Ножи универсальные
+                                    </a>
+                                </li>
+                                <li class="aside__nav-sublist-item">
+                                    <a href="/aktivnyj-otdyh-sport-i-turizm/passazirskie-perevozki">
+                                        Пассажирские перевозки <i class="fa fa-angle-right"></i>
+                                    </a>
+
+                                    <ul class="aside__nav-sublist2x">
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/passazirskie-perevozki/aviabilety">Авиабилеты</a>
+                                        </li>
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/passazirskie-perevozki/avtobusnye-bilety">
+                                                Автобусные билеты
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="aside__nav-sublist-item">
+                                    <a href="/aktivnyj-otdyh-sport-i-turizm/portativnye-pusko-zaradnye-ustrojstva">
+                                        Портативные пуско-зарядные устройства
+                                    </a>
+                                </li>
+                                <li class="aside__nav-sublist-item">
+                                    <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport">
+                                        Электротранспорт <i class="fa fa-angle-right"></i>
+                                    </a>
+                                    <ul class="aside__nav-sublist2x">
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/aksessuary-k-elektrotransportu">Аксессуары к электротранспорту</a>
+                                        </li>
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/girobordy">Гироборды</a>
+                                        </li>
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/girobordy-maksi">Гироборды-макси</a>
+                                        </li>
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/monokolesa">Моноколеса</a>
+                                        </li>
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/elektrovelosipedy">Электровелосипеды</a>
+                                        </li>
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/elektrosamokaty">Электросамокаты</a>
+                                        </li>
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/elektroskejty">Электроскейты</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="submenu__col">
+                            <ul class="aside__nav-sublist">
+                                <li class="aside__nav-sublist-item">
+                                    <a href="/aktivnyj-otdyh-sport-i-turizm/sanki">
+                                        Санки
+                                    </a>
+                                </li>
+                                <li class="aside__nav-sublist-item">
+                                    <a href="/aktivnyj-otdyh-sport-i-turizm/strahovanie">
+                                        Страхование
+                                    </a>
+
+                                    <ul class="aside__nav-sublist2x">
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/strahovanie/strahovanie-avtotransporta">Страхование автотранспорта</a>
+                                        </li>
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/strahovanie/strahovanie-turistov">
+                                                Страхование туристов
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="aside__nav-sublist-item">
+                                    <a href="/aktivnyj-otdyh-sport-i-turizm/termosy-i-termo-posuda">
+                                        Термосы и термо посуда
+                                    </a>
+                                </li>
+                                <li class="aside__nav-sublist-item">
+                                    <a href="/aktivnyj-otdyh-sport-i-turizm/turisticeskie-gorelki-plity-i-aksessuary">
+                                        Туристические горелки, плиты и аксессуары
+                                    </a>
+                                </li>
+                                <li class="aside__nav-sublist-item">
+                                    <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport">
+                                        Электротранспорт <i class="fa fa-angle-right"></i>
+                                    </a>
+                                    <ul class="aside__nav-sublist2x">
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/aksessuary-k-elektrotransportu">Аксессуары к электротранспорту</a>
+                                        </li>
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/girobordy">Гироборды</a>
+                                        </li>
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/girobordy-maksi">Гироборды-макси</a>
+                                        </li>
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/monokolesa">Моноколеса</a>
+                                        </li>
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/elektrovelosipedy">Электровелосипеды</a>
+                                        </li>
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/elektrosamokaty">Электросамокаты</a>
+                                        </li>
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/elektroskejty">Электроскейты</a>
+                                        </li>
+                                     </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="aside__nav-item">
+                    <a href="subcategories.html">
+                    <span><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="cctv" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="fa-cctv fa-pro-icon"><path fill="currentColor" d="M517.45 168.58L139.24 2.29a32 32 0 0 0-39.67 13.84L4.23 183a32 32 0 0 0 16.85 46l156.57 64.85L137.81 400H64v-32a16 16 0 0 0-16-16H16a16 16 0 0 0-16 16v128a16 16 0 0 0 16 16h32a16 16 0 0 0 16-16v-32h96a32 32 0 0 0 30-20.77l46.85-124.94 68.52 28.38a32 32 0 0 0 27.89-2.94l189.26-118.31c22.21-13.88 19.25-47.11-5.07-56.84zm48.47 105.2l-35.45-15.59-138.4 86.5 119.58 52.58a16.86 16.86 0 0 0 22.22-8.65l40.7-92.62a16.85 16.85 0 0 0-8.65-22.22z" class=""></path></svg></span>
+                    Безопасность и видеонаблюдение</a>
+                    <div class="submenu">
+                        <div class="submenu__col">
+                            <ul class="aside__nav-sublist">
+                                <li class="aside__nav-sublist-item">
+                                    <a href="/aktivnyj-otdyh-sport-i-turizm/akkumulatornye-radio">
+                                        Аккумуляторные радио
+                                    </a>
+                                </li>
+                                <li class="aside__nav-sublist-item">
+                                    <a href="/aktivnyj-otdyh-sport-i-turizm/badminton-tennis-darts-basketbol-sahmaty">
+                                        Бадминтон, теннис, дартс, шахматы
+                                    </a>
+                                </li>
+                                <li class="aside__nav-sublist-item">
+                                    <a href="/aktivnyj-otdyh-sport-i-turizm/multiinstrumenty-multituly">
+                                        Мультиинструменты (мультитулы)
+                                    </a>
+                                </li>
+                                <li class="aside__nav-sublist-item">
+                                    <a href="/aktivnyj-otdyh-sport-i-turizm/maci-volejbolnye-i-futbolnye">
+                                        Мячи футбольные, волейбольные, баскетбольные, теннисные
+                                    </a>
+                                </li>
+                                <li class="aside__nav-sublist-item">
+                                    <a href="/aktivnyj-otdyh-sport-i-turizm/nabory-dla-otdyha">
+                                        Наборы для отдыха <i class="fa fa-angle-right"></i>
+                                    </a>
+                                    <ul class="aside__nav-sublist2x">
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/aksessuary-k-elektrotransportu">Аксессуары к электротранспорту</a>
+                                        </li>
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/girobordy">Гироборды</a>
+                                        </li>
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/girobordy-maksi">Гироборды-макси</a>
+                                        </li>
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/monokolesa">Моноколеса</a>
+                                        </li>
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/elektrovelosipedy">Электровелосипеды</a>
+                                        </li>
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/elektrosamokaty">Электросамокаты</a>
+                                        </li>
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/elektroskejty">Электроскейты</a>
+                                        </li>
+                                     </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="submenu__col">
+                            <ul class="aside__nav-sublist">
+                                <li class="aside__nav-sublist-item">
+                                    <a href="/aktivnyj-otdyh-sport-i-turizm/nozi-skladnye">
+                                        Ножи складные
+                                    </a>
+                                </li>
+                                <li class="aside__nav-sublist-item">
+                                    <a href="/aktivnyj-otdyh-sport-i-turizm/nozi-universalnye">
+                                        Ножи универсальные
+                                    </a>
+                                </li>
+                                <li class="aside__nav-sublist-item">
+                                    <a href="/aktivnyj-otdyh-sport-i-turizm/passazirskie-perevozki">
+                                        Пассажирские перевозки <i class="fa fa-angle-right"></i>
+                                    </a>
+
+                                    <ul class="aside__nav-sublist2x">
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/passazirskie-perevozki/aviabilety">Авиабилеты</a>
+                                        </li>
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/passazirskie-perevozki/avtobusnye-bilety">
+                                                Автобусные билеты
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="aside__nav-sublist-item">
+                                    <a href="/aktivnyj-otdyh-sport-i-turizm/portativnye-pusko-zaradnye-ustrojstva">
+                                        Портативные пуско-зарядные устройства
+                                    </a>
+                                </li>
+                                <li class="aside__nav-sublist-item">
+                                    <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport">
+                                        Электротранспорт <i class="fa fa-angle-right"></i>
+                                    </a>
+                                    <ul class="aside__nav-sublist2x">
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/aksessuary-k-elektrotransportu">Аксессуары к электротранспорту</a>
+                                        </li>
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/girobordy">Гироборды</a>
+                                        </li>
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/girobordy-maksi">Гироборды-макси</a>
+                                        </li>
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/monokolesa">Моноколеса</a>
+                                        </li>
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/elektrovelosipedy">Электровелосипеды</a>
+                                        </li>
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/elektrosamokaty">Электросамокаты</a>
+                                        </li>
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/elektroskejty">Электроскейты</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="submenu__col">
+                            <ul class="aside__nav-sublist">
+                                <li class="aside__nav-sublist-item">
+                                    <a href="/aktivnyj-otdyh-sport-i-turizm/sanki">
+                                        Санки
+                                    </a>
+                                </li>
+                                <li class="aside__nav-sublist-item">
+                                    <a href="/aktivnyj-otdyh-sport-i-turizm/strahovanie">
+                                        Страхование
+                                    </a>
+
+                                    <ul class="aside__nav-sublist2x">
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/strahovanie/strahovanie-avtotransporta">Страхование автотранспорта</a>
+                                        </li>
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/strahovanie/strahovanie-turistov">
+                                                Страхование туристов
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="aside__nav-sublist-item">
+                                    <a href="/aktivnyj-otdyh-sport-i-turizm/termosy-i-termo-posuda">
+                                        Термосы и термо посуда
+                                    </a>
+                                </li>
+                                <li class="aside__nav-sublist-item">
+                                    <a href="/aktivnyj-otdyh-sport-i-turizm/turisticeskie-gorelki-plity-i-aksessuary">
+                                        Туристические горелки, плиты и аксессуары
+                                    </a>
+                                </li>
+                                <li class="aside__nav-sublist-item">
+                                    <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport">
+                                        Электротранспорт <i class="fa fa-angle-right"></i>
+                                    </a>
+                                    <ul class="aside__nav-sublist2x">
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/aksessuary-k-elektrotransportu">Аксессуары к электротранспорту</a>
+                                        </li>
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/girobordy">Гироборды</a>
+                                        </li>
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/girobordy-maksi">Гироборды-макси</a>
+                                        </li>
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/monokolesa">Моноколеса</a>
+                                        </li>
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/elektrovelosipedy">Электровелосипеды</a>
+                                        </li>
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/elektrosamokaty">Электросамокаты</a>
+                                        </li>
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/elektroskejty">Электроскейты</a>
+                                        </li>
+                                     </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="aside__nav-item">
+                    <a href="subcategories.html"><i class="fas fa-home"></i> Товары для дома</a>
+                    <div class="submenu">
+                        <div class="submenu__col">
+                            <ul class="aside__nav-sublist">
+                                <li class="aside__nav-sublist-item">
+                                    <a href="/aktivnyj-otdyh-sport-i-turizm/akkumulatornye-radio">
+                                        Аккумуляторные радио
+                                    </a>
+                                </li>
+                                <li class="aside__nav-sublist-item">
+                                    <a href="/aktivnyj-otdyh-sport-i-turizm/badminton-tennis-darts-basketbol-sahmaty">
+                                        Бадминтон, теннис, дартс, шахматы
+                                    </a>
+                                </li>
+                                <li class="aside__nav-sublist-item">
+                                    <a href="/aktivnyj-otdyh-sport-i-turizm/multiinstrumenty-multituly">
+                                        Мультиинструменты (мультитулы)
+                                    </a>
+                                </li>
+                                <li class="aside__nav-sublist-item">
+                                    <a href="/aktivnyj-otdyh-sport-i-turizm/maci-volejbolnye-i-futbolnye">
+                                        Мячи футбольные, волейбольные, баскетбольные, теннисные
+                                    </a>
+                                </li>
+                                <li class="aside__nav-sublist-item">
+                                    <a href="/aktivnyj-otdyh-sport-i-turizm/nabory-dla-otdyha">
+                                        Наборы для отдыха <i class="fa fa-angle-right"></i>
+                                    </a>
+                                    <ul class="aside__nav-sublist2x">
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/aksessuary-k-elektrotransportu">Аксессуары к электротранспорту</a>
+                                        </li>
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/girobordy">Гироборды</a>
+                                        </li>
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/girobordy-maksi">Гироборды-макси</a>
+                                        </li>
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/monokolesa">Моноколеса</a>
+                                        </li>
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/elektrovelosipedy">Электровелосипеды</a>
+                                        </li>
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/elektrosamokaty">Электросамокаты</a>
+                                        </li>
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/elektroskejty">Электроскейты</a>
+                                        </li>
+                                     </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="submenu__col">
+                            <ul class="aside__nav-sublist">
+                                <li class="aside__nav-sublist-item">
+                                    <a href="/aktivnyj-otdyh-sport-i-turizm/nozi-skladnye">
+                                        Ножи складные
+                                    </a>
+                                </li>
+                                <li class="aside__nav-sublist-item">
+                                    <a href="/aktivnyj-otdyh-sport-i-turizm/nozi-universalnye">
+                                        Ножи универсальные
+                                    </a>
+                                </li>
+                                <li class="aside__nav-sublist-item">
+                                    <a href="/aktivnyj-otdyh-sport-i-turizm/passazirskie-perevozki">
+                                        Пассажирские перевозки <i class="fa fa-angle-right"></i>
+                                    </a>
+
+                                    <ul class="aside__nav-sublist2x">
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/passazirskie-perevozki/aviabilety">Авиабилеты</a>
+                                        </li>
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/passazirskie-perevozki/avtobusnye-bilety">
+                                                Автобусные билеты
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="aside__nav-sublist-item">
+                                    <a href="/aktivnyj-otdyh-sport-i-turizm/portativnye-pusko-zaradnye-ustrojstva">
+                                        Портативные пуско-зарядные устройства
+                                    </a>
+                                </li>
+                                <li class="aside__nav-sublist-item">
+                                    <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport">
+                                        Электротранспорт <i class="fa fa-angle-right"></i>
+                                    </a>
+                                    <ul class="aside__nav-sublist2x">
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/aksessuary-k-elektrotransportu">Аксессуары к электротранспорту</a>
+                                        </li>
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/girobordy">Гироборды</a>
+                                        </li>
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/girobordy-maksi">Гироборды-макси</a>
+                                        </li>
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/monokolesa">Моноколеса</a>
+                                        </li>
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/elektrovelosipedy">Электровелосипеды</a>
+                                        </li>
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/elektrosamokaty">Электросамокаты</a>
+                                        </li>
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/elektroskejty">Электроскейты</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="submenu__col">
+                            <ul class="aside__nav-sublist">
+                                <li class="aside__nav-sublist-item">
+                                    <a href="/aktivnyj-otdyh-sport-i-turizm/sanki">
+                                        Санки
+                                    </a>
+                                </li>
+                                <li class="aside__nav-sublist-item">
+                                    <a href="/aktivnyj-otdyh-sport-i-turizm/strahovanie">
+                                        Страхование
+                                    </a>
+
+                                    <ul class="aside__nav-sublist2x">
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/strahovanie/strahovanie-avtotransporta">Страхование автотранспорта</a>
+                                        </li>
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/strahovanie/strahovanie-turistov">
+                                                Страхование туристов
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="aside__nav-sublist-item">
+                                    <a href="/aktivnyj-otdyh-sport-i-turizm/termosy-i-termo-posuda">
+                                        Термосы и термо посуда
+                                    </a>
+                                </li>
+                                <li class="aside__nav-sublist-item">
+                                    <a href="/aktivnyj-otdyh-sport-i-turizm/turisticeskie-gorelki-plity-i-aksessuary">
+                                        Туристические горелки, плиты и аксессуары
+                                    </a>
+                                </li>
+                                <li class="aside__nav-sublist-item">
+                                    <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport">
+                                        Электротранспорт <i class="fa fa-angle-right"></i>
+                                    </a>
+                                    <ul class="aside__nav-sublist2x">
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/aksessuary-k-elektrotransportu">Аксессуары к электротранспорту</a>
+                                        </li>
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/girobordy">Гироборды</a>
+                                        </li>
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/girobordy-maksi">Гироборды-макси</a>
+                                        </li>
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/monokolesa">Моноколеса</a>
+                                        </li>
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/elektrovelosipedy">Электровелосипеды</a>
+                                        </li>
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/elektrosamokaty">Электросамокаты</a>
+                                        </li>
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/elektroskejty">Электроскейты</a>
+                                        </li>
+                                     </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="aside__nav-item">
+                    <a href="subcategories.html"><i class="fas fa-hand-holding-heart"></i> Красота и здоровье</a>
+                    <div class="submenu">
+                        <div class="submenu__col">
+                            <ul class="aside__nav-sublist">
+                                <li class="aside__nav-sublist-item">
+                                    <a href="/aktivnyj-otdyh-sport-i-turizm/akkumulatornye-radio">
+                                        Аккумуляторные радио
+                                    </a>
+                                </li>
+                                <li class="aside__nav-sublist-item">
+                                    <a href="/aktivnyj-otdyh-sport-i-turizm/badminton-tennis-darts-basketbol-sahmaty">
+                                        Бадминтон, теннис, дартс, шахматы
+                                    </a>
+                                </li>
+                                <li class="aside__nav-sublist-item">
+                                    <a href="/aktivnyj-otdyh-sport-i-turizm/multiinstrumenty-multituly">
+                                        Мультиинструменты (мультитулы)
+                                    </a>
+                                </li>
+                                <li class="aside__nav-sublist-item">
+                                    <a href="/aktivnyj-otdyh-sport-i-turizm/maci-volejbolnye-i-futbolnye">
+                                        Мячи футбольные, волейбольные, баскетбольные, теннисные
+                                    </a>
+                                </li>
+                                <li class="aside__nav-sublist-item">
+                                    <a href="/aktivnyj-otdyh-sport-i-turizm/nabory-dla-otdyha">
+                                        Наборы для отдыха <i class="fa fa-angle-right"></i>
+                                    </a>
+                                    <ul class="aside__nav-sublist2x">
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/aksessuary-k-elektrotransportu">Аксессуары к электротранспорту</a>
+                                        </li>
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/girobordy">Гироборды</a>
+                                        </li>
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/girobordy-maksi">Гироборды-макси</a>
+                                        </li>
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/monokolesa">Моноколеса</a>
+                                        </li>
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/elektrovelosipedy">Электровелосипеды</a>
+                                        </li>
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/elektrosamokaty">Электросамокаты</a>
+                                        </li>
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/elektroskejty">Электроскейты</a>
+                                        </li>
+                                     </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="submenu__col">
+                            <ul class="aside__nav-sublist">
+                                <li class="aside__nav-sublist-item">
+                                    <a href="/aktivnyj-otdyh-sport-i-turizm/nozi-skladnye">
+                                        Ножи складные
+                                    </a>
+                                </li>
+                                <li class="aside__nav-sublist-item">
+                                    <a href="/aktivnyj-otdyh-sport-i-turizm/nozi-universalnye">
+                                        Ножи универсальные
+                                    </a>
+                                </li>
+                                <li class="aside__nav-sublist-item">
+                                    <a href="/aktivnyj-otdyh-sport-i-turizm/passazirskie-perevozki">
+                                        Пассажирские перевозки <i class="fa fa-angle-right"></i>
+                                    </a>
+
+                                    <ul class="aside__nav-sublist2x">
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/passazirskie-perevozki/aviabilety">Авиабилеты</a>
+                                        </li>
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/passazirskie-perevozki/avtobusnye-bilety">
+                                                Автобусные билеты
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="aside__nav-sublist-item">
+                                    <a href="/aktivnyj-otdyh-sport-i-turizm/portativnye-pusko-zaradnye-ustrojstva">
+                                        Портативные пуско-зарядные устройства
+                                    </a>
+                                </li>
+                                <li class="aside__nav-sublist-item">
+                                    <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport">
+                                        Электротранспорт <i class="fa fa-angle-right"></i>
+                                    </a>
+                                    <ul class="aside__nav-sublist2x">
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/aksessuary-k-elektrotransportu">Аксессуары к электротранспорту</a>
+                                        </li>
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/girobordy">Гироборды</a>
+                                        </li>
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/girobordy-maksi">Гироборды-макси</a>
+                                        </li>
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/monokolesa">Моноколеса</a>
+                                        </li>
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/elektrovelosipedy">Электровелосипеды</a>
+                                        </li>
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/elektrosamokaty">Электросамокаты</a>
+                                        </li>
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/elektroskejty">Электроскейты</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="submenu__col">
+                            <ul class="aside__nav-sublist">
+                                <li class="aside__nav-sublist-item">
+                                    <a href="/aktivnyj-otdyh-sport-i-turizm/sanki">
+                                        Санки
+                                    </a>
+                                </li>
+                                <li class="aside__nav-sublist-item">
+                                    <a href="/aktivnyj-otdyh-sport-i-turizm/strahovanie">
+                                        Страхование
+                                    </a>
+
+                                    <ul class="aside__nav-sublist2x">
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/strahovanie/strahovanie-avtotransporta">Страхование автотранспорта</a>
+                                        </li>
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/strahovanie/strahovanie-turistov">
+                                                Страхование туристов
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="aside__nav-sublist-item">
+                                    <a href="/aktivnyj-otdyh-sport-i-turizm/termosy-i-termo-posuda">
+                                        Термосы и термо посуда
+                                    </a>
+                                </li>
+                                <li class="aside__nav-sublist-item">
+                                    <a href="/aktivnyj-otdyh-sport-i-turizm/turisticeskie-gorelki-plity-i-aksessuary">
+                                        Туристические горелки, плиты и аксессуары
+                                    </a>
+                                </li>
+                                <li class="aside__nav-sublist-item">
+                                    <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport">
+                                        Электротранспорт <i class="fa fa-angle-right"></i>
+                                    </a>
+                                    <ul class="aside__nav-sublist2x">
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/aksessuary-k-elektrotransportu">Аксессуары к электротранспорту</a>
+                                        </li>
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/girobordy">Гироборды</a>
+                                        </li>
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/girobordy-maksi">Гироборды-макси</a>
+                                        </li>
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/monokolesa">Моноколеса</a>
+                                        </li>
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/elektrovelosipedy">Электровелосипеды</a>
+                                        </li>
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/elektrosamokaty">Электросамокаты</a>
+                                        </li>
+                                        <li class="aside__nav-siblist2x-item">
+                                            <a href="/aktivnyj-otdyh-sport-i-turizm/elektrotransport/elektroskejty">Электроскейты</a>
+                                        </li>
+                                     </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <h3 class="aside__title title-underline">Новости</h3>
+            <br>
+            <ul class="news__block">
+                <li class="articles-block__topic">
+
+                    <a href="/news/makita-drel.html" >Аккумуляторная дрель Makita</a>
+                    16 окт. 2019 г.
+                </li>
+                <li class="articles-block__topic">
+
+                    <a href="/news/df333dwye.html">Аккумуляторная дрель-шуруповерт Makita DF333DWYE</a>
+                    15 окт. 2019 г.
+                </li>
+            </ul>
+            <div class="aside__tel">
+                <a href="tel:+0800750250">0800<span class="color-green">750 250</span></a>
+                <a href="tel:+0800750250">0800<span class="color-green">750 250</span></a>
+                <a href="tel:+0800750250">0800<span class="color-green">750 250</span></a>
+                <a href="tel:+0800750250">0800<span class="color-green">750 250</span></a>
+            </div>
+            <ul class="aside__soc_links">
+            	<li><a href="#"><i class="fab fa-viber"></i></a></li>
+            	<li><a href="#"><i class="fab fa-telegram"></i></a></li>
+            </ul>
+        </div>
+    </aside>
+	<div class="inner-wrapper">
+		<div class="main-container">
+      <h1 class="title-underline">
+        Сравнение Ноутбуков
+      </h1>
+      <div class="comparsion" data-slideout-ignore>
+        <div class="comparsion__heading d-iflex">
+          <div class="comparsion__cell">
+            <a href="catalog.html" class="comparsion__add-product">Добавить товары</a>
+          </div>
+          <div class="comparsion__cell d-flex comparsion__product">
+            <img src="img/img2.jpg" alt="thumbnail" class="comparsion__thumbnail">
+            <div class="comparsion__product__info">
+              <h2 class="info__title">Lenovo XB3200</h2>
+              <div class="goods-shortinfo__price discount">
+                <div class="goods-shortinfo__price__price">
+                    <span class="old__price">
+                        <strike>14 087</strike>
+                    </span>
+                    <span class="discount__price">14 088 <small>грн</small></span>
+                </div>
+                <div class="goods-shortinfo__actions">
+                    <a href="#!" class="products-card__wish_btn action"><i class="far fa-heart"></i></a>
+                    <a href="#!" class="products-card__compare_btn action"><i class="fal fa-shopping-cart"></i></a>
+                </div>
+						  </div>
+            </div>
+          </div>
+          <div class="comparsion__cell d-flex comparsion__product">
+            <img src="img/img2.jpg" alt="thumbnail" class="comparsion__thumbnail">
+            <div class="comparsion__product__info">
+              <h2 class="info__title">Lenovo XB3200</h2>
+              <div class="goods-shortinfo__price discount">
+                <div class="goods-shortinfo__price__price">
+                    <span class="old__price">
+                        <strike>14 087</strike>
+                    </span>
+                    <span class="discount__price">14 088 <small>грн</small></span>
+                </div>
+                <div class="goods-shortinfo__actions">
+                    <a href="#!" class="products-card__wish_btn action"><i class="far fa-heart"></i></a>
+                    <a href="#!" class="products-card__compare_btn action"><i class="fal fa-shopping-cart"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="comparsion__body">
+          <div class="comparsion__row d-iflex">
+            <div class="comparsion__cell">
+              <h3 class="comparsion__property-title">Продавец</h3>
+            </div>
+            <div class="comparsion__cell">
+              Amadino
+            </div>
+            <div class="comparsion__cell">
+              Amadino
+            </div>
+          </div>
+          <div class="comparsion__row d-iflex">
+            <div class="comparsion__cell">
+              <h3 class="comparsion__property-title">Производитель</h3>
+            </div>
+            <div class="comparsion__cell">
+              Китай
+            </div>
+            <div class="comparsion__cell">
+              США
+            </div>
+          </div>
+          <div class="comparsion__row d-iflex">
+            <div class="comparsion__cell">
+              <h3 class="comparsion__property-title">Процессор</h3>
+            </div>
+            <div class="comparsion__cell">
+              Двухъядерный Intel Celeron N4000 (1.1 - 2.6 ГГц)
+            </div>
+            <div class="comparsion__cell">
+              Четырехъядерный AMD Ryzen 5 3500U (2.1 - 3.7 ГГц)
+            </div>
+          </div>
+          <div class="comparsion__row d-iflex">
+            <div class="comparsion__cell">
+              <h3 class="comparsion__property-title">Объем оперативной памяти</h3>
+            </div>
+            <div class="comparsion__cell">
+              4 ГБ
+            </div>
+            <div class="comparsion__cell">
+              8 ГБ
+            </div>
+          </div>
+          <div class="comparsion__row d-iflex">
+            <div class="comparsion__cell">
+              <h3 class="comparsion__property-title">Диагональ экрана</h3>
+            </div>
+            <div class="comparsion__cell">
+              15.6" (1366x768) WXGA HD
+            </div>
+            <div class="comparsion__cell">
+              14" (1920x1080) Full HD
+            </div>
+          </div>
+          <div class="comparsion__row d-iflex">
+            <div class="comparsion__cell">
+              <h3 class="comparsion__property-title">Краткие характеристики</h3>
+            </div>
+            <div class="comparsion__cell">
+              Экран 15.6" TN+film (1366x768) HD, матовый / Intel Celeron N4000 (1.1 - 2.6 ГГц) / RAM 4 ГБ / HDD 500 ГБ / Intel UHD 600 / без ОД / Wi-Fi / Bluetooth / веб-камера / без ОС / 1.85 кг / черный
+            </div>
+            <div class="comparsion__cell">
+              Экран 14.0" IPS (1920x1080) Full HD, матовый / AMD Ryzen 5 3500U (2.1 - 3.7 ГГц) / RAM 8 ГБ / SSD 256 ГБ / AMD Radeon Vega 8 / без ОД / Wi-Fi / Bluetooth / веб-камера / без ОС / 1.39 кг / светло-синий / чехол + мышь
+            </div>
+          </div>
+          <div class="comparsion__row d-iflex">
+            <div class="comparsion__cell">
+              <h3 class="comparsion__property-title">Частота обновления экрана</h3>
+            </div>
+            <div class="comparsion__cell">
+              60 Гц
+            </div>
+            <div class="comparsion__cell">
+              60 гц
+            </div>
+          </div>
+          <div class="comparsion__row d-iflex">
+            <div class="comparsion__cell">
+              <h3 class="comparsion__property-title">Объём накопителя</h3>
+            </div>
+            <div class="comparsion__cell">
+              500 ГБ
+            </div>
+            <div class="comparsion__cell">
+              256 ГБ SSD
+            </div>
+          </div>
+        </div>
+      </div>
+		</div> <!-- /main-container -->
+	</div>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+	<div class="footer-container">
+		<div class="footer__inner">
+
+			<div class="footer__col">
+				<h4 class="footer__title">информация о компании</h4>
+				<a href="#" class="footer__link">О компании</a>
+				<a href="#" class="footer__link">Контакты</a>
+				<a href="#" class="footer__link">Вакансии</a>
+			</div>
+
+			<div class="footer__col">
+				<h4 class="footer__title">Помощь</h4>
+				<a href="#" class="footer__link">Оплата и доставка</a>
+				<a href="#" class="footer__link">Возврат товара</a>
+				<a href="#" class="footer__link">Вопросы и ответы</a>
+				<a href="#" class="footer__link">Сервисные центры</a>
+				<a href="#" class="footer__link">Отследить заказ</a>
+			</div>
+
+			<div class="footer__col">
+				<h4 class="footer__title">Сотрудничество</h4>
+				<a href="#" class="footer__link">Кабинет B2B для партнеров</a>
+				<a href="#" class="footer__link">Для поставщиков</a>
+				<a href="#" class="footer__link">Для частных лиц</a>
+				<a href="#" class="footer__link">Для корпоративных клиентов</a>
+			</div>
+
+			<div class="footer__col">
+				<h4 class="footer__title">
+					Контактная информация
+				</h4>
+				<a href="tel:+0800750250" class="footer__link">тел: 0800-555-22</a>
+				<a href="#" class="footer__link">Адрес:</a>
+				<p class="footer__link">Принимаем к оплате:</p>
+				<div class="footer__payment">
+					<img src="img/home/mastercard.png" alt="">
+					<img src="img/home/visa-logo.png" alt="">
+					<img src="img/home/privat.png" alt="">
+				</div>
+			</div>
+
+		</div>
+		<div class="footer__year">
+			2019
+		</div>
+	</div>
+</footer>
+</main>
+
+<!-- Enqueue scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.js"></script>
+<script src="libs/slick-1.8.1/slick/slick.min.js"></script>
+<script src="libs/remodal.js"></script>
+<script src="libs/slideout.min.js"></script>
+<script src="js/common.js"></script>
+</body>
+</html>
