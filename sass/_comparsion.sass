@@ -35,8 +35,46 @@
     font-size: 16px
     font-weight: 700
   .comparsion__row
+    align-items: center
     transition: all .15s ease
     cursor: pointer
   .comparsion__body
     .comparsion__row:hover
       background: rgba(1, 164, 121, 0.1)
+
+@media (max-width: 1024px)
+  .comparsion
+    padding-top: 20px
+    & &__product__info
+      margin-left: 0
+      margin-top: 15px
+    .goods-shortinfo__price__price
+      margin-right: 0
+      margin-top: 10px
+      margin-bottom: 10px
+    .discount__price
+      display: block
+    .old__price
+      margin-right: 0
+    .goods-shortinfo__actions
+      justify-content: center
+    &__product
+      flex-direction: column
+    .info__title
+      font-size: 16px
+    &__heading, &__row
+      width: 100%
+      flex-wrap: wrap
+    &__heading
+      .comparsion__cell
+        align-items: center
+    & &__cell
+      padding: 10px
+      text-align: center
+    &__cell:first-child
+      width: 100%
+      border-right: none !important
+      text-align: center
+    &__cell:not(:first-child)
+      width: 50%
+      border: none
