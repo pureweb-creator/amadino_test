@@ -1,38 +1,116 @@
-.b2b-settings__warning
-	background-color: $green
-	margin: 0 50px 50px
-	color: #fff
+.b2b-settings__alert
+	margin: 0 0px 50px 0
+	border-radius: 10px
 	padding: 20px 20px 30px
 	font-size: 14px
+	position: relative
+	.close
+		position: absolute
+		right: 10px
+		top: 10px
+		cursor: pointer
+		background: transparent
+		transition: all .3s ease
+		width: 20px
+		height: 20px
+		border-radius: 20px
+		text-align: center
+		line-height: 20px
+		&:hover
+			background: #333
+			color: #fff
+			transform: rotate(90deg)
 	div
 		font-size: 14px
 		margin-bottom: 15px
+.b2b-settings__alert--warning
+	background-color: #FFC0CE
+	color: #92334D
+
 .settings
 	padding: 0 50px
 	font-size: 14px
-	font-weight: 600
-	input, select
-		height: 45px
-		background-color: #f1f1f1
-		box-shadow: $shadow2
-		font-size: 20px
-		padding: 11px 20px
-	select
-		appearance: none
-		padding: 0 20px
-		background: #f1f1f1 url('../img/b2b/select-arr.png') no-repeat
-		background-position-y: 50%
-		background-position-x: 98%
-	.green-btn
-		background-color: $green
-		font-size: 22px
-		font-weight: 700
-		color: #fff
-		padding: 9px 20px
+	.settings-select
+		background: #FAFAFA
 		cursor: pointer
-		box-shadow: $shadow2
-		margin-left: -6px
+		appearance: none
+		box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.12), 0px 2px 2px rgba(0, 0, 0, 0.24)
+		border-radius: 2px
+		padding: 17px 50px 17px 24px
+		min-width: 184px
+		background: url('../../img/Shape.svg') no-repeat right 24px center / 10px 5px
+	.settings-field
+		height: 48px
+		padding-left: 24px
+		padding-right: 24px
+	.green-btn
+		background: #009688
+		box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.12), 0px 2px 2px rgba(0, 0, 0, 0.24)
+		border-radius: 5px
+		padding: 0 20px
+		font-size: 14px
+		line-height: 16px
+		text-transform: uppercase
+		color: #fff
+		cursor: pointer
+		height: 48px
+		transition: all .3s ease
+		&:hover
+			background: linear-gradient(0deg, rgba(189, 189, 189, 0.3), rgba(189, 189, 189, 0.3)), #009688
+			box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.12), 0px 8px 8px rgba(0, 0, 0, 0.24)
 
+.checkbox
+	display: block
+	text-align: center
+	margin: 17px 0
+	position: relative
+	display: flex
+	align-items: center
+	cursor: pointer
+	.checkbox__input
+		display: none
+
+	.checkbox__input:checked + .checkbox__icon
+		background: #009688
+		border-color: #009688
+		.tick
+			display: block
+
+	.checkbox__icon
+		width: 19px
+		height: 19px
+		background: #fff
+		display: inline-block
+		border: 2px solid #6d6d6d
+		border-radius: 3px
+		content: ""
+		margin-left: 15px
+		.tick
+			display: none
+
+.settings__price-filter
+	margin-left: 50px
+	.ui-widget-header
+		background: #009688
+	.ui-widget.ui-widget-content
+		background: rgba(0, 0, 0, 0.26)
+		height: 5px
+	.ui-state-default
+		background:  #009688
+		width: 12px
+		height: 12px
+		border-radius: 50px
+		border: none
+		cursor: pointer
+	.ui-state-active
+		width: 18px
+		height: 18px
+		top: -6px
+.settings__rozetka-upload
+	flex-wrap: wrap
+	justify-content: space-between
+.settings__group
+	width: 48%
 .settings__what
 	margin-bottom: 20px
 	margin-top: 30px
@@ -41,61 +119,21 @@
 		margin-top: -13px
 
 .settings__bigwhat
-	margin: 60px 0 30px
-	font-size: 30px
+	margin: 30px 0 30px
+	font-size: 24px
 	font-weight: 700
 
 
-.settings__checks
-	margin: 30px 0
-	position: relative
-	label
-		display: block
-		cursor: pointer
-
 .settings__lilwhat
 	font-size: 20px
-	font-weight: 400
-
-.settings__checkbox
-	position: absolute
-	opacity: 0
-	height: 0
-	width: 0
-	cursor: pointer
 
 .settings__input-3
 	width: calc(100% - 260px)
 
 
-
-.settings__checkbox:checked ~ .check-mark
-	background-color: $green
-	border-color: $green
-
-.check-mark
-	position: absolute
-	width: 16px
-	height: 16px
-	top: 6px
-	right: 0
-	background-color: #f1f1f1
-	border: 1px solid #000
-	z-index: 0
-
-.settings__select
-	width: 100%
-
 .settings__split
 	display: flex
-	justify-content: space-between
 	flex-wrap: wrap
-	& > div
-		width: 47%
-		max-width: 736px
-
-.settings__input-1
-	width: 550px
 
 .settings__select-2
 	width: 320px

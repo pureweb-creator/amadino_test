@@ -131,14 +131,14 @@
               </a>
           </li>
 
-          <li class="b2b-nav__item active">
+          <li class="b2b-nav__item">
               <a href="b2b-contacts.html" class="b2b-nav__link">
                   <i class="fal fa-phone"></i>
                   <span class="b2b-nav__caption">Контакты</span>
               </a>
           </li>
 
-          <li class="b2b-nav__item">
+          <li class="b2b-nav__item active">
               <a href="b2b-settings.html" class="b2b-nav__link">
                   <i class="fal fa-cogs"></i>
                   <span class="b2b-nav__caption">Настройки</span>
@@ -157,101 +157,106 @@
 
 <div class="b2b-container">
 
+  <div class="b2b-heading">
     <div class="b2b-top">
         <div class="b2b-pagetitle title-underline">
             Настройки
         </div>
+    </div>
+  </div>
+  <div class="settings">
 
+    <div class="b2b-settings__alert b2b-settings__alert--warning">
+        <i class="fal fa-times close"></i>
+        <div class="fw-bold"><i class="fal fa-exclamation-triangle"></i> Внимание</div>
+        Настройки каталога напрямую влияют на товар, который попадает в выгрузку YML или XLSX (Excel). Если вас не интересуют определенные группы товара или бренды, рекомендуем отключить их перед выгрузкой и нажмите на кнопку "Подтвердить" чтобы сохранить изменения. Полную выгрузку каталога можно делать не чаще чем 1 раз в 4 часа.
     </div>
 
     <div class="b2b-subtop">
-        <div class="subtop__categoryname">
+        <div class="settings__bigwhat">
             Выгрузка каталога товаров
         </div>
 
     </div>
 
-    <div class="b2b-settings__warning">
-        <div class="fw-bold">Внимание</div>
-        Настройки каталога напрямую влияют на товар, который попадает в выгрузку YML или XLSX (Excel). Если вас не интересуют определенные группы товара или бренды, рекомендуем отключить их перед выгрузкой и нажмите на кнопку "Подтвердить" чтобы сохранить изменения. Полную выгрузку каталога можно делать не чаще чем 1 раз в 4 часа.
-    </div>
 
-    <div class="settings">
-        <form action="" class="settings-form">
-            <div class="settings__what">
-                Формат файла выгрузки
+        <form action="/" method="POST" class="settings-form">
+          <div class="d-flex">
+            <div class="settings-form__item">
+              <div class="settings__what">
+                  Формат файла выгрузки
+              </div>
+              <select name="file-format" class="settings-select">
+                  <option value="yml">YML</option>
+                  <option value="2">2</option>
+                  <option value="3">4</option>
+                  <option value="5">6</option>
+              </select>
             </div>
-            <select name="file-format" class="settings__select">
-                <option value="yml">YML</option>
-                <option value="2">2</option>
-                <option value="3">4</option>
-                <option value="5">6</option>
-            </select>
-
-            <div class="settings__what">
-                Тип выгрузки каталога
+            <div class="settings-form__item">
+              <div class="settings__what">
+                  Тип выгрузки каталога
+              </div>
+              <select name="catalog-type" class="settings-select">
+                  <option value="yml">Полная</option>
+                  <option value="2">2</option>
+                  <option value="3">4</option>
+                  <option value="5">6</option>
+              </select>
             </div>
-            <select name="catalog-type" class="settings__select">
-                <option value="yml">Полная</option>
-                <option value="2">2</option>
-                <option value="3">4</option>
-                <option value="5">6</option>
-            </select>
-
-            <div class="settings__what">
-                Фотографии товара
+            <div class="settings-form__item">
+              <div class="settings__what">
+                  Фотографии товара
+              </div>
+              <select name="photos" class="settings-select">
+                  <option value="yml">Доступны по ссылке</option>
+                  <option value="2">2</option>
+                  <option value="3">4</option>
+                  <option value="5">6</option>
+              </select>
             </div>
-            <select name="photos" class="settings__select">
-                <option value="yml">Доступны по ссылке</option>
-                <option value="2">2</option>
-                <option value="3">4</option>
-                <option value="5">6</option>
-            </select>
-
+          </div>
             <div class="settings__split">
                 <div class="">
                     <div class="settings__what">
                         Наценка к розничной цене, %
                     </div>
+                    <input type="number" class="settings__input-1 settings-field" value="0">
+                    <button class="green-btn green-btn--2" style="margin-left: 15px">Обновить</button>
 
-                    <input type="text" class="settings__input-1" value="0">
-                    <button class="green-btn green-btn--2">Обновить</button>
+                    <label for="watermark-checkbox" class="checkbox">
+                      <span class="checkbox__body">
+          							Изображения с водяным знаком
+          						</span>
+          						<input type="checkbox" class="checkbox__input" id="watermark-checkbox" checked>
+          						<svg class="checkbox__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22">
+          						    <path class="tick" stroke="#fff" fill="none" stroke-linecap="round" stroke-width="4" d="M4 10l5 5 9-9"></path>
+          						  </svg>
+          					</label>
 
-                    <div class="settings__checks">
-                        <label for="check1">Изображения с водяным знаком</label>
-                        <input type="checkbox" class="settings__checkbox" id="check1" name="pic-w-water">
-                        <span class="check-mark"></span>
-
-                    </div>
-
-                    <div class="settings__checks">
-                        <label for="check2">Выгружать товары, не имеющие фото</label>
-                        <input type="checkbox" class="settings__checkbox" id="check2" name="items-w-o-pic" checked>
-
-                        <span class="check-mark"></span>
-                    </div>
-
+                    <label for="upload-without-photo-checkbox" class="checkbox">
+                      <span class="checkbox__body">
+          						  Выгружать товары, не имеющие фото
+          						</span>
+          						<input type="checkbox" class="checkbox__input" id="upload-without-photo-checkbox" checked>
+          						<svg class="checkbox__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22">
+          						    <path class="tick" stroke="#fff" fill="none" stroke-linecap="round" stroke-width="4" d="M4 10l5 5 9-9"></path>
+          						  </svg>
+          					</label>
                 </div>
 
-                <div class="">
+                <div class="settings__price-filter">
+                  <div class="filter-content">
                     <div class="settings__what">
-                        Фильтр товара по цене, от
+                        Фильтр товара по цене
                     </div>
-                    <select name="filter-from" class="settings__select-2">
-                        <option value="0">0</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                    </select>
-                    <span class="fw-normal">до</span>
-                    <input type="text" class="settings__input-2" value="0">
-                    <button class="green-btn green-btn--2">Сохранить</button>
+                    <p>
+                      <input type="text" id="amount" readonly style="margin-bottom: 15px">
+                    </p>
+
+                    <div id="slider-range"></div>
+                  </div>
+                  <button class="green-btn green-btn--2" style="margin-top: 20px">Сохранить</button>
                 </div>
             </div>
 
@@ -264,7 +269,9 @@
                 Ваша ссылка обновления цен и остатка
             </div>
 
-            <div class="settings__lilwhat">
+            <div class="b2b-settings__alert b2b-settings__alert--warning">
+                <i class="fal fa-times close"></i>
+                <div class="fw-bold"><i class="fal fa-exclamation-triangle"></i> Внимание</div>
                 Внимание! Файл по данной ссылке не содержит фото, описаний и характеристик товара.
             </div>
 
@@ -272,38 +279,44 @@
                 Ваша ссылка YML
             </div>
 
-            <input type="text" id="copyInput1" class="settings__input-3" value="afggkhhqwklj;glkj;lklkg-0[wi[di[fpk';lk'a;ka[sdkljohqloihvoihlhpooilhnjlkcjvljpdk" readonly>
-            <a class="green-btn" id="copyBtn1"">Скопировать ссылку</a>
+            <input type="text" id="copyInput1" class="settings__input-3 settings-field" value="afggkhhqwklj;glkj;lklkg-0[wi[di[fpk';lk'a;ka[sdkljohqloihvoihlhpooilhnjlkcjvljpdk" readonly>
+            <button class="green-btn green-btn--2" id="copyBtn1">Скопировать ссылку</button>
 
             <div class="settings__what">
                 Ваша ссылка YML с оптовой ценой
             </div>
-            <input type="text" id="copyInput2" class="settings__input-3" value="afggkhhqwklj;glkj;lklkg-0[wi[di[fpk';lk'a;ka[sdkljohqloihvoihlhpooilhnjlkcjvljpdk" readonly>
-            <a class="green-btn" id="copyBtn2"">Скопировать ссылку</a>
+            <input type="text" id="copyInput2" class="settings__input-3 settings-field" value="afggkhhqwklj;glkj;lklkg-0[wi[di[fpk';lk'a;ka[sdkljohqloihvoihlhpooilhnjlkcjvljpdk" readonly>
+              <button class="green-btn green-btn--2" id="copyBtn2">Скопировать ссылку</button>
 
             <div class="settings__bigwhat">
                 Выгрузка для rozetka.com.ua
             </div>
-
-            <div class="settings__what">
-                Короткое название магазина
+            <div class="settings__rozetka-upload d-flex">
+              <div class="settings__group">
+                <div class="settings__what">
+                    Короткое название магазина
+                </div>
+                <input type="text" placeholder="Доступны по ссылке" class="settings__input-4 settings-field">
+              </div>
+              <div class="settings__group">
+                <div class="settings__what">
+                    Короткое название магазина
+                </div>
+                <input type="text" placeholder="Доступны по ссылке" class="settings__input-4 settings-field">
+              </div>
+              <div class="settings__group">
+                <div class="settings__what">
+                    Короткое название магазина
+                </div>
+                <input type="text" placeholder="Доступны по ссылке" class="settings__input-4 settings-field">
+              </div>
+              <div class="settings__group">
+                <div class="settings__what">
+                    Короткое название магазина
+                </div>
+                <input type="text" placeholder="Доступны по ссылке" class="settings__input-4 settings-field">
+              </div>
             </div>
-            <input type="text" placeholder="Доступны по ссылке" class="settings__input-4">
-
-            <div class="settings__what">
-                Полное наименование компании, владеющей магазином
-            </div>
-            <input type="text" placeholder="Доступны по ссылке" class="settings__input-4">
-
-            <div class="settings__what">
-                URL главной страницы магазина
-            </div>
-            <input type="text" placeholder="Доступны по ссылке" class="settings__input-4">
-
-            <div class="settings__what">
-                Наценка для rozetka в розничной цене, %
-            </div>
-            <input type="text" placeholder="Доступны по ссылке" class="settings__input-4">
 
             <div class="settings__what">
                 По окончании формирования файла экспорта для rozetka.com.ua, ссылка  на его загрузку будет отправлена на ваш e-mail.
@@ -317,503 +330,167 @@
                 <div class="settings__what">
                     Введите старый пароль
                 </div>
-                <input type="password" placeholder="********" name="old-password" id="oldPassword" class="settings__pass">
-                <a href="#" class="green-btn" id="showPass"></a>
+                <input type="password" placeholder="" name="old-password" id="oldPassword" class="settings__pass  settings-field">
 
                 <div class="settings__what">
                     Введите новый пароль
                 </div>
-                <input type="password" placeholder="********" name="new-password" id="newPassword" class="settings__pass settings__pass-2">
+                <input type="password" placeholder="" name="new-password" id="newPassword" class="settings__pass settings__pass-2 settings-field">
                 <div class="settings__what">
                     Повторите новый пароль
                 </div>
-                <input type="password" placeholder="********" name="again-new-password" id="againNewPassword" class="settings__pass settings__pass-2">
+                <input type="password" placeholder="" name="again-new-password" id="againNewPassword" class="settings__pass settings__pass-2 settings-field">
+                <br><br><button class="green-btn">Отправить</button>
             </div>
-            <div class="settings__bigwhat">
-                Настройки категорий товара
-            </div>
-
-            <div class="settings__pick-categories">
-                <div class="pick-catg__col">
-                    <div class="pick-catg__item">
-                        <label>Инструменты[9523]
-                            <input type="checkbox" class="pick-catg__input" name="category">
-                            <span class="checkmark1"></span>
-                        </label>
-                    </div>
-
-                    <div class="pick-catg__item">
-                        <label>Инструменты[9523]
-                            <input type="checkbox" class="pick-catg__input" name="category">
-                            <span class="checkmark1"></span>
-                        </label>
-                    </div>
-
-                    <div class="pick-catg__item">
-                        <label>Инструменты[9523]
-                            <input type="checkbox" class="pick-catg__input" name="category">
-                            <span class="checkmark1"></span>
-                        </label>
-                    </div>
-
-                    <div class="pick-catg__item">
-                        <label>Инструменты[9523]
-                            <input type="checkbox" class="pick-catg__input" name="category">
-                            <span class="checkmark1"></span>
-                        </label>
-                    </div>
-
-                    <div class="pick-catg__item">
-                        <label>Инструменты[9523]
-                            <input type="checkbox" class="pick-catg__input" name="category">
-                            <span class="checkmark1"></span>
-                        </label>
-                    </div>
-
-                    <div class="pick-catg__item">
-                        <label>Инструменты[9523]
-                            <input type="checkbox" class="pick-catg__input" name="category">
-                            <span class="checkmark1"></span>
-                        </label>
-                    </div>
-
-                    <div class="pick-catg__item">
-                        <label>Инструменты[9523]
-                            <input type="checkbox" class="pick-catg__input" name="category">
-                            <span class="checkmark1"></span>
-                        </label>
-                    </div>
-
-                </div>
-
-                <div class="pick-catg__col">
-                    <div class="pick-catg__item">
-                        <label>Инструменты[9523]
-                            <input type="checkbox" class="pick-catg__input" name="category">
-                            <span class="checkmark1"></span>
-                        </label>
-                    </div>
-
-                    <div class="pick-catg__item">
-                        <label>Инструменты[9523]
-                            <input type="checkbox" class="pick-catg__input" name="category">
-                            <span class="checkmark1"></span>
-                        </label>
-                    </div>
-
-                    <div class="pick-catg__item">
-                        <label>Инструменты[9523]
-                            <input type="checkbox" class="pick-catg__input" name="category">
-                            <span class="checkmark1"></span>
-                        </label>
-                    </div>
-
-                    <div class="pick-catg__item">
-                        <label>Инструменты[9523]
-                            <input type="checkbox" class="pick-catg__input" name="category">
-                            <span class="checkmark1"></span>
-                        </label>
-                    </div>
-
-                    <div class="pick-catg__item">
-                        <label>Инструменты[9523]
-                            <input type="checkbox" class="pick-catg__input" name="category">
-                            <span class="checkmark1"></span>
-                        </label>
-                    </div>
-
-                    <div class="pick-catg__item">
-                        <label>Инструменты[9523]
-                            <input type="checkbox" class="pick-catg__input" name="category">
-                            <span class="checkmark1"></span>
-                        </label>
-                    </div>
-
-                    <div class="pick-catg__item">
-                        <label>Инструменты[9523]
-                            <input type="checkbox" class="pick-catg__input" name="category">
-                            <span class="checkmark1"></span>
-                        </label>
-                    </div>
-
-                </div>
-
-                <div class="pick-catg__col">
-                    <div class="pick-catg__item">
-                        <label>Инструменты[9523]
-                            <input type="checkbox" class="pick-catg__input" name="category">
-                            <span class="checkmark1"></span>
-                        </label>
-                    </div>
-
-                    <div class="pick-catg__item">
-                        <label>Инструменты[9523]
-                            <input type="checkbox" class="pick-catg__input" name="category">
-                            <span class="checkmark1"></span>
-                        </label>
-                    </div>
-
-                    <div class="pick-catg__item">
-                        <label>Инструменты[9523]
-                            <input type="checkbox" class="pick-catg__input" name="category">
-                            <span class="checkmark1"></span>
-                        </label>
-                    </div>
-
-                    <div class="pick-catg__item">
-                        <label>Инструменты[9523]
-                            <input type="checkbox" class="pick-catg__input" name="category">
-                            <span class="checkmark1"></span>
-                        </label>
-                    </div>
-
-                    <div class="pick-catg__item">
-                        <label>Инструменты[9523]
-                            <input type="checkbox" class="pick-catg__input" name="category">
-                            <span class="checkmark1"></span>
-                        </label>
-                    </div>
-
-                    <div class="pick-catg__item">
-                        <label>Инструменты[9523]
-                            <input type="checkbox" class="pick-catg__input" name="category">
-                            <span class="checkmark1"></span>
-                        </label>
-                    </div>
-
-                    <div class="pick-catg__item">
-                        <label>Инструменты[9523]
-                            <input type="checkbox" class="pick-catg__input" name="category">
-                            <span class="checkmark1"></span>
-                        </label>
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="pick-catg__buttons">
-                <a href="#" class="green-btn white-btn">Отметить/снять</a>
-                <a href="#" class="green-btn">Подтвердить</a>
-            </div>
-
             <div class="settings__bigwhat">
                 Настройки категорий товара
             </div>
             <div class="settings__pick-categories">
 
                 <div class="pick-catg__col pick-catg__col-2">
-                    <div class="pick-catg__item">
-                        <label>Бренды
-                            <input type="checkbox" class="pick-catg__input" name="category">
-                            <span class="checkmark1"></span>
-                        </label>
-                    </div>
-
-                    <div class="pick-catg__item">
-                        <label>Бренды
-                            <input type="checkbox" class="pick-catg__input" name="category">
-                            <span class="checkmark1"></span>
-                        </label>
-                    </div>
-
-                    <div class="pick-catg__item">
-                        <label>Бренды
-                            <input type="checkbox" class="pick-catg__input" name="category">
-                            <span class="checkmark1"></span>
-                        </label>
-                    </div>
-
-                    <div class="pick-catg__item">
-                        <label>Бренды
-                            <input type="checkbox" class="pick-catg__input" name="category">
-                            <span class="checkmark1"></span>
-                        </label>
-                    </div>
-
-                    <div class="pick-catg__item">
-                        <label>Бренды
-                            <input type="checkbox" class="pick-catg__input" name="category">
-                            <span class="checkmark1"></span>
-                        </label>
-                    </div>
-
-                    <div class="pick-catg__item">
-                        <label>Бренды
-                            <input type="checkbox" class="pick-catg__input" name="category">
-                            <span class="checkmark1"></span>
-                        </label>
-                    </div>
-
-                    <div class="pick-catg__item">
-                        <label>Бренды
-                            <input type="checkbox" class="pick-catg__input" name="category">
-                            <span class="checkmark1"></span>
-                        </label>
-                    </div>
-
-                    <div class="pick-catg__item">
-                        <label>Бренды
-                            <input type="checkbox" class="pick-catg__input" name="category">
-                            <span class="checkmark1"></span>
-                        </label>
-                    </div>
-
-                    <div class="pick-catg__item">
-                        <label>Бренды
-                            <input type="checkbox" class="pick-catg__input" name="category">
-                            <span class="checkmark1"></span>
-                        </label>
-                    </div>
-
-                    <div class="pick-catg__item">
-                        <label>Бренды
-                            <input type="checkbox" class="pick-catg__input" name="category">
-                            <span class="checkmark1"></span>
-                        </label>
-                    </div>
+                  <label class="checkbox">
+                    <span class="checkbox__body">
+                      Бренды
+                    </span>
+                    <input type="checkbox" class="checkbox__input" checked>
+                    <svg class="checkbox__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22">
+                      <path class="tick" stroke="#fff" fill="none" stroke-linecap="round" stroke-width="4" d="M4 10l5 5 9-9"></path>
+                    </svg>
+                  </label>
+                  <label class="checkbox">
+                    <span class="checkbox__body">
+                      Бренды
+                    </span>
+                    <input type="checkbox" class="checkbox__input" checked>
+                    <svg class="checkbox__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22">
+                      <path class="tick" stroke="#fff" fill="none" stroke-linecap="round" stroke-width="4" d="M4 10l5 5 9-9"></path>
+                    </svg>
+                  </label>
+                  <label class="checkbox">
+                    <span class="checkbox__body">
+                      Бренды
+                    </span>
+                    <input type="checkbox" class="checkbox__input" checked>
+                    <svg class="checkbox__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22">
+                      <path class="tick" stroke="#fff" fill="none" stroke-linecap="round" stroke-width="4" d="M4 10l5 5 9-9"></path>
+                    </svg>
+                  </label>
+                  <label class="checkbox">
+                    <span class="checkbox__body">
+                      Бренды
+                    </span>
+                    <input type="checkbox" class="checkbox__input" checked>
+                    <svg class="checkbox__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22">
+                      <path class="tick" stroke="#fff" fill="none" stroke-linecap="round" stroke-width="4" d="M4 10l5 5 9-9"></path>
+                    </svg>
+                  </label>
                 </div>
 
                 <div class="pick-catg__col pick-catg__col-2">
-                    <div class="pick-catg__item">
-                        <label>Бренды
-                            <input type="checkbox" class="pick-catg__input" name="category">
-                            <span class="checkmark1"></span>
-                        </label>
-                    </div>
-
-                    <div class="pick-catg__item">
-                        <label>Бренды
-                            <input type="checkbox" class="pick-catg__input" name="category">
-                            <span class="checkmark1"></span>
-                        </label>
-                    </div>
-
-                    <div class="pick-catg__item">
-                        <label>Бренды
-                            <input type="checkbox" class="pick-catg__input" name="category">
-                            <span class="checkmark1"></span>
-                        </label>
-                    </div>
-
-                    <div class="pick-catg__item">
-                        <label>Бренды
-                            <input type="checkbox" class="pick-catg__input" name="category">
-                            <span class="checkmark1"></span>
-                        </label>
-                    </div>
-
-                    <div class="pick-catg__item">
-                        <label>Бренды
-                            <input type="checkbox" class="pick-catg__input" name="category">
-                            <span class="checkmark1"></span>
-                        </label>
-                    </div>
-
-                    <div class="pick-catg__item">
-                        <label>Бренды
-                            <input type="checkbox" class="pick-catg__input" name="category">
-                            <span class="checkmark1"></span>
-                        </label>
-                    </div>
-
-                    <div class="pick-catg__item">
-                        <label>Бренды
-                            <input type="checkbox" class="pick-catg__input" name="category">
-                            <span class="checkmark1"></span>
-                        </label>
-                    </div>
-
-                    <div class="pick-catg__item">
-                        <label>Бренды
-                            <input type="checkbox" class="pick-catg__input" name="category">
-                            <span class="checkmark1"></span>
-                        </label>
-                    </div>
-
-                    <div class="pick-catg__item">
-                        <label>Бренды
-                            <input type="checkbox" class="pick-catg__input" name="category">
-                            <span class="checkmark1"></span>
-                        </label>
-                    </div>
-
-                    <div class="pick-catg__item">
-                        <label>Бренды
-                            <input type="checkbox" class="pick-catg__input" name="category">
-                            <span class="checkmark1"></span>
-                        </label>
-                    </div>
+                  <label class="checkbox">
+                    <span class="checkbox__body">
+                      Бренды
+                    </span>
+                    <input type="checkbox" class="checkbox__input" checked>
+                    <svg class="checkbox__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22">
+                      <path class="tick" stroke="#fff" fill="none" stroke-linecap="round" stroke-width="4" d="M4 10l5 5 9-9"></path>
+                    </svg>
+                  </label>
+                  <label class="checkbox">
+                    <span class="checkbox__body">
+                      Бренды
+                    </span>
+                    <input type="checkbox" class="checkbox__input" checked>
+                    <svg class="checkbox__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22">
+                      <path class="tick" stroke="#fff" fill="none" stroke-linecap="round" stroke-width="4" d="M4 10l5 5 9-9"></path>
+                    </svg>
+                  </label>
+                  <label class="checkbox">
+                    <span class="checkbox__body">
+                      Бренды
+                    </span>
+                    <input type="checkbox" class="checkbox__input" checked>
+                    <svg class="checkbox__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22">
+                      <path class="tick" stroke="#fff" fill="none" stroke-linecap="round" stroke-width="4" d="M4 10l5 5 9-9"></path>
+                    </svg>
+                  </label>
+                  <label class="checkbox">
+                    <span class="checkbox__body">
+                      Бренды
+                    </span>
+                    <input type="checkbox" class="checkbox__input" checked>
+                    <svg class="checkbox__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22">
+                      <path class="tick" stroke="#fff" fill="none" stroke-linecap="round" stroke-width="4" d="M4 10l5 5 9-9"></path>
+                    </svg>
+                  </label>
                 </div>
-
                 <div class="pick-catg__col pick-catg__col-2">
-                    <div class="pick-catg__item">
-                        <label>Бренды
-                            <input type="checkbox" class="pick-catg__input" name="category">
-                            <span class="checkmark1"></span>
-                        </label>
-                    </div>
-
-                    <div class="pick-catg__item">
-                        <label>Бренды
-                            <input type="checkbox" class="pick-catg__input" name="category">
-                            <span class="checkmark1"></span>
-                        </label>
-                    </div>
-
-                    <div class="pick-catg__item">
-                        <label>Бренды
-                            <input type="checkbox" class="pick-catg__input" name="category">
-                            <span class="checkmark1"></span>
-                        </label>
-                    </div>
-
-                    <div class="pick-catg__item">
-                        <label>Бренды
-                            <input type="checkbox" class="pick-catg__input" name="category">
-                            <span class="checkmark1"></span>
-                        </label>
-                    </div>
-
-                    <div class="pick-catg__item">
-                        <label>Бренды
-                            <input type="checkbox" class="pick-catg__input" name="category">
-                            <span class="checkmark1"></span>
-                        </label>
-                    </div>
-
-                    <div class="pick-catg__item">
-                        <label>Бренды
-                            <input type="checkbox" class="pick-catg__input" name="category">
-                            <span class="checkmark1"></span>
-                        </label>
-                    </div>
-
-                    <div class="pick-catg__item">
-                        <label>Бренды
-                            <input type="checkbox" class="pick-catg__input" name="category">
-                            <span class="checkmark1"></span>
-                        </label>
-                    </div>
-
-                    <div class="pick-catg__item">
-                        <label>Бренды
-                            <input type="checkbox" class="pick-catg__input" name="category">
-                            <span class="checkmark1"></span>
-                        </label>
-                    </div>
-
-                    <div class="pick-catg__item">
-                        <label>Бренды
-                            <input type="checkbox" class="pick-catg__input" name="category">
-                            <span class="checkmark1"></span>
-                        </label>
-                    </div>
-
-                    <div class="pick-catg__item">
-                        <label>Бренды
-                            <input type="checkbox" class="pick-catg__input" name="category">
-                            <span class="checkmark1"></span>
-                        </label>
-                    </div>
-                </div>
-
-                <div class="pick-catg__col pick-catg__col-2">
-                    <div class="pick-catg__item">
-                        <label>Бренды
-                            <input type="checkbox" class="pick-catg__input" name="category">
-                            <span class="checkmark1"></span>
-                        </label>
-                    </div>
-
-                    <div class="pick-catg__item">
-                        <label>Бренды
-                            <input type="checkbox" class="pick-catg__input" name="category">
-                            <span class="checkmark1"></span>
-                        </label>
-                    </div>
-
-                    <div class="pick-catg__item">
-                        <label>Бренды
-                            <input type="checkbox" class="pick-catg__input" name="category">
-                            <span class="checkmark1"></span>
-                        </label>
-                    </div>
-
-                    <div class="pick-catg__item">
-                        <label>Бренды
-                            <input type="checkbox" class="pick-catg__input" name="category">
-                            <span class="checkmark1"></span>
-                        </label>
-                    </div>
-
-                    <div class="pick-catg__item">
-                        <label>Бренды
-                            <input type="checkbox" class="pick-catg__input" name="category">
-                            <span class="checkmark1"></span>
-                        </label>
-                    </div>
-
-                    <div class="pick-catg__item">
-                        <label>Бренды
-                            <input type="checkbox" class="pick-catg__input" name="category">
-                            <span class="checkmark1"></span>
-                        </label>
-                    </div>
-
-                    <div class="pick-catg__item">
-                        <label>Бренды
-                            <input type="checkbox" class="pick-catg__input" name="category">
-                            <span class="checkmark1"></span>
-                        </label>
-                    </div>
-
-                    <div class="pick-catg__item">
-                        <label>Бренды
-                            <input type="checkbox" class="pick-catg__input" name="category">
-                            <span class="checkmark1"></span>
-                        </label>
-                    </div>
-
-                    <div class="pick-catg__item">
-                        <label>Бренды
-                            <input type="checkbox" class="pick-catg__input" name="category">
-                            <span class="checkmark1"></span>
-                        </label>
-                    </div>
-
-                    <div class="pick-catg__item">
-                        <label>Бренды
-                            <input type="checkbox" class="pick-catg__input" name="category">
-                            <span class="checkmark1"></span>
-                        </label>
-                    </div>
+                  <label class="checkbox">
+                    <span class="checkbox__body">
+                      Бренды
+                    </span>
+                    <input type="checkbox" class="checkbox__input" checked>
+                    <svg class="checkbox__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22">
+                      <path class="tick" stroke="#fff" fill="none" stroke-linecap="round" stroke-width="4" d="M4 10l5 5 9-9"></path>
+                    </svg>
+                  </label>
+                  <label class="checkbox">
+                    <span class="checkbox__body">
+                      Бренды
+                    </span>
+                    <input type="checkbox" class="checkbox__input" checked>
+                    <svg class="checkbox__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22">
+                      <path class="tick" stroke="#fff" fill="none" stroke-linecap="round" stroke-width="4" d="M4 10l5 5 9-9"></path>
+                    </svg>
+                  </label>
+                  <label class="checkbox">
+                    <span class="checkbox__body">
+                      Бренды
+                    </span>
+                    <input type="checkbox" class="checkbox__input" checked>
+                    <svg class="checkbox__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22">
+                      <path class="tick" stroke="#fff" fill="none" stroke-linecap="round" stroke-width="4" d="M4 10l5 5 9-9"></path>
+                    </svg>
+                  </label>
+                  <label class="checkbox">
+                    <span class="checkbox__body">
+                      Бренды
+                    </span>
+                    <input type="checkbox" class="checkbox__input" checked>
+                    <svg class="checkbox__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22">
+                      <path class="tick" stroke="#fff" fill="none" stroke-linecap="round" stroke-width="4" d="M4 10l5 5 9-9"></path>
+                    </svg>
+                  </label>
                 </div>
 
             </div>
             <div class="pick-catg__buttons">
-                <a href="#" class="green-btn white-btn">Отметить/снять</a>
-                <a href="#" class="green-btn">Подтвердить</a>
+                <button class="green-btn white-btn">Отметить/снять</button>
+                <button class="green-btn">Подтвердить</button>
             </div>
-
-
         </form>
-
-
     </div>
-
-
-
-
-
-
 </div>
-
-
-
-
 </main>
-<script src="libs/jQuery/jquery-3.4.1.min.js"></script>
-<script src="libs/slick-1.8.1/slick/slick.min.js"></script>
-<script src="js/common.js"></script>
+<script src="../libs/jQuery/jquery-3.4.1.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="../libs/slick-1.8.1/slick/slick.min.js"></script>
+<script src="../js/b2b.js"></script>
+<script>
+  $( function() {
+    $( "#slider-range" ).slider({
+      range: true,
+      min: 0,
+      max: 500,
+      values: [ 75, 300 ],
+      slide: function( event, ui ) {
+        $( "#amount" ).val( "От " + ui.values[ 0 ] + " - До " + ui.values[ 1 ] );
+      }
+    });
+    $( "#amount" ).val( "От " + $( "#slider-range" ).slider( "values", 0 ) +
+      " - До " + $( "#slider-range" ).slider( "values", 1 ) );
+  } );
+
+  </script>
 </body>
 </html>
