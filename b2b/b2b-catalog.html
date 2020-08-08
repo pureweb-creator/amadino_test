@@ -1,57 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-    <meta charset="UTF-8">
+   <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- Fonts -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link href="https://pro.fontawesome.com/releases/v5.2.0/css/all.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="fonts/BebasNeue/stylesheet.css">
-    <link rel="stylesheet" href="fonts/Gilroy/stylesheet.css">
+    <link rel="stylesheet" href="../fonts/BebasNeue/stylesheet.css">
+    <link rel="stylesheet" href="../fonts/Gilroy/stylesheet.css">
 
     <!-- Libs -->
-    <link rel="stylesheet" type="text/css" href="https://amadino.com.ua/assets/f3c20633/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="https://amadino.com.ua/assets/f3c20633/css/bootsulap.css">
     <link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
-    <link rel="stylesheet" type="text/css" href="libs/remodal.css">
-    <link rel="stylesheet" type="text/css" href="libs/remodal-default-theme.css">
+    <link rel="stylesheet" type="text/css" href="../libs/remodal.css">
+    <link rel="stylesheet" type="text/css" href="../libs/remodal-default-theme.css">
     <link rel="stylesheet" href="libs/slick-1.8.1/slick/slick.css">
-    <link rel="stylesheet" type="text/css" href="https://amadino.com.ua/assets/f465a09/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://amadino.com.ua/assets/f465a09/css/bootsulap.min.css">
     <link rel="stylesheet" type="text/css" href="https://amadino.com.ua/flickity/flickity.min.css">
     <link rel="stylesheet" type="text/css" href="https://amadino.com.ua/assets/9b8159c5/css/activeform.min.css">
 
     <!-- MAIN CSS FILE -->
     <link rel="stylesheet" type="text/css" href="https://amadino.com.ua/css/style.css?2">
-    <link rel="stylesheet" href="css/main.min.css">
+    <link rel="stylesheet" href="../css/main.min.css">
 
-	<title>B2B - Каталог</title>
+	<title>B2B - Счет</title>
 </head>
 <body>
 
 <header class="b2b-header">
     <div class="b2b-header__logo">
         <a href="#">
-            <img src="img/b2b/logo.png" alt="B2B"> B<span class="color-green no-margin">2</span>B
+            <img src="../img/b2b/logo.png" alt="B2B"> B<span class="color-green no-margin">2</span>B
         </a>
     </div>
 
-    <div class="b2b-header__right" id="b2bMenu">
+    <div class="b2b-header__right">
         <div class="b2b-header__notifications">
-            <a href="#"><img src="img/b2b/bell.png" alt="">
-            <div class="notifications-number">1</div></a>
+            <a href="#">
+              <i class="fal fa-bell b2b-header__icon b2b-header__icon--notifications"></i>
+            <div class="cart-number">1</div></a>
         </div>
 
         <div class="b2b-header__cart">
             <a href="#">
-                <img src="img/b2b/cart.png" alt="">
-                <div class="notifications-number">1</div>
+                <img src="../img/icons8-opencart.svg" alt="cart" class="cart__button_cart_icon " style="width: 30px">
+                <div class="cart-number">1</div>
             </a>
         </div>
 
         <div class="b2b-header__cashout" id="cashOut">
             <a href="#">
-                <img src="img/b2b/account.png" class="b2b-header__cashout-img" alt="">
-                <img src="img/b2b/account-hover.png" class="b2b-header__cashout-img-hover" alt="">
+                <i class="fal fa-credit-card b2b-header__icon b2b-header__icon--cashout" style="margin-right: 20px"></i>
                 Вывод средств
             </a>
 
@@ -70,247 +70,120 @@
 
         <div class="b2b-header__user">
             <a href="#">
-                <img src="img/b2b/user-pic.png" alt="">
-                Иван Иван
+                <img src="../img/b2b/user-pic.png" alt="user avatar" class="user-avatar">
+                Господарчук Валентина
             </a>
         </div>
 
         <div class="b2b-header__settings">
             <a href="#">
-                <img src="img/b2b/settings.png" alt="">
+                <i class="fal fa-cog b2b-header__icon b2b-header__icon--settings"></i>
             </a>
         </div>
     </div>
 </header>
 
-<aside class="b2b-sidebar">
-    <div class="b2b-side__menu">
-        <img src="img/b2b/menu.png" id="b2bMenuButton" alt="Menu">
-    </div>
-
-    <div class="b2b-side__user">
-        <a href="#">
-            <img src="img/b2b/user-pic.png" alt="">
-        </a>
-    </div>
-
-    <ul class="b2b-nav">
-        <li class="b2b-nav__link">
-            <a href="b2b-catalog.html" class="active">
-                <img src="img/b2b/catalog.png" alt="" class="b2b-nav__link-img">
-                <img src="img/b2b/catalog-hover.png" alt="" class="b2b-nav__link-img--hover">
-            </a>
-            <div class="b2b-nav__sublink b2b-nav__sublink--catalog">
-                Каталог
-                <div class="b2b-nav__catalog">
-                    Инструменты
-
-                    <div class="b2b-nav__subcatalog">
-                        <a href="#">Электроинструменты</a>
-                        <a href="#">Электроинструменты</a>
-                        <a href="#">Электроинструменты</a>
-                        <a href="#">Электроинструменты</a>
-                        <a href="#">Электроинструменты</a>
-                        <a href="#">Электроинструменты</a>
-                        <a href="#">Электроинструменты</a>
-                        <a href="#">Электроинструменты</a>
-                        <a href="#">Электроинструменты</a>
-                    </div>
+<main class="wrap d-flex">
+  <aside class="b2b-sidebar">
+    <nav class="b2b-nav" aria-label="Main">
+      <ul class="b2b-nav__list">
+          <li class="b2b-nav__item">
+              <a href="b2b-account.html" class="b2b-nav__link">
+                  <i class="fal fa-user"></i>
+                  <span class="b2b-nav__caption">Аккаунт</span>
+              </a>
+          </li>
+          <li class="b2b-nav__item active">
+              <a href="b2b-catalog.html" class="b2b-nav__link">
+                  <i class="fal fa-list-alt"></i>
+                  <span class="b2b-nav__caption">Каталог</span>
+              </a>
+              <div class="b2b-nav__catalog">
+                <div class="b2b-nav__submenu">
+                  <h3 class="b2b-nav__title">Инструменты</h3>
+                  <ul class="b2b-nav__list b2b-nav__list--second">
+                      <li href="#" class="b2b-nav__item b2b-nav__item--second"><a href="#" class="b2b-nav__link b2b-nav__link--second">Электроинструменты</a></li>
+                      <li href="#" class="b2b-nav__item b2b-nav__item--second"><a href="#" class="b2b-nav__link b2b-nav__link--second">Электроинструменты</a></li>
+                      <li href="#" class="b2b-nav__item b2b-nav__item--second"><a href="#" class="b2b-nav__link b2b-nav__link--second">Электроинструменты</a></li>
+                  </ul>
                 </div>
+              </div>
+          </li>
 
-                <div class="b2b-nav__catalog">
-                    Инструменты
+          <li class="b2b-nav__item">
+              <a href="b2b-orders.html" class="b2b-nav__link">
+                  <i class="fal fa-tasks"></i>
+                  <span class="b2b-nav__caption">Заказы</span>
+              </a>
+          </li>
 
-                    <div class="b2b-nav__subcatalog">
-                        <a href="#">Электроинструменты</a>
-                        <a href="#">Электроинструменты</a>
-                        <a href="#">Электроинструменты</a>
-                        <a href="#">Электроинструменты</a>
-                        <a href="#">Электроинструменты</a>
-                        <a href="#">Электроинструменты</a>
-                        <a href="#">Электроинструменты</a>
-                        <a href="#">Электроинструменты</a>
-                        <a href="#">Электроинструменты</a>
-                    </div>
-                </div>
+          <li class="b2b-nav__item">
+              <a href="b2b-refunds.html" class="b2b-nav__link">
+                  <i class="fal fa-times"></i>
+                  <span class="b2b-nav__caption">Возвраты</span>
+              </a>
+          </li>
 
-                <div class="b2b-nav__catalog">
-                    Инструменты
+          <li class="b2b-nav__item">
+              <a href="b2b-account.html" class="b2b-nav__link active">
+                  <i class="fal fa-credit-card"></i>
+                  <span class="b2b-nav__caption">Счет</span>
+              </a>
+          </li>
 
-                    <div class="b2b-nav__subcatalog">
-                        <a href="#">Электроинструменты</a>
-                        <a href="#">Электроинструменты</a>
-                        <a href="#">Электроинструменты</a>
-                        <a href="#">Электроинструменты</a>
-                        <a href="#">Электроинструменты</a>
-                        <a href="#">Электроинструменты</a>
-                        <a href="#">Электроинструменты</a>
-                        <a href="#">Электроинструменты</a>
-                        <a href="#">Электроинструменты</a>
-                    </div>
-                </div>
+          <li class="b2b-nav__item">
+              <a href="b2b-contacts.html" class="b2b-nav__link">
+                  <i class="fal fa-phone"></i>
+                  <span class="b2b-nav__caption">Контакты</span>
+              </a>
+          </li>
 
-                <div class="b2b-nav__catalog">
-                    Инструменты
+          <li class="b2b-nav__item">
+              <a href="b2b-settings.html" class="b2b-nav__link">
+                  <i class="fal fa-cogs"></i>
+                  <span class="b2b-nav__caption">Настройки</span>
+              </a>
+          </li>
 
-                    <div class="b2b-nav__subcatalog">
-                        <a href="#">Электроинструменты</a>
-                        <a href="#">Электроинструменты</a>
-                        <a href="#">Электроинструменты</a>
-                        <a href="#">Электроинструменты</a>
-                        <a href="#">Электроинструменты</a>
-                        <a href="#">Электроинструменты</a>
-                        <a href="#">Электроинструменты</a>
-                        <a href="#">Электроинструменты</a>
-                        <a href="#">Электроинструменты</a>
-                    </div>
-                </div>
-
-                <div class="b2b-nav__catalog">
-                    Инструменты
-
-                    <div class="b2b-nav__subcatalog">
-                        <a href="#">Электроинструменты</a>
-                        <a href="#">Электроинструменты</a>
-                        <a href="#">Электроинструменты</a>
-                        <a href="#">Электроинструменты</a>
-                        <a href="#">Электроинструменты</a>
-                        <a href="#">Электроинструменты</a>
-                        <a href="#">Электроинструменты</a>
-                        <a href="#">Электроинструменты</a>
-                        <a href="#">Электроинструменты</a>
-                    </div>
-                </div>
-
-                <div class="b2b-nav__catalog">
-                    Инструменты
-
-                    <div class="b2b-nav__subcatalog">
-                        <a href="#">Электроинструменты</a>
-                        <a href="#">Электроинструменты</a>
-                        <a href="#">Электроинструменты</a>
-                        <a href="#">Электроинструменты</a>
-                        <a href="#">Электроинструменты</a>
-                        <a href="#">Электроинструменты</a>
-                        <a href="#">Электроинструменты</a>
-                        <a href="#">Электроинструменты</a>
-                        <a href="#">Электроинструменты</a>
-                    </div>
-                </div>
-
-                <div class="b2b-nav__catalog">
-                    Инструменты
-
-                    <div class="b2b-nav__subcatalog">
-                        <a href="#">Электроинструменты</a>
-                        <a href="#">Электроинструменты</a>
-                        <a href="#">Электроинструменты</a>
-                        <a href="#">Электроинструменты</a>
-                        <a href="#">Электроинструменты</a>
-                        <a href="#">Электроинструменты</a>
-                        <a href="#">Электроинструменты</a>
-                        <a href="#">Электроинструменты</a>
-                        <a href="#">Электроинструменты</a>
-                    </div>
-                </div>
-            </div>
-        </li>
-
-        <li class="b2b-nav__link">
-            <a href="b2b-orders.html" class="">
-                <img src="img/b2b/orders.png" alt="" class="b2b-nav__link-img">
-                <img src="img/b2b/orders-hover.png" alt="" class="b2b-nav__link-img--hover">
-            </a>
-            <div class="b2b-nav__sublink">
-                Заказы
-                
-            </div>
-        </li>
-
-        <li class="b2b-nav__link">
-            <a href="b2b-refunds.html" class="">
-                <img src="img/b2b/refunds.png" alt="" class="b2b-nav__link-img">
-                <img src="img/b2b/refunds-hover.png" alt="" class="b2b-nav__link-img--hover">
-            </a>
-            <div class="b2b-nav__sublink">
-                Возвраты
-            </div>
-        </li>
-
-        <li class="b2b-nav__link">
-            <a href="b2b-account.html" class="">
-                <img src="img/b2b/account.png" alt="" class="b2b-nav__link-img">
-                <img src="img/b2b/account-hover.png" alt="" class="b2b-nav__link-img--hover">
-            </a>
-            <div class="b2b-nav__sublink">
-                Счет
-            </div>
-        </li>
-
-        <li class="b2b-nav__link">
-            <a href="b2b-contacts.html" class="">
-                <img src="img/b2b/contacts.png" alt="" class="b2b-nav__link-img">
-                <img src="img/b2b/contacts-hover.png" alt="" class="b2b-nav__link-img--hover">
-            </a>
-            <div class="b2b-nav__sublink">
-                Контакты
-            </div>
-        </li>
-
-        <li class="b2b-nav__link">
-            <a href="b2b-settings.html" class="">
-                <img src="img/b2b/settings.png" alt="" class="b2b-nav__link-img">
-                <img src="img/b2b/settings-hover.png" alt="" class="b2b-nav__link-img--hover">
-            </a>
-            <div class="b2b-nav__sublink">
-                Настройки
-            </div>
-        </li>
-
-        <li class="b2b-nav__link">
-            <a href="b2b-questions.html" class="">
-                <img src="img/b2b/questions.png" alt="" class="b2b-nav__link-img">
-                <img src="img/b2b/questions-hover.png" alt="" class="b2b-nav__link-img--hover">
-            </a>
-            <div class="b2b-nav__sublink">
-                Вопросы
-            </div>
-        </li>
-    </ul>
-</aside>
+          <li class="b2b-nav__item">
+              <a href="b2b-questions.html" class="b2b-nav__link">
+                  <i class="fal fa-question"></i>
+                  <span class="b2b-nav__caption">Вопросы</span>
+              </a>
+          </li>
+      </ul>
+    </nav>
+  </aside>
 
 <div class="b2b-container">
-
     <div class="b2b-top">
         <div class="b2b-pagetitle title-underline">
-            каталог товаров
+            Каталог товаров
         </div>
 
         <div class="b2b-top__date">
             Актуальность остатков от: 2019-09-25  16:50:33
         </div>
     </div>
-
     <div class="b2b-subtop">
         <div class="subtop__categoryname">
             Тачки
         </div>
     </div>
-
     <div class="b2b-catalog__search">
         <div class="catalog__left">
-            <input type="search" class="catalog__search">
-            <button class="catalog__search-btn">
-                <img src="img/b2b/white-lupa.png" alt="">
-            </button>
+            <form class="search-wrap">
+              <input type="search" class="catalog__search input__search" placeholder="Поиск">
+              <button class="catalog__search__button"><i class="fa fa-search"></i></button>
+            </form>
             <div class="catalog__left-price">
-                Цена от: <input type="text" class="catalog__left-input" value="0">
-                до: <input type="text" class="catalog__left-input" value="99000">
+                Цена от: <input type="text" class="catalog__left-input input__search" value="0">
+                до: <input type="text" class="catalog__left-input input__search" value="99000">
             </div>
         </div>
 
         <div class="catalog__right">
-            <input type="text" class="catalog__right-search" placeholder="Фильтр бренд">
+            <input type="text" class="catalog__right-search input__search" placeholder="Фильтр бренд">
             <select name="code" class="catalog__right-select">
                 <option value="1">Сортировка по коду</option>
                 <option value="2">2</option>
@@ -324,120 +197,71 @@
             </select>
         </div>
     </div>
-
     <div class="catalog__inner">
-        <table class="catalog-table">
-            <tr class="catalog-table__head">
-                <th>Код</th>
-                <th>Изображение</th>
-                <th>Наименование</th>
-                <th>Артикул</th>
-                <th>Ваша цена</th>
-                <th>Розничная цена</th>
-                <th>Прибыль</th>
-                <th></th>
-            </tr>
-
-            <tr class="catalog-table__row">
-
-                <td>990005</td>
-                <td><img src="img/home/tachka.png" alt=""></td>
-                <td>Forte WB6407A Тачка садовая</td>
-                <td>4020536</td>
-                <td>20473,03</td>
-                <td>2999</td>
-                <td>525,97</td>
-                <td>Нет в наличии</td>
-
-            </tr>
-
-            <tr class="catalog-table__row">
-
-                <td>990005</td>
-                <td><img src="img/home/tachka.png" alt=""></td>
-                <td>Forte WB6407A Тачка садовая</td>
-                <td>4020536</td>
-                <td>20473,03</td>
-                <td>2999</td>
-                <td>525,97</td>
-                <td>
-                    <div class="catalog-table__counter">
-                        <span class="btns valueDown">-</span>
-                        <input type="number" value="1">
-                        <span class="btns valueUp">+</span>
-                        <a href="#" class="catalog-counter__cart">
-                            <img src="img/b2b/cart-small-white.png" class="catalog-counter__cart-img" alt="">
-                            <img src="img/b2b/cart-small-green.png" class="catalog-counter__cart-img--hover" alt="">
-                        </a>
-                    </div>
-                </td>
-
-            </tr>
-
-            <tr class="catalog-table__row">
-
-                <td>990005</td>
-                <td><img src="img/home/tachka.png" alt=""></td>
-                <td>Forte WB6407A Тачка садовая</td>
-                <td>4020536</td>
-                <td>20473,03</td>
-                <td>2999</td>
-                <td>525,97</td>
-                <td>
-                    <div class="catalog-table__counter">
-                        <span class="btns valueDown">-</span>
-                        <input type="number" value="1">
-                        <span class="btns valueUp">+</span>
-                        <a href="#" class="catalog-counter__cart">
-                            <img src="img/b2b/cart-small-white.png" class="catalog-counter__cart-img" alt="">
-                            <img src="img/b2b/cart-small-green.png" class="catalog-counter__cart-img--hover" alt="">
-                        </a>
-                    </div>
-                </td>
-
-            </tr>
-
-            <tr class="catalog-table__row">
-
-                <td>990005</td>
-                <td><img src="img/home/tachka.png" alt=""></td>
-                <td>Forte WB6407A Тачка садовая</td>
-                <td>4020536</td>
-                <td>20473,03</td>
-                <td>2999</td>
-                <td>525,97</td>
-                <td>Нет в наличии</td>
-
-            </tr>
-
-            <tr class="catalog-table__row">
-
-                <td>990005</td>
-                <td><img src="img/home/tachka.png" alt=""></td>
-                <td>Forte WB6407A Тачка садовая</td>
-                <td>4020536</td>
-                <td>20473,03</td>
-                <td>2999</td>
-                <td>525,97</td>
-                <td>Нет в наличии</td>
-
-            </tr>
-        </table>
-
-        <div class="category__page-buttons">
-			<div class="page-button active">1</div>
-			<div class="page-button">2</div>
-			<div class="page-button">3</div>
-			<div class="page-button">4</div>
-			<div class="page-button">5</div>
-		</div>
+      <div class="account-table">
+          <ul class="account-table__header d-iflex">
+              <li>Код</li>
+              <li>Изображение</li>
+              <li>Наименование</li>
+              <li>Артикул</li>
+              <li>Ваша цена</li>
+              <li>Розничная цена</li>
+              <li>Прибыль</li>
+          </ul>
+          <ul class="account-table__row d-iflex">
+              <li>990005</li>
+              <li> <img src="../img/b2b/down-arr.png" class="account-table-img" alt=""></li>
+              <li>Forte WB6407A Тачка садовая</li>
+              <li>4020536</li>
+              <li>20473,03</li>
+              <li>2999</li>
+              <li>525,97</li>
+              <li>Нет в наличии</li>
+          </ul>
+          <ul class="account-table__row d-iflex">
+              <li>990005</li>
+              <li> <img src="../img/b2b/down-arr.png" class="account-table-img" alt=""></li>
+              <li>Forte WB6407A Тачка садовая</li>
+              <li>4020536</li>
+              <li>20473,03</li>
+              <li>2999</li>
+              <li>525,97</li>
+              <li>Нет в наличии</li>
+          </ul>
+          <ul class="account-table__row d-iflex">
+              <li>990005</li>
+              <li> <img src="../img/b2b/down-arr.png" class="account-table-img" alt=""></li>
+              <li>Forte WB6407A Тачка садовая</li>
+              <li>4020536</li>
+              <li>20473,03</li>
+              <li>2999</li>
+              <li>525,97</li>
+              <li>Нет в наличии</li>
+          </ul>
+          <ul class="account-table__row d-iflex">
+              <li>990005</li>
+              <li> <img src="../img/b2b/down-arr.png" class="account-table-img" alt=""></li>
+              <li>Forte WB6407A Тачка садовая</li>
+              <li>4020536</li>
+              <li>20473,03</li>
+              <li>2999</li>
+              <li>525,97</li>
+              <li>Нет в наличии</li>
+          </ul>
+          <ul class="account-table__row d-iflex">
+              <li>990005</li>
+              <li> <img src="../img/b2b/down-arr.png" class="account-table-img" alt=""></li>
+              <li>Forte WB6407A Тачка садовая</li>
+              <li>4020536</li>
+              <li>20473,03</li>
+              <li>2999</li>
+              <li>525,97</li>
+              <li>Нет в наличии</li>
+          </ul>
+      </div>
     </div>
-
 </div>
-
-    
-
-
+</main>
 
 <script src="libs/jQuery/jquery-3.4.1.min.js"></script>
 <script src="libs/slick-1.8.1/slick/slick.min.js"></script>
