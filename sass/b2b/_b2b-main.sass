@@ -1,0 +1,316 @@
+.d-iflex
+	display: inline-flex
+
+// B2B
+.b2b-header__logo
+	font-size: 30px
+	font-weight: 700
+	font-family: $bebas
+	margin-left: 50px
+	a
+		display: flex
+		align-items: center
+		img
+      width: 50px
+      margin-right: 15px
+.b2b-header
+	display: flex
+	align-items: center
+	justify-content: space-between
+	color: #fff
+	box-shadow: 0 5px 20px $dark_blue
+	background: $dark_blue
+	width: 100%
+	padding-top: 10px
+	padding-bottom: 10px
+	padding-right: 50px
+	.b2b-header__icon
+		font-size: 25px
+		transition: all .3s ease-in-out
+	.b2b-header__icon--settings
+		transition: all 1.5s ease-in-out
+	.b2b-header__icon--notifications
+		transform-origin: top
+	.b2b-header__icon--notifications:hover
+		transform: rotate(0) scale(1.2)
+		animation-name: notifications-animation
+		animation-fill-mode: forwards
+		animation-timing-function: ease-in
+		animation-iteration-count: 1
+		animation-duration: .6s
+	.b2b-header__icon--settings:hover
+		transform: rotate(1800deg)
+	.b2b-header__icon--cashout
+		transform-origin: bottom
+		animation-duration: 1.5s
+	.b2b-header__cashout:hover .b2b-header__icon--cashout
+		animation-name: cashout-animation
+
+	a
+		color: #fff
+
+@keyframes notifications-animation
+	from
+		transform: rotate(0)
+	10%
+		transform: rotate(-15deg) scale(1.2)
+	20%
+		transform: rotate(15deg) scale(1.2)
+	30%
+		transform: rotate(-15deg) scale(1.2)
+	40%
+		transform: rotate(15deg) scale(1.2)
+	50%
+		transform: rotate(-15deg) scale(1.2)
+	60%
+		transform: rotate(15deg) scale(1.2)
+	70%
+		transform: rotate(-15deg) scale(1.2)
+	80%
+		transform: rotate(15deg) scale(1.2)
+	90%
+		transform: rotate(-15deg) scale(1.2)
+	100%
+		transform: rotate(0)
+
+@keyframes cashout-animation
+	0%
+		transform: scale(1,1) translateY(0)
+	10%
+		transform: scale(1.1,.9) translateY(0)
+	30%
+		transform: scale(.9,1.1) translateY(-10px)
+	50%
+		transform: scale(1.05,.95) translateY(0)
+	57%
+		transform: scale(1,1) translateY(-7px)
+	64%
+		transform: scale(1,1) translateY(0)
+	100%
+		transform: scale(1,1) translateY(0)
+
+.b2b-header__notifications
+	position: relative
+	margin-right: 40px
+
+.notifications-number
+	position: absolute
+	right: -14px
+	display: flex
+	align-items: center
+	justify-content: center
+	top: -14px
+	background-color: $green
+	width: 20px
+	height: 20px
+	border-radius: 50%
+	font-size: 12px
+	font-weight: 700
+	color: #fff
+
+.b2b-header__right
+	display: flex
+	align-items: center
+
+.b2b-header__cart
+	position: relative
+
+.b2b-header__cashout
+	margin-right: 30px
+	margin-left: 30px
+	border-radius: 10px
+	padding: 20px
+	position: relative
+	transition: all .3s ease
+	&:hover
+		.b2b-header__cashout-hover
+			opacity: 1
+			visibility: visible
+			top: calc(100% + 20px)
+	a
+		font-weight: 700
+		font-size: 14px
+		display: flex
+		align-items: center
+	.b2b-header__cashout-img
+		margin-right: 10px
+
+.b2b-header__user
+	margin-right: 50px
+	.user-avatar
+			width: 50px
+	a
+		display: flex
+		align-items: center
+		font-size: 14px
+		font-weight: 700
+		img
+			margin-right: 20px
+
+.b2b-header__cashout.show
+	.b2b-header__cashout-hover
+		display: block
+
+	background-color: #01a479
+	color: #fff
+
+.b2b-header__cashout:hover
+	background-color: #01a479
+	color: #fff
+
+.b2b-header__cashout-hover
+	opacity: 0
+	transition: all .3s ease
+	visibility: hidden
+	position: absolute
+	width: 426px
+	padding: 20px
+	background-color: #01a479
+	top: calc(100% + 40px)
+	border-radius: 15px
+	left: 0
+	color: #fff
+	form
+		label
+			display: block
+			font-size: 14px
+			margin: 15px 0 10px
+		.cashout__input
+			display: block
+			padding: 11px 20px
+			font-size: 14px
+			border-radius: 5px
+			color: #000
+			width: 100%
+			border: none
+		button
+			margin-left: auto
+			display: block
+			width: 129px
+			height: 45px
+			background-color: $dark_blue
+			border-radius: 5px
+			color: #fff
+			font-size: 14px
+			border: 0
+			box-shadow: $shadow2
+			margin-top: 20px
+			cursor: pointer
+			font-family: $m_font
+
+.b2b-sidebar
+	width: 10%
+	background: #024138
+	text-align: center
+
+
+.b2b-nav
+	&__item
+		transition: all .3s ease
+		position: relative
+		&.active, &:hover
+			background: darken(#024138, 3)
+		&:hover
+			.b2b-nav__catalog
+				opacity: 1
+				visibility: visible
+	&__link
+		color: #fff
+		padding: 25px 0
+		i
+			font-size: 27px
+	&__caption
+		display: block
+		margin-top: 10px
+	&__catalog
+		opacity: 0
+		visibility: hidden
+		transition: all .3s ease
+		position: absolute
+		top: 20px
+		z-index: 2
+		left: calc(100% +  20px)
+		background: #fff
+		padding: 15px 0
+		box-shadow: 0 0 20px lighten(#000, 70)
+		border-radius: 15px
+	&__title
+		margin-bottom: 15px
+	&__item--second
+		&:hover
+			background: lighten(#000, 90)
+	&__link--second
+		color: #333
+		padding: 7px 35px
+
+.account-table
+	text-align: left
+	border-spacing: 0
+	width: 100%
+	cursor: pointer
+	overflow-x: scroll
+
+.account-table__header
+	margin-bottom: 20px
+	font-size: 18px
+	font-weight: 700
+	li
+		width: 350px
+		&:first-child
+			padding-left: 50px
+
+.account-table__row
+	align-items: center
+	font-size: 18px
+	height: 41px
+	li
+		width: 350px
+		&:first-child
+			padding-left: 50px
+		&:nth-child(2)
+			img
+				margin-right: 8px
+				margin-bottom: -2px
+
+	&:hover
+		background: rgba(1,164,121,0.1)
+
+.b2b-container
+	width: 90%
+
+.b2b-pagetitle
+	font-weight: 700
+
+.b2b-top
+	padding: 20px 50px 0
+	justify-content: space-between
+	display: flex
+	margin-bottom: 24px
+
+.b2b-top__date
+	font-size: 14px
+
+.b2b-subtop
+	display: flex
+	justify-content: space-between
+	padding: 0 50px
+	margin-bottom: 20px
+
+.subtop__categoryname
+	font-weight: 700
+	font-size: 16px
+
+.b2b-category__search
+	display: flex
+	justify-content: space-between
+	padding: 0 50px
+
+.b2b-catalog__search
+	display: flex
+	justify-content: space-between
+	padding: 0 50px
+	margin-bottom: 40px
+
+@import "b2b-catalog"
+@import "b2b-refunds"
+@import "b2b-settings"

@@ -472,29 +472,6 @@ $(document).ready(function(){
         aside.toggleClass('show');
     });
 
-    // b2b header
-    var cashOut = $('#cashOut');
-    var cashOutButton = $('#cashOut a');
-    cashOutButton.on('click', function(e) {
-        e.preventDefault();
-        cashOut.toggleClass('show');
-    });
-
-    var valueDown = $('.valueDown'),
-        valueUp = $('.valueUp');
-
-    for (var k = 0; k < valueUp.length; k++) {
-        valueUp[k].addEventListener('click', function() {
-            this.parentNode.querySelector('input[type=number]').stepUp();
-        });
-    }
-
-    for (var n = 0; n < valueDown.length; n++) {
-        valueDown[n].addEventListener('click', function() {
-            this.parentNode.querySelector('input[type=number]').stepDown();
-        });
-    }
-
     // Copylink
     var copyBtn1 = $('#copyBtn1');
     var copyInput1 = $('#copyInput1');
@@ -528,20 +505,6 @@ $(document).ready(function(){
     }
 
     viewPassword(showPass, passes);
-
-    // b2b menu
-    var b2bMenu = $('#b2bMenu'),
-        b2bMenuButton = $('#b2bMenuButton');
-
-    b2bMenuButton.on('click', function() {
-        b2bMenu.toggleClass('show');
-
-        if (b2bMenu.hasClass('show')) {
-            disableBody();
-        } else {
-            openBody();
-        }
-    });
 
     $('.product-tabs__header').on('click', '.product-tabs__tab-button:not(.active)', function() {
         $(this)
